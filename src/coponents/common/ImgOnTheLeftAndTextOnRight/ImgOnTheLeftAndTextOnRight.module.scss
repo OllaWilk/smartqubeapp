@@ -1,0 +1,24 @@
+@import "../../../styles/mixins";
+
+.contentWrap {
+  @include flex(row, center, space-between);
+
+  @include md-max {
+    flex-direction: column;
+  }
+
+  .imgWrap {
+    width: 40%;
+
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  .textWrap {
+    width: 48%;
+    @include md-max {
+      width: 100%;
+    }
+  }
+}

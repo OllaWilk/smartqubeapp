@@ -1,0 +1,17 @@
+@import "../../../../styles/mixins.scss";
+
+.greenTransparentBckg {
+  @include btn;
+  background-color: transparent;
+  border: none;
+  color: var(--color-main);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: var(--bold);
+  padding: 0;
+
+  &:hover {
+    color: var(--color-green-dark);
+    background-color: transparent;
+  }
+}

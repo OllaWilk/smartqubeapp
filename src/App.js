@@ -1,26 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Home, Redirect } from "./coponents/views/index";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Redirect redirectUrl={"home"} />} />
+      <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
-}
-
-export default App;
+};

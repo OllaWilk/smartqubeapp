@@ -1,0 +1,20 @@
+@import "./../../../../styles/mixins.scss";
+
+.black {
+  @include btn;
+  background-color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+  font-size: 16px;
+  color: var(--color-light);
+  padding: 9px 120px;
+
+  &:hover {
+    background-color: lighten($color: black, $amount: 18);
+    border: 2px solid lighten($color: black, $amount: 18);
+  }
+
+  @include sm-max {
+    width: 100%;
+    padding: 9px 30px;
+  }
+}

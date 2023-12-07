@@ -1,0 +1,13 @@
+@import "../../../../styles//mixins.scss";
+
+.btnMainColor {
+  @include btn;
+  background-color: var(--color-main);
+  border: none;
+  color: var(--color-light);
+
+  &:hover {
+    background-color: var(--color-green-dark);
+    color: var(--color-light);
+  }
+}

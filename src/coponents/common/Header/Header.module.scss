@@ -1,0 +1,52 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable.scss";
+@import "../../../styles/typography";
+
+.header {
+  @include flex(row, center, center);
+  height: 100%;
+  padding: 120px 0 0 0;
+  width: 100%;
+
+  @include sm-max {
+    height: 100%;
+    padding: auto 0px;
+  }
+
+  .contentWrapper {
+    @include flex(column, flex-start, center);
+    height: auto;
+    text-align: left;
+
+    @include sm-max {
+      padding-bottom: 0;
+      height: 100%;
+    }
+
+    .text {
+      @extend .text;
+      color: var(--color-light);
+      padding-bottom: 27px;
+
+      @include sm-max {
+        padding-bottom: 0;
+      }
+    }
+
+    .btnsWrap {
+      @include flex(row, center, space-beween);
+
+      @include sm-max {
+        @include flex(column, flex-start, space-beween);
+      }
+
+      a {
+        margin: 30px 30px 0 0;
+
+        @include sm-max {
+          margin: 20px 10px 0 0;
+        }
+      }
+    }
+  }
+}

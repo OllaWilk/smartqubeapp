@@ -1,0 +1,26 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/typography";
+
+.headline {
+  @extend .h1;
+
+  color: var(--color-light);
+  padding: 0px 0 31px 0;
+
+  @include sm-max {
+    padding: 0px 0 0px 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 33.33%;
+    background-color: var(--color-main);
+    margin-top: 30px;
+
+    @include sm-max {
+      margin-top: 15px;
+    }
+  }
+}
