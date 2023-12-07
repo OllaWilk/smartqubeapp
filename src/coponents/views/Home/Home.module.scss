@@ -1,0 +1,38 @@
+@import "../../../styles/mixins";
+
+.splashBackgroundImg {
+  @include flex(column, stretch, flex-end);
+}
+
+.splashBackgroundImg,
+.offerBackground {
+  background-image: url("../../../images/photos/splash.jpg");
+  @include splash;
+  height: 688px;
+  @include flex(column, center, center);
+
+  @include sm-max {
+    height: 100vh;
+  }
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.offerBackground {
+  height: auto;
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  @include sm-max {
+    height: auto;
+  }
+}
+
+.callToActionBackground {
+  background-color: var(--color-green-dark);
+  padding: 70px 0;
+}

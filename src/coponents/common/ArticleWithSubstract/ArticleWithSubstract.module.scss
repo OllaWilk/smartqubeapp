@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+@import "../../../styles/typography";
+
+.infoBox {
+  @include flex(row, flex-start, space-between);
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  .headingBlock {
+    width: 47%;
+
+    @include md-max {
+      width: 100%;
+    }
+
+    .abstract {
+      padding: 20px 0;
+      font-weight: var(--bold);
+      color: var(--color-main);
+      font-size: 18px;
+    }
+  }
+
+  .textBlock {
+    width: 47%;
+    @include flex(column, space-between, flex-end);
+
+    @include md-max {
+      width: 100%;
+    }
+
+    .text {
+      @extend .text;
+
+      &:nth-child(2) {
+        margin: 30px 0;
+      }
+    }
+  }
+
+  @include md-max {
+    @include flex(column, center, space-between);
+  }
+}

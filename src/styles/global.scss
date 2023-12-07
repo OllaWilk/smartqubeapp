@@ -1,9 +1,66 @@
-@import "normalize.scss";
+@import "./variable";
+@import "./mixins";
+@import "./normalize";
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-light);
+  font-family: var(--text-font);
+  font-size: var(--font-d-text);
+  color: var(--color-dark);
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.container {
+  width: 70vw;
+  // max-width: 1300px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1200px) {
+    width: 92%;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: unset;
+    text-decoration: none;
+  }
+}
+
+button {
+  background-color: transparen;
+}
+
+.closed {
+  transform: translateX(100vw);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.selectedBtn {
+  border-bottom: 2px solid var(--color-main);
+
+  @include md-max {
+    border-bottom: none;
+  }
+  background-color: lighten($color: black, $amount: 10);
 }

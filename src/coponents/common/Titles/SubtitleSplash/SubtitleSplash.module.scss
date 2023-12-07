@@ -1,0 +1,7 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/typography";
+
+.subtitle {
+  @extend .h2;
+  color: var(--color-main);
+}

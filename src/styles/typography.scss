@@ -1,0 +1,53 @@
+@import "./mixins";
+
+.h1 {
+  font-family: var(--header-font);
+  font-size: var(--font-d-header);
+  font-weight: var(--normal);
+  line-height: 63px;
+
+  @include sm-max {
+    font-size: 40px;
+  }
+
+  @include lg-min {
+    font-size: var(--font-d-header);
+    line-height: 53px;
+  }
+
+  @include md-min {
+    line-height: 53px;
+  }
+
+  @include md-max {
+    font-size: 40px;
+  }
+}
+
+.h2 {
+  font-size: var(--font-d-subtitle);
+  font-weight: var(--normal);
+  font-family: var(--header-font);
+  line-height: 30px;
+
+  @include lg-min {
+    line-height: 26px;
+  }
+
+  @include sm-max {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-size: var(--font-d-text);
+  line-height: 26px;
+  font-size: var(--font-d-text);
+}
+
+.btn-text {
+  font-size: var(--font-d-btn);
+  font-weight: var(--bold);
+  color: var(--color-light);
+  text-transform: uppercase;
+}

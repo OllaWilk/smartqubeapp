@@ -1,0 +1,10 @@
+@import "../../../../styles/mixins";
+
+.subtitle {
+  color: var(--color-dark);
+  font-family: var(--header-font);
+  font-weight: var(--bold);
+  font-size: var(--font-d-section-subtitle);
+  line-height: 29px;
+  text-transform: uppercase;
+}
