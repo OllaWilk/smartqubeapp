@@ -1,4 +1,4 @@
-// export { About } from "./About/About";
+export { About } from "./About/About";
 export { Home } from "./Home/Home";
 // export { Contact } from "./Contact/Contact";
 // export { NotFound } from "./NotFound/NotFound";
