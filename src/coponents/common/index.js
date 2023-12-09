@@ -6,13 +6,15 @@ export { CallToAction } from "./CallToAction/CallToAction";
 export { OurMission } from "./OurMission/OurMission";
 export { ImgOnTheLeftAndTextOnRight } from "./ImgOnTheLeftAndTextOnRight/ImgOnTheLeftAndTextOnRight";
 export { ImageBox } from "./ImageBox/ImageBox";
+export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
 
-/* titles */
+/* headers */
 export { SubtitleSplash } from "./Titles/SubtitleSplash/SubtitleSplash";
 export { HeadlineSplash } from "./Titles/HeadlineSplash/HeadlineSplash";
 export { DescriptionSubtitle } from "./Titles/DescriptionSubtitle/DescriptionSubtitle";
 export { DescriptionHeadline } from "./Titles/DescriptionHeadline/DescriptionHeadline";
 export { SectionTitle } from "./Titles/SectionTitle/SectionTitle";
+export { ImgHeader } from "./Titles/ImgHeader/ImgHeader";
 
 /* Buttons */
 export { MainColorBtn } from "./Buttons/MainColorBtn/MainColorBtn";

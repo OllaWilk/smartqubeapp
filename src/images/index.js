@@ -27,15 +27,18 @@ import logo100px from "./logo/logo100px.png";
 
 /* photos */
 
-import engeneer from "./photos/engeneer.png";
 import iceCube from "./photos/iceCube.png";
 import shs from "./photos/shs.jpg";
 import splash from "./photos/splash.jpg";
 import projects from "./photos/projects.jpg";
 import integration from "./photos/integration.jpg";
-import googleMap from "./photos/googleMap.jpg";
 import cemsCabinet from "./photos/cemsCabinet.jpg";
 import gasMetering from "./photos/gasMetering.jpg";
+import fieldServices from "./photos/fieldServices.jpg";
+
+import iceProduct from "./photos/iceProduct.jpg";
+import tenderSupport from "./photos/tenderSupport.jpg";
+import efficientSite from "./photos/efficientSite.jpg";
 
 /* iso */
 import ce from "./iso/ce.png";
@@ -77,15 +80,17 @@ export const logos = {
 };
 
 export const photos = {
-  engeneer,
   iceCube,
   shs,
   splash,
   integration,
   projects,
-  googleMap,
   cemsCabinet,
   gasMetering,
+  fieldServices,
+  iceProduct,
+  tenderSupport,
+  efficientSite,
 };
 
 export const iso = {

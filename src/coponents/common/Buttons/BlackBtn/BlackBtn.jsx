@@ -13,6 +13,6 @@ export const BlackBtn = ({ text, linkTo }) => {
 };
 
 BlackBtn.propTypes = {
-  text: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  linkTo: PropTypes.string,
 };
