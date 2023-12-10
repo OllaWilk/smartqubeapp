@@ -1,0 +1,110 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.navigation {
+  @include flex(row, center, center);
+  background-color: var(--color-dark);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+
+  @include md-max {
+    padding: 10px;
+  }
+
+  .navWrap {
+    @include flex(row, center, space-between);
+  }
+
+  .navigationLogo {
+    margin-right: 50px;
+    @include flex(column, center, center);
+
+    img {
+      width: 80%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include sm-max {
+      margin-right: 0;
+      width: 60px;
+    }
+  }
+
+  .navigationList {
+    @include flex(row, center, flex-end);
+    text-transform: uppercase;
+    position: relative;
+
+    @include lg-max {
+      display: none;
+    }
+
+    .dropdownMenu {
+      font-weight: "bold";
+      color: var(--color-light);
+      cursor: pointer;
+      height: 100%;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--color-main);
+      }
+
+      p {
+        padding: 20px 0;
+      }
+
+      .navigationList {
+        background-color: var(--color-dark);
+        position: absolute;
+        @include flex(column, center, center);
+
+        li {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  .sidebarIcon {
+    display: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    padding: 30px;
+
+    @include lg-max {
+      display: block;
+    }
+
+    img {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    background-color: var(--color-dark);
+    top: 100%;
+    right: 0;
+    transition: transform 0.5s ease-out;
+    z-index: -20;
+    @include flex(column, flex-start, flex-start);
+
+    @include md-max {
+      padding: 0 0px 20px 0px;
+      @include flex(row, center, center);
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include lg-min {
+      display: none;
+    }
+  }
+}

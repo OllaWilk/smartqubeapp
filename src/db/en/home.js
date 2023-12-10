@@ -6,7 +6,7 @@ export const home = {
     slogan: "WE WILL DESIGN THE FUTURE",
     description:
       "SMARTqube sp z.o.o is a team of engineers who passionately design the future using the latest technological solutions.",
-    greenBtn: "contact us",
+    greenBtn: "contact",
     transparentBtn: "about us",
   },
   about: {

@@ -7,18 +7,24 @@ import {
   NotFound,
   LeggalPrivacy,
   Contact,
+  Footer,
+  Navigation,
 } from "./components/views/index";
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Redirect redirectUrl={"home"} />} />
-      <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/aboutus" element={<About />} />
-      <Route path="/leggalandprivacy" element={<LeggalPrivacy />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Redirect redirectUrl={"home"} />} />
+        <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutus" element={<About />} />
+        <Route path="/leggalandprivacy" element={<LeggalPrivacy />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };

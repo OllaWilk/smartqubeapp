@@ -1,0 +1,97 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.footer {
+  background-color: var(--color-dark);
+  padding: 50px 0;
+  color: var(--color-light);
+
+  .navWrap {
+    @include flex(row, center, space-between);
+
+    @include sm-max {
+      flex-direction: column;
+    }
+
+    .linksWrap {
+      @include flex(row, flex-start, space-between);
+      width: 70%;
+      flex-wrap: wrap;
+
+      @include sm-max {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 20px 0;
+        width: 100%;
+      }
+
+      a,
+      p {
+        color: var(--color-light);
+        text-align: left;
+        transition: var(--transition);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--color-main);
+        }
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+
+        @include sm-max {
+          padding: 5px 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .certificatesWrap {
+    @include flex(row, center, space-between);
+    padding: 40px 0 40px 0;
+  }
+
+  .isoWrap {
+    @include flex(row, center, space-between);
+
+    @include sm-max {
+      flex-direction: column;
+
+      p {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .expandedItem {
+    background-color: lighten($color: black, $amount: 10);
+
+    @include sm-max {
+      width: 80vw;
+      text-align: center;
+    }
+
+    li {
+      padding: 10px;
+      text-align: left;
+
+      @include sm-max {
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.logoWrap {
+  @include sm-max {
+    padding: 20px;
+  }
+}
