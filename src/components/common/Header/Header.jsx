@@ -5,7 +5,7 @@ import {
   HeadlineSplash,
   MainColorBtn,
   TransparentBtn,
-} from "../../common/index";
+} from "../index";
 
 import styles from "./Header.module.scss";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ArticleWithSubstract } from "../../common/index";
+import { ArticleWithSubstract } from "../index";
 import styles from "./AboutUs.module.scss";
 
 export const AboutUs = ({

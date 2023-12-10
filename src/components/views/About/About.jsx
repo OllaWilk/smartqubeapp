@@ -2,15 +2,11 @@ import React from "react";
 import { about } from "../../../db/en/about";
 import {
   Header,
-  //   AboutUs,
-  //   Offer,
   CallToAction,
   ImageHeaderColumns,
   ImgOnTheLeftAndTextOnRight,
-  //   OurMission,
 } from "../../common/index";
 
-// import { photos } from "../../images";
 import styles from "./About.module.scss";
 
 export const About = () => {

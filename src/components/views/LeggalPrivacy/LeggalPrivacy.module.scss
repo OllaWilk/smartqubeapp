@@ -1,0 +1,77 @@
+@import "../../../styles/mixins";
+
+.callToActionBackground {
+  background-color: var(--color-green-dark);
+  padding: 70px 0;
+}
+
+.leggalPrivacy {
+  overflow: hidden;
+
+  .sectionWrap {
+    padding: 20px 0;
+    @include flex(row, center, space-between);
+
+    .pageDescription {
+      width: 30%;
+      padding: 20px 0;
+      font-weight: var(--bold);
+      color: var(--color-main);
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .documentsWrap {
+      @include flex(row, flex-start, space-between);
+      flex-wrap: wrap;
+      padding-bottom: 30px;
+      width: 100%;
+
+      .card {
+        @include flex(column, space-between, space-between);
+        width: 45%;
+        height: 350px;
+        border: 1px solid #ccc;
+        margin: 16px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+
+        @include lg-max {
+          height: 400px;
+        }
+
+        @include md-max {
+          padding: 0 20px 20px 20px;
+          width: 100%;
+          height: auto;
+        }
+
+        @media screen and (min-width: 766px) and (max-width: 940px) {
+          width: 49%;
+        }
+
+        .btnDownloadWrap {
+          @include flex(column, flex-start, space-between);
+          padding: 0 30px 30px 30px;
+
+          @include md-max {
+            padding: 0 10px 10px 10px;
+          }
+
+          .downloadLink {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: var(--color-green-dark);
+            font-weight: bold;
+            transition: var(--transition);
+
+            &:hover {
+              color: var(--color-main);
+            }
+          }
+        }
+      }
+    }
+  }
+}

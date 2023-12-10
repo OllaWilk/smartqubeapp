@@ -1,4 +1,5 @@
 export { Header } from "./Header/Header";
+export { GreenHeader } from "./GreenHeader/GreenHeader";
 export { AboutUs } from "./AboutUs/AboutUs";
 export { ArticleWithSubstract } from "./ArticleWithSubstract/ArticleWithSubstract";
 export { Offer } from "./Offer/Offer";
@@ -24,3 +25,4 @@ export { BlackBtn } from "./Buttons/BlackBtn/BlackBtn";
 
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";
+export { ImgWithTitleAndDescriptionBellowCart } from "./Carts/ImgWithTitleAndDescriptionBellowCart/ImgWithTitleAndDescriptionBellowCart";
