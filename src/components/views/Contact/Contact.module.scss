@@ -1,0 +1,37 @@
+@import "../../../styles/mixins";
+
+.contact {
+  background-image: url("../../../images/photos/splash.jpg");
+
+  @include splash;
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .contactPage {
+    @include flex(row, flex-start, space-between);
+    background-color: var(--color-light);
+    border-radius: 4px;
+    width: 70vw;
+    margin: 120px auto 30px auto;
+
+    @include lg-max {
+      width: 80vw;
+    }
+
+    .contactForm {
+      background-color: var(--color-light);
+    }
+
+    @include md-max {
+      @include flex(column-reverse, center, space-between);
+      margin: 120px auto 30px auto;
+      width: 90vw;
+    }
+  }
+}
+
+.requestToCall {
+  background-color: var(--color-green-dark);
+}

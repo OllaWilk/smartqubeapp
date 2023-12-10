@@ -6,6 +6,7 @@ import {
   Redirect,
   NotFound,
   LeggalPrivacy,
+  Contact,
 } from "./components/views/index";
 
 export const App = () => {
@@ -16,6 +17,7 @@ export const App = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/aboutus" element={<About />} />
       <Route path="/leggalandprivacy" element={<LeggalPrivacy />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

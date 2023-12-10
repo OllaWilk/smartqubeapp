@@ -1,0 +1,80 @@
+@import "../../../../styles/mixins";
+
+.formBox {
+  @include flex(column, flex-start, space-between);
+  width: 70%;
+  padding: 20px 40px;
+
+  @include lg-max {
+    padding: 20px 20px;
+  }
+
+  @include md-max {
+    width: 100%;
+  }
+
+  @include sm-max {
+    align-items: center;
+  }
+
+  .contactForm {
+    width: 100%;
+    overflow: hidden;
+
+    form {
+      @include flex(row, stretch, space-between);
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      @include sm-max {
+        margin-top: 20px;
+      }
+
+      .customImput {
+        border: 0;
+        border-bottom: 2px solid var(--color-dark);
+        box-shadow: none;
+        resize: none;
+        padding: 20px 11px;
+        outline: none;
+        font-size: 16px;
+        font-family: var(--text-font);
+      }
+
+      input,
+      select {
+        width: 45%;
+        appearance: none;
+
+        @include xl-max {
+          width: 100%;
+        }
+      }
+
+      textarea {
+        min-height: 200px;
+        width: 100%;
+      }
+    }
+
+    .formBtn {
+      font-size: var(--font-d-text);
+      font-weight: var(--semi-bold);
+      padding: 10px 30px;
+      border: 2px solid var(--color-dark);
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      margin-top: 30px;
+      width: 100%;
+
+      &:hover {
+        background-color: var(--color-green-dark);
+        border-color: var(--color-green-dark);
+      }
+    }
+  }
+}

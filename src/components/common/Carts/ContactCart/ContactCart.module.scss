@@ -1,0 +1,73 @@
+@import "../../../../styles/mixins";
+
+.contactBox {
+  @include flex(column, flex-start, space-between);
+  width: 40%;
+  height: 100%;
+  padding: 20px 40px;
+
+  @include lg-max {
+    padding: 20px 20px;
+  }
+
+  @include md-max {
+    justify-content: space-between;
+    width: 100%;
+
+    &:nth-child(3) {
+      width: 70%;
+    }
+  }
+
+  @include sm-max {
+    flex-direction: column;
+    width: 100%;
+
+    &:nth-child(3) {
+      width: 100%;
+    }
+  }
+
+  .cartWrap {
+    @include flex(column, center, space-between);
+    width: 100%;
+    height: 100%;
+
+    .cart {
+      @include flex(row, center, flex-start);
+      padding: 20px 0;
+      width: 100%;
+
+      @include lg-max {
+        flex-direction: column;
+        padding: 10px 0;
+      }
+
+      @include sm-max {
+        margin-top: 20px;
+      }
+
+      img {
+        margin: 0px 1.5rem 0px 0;
+        width: 30px;
+        object-fit: cover;
+
+        @include lg-max {
+          margin: 1rem 0;
+        }
+
+        @include sm-max {
+          margin: 0px 0px 1.5rem 0;
+        }
+      }
+
+      .textWrap {
+        text-align: left;
+
+        @include lg-max {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
