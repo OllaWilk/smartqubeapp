@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { About, Home, Redirect } from "./coponents/views/index";
+import { About, Home, Redirect, NotFound } from "./coponents/views/index";
 
 export const App = () => {
   return (
@@ -9,6 +9,7 @@ export const App = () => {
       <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
       <Route path="/home" element={<Home />} />
       <Route path="/aboutus" element={<About />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
