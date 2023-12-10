@@ -1,0 +1,81 @@
+@import "../../../../styles/mixins";
+
+.callToAction {
+  padding: 70px 0;
+  width: 100%;
+  overflow: hidden;
+
+  .headlingsWrap {
+    color: var(--color-light);
+    text-align: left;
+    font-family: var(--header-font);
+    width: 20%;
+
+    .subtitleCall {
+      font-size: var(--font-d-section-header);
+      line-height: 40px;
+      font-weight: var(--normal);
+      width: 100vw;
+
+      @include md-max {
+        font-size: var(--font-d-section-subtitle);
+        line-height: 26px;
+      }
+    }
+
+    p {
+      margin: 20px 0;
+    }
+  }
+
+  .formRequest {
+    @include flex(row, center, space-between);
+    flex-wrap: wrap;
+    width: 100%;
+
+    input,
+    select {
+      appearance: none;
+
+      border: none;
+      box-shadow: none;
+      font-family: var(--text-font);
+      font-size: 16px;
+      outline: none;
+      padding: 0px 10px;
+      line-height: 1;
+      height: 48px;
+      resize: none;
+      text-decoration: none;
+      width: 300px;
+      margin-top: 22px;
+
+      @include sm-max {
+        width: 100%;
+      }
+    }
+
+    .submitBtn {
+      margin-top: 22px;
+      background-color: var(--color-dark);
+      border: none;
+      color: var(--color-light);
+      cursor: pointer;
+      font-size: var(--font-d-text);
+      font-weight: var(--semi-bold);
+      letter-spacing: 1px;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      transition: var(--transition);
+      height: 48px;
+
+      &:hover {
+        background-color: lighten($color: black, $amount: 10);
+      }
+
+      @include sm-max {
+        width: 100%;
+      }
+    }
+  }
+}

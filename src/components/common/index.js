@@ -8,6 +8,9 @@ export { OurMission } from "./OurMission/OurMission";
 export { ImgOnTheLeftAndTextOnRight } from "./ImgOnTheLeftAndTextOnRight/ImgOnTheLeftAndTextOnRight";
 export { ImageBox } from "./ImageBox/ImageBox";
 export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
+/*forms*/
+export { ContactForm } from "./Forms/ContactForm/ContactForm";
+export { RequestCall } from "./Forms/RequestCall/RequestCall";
 
 /* headers */
 export { SubtitleSplash } from "./Titles/SubtitleSplash/SubtitleSplash";
@@ -26,3 +29,4 @@ export { BlackBtn } from "./Buttons/BlackBtn/BlackBtn";
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";
 export { ImgWithTitleAndDescriptionBellowCart } from "./Carts/ImgWithTitleAndDescriptionBellowCart/ImgWithTitleAndDescriptionBellowCart";
+export { ContactCart } from "./Carts/ContactCart/ContactCart";
