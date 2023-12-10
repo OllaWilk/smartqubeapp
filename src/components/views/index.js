@@ -6,3 +6,5 @@ export { Redirect } from "./Redirect/Redirect";
 // export { Portfolio } from "./Portfolio/Portfolio";
 // export { Support } from "./Support/Support";
 export { LeggalPrivacy } from "./LeggalPrivacy/LeggalPrivacy";
+export { Footer } from "./Footer/Footer";
+export { Navigation } from "./Navigation/Navigation";
