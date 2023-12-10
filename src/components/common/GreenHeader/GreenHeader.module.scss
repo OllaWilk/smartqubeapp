@@ -1,0 +1,10 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable.scss";
+@import "../../../styles/typography";
+
+.headerBackground {
+  background-color: var(--color-green-dark);
+  @include splash;
+  height: auto;
+  @include flex(column, center, center);
+}

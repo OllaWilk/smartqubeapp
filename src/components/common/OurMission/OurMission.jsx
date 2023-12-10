@@ -1,5 +1,5 @@
 import React from "react";
-import { ImgOnTheLeftAndTextOnRight } from "../../common/index";
+import { ImgOnTheLeftAndTextOnRight } from "../index";
 import PropTypes from "prop-types";
 
 import styles from "./OurMission.module.scss";

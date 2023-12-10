@@ -1,5 +1,5 @@
 import React from "react";
-import { BlackBtn } from "../../common/index";
+import { BlackBtn } from "../index";
 import PropTypes from "prop-types";
 
 import styles from "./CallToAction.module.scss";

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CartWithImg, SectionTitle } from "../../common/index";
+import { CartWithImg, SectionTitle } from "../index";
 
 import styles from "./Offer.module.scss";
 
