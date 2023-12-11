@@ -3,15 +3,15 @@ import { logos, iso } from "../../images";
 export const navigationNavbar = [
   "home",
   "about",
-  "support",
-  "legal&privacy",
-  // { portfolio: ['products', 'integration', 'services'] },
+  "solutions",
+  "technical",
+  { portfolio: ["products", "integration", "services"] },
   "contact",
 ];
 
 export const footer = {
   logo: {
-    imgUrl: logos.logo100px,
+    imgUrl: logos.logo90px,
     companyName: "SMARTqube Sp z o.o.",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Wrocław, Poland",

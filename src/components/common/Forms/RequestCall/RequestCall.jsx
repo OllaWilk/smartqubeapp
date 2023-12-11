@@ -40,7 +40,6 @@ export const RequestCall = () => {
     }));
 
     if (country && countryPrefixes[country]) {
-      console.log(countryPrefixes[country]);
       setForm((prevState) => ({
         ...prevState,
         phoneNumber: countryPrefixes[country],
@@ -50,8 +49,6 @@ export const RequestCall = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-
-    console.log("data to send:", form);
 
     setForm({
       name: "",

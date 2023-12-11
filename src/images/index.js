@@ -24,6 +24,7 @@ import shield from "./icons/i-shield.png";
 /* logo */
 import logo from "./logo/logo.png";
 import logo100px from "./logo/logo100px.png";
+import logo90px from "./logo/logo90px.png";
 
 /* photos */
 
@@ -77,6 +78,7 @@ export const icons = {
 export const logos = {
   logo,
   logo100px,
+  logo90px,
 };
 
 export const photos = {

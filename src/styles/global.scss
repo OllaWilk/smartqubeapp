@@ -23,7 +23,6 @@ body {
 
 .container {
   width: 70vw;
-  // max-width: 1300px;
   margin: 0 auto;
 
   @media screen and (max-width: 1200px) {
@@ -56,11 +55,11 @@ button {
   transform: translateX(0);
 }
 
-.selectedBtn {
-  border-bottom: 2px solid var(--color-main);
+.active {
+  color: var(--color-main);
+  font-weight: var(--bold);
 
-  @include md-max {
-    border-bottom: none;
+  &:hover {
+    color: var(--color-light);
   }
-  background-color: lighten($color: black, $amount: 10);
 }

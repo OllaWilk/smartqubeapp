@@ -20,7 +20,7 @@ export const App = () => {
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/leggalandprivacy" element={<LeggalPrivacy />} />
+        <Route path="/technical" element={<LeggalPrivacy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
