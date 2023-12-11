@@ -2,7 +2,7 @@
 @import "../../../../styles/typography";
 
 .porftolioCart {
-  width: 320px;
+  width: 330px;
   border-radius: 1px;
 
   @include lg-max {
@@ -31,6 +31,10 @@
     text-align: left;
     padding: 20px;
     background-color: #fff;
+
+    @include sm-max {
+      height: auto;
+    }
 
     h3 {
       z-index: 9;

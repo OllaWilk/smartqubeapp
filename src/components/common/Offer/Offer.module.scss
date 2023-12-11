@@ -1,7 +1,7 @@
 @import "../../../styles/mixins";
 
 .offer {
-  @include flex(column, center, space-between);
+  @include flex(column, center, flex-start);
   padding: 70px 0 90px 0;
   overflow: hidden;
 

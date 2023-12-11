@@ -2,7 +2,7 @@ import { logos, iso } from "../../images";
 
 export const navigationNavbar = [
   "home",
-  "about us",
+  "about",
   "support",
   "legal&privacy",
   // { portfolio: ['products', 'integration', 'services'] },
