@@ -17,8 +17,13 @@
 
   .textWrap {
     width: 48%;
+
     @include md-max {
       width: 100%;
+    }
+
+    p {
+      margin-top: 20px;
     }
   }
 }
