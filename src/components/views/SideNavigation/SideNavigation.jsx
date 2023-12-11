@@ -22,12 +22,6 @@ export const SideNavigation = ({ item, index }) => {
           key={index}
           to={`/${item.toLowerCase()}`}
           className={styles.link}
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isActive ? "#5dbb4e" : "white",
-            };
-          }}
         >
           {item}
         </NavLink>
@@ -51,12 +45,6 @@ export const SideNavigation = ({ item, index }) => {
                   key={`dropdownBtnNav-${subIndex}`}
                   to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
                   className={styles.link}
-                  style={({ isActive }) => {
-                    return {
-                      fontWeight: isActive ? "bold" : "",
-                      color: isActive ? "#5dbb4e" : "white",
-                    };
-                  }}
                 >
                   {subItem}
                 </NavLink>

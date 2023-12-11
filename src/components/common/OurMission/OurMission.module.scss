@@ -2,10 +2,10 @@
 
 .mission {
   @include flex(row, center, center);
-  // padding: 50px 0 90px 0;
+  padding: 50px 0 90px 0;
   text-align: justify;
   text-justify: inter-word;
-  height: 60vh;
+  min-height: 60vh;
 
   h2 {
     color: var(--color-dark);

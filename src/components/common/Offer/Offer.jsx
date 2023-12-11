@@ -5,7 +5,6 @@ import { CartWithImg, SectionTitle } from "../index";
 import styles from "./Offer.module.scss";
 
 export const Offer = ({ offers, title, subtitle }) => {
-  console.log(offers.map((offer) => console.log(offer.button[0])));
   return (
     <div className={`${styles.offer} container`}>
       <SectionTitle h2={title} h3={subtitle} />

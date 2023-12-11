@@ -21,7 +21,8 @@
   /* mobie */
   --font-m-text: 14px;
   --font-m-subtitle: 18px;
-  --font-m-header: 46px;
+  // --font-m-header: 46px;
+  --font-m-header: 2rem;
 
   /* desctop */
   --font-d-btn: 14px;
@@ -33,7 +34,8 @@
   --font-d-header: 56px;
 
   /* Transition */
-  --transition: 0.3s linear;
+  --transition: 0.75s cubic-bezier(0.71, 0.01, 0.24, 0.99);
+  --deley: 0.5s;
 
   /* Response */
 
