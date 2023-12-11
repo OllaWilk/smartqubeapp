@@ -7,7 +7,7 @@ export const home = {
     description:
       "SMARTqube sp z.o.o is a team of engineers who passionately design the future using the latest technological solutions.",
     greenBtn: "contact",
-    transparentBtn: "about us",
+    transparentBtn: "about",
   },
   about: {
     subtitle: "welcome to",

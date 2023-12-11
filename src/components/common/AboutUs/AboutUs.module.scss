@@ -1,7 +1,8 @@
 @import "../../../styles/mixins";
 
 .about {
-  @include flex(column, flex-end, center);
+  @include flex(column, center, center);
   overflow: hidden;
-  padding: 70px 0 90px 0;
+  // padding: 70px 0 90px 0;
+  height: 60vh;
 }
