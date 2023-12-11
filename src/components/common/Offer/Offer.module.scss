@@ -3,7 +3,6 @@
 .offer {
   @include flex(column, center, space-between);
   padding: 70px 0 90px 0;
-  flex-wrap: wrap;
   overflow: hidden;
 
   h2 {
@@ -15,20 +14,17 @@
   }
 
   .offerCart {
-    @include flex(row, flex-start, space-between);
+    @include flex(row, center, space-between);
+    flex-wrap: wrap;
+    margin-top: 50px;
     width: 100%;
-    padding: 30px 0;
 
-    @include md-max {
-      flex-direction: column;
-    }
+    gap: 20px;
 
-    @include lg-max {
-      flex-wrap: wrap;
-    }
-
-    @include lg-min {
-      flex-wrap: wrap;
+    @include sm-max {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      gap: 100px;
     }
   }
 }

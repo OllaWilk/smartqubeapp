@@ -8,14 +8,13 @@
     color: var(--color-main);
     line-height: 29px;
     font-weight: var(--bold);
-    margin-top: 15px;
   }
 
   .quoteTitle {
     font-size: var(--font-d-section-header);
     line-height: 40px;
     font-weight: var(--superbold);
-    padding: 20px 0;
+    padding-top: 20px;
     width: 100%;
 
     &::after {
