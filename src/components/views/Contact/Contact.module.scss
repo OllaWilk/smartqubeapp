@@ -2,36 +2,38 @@
 
 .contact {
   background-image: url("../../../images/photos/splash.jpg");
-
   @include splash;
 
   &::before {
     background-color: rgba(0, 0, 0, 0.9);
   }
+}
 
-  .contactPage {
-    @include flex(row, flex-start, space-between);
-    background-color: var(--color-light);
-    border-radius: 4px;
-    width: 70vw;
-    margin: 120px auto 30px auto;
+.header {
+  background-color: var(--color-green-dark);
+  @include flex(column, center, center);
+  margin-bottom: 70px;
+}
 
-    @include lg-max {
-      width: 80vw;
-    }
+.contactPage {
+  @include flex(row, stretch, space-between);
 
-    .contactForm {
-      background-color: var(--color-light);
-    }
-
-    @include md-max {
-      @include flex(column-reverse, center, space-between);
-      margin: 120px auto 30px auto;
-      width: 90vw;
-    }
-  }
+  background-color: white;
+  padding: 30px;
+  border-radius: 4px;
 }
 
 .requestToCall {
+  margin-top: 70px;
   background-color: var(--color-green-dark);
+}
+
+.text {
+  @extend .text;
+  color: var(--color-light);
+  padding-bottom: 27px;
+
+  @include sm-max {
+    padding-bottom: 0;
+  }
 }

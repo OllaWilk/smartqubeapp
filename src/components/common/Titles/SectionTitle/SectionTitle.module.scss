@@ -4,16 +4,16 @@
   font-family: var(--header-font);
 
   .sectionTitle {
-    font-size: var(--font-d-section-subtitle);
+    font-size: var(--fs-section-subtitle);
     color: var(--color-main);
     line-height: 29px;
-    font-weight: var(--bold);
+    font-weight: var(--fw-900);
   }
 
   .quoteTitle {
     font-size: var(--font-d-section-header);
     line-height: 40px;
-    font-weight: var(--superbold);
+    font-weight: var(--fw-900);
     padding-top: 20px;
     width: 100%;
 

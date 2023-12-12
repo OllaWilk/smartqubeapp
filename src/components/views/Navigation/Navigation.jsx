@@ -74,8 +74,10 @@ export const Navigation = () => {
         }
       >
         <div className={`${styles.navWrap} container`}>
-          <Link to="/home" className={styles.navigationLogo}>
-            <img src={logos.logo90px} alt="Logo" />
+          <Link to="/home">
+            <h1 className={styles.navigationLogo}>
+              <img src={logos.logo90px} alt="Smartqube" />
+            </h1>
           </Link>
           <nav className={styles.navigationList}>
             {navigationNavbar.map((item, index) => renderNavItem(item, index))}

@@ -14,7 +14,7 @@
 body {
   background-color: var(--color-light);
   font-family: var(--text-font);
-  font-size: var(--font-d-text);
+  font-size: var(--fs-text);
   color: var(--color-dark);
   letter-spacing: 1px;
   text-align: center;
@@ -57,7 +57,7 @@ button {
 
 .active {
   color: var(--color-main);
-  font-weight: var(--bold);
+  font-weight: var(--fw-900);
 
   &:hover {
     color: var(--color-light);

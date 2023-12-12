@@ -2,10 +2,10 @@
 @import "../../../../styles/typography";
 
 .headline {
-  @extend .h1;
+  @extend .h2;
 
   color: var(--color-light);
-  padding: 0px 0 31px 0;
+  margin: 27px 0 60px 0;
 
   @include sm-max {
     padding: 0px 0 0px 0;
