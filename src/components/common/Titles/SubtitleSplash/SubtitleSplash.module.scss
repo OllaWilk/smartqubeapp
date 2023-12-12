@@ -2,6 +2,6 @@
 @import "../../../../styles/typography";
 
 .subtitle {
-  @extend .h2;
+  @extend .h3;
   color: var(--color-main);
 }

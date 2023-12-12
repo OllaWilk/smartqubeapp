@@ -6,14 +6,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 999;
   width: 100%;
   transition: var(--transition);
-
-  @include md-max {
-    padding: 10px;
-  }
 
   .navWrap {
     @include flex(row, center, space-between);
@@ -22,9 +18,12 @@
   }
 
   .navigationLogo {
-    height: auto;
-    width: 80px;
-    margin-top: 5px;
+    @include flex(column, center, center);
+    position: relative;
+    min-width: 70px;
+    z-index: 2;
+    font-size: var(--fs-1);
+    margin: 0.19em 0;
 
     img {
       @include img;
@@ -80,7 +79,7 @@
   .sidebarIcon {
     display: none;
     cursor: pointer;
-    width: auto;
+    width: 20px;
     height: 20px;
 
     @include lg-max {
@@ -106,7 +105,7 @@
 }
 
 .navigationActive {
-  padding: 5px 0;
+  padding: 0px 0;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
 }

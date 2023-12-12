@@ -8,7 +8,8 @@
   .splashBackgroundImg {
     background-image: url("../../../images/photos/splash.jpg");
     @include splash;
-    height: 688px;
+
+    height: 80vh;
     @include flex(column, center, center);
 
     @include sm-max {
@@ -22,8 +23,9 @@
 
   .companyWrap {
     columns: 200px 2;
-    column-gap: 40px;
-    padding: 20px;
+    column-gap: 60px;
+    padding: 70px 0 90px 0;
+    min-height: 60vh;
   }
 
   .offers {
@@ -52,7 +54,7 @@
         height: 100%;
 
         .cartNumb {
-          font-weight: var(--bold);
+          font-weight: var(--fw-900);
           font-size: 25px;
           margin-bottom: 12px;
         }

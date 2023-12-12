@@ -2,9 +2,9 @@
 @import "../../../../styles/typography";
 
 .headline {
-  @extend .h2;
+  @extend .h3;
   color: var(--color-main);
-  font-weight: var(--superbold);
+  font-weight: var(--fw-900);
   font-size: var(--font-d-section-header);
   line-height: 40px;
   margin-top: 20px;

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import styles from "./SubtitleSplash.module.scss";
 
 export const SubtitleSplash = ({ subtitle }) => {
-  return <h2 className={styles.subtitle}>{subtitle}</h2>;
+  return <h3 className={styles.subtitle}>{subtitle}</h3>;
 };
 
 SubtitleSplash.propTypes = {

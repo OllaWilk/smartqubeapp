@@ -1,17 +1,19 @@
 import React from "react";
-import { DescriptionSubtitle } from "../../../common/index";
-import { contact } from "../../../../db/en/contact";
+import PropTypes from "prop-types";
+
 import styles from "./ContactCart.module.scss";
 
-export const ContactCart = () => {
-  const { contactCartTitle, contactCart } = contact;
+export const ContactCart = ({ cartDescription, cartSubtitle, contactCart }) => {
   return (
     <div className={styles.contactBox}>
-      <DescriptionSubtitle text={contactCartTitle} />
-      <div className={styles.cartWrap}>
+      <p className={styles.subtitle}>{cartSubtitle}</p>
+      <p className={styles.cartDescription}>{cartDescription}</p>
+      <div className={styles.contactList}>
         {contactCart.map((item, index) => (
-          <div key={`contactCart-${index}`} className={styles.cart}>
-            {item.imgUrl && <img src={item.imgUrl} alt="icon" />}
+          <div key={`contactCart-${index}`} className={styles.contactListLtem}>
+            <div className={styles.contactItemIcon}>
+              {item.imgUrl && <img src={item.imgUrl} alt="icon" />}
+            </div>
             <div className={styles.textWrap}>
               {item.companyName && <p>{item.companyName}</p>}
               {item.street && <p>{item.street}</p>}
@@ -29,4 +31,24 @@ export const ContactCart = () => {
       </div>
     </div>
   );
+};
+
+ContactCart.propTypes = {
+  cartDescription: PropTypes.string,
+  cartSubtitle: PropTypes.string,
+  contactCart: PropTypes.arrayOf(
+    PropTypes.shape({
+      imgUrl: PropTypes.string.isRequired,
+      companyName: PropTypes.string,
+      street: PropTypes.string,
+      zip: PropTypes.string,
+      mail: PropTypes.string,
+      hours: PropTypes.string,
+      workWeek: PropTypes.string,
+      weekend: PropTypes.string,
+      VAT: PropTypes.string,
+      USDIBAN: PropTypes.string,
+      EURIBAN: PropTypes.string,
+    })
+  ).isRequired,
 };

@@ -1,20 +1,25 @@
 import React, { useState } from "react";
+import { PhoneNumberUtil } from "google-libphonenumber";
+import PropTypes from "prop-types";
+
 import { PhoneInput } from "react-international-phone";
-import { DescriptionSubtitle } from "../../../common/index";
 import "react-international-phone/style.css";
 
 import styles from "./ContactForm.module.scss";
 
-export const ContactForm = () => {
+export const ContactForm = ({ contactForm }) => {
+  const { name, companyName, email, position, phoneNumber, message } =
+    contactForm;
+
   const [formData, setFormData] = useState({
     name: "",
     country: "",
     companyName: "",
     job: "",
     email: "",
-    phoneNumber: "",
     message: "",
   });
+
   const [phone, setPhone] = useState("");
 
   const handleChange = (e) => {
@@ -22,31 +27,8 @@ export const ContactForm = () => {
     setFormData({
       ...formData,
       [name]: value,
+      phone: phone,
     });
-  };
-
-  const handleCountryChange = (e) => {
-    const country = e.target.value;
-    setFormData((prevState) => ({ ...prevState, country }));
-
-    const countryPrefixes = {
-      usa: "+1",
-      uk: "+44",
-      canada: "+1",
-      // Dodaj więcej prefiksów dla innych krajów
-    };
-
-    setFormData((prevState) => ({
-      ...prevState,
-      phoneNumber: "",
-    }));
-
-    if (country && countryPrefixes[country]) {
-      setFormData((prevState) => ({
-        ...prevState,
-        phoneNumber: countryPrefixes[country],
-      }));
-    }
   };
 
   const handleSubmit = (e) => {
@@ -57,66 +39,70 @@ export const ContactForm = () => {
   return (
     <>
       <div className={styles.formBox}>
-        <DescriptionSubtitle text={"SAY SOMETHING"} />
         <div className={styles.contactForm}>
           <form onSubmit={handleSubmit}>
-            <input
-              className={styles.customImput}
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Enter youre name "
-            />
-            <PhoneInput
-              defaultCountry="us"
-              value={phone}
-              onChange={(phone) => setPhone(phone)}
-            />
-            <input
-              className={styles.customImput}
-              type="text"
-              name="companyName"
-              value={formData.companyName}
-              onChange={handleChange}
-              placeholder="Enter youre company name"
-              required
-            />
-            <input
-              className={styles.customImput}
-              type="text"
-              name="job"
-              value={formData.job}
-              onChange={handleChange}
-              placeholder="Enter youre  job position"
-            />
-
-            <input
-              className={styles.customImput}
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Enter youre valid email"
-            />
-            <input
-              className={styles.customImput}
-              type="tel"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              placeholder="Enter youre phone (e.g. +14155552675)"
-            />
-            <textarea
-              className={styles.customImput}
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Enter youre message"
-              required
-            />
+            <ul>
+              <li>
+                <input
+                  className={styles.customImput}
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder={name}
+                />
+              </li>
+              <li>
+                <PhoneInput
+                  defaultCountry="us"
+                  value={phone}
+                  onChange={(phone) => setPhone(phone)}
+                />
+              </li>
+              <li>
+                <input
+                  className={styles.customImput}
+                  type="text"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  placeholder={companyName}
+                  required
+                />
+              </li>
+              <li>
+                <input
+                  className={styles.customImput}
+                  type="text"
+                  name="job"
+                  value={formData.job}
+                  onChange={handleChange}
+                  placeholder={position}
+                />
+              </li>
+              <li>
+                <input
+                  className={styles.customImput}
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder={email}
+                />
+              </li>
+              <li>
+                <textarea
+                  className={styles.customImput}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder={message}
+                  required
+                />
+              </li>
+            </ul>
             <button className={styles.formBtn} type="submit">
               Submit
             </button>
@@ -125,4 +111,15 @@ export const ContactForm = () => {
       </div>
     </>
   );
+};
+
+ContactForm.propTypes = {
+  contactForm: PropTypes.shape({
+    name: PropTypes.string,
+    companyName: PropTypes.string,
+    email: PropTypes.string,
+    position: PropTypes.string,
+    phoneNumber: PropTypes.string,
+    message: PropTypes.string,
+  }).isRequired,
 };

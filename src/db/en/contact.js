@@ -1,7 +1,10 @@
 import { icons } from "../../images/index";
 
 export const contact = {
-  contactCartTitle: "get in touch",
+  contactTitle: "Do You Have Any Project?",
+  cartSubtitle: "Please Drop a Message",
+  cartDescription:
+    "Get in touch and let us know how we can help. Fill out the form and we'll be in touch as soon as possible.",
   contactCart: [
     {
       imgUrl: icons.location,
@@ -25,4 +28,12 @@ export const contact = {
       EURIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
     },
   ],
+  contactForm: {
+    name: "Enter Your name",
+    companyName: "Enter Your company name",
+    email: "Enter Your valid email",
+    position: "Enter Your job position",
+    phoneNumber: "Enter Your phone number",
+    message: "Enter Your message",
+  },
 };

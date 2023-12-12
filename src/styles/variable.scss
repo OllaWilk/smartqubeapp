@@ -5,33 +5,36 @@
   --color-light: #ffffff;
   --color-main: #5dbb4e;
   --color-green-dark: #0d5401;
-  --color-grey: #e8e8e8;
+  --color-grey: #eceaea;
 
-  /* Fonts */
+  /* Typography */
   --header-font: "Oswald", sans-serif;
   --text-font: "Lato", sans-serif;
 
-  --superbold: 900;
-  --bold: 700;
-  --semi-bold: 600;
-  --normal: 400;
-  --medium-light: 300;
-  --light: 200;
+  --fw-900: 900;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-400: 400;
+  --fw-300: 300;
+  --fw-200: 200;
+
+  --fs-text: 16px;
+  --fs-section-subtitle: 1.5rem;
+  --fs-1: 2rem;
+  --fs-2: calc(1.813rem + 1vw);
+  --fs-3: calc(1.313rem + 1vw);
+  --fs-4: 1.7rem;
+  --fs-5: 1rem;
+  --fs-6: 0.813rem;
+  --fs-7: 0.75rem;
 
   /* mobie */
-  --font-m-text: 14px;
   --font-m-subtitle: 18px;
-  // --font-m-header: 46px;
-  --font-m-header: 2rem;
 
   /* desctop */
   --font-d-btn: 14px;
-  --font-d-text: 16px;
   --font-d-slide: 20px;
-  --font-d-section-subtitle: 24px;
-  --font-d-subtitle: 26px;
   --font-d-section-header: 36px;
-  --font-d-header: 56px;
 
   /* Transition */
   --transition: 0.75s cubic-bezier(0.71, 0.01, 0.24, 0.99);

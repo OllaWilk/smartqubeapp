@@ -2,12 +2,9 @@
 
 .formBox {
   @include flex(column, flex-start, space-between);
-  width: 70%;
   padding: 20px 40px;
-
-  @include lg-max {
-    padding: 20px 20px;
-  }
+  border-radius: 8px;
+  width: 70%;
 
   @include md-max {
     width: 100%;
@@ -21,45 +18,9 @@
     width: 100%;
     overflow: hidden;
 
-    form {
-      @include flex(row, stretch, space-between);
-      flex-wrap: wrap;
-      margin-top: 20px;
-
-      @include sm-max {
-        margin-top: 20px;
-      }
-
-      .customImput {
-        border: 0;
-        border-bottom: 2px solid var(--color-dark);
-        box-shadow: none;
-        resize: none;
-        padding: 20px 11px;
-        outline: none;
-        font-size: 16px;
-        font-family: var(--text-font);
-      }
-
-      input,
-      select {
-        width: 45%;
-        appearance: none;
-
-        @include xl-max {
-          width: 100%;
-        }
-      }
-
-      textarea {
-        min-height: 200px;
-        width: 100%;
-      }
-    }
-
     .formBtn {
-      font-size: var(--font-d-text);
-      font-weight: var(--semi-bold);
+      //   font-size: var(--font-text);
+      font-weight: var(--fw-600);
       padding: 10px 30px;
       border: 2px solid var(--color-dark);
       background-color: var(--color-dark);
@@ -76,5 +37,36 @@
         border-color: var(--color-green-dark);
       }
     }
+  }
+}
+
+.customImput,
+.react-international-phone-input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contactForm form {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  li {
+    margin-bottom: 15px;
+
+    input,
+    select {
+      width: 100%;
+      appearance: none;
+    }
+  }
+
+  textarea {
+    min-height: 200px;
   }
 }

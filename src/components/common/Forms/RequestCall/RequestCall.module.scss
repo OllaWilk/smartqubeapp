@@ -14,7 +14,7 @@
     .subtitleCall {
       font-size: var(--font-d-section-header);
       line-height: 40px;
-      font-weight: var(--normal);
+      font-weight: var(--fw-400);
       width: 100vw;
 
       @include md-max {
@@ -61,8 +61,8 @@
       border: none;
       color: var(--color-light);
       cursor: pointer;
-      font-size: var(--font-d-text);
-      font-weight: var(--semi-bold);
+      font-size: var(--font-text);
+      font-weight: var(--fw-600);
       letter-spacing: 1px;
       padding: 10px 30px;
       text-transform: uppercase;
