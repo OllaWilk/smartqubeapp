@@ -3,8 +3,8 @@
 @import "../../../styles/typography";
 
 .headerBackground {
-  background-color: var(--color-green-dark);
   @include splash;
   height: auto;
+  width: 100%;
   @include flex(column, center, center);
 }

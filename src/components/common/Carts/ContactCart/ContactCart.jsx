@@ -11,9 +11,11 @@ export const ContactCart = ({ cartDescription, cartSubtitle, contactCart }) => {
       <div className={styles.contactList}>
         {contactCart.map((item, index) => (
           <div key={`contactCart-${index}`} className={styles.contactListLtem}>
-            <div className={styles.contactItemIcon}>
-              {item.imgUrl && <img src={item.imgUrl} alt="icon" />}
-            </div>
+            {item.imgUrl && (
+              <div className={styles.contactItemIcon}>
+                <img src={item.imgUrl} alt="icon" />
+              </div>
+            )}
             <div className={styles.textWrap}>
               {item.companyName && <p>{item.companyName}</p>}
               {item.street && <p>{item.street}</p>}

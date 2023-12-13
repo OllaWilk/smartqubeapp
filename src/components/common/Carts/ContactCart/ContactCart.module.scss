@@ -3,79 +3,79 @@
 .contactBox {
   text-align: left;
 
+  @include lg-max {
+    text-align: center;
+  }
+
   .subtitle {
     font-family: var(--header-font);
     color: var(--color-dark);
     font-weight: var(--fw-900);
     font-size: var(--fs-3);
-
     text-transform: uppercase;
     margin: 0 30px 30px 0;
+
+    @include lg-max {
+      margin: 0 0 30px 0;
+    }
   }
 
   .cartDescription {
     margin: 30px 0;
     width: 85%;
+
+    @include lg-max {
+      width: 100%;
+      margin: 0 0 30px 0;
+    }
   }
-
-  @include lg-max {
-    // padding: 20px 20px;
-  }
-
-  // @include md-max {
-  //   // justify-content: space-between;
-  //   width: 100%;
-
-  //   &:nth-child(3) {
-  //     width: 70%;
-  //   }
-  // // }
-
-  // @include sm-max {
-  //   flex-direction: column;
-  //   width: 100%;
-
-  //   &:nth-child(3) {
-  //     width: 100%;
-  //   }
-  // }
 
   .contactList {
-    // @include flex(column, center, space-between);
-    // width: 100%;
-    // height: 100%;
+    @include lg-max {
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    @include md-max {
+      justify-content: center;
+    }
 
     .contactListLtem {
       @include flex(row, center, flex-start);
       gap: 18px;
       margin-bottom: 30px;
-      // height: 130px;
+      border: none;
 
-      // @include lg-max {
-      //   flex-direction: column;
-      //   padding: 10px 0;
-      // }
+      &:last-child {
+        width: 100%;
+        height: auto;
+      }
 
-      // @include sm-max {
-      //   margin-top: 20px;
-      // }
+      @include lg-max {
+        width: 100%;
+        justify-content: space-around;
+        align-items: space-between;
+        padding: 0 20px;
+        width: 250px;
+        height: 150px;
+        border: 1px solid var(--color-main);
+        margin-bottom: 0px;
+      }
+
+      @include md-max {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+      }
 
       .contactItemIcon {
-        // margin: 0px 1.5rem 0px 0;
         width: 25px;
         object-fit: cover;
 
         img {
           @include img;
         }
-
-        // @include lg-max {
-        //   margin: 1rem 0;
-        // }
-
-        // @include sm-max {
-        //   margin: 0px 0px 1.5rem 0;
-        // }
       }
 
       .textWrap {
