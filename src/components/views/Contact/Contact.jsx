@@ -38,7 +38,11 @@ export const Contact = () => {
       </div>
 
       <div className={styles.requestToCall}>
-        <RequestCall />
+        <RequestCall
+          namePlaceholder={contactForm.name}
+          phonePlaceholder={contactForm.phoneNumber}
+          errorsMessages={errorsMessages}
+        />
       </div>
     </div>
   );
