@@ -17,6 +17,7 @@ export const Contact = () => {
     cartSubtitle,
     contactCart,
     contactForm,
+    errorsMessages,
   } = contact;
   return (
     <div className={styles.contact}>
@@ -30,7 +31,10 @@ export const Contact = () => {
           contactCart={contactCart}
           cartTitle={cartTitle}
         />
-        <ContactForm contactForm={contactForm} />
+        <ContactForm
+          contactForm={contactForm}
+          errorsMessages={errorsMessages}
+        />
       </div>
 
       <div className={styles.requestToCall}>

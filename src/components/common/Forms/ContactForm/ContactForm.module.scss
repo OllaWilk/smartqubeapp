@@ -45,9 +45,23 @@
   width: 100%;
   padding: 10px;
 
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-light);
   border-radius: 5px;
   font-size: 16px;
+}
+
+.phoneSelect > div {
+  border-radius: 5px;
+  border: 1px solid var(--color-light);
+
+  background-color: var(--color-light);
+  padding: 10px 0 10px 10px;
+
+  input {
+    width: 100%;
+    appearance: none;
+    border: none;
+  }
 }
 
 .contactForm form {
@@ -59,14 +73,32 @@
   li {
     margin-bottom: 15px;
 
+    div {
+      background-color: var(--color-light);
+
+      input,
+      select {
+        padding: 10px;
+      }
+    }
+
     input,
     select {
       width: 100%;
       appearance: none;
+      border: none;
     }
   }
 
   textarea {
     min-height: 200px;
   }
+}
+
+.errorText {
+  color: var(--color-danger);
+  display: inline-block;
+  margin: 10px 0 0 0;
+  width: 100%;
+  text-align: left;
 }

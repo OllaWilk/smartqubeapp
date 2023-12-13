@@ -38,7 +38,7 @@ ContactCart.propTypes = {
   cartSubtitle: PropTypes.string,
   contactCart: PropTypes.arrayOf(
     PropTypes.shape({
-      imgUrl: PropTypes.string.isRequired,
+      imgUrl: PropTypes.string,
       companyName: PropTypes.string,
       street: PropTypes.string,
       zip: PropTypes.string,

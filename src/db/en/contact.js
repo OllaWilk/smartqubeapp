@@ -36,4 +36,11 @@ export const contact = {
     phoneNumber: "Enter Your phone number",
     message: "Enter Your message",
   },
+  errorsMessages: {
+    name: "Please enter your name",
+    phone: "Please enter your phone number",
+    companyName: "Please enter your company name",
+    email: "Please enter a valid email address ",
+    message: "Please enter your message",
+  },
 };

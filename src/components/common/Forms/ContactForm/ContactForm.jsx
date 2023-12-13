@@ -1,39 +1,71 @@
-import React, { useState } from "react";
-import { PhoneNumberUtil } from "google-libphonenumber";
+import React from "react";
 import PropTypes from "prop-types";
-
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
-
+import PhoneInput from "react-phone-number-input";
+import useFormValidation from "../../../../utils/useFormValidation";
+import "react-phone-number-input/style.css";
 import styles from "./ContactForm.module.scss";
 
-export const ContactForm = ({ contactForm }) => {
+export const ContactForm = ({ contactForm, errorsMessages }) => {
   const { name, companyName, email, position, phoneNumber, message } =
     contactForm;
 
-  const [formData, setFormData] = useState({
-    name: "",
-    country: "",
-    companyName: "",
-    job: "",
-    email: "",
-    message: "",
-  });
+  const { formData, errors, setFieldValue, validateForm } = useFormValidation(
+    {
+      name: "",
+      companyName: "",
+      job: "",
+      email: "",
+      message: "",
+    },
+    {
+      name: [
+        {
+          required: true,
+          minlength: 3,
+          maxlength: 120,
+          message: `${errorsMessages.name}. It should contain at least 3 characters. `,
+        },
+      ],
+      phone: [
+        {
+          required: true,
+          pattern: /^\+?[1-9]\d{1,14}$/,
+          message: `${errorsMessages.phone}.`,
+        },
+      ],
+      companyName: [
+        {
+          required: true,
+          minlength: 1,
+          maxlength: 120,
+          message: errorsMessages.companyName,
+        },
+      ],
+      email: [
+        {
+          required: true,
+          minlength: 4,
+          maxlength: 255,
+          message: errorsMessages.email,
+          pattern: /^\S+@\S+$/i,
+        },
+      ],
 
-  const [phone, setPhone] = useState("");
+      message: [{ required: true, minlength: 1, maxlength: 250 }],
+    },
+    {}
+  );
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-      phone: phone,
-    });
-  };
+  const onChange = (e) => setFieldValue(e.target.name, e.target.value);
 
+  /* Submition */
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Dodaj obsługę logiki wysyłki formularza, np. do serwera API lub innej funkcji
+    if (validateForm()) {
+      console.log("Formularz wysłany:", formData);
+    } else {
+      console.log("Formularz zawiera błędy", formData);
+    }
   };
 
   return (
@@ -48,17 +80,24 @@ export const ContactForm = ({ contactForm }) => {
                   type="text"
                   name="name"
                   value={formData.name}
-                  onChange={handleChange}
-                  required
+                  onChange={onChange}
                   placeholder={name}
                 />
+                {errors.name && (
+                  <span className={styles.errorText}>{errors.name}</span>
+                )}
               </li>
               <li>
                 <PhoneInput
-                  defaultCountry="us"
-                  value={phone}
-                  onChange={(phone) => setPhone(phone)}
+                  className={styles.phoneSelect}
+                  defaultCountry="PL"
+                  placeholder={phoneNumber}
+                  value={formData.phone}
+                  onChange={(phone) => setFieldValue("phone", phone)}
                 />
+                {errors.phone && (
+                  <span className={styles.errorText}>{errors.phone}</span>
+                )}
               </li>
               <li>
                 <input
@@ -66,10 +105,12 @@ export const ContactForm = ({ contactForm }) => {
                   type="text"
                   name="companyName"
                   value={formData.companyName}
-                  onChange={handleChange}
+                  onChange={onChange}
                   placeholder={companyName}
-                  required
                 />
+                {errors.companyName && (
+                  <span className={styles.errorText}>{errors.companyName}</span>
+                )}
               </li>
               <li>
                 <input
@@ -77,9 +118,12 @@ export const ContactForm = ({ contactForm }) => {
                   type="text"
                   name="job"
                   value={formData.job}
-                  onChange={handleChange}
+                  onChange={onChange}
                   placeholder={position}
                 />
+                {errors.job && (
+                  <span className={styles.errorText}>{errors.job}</span>
+                )}
               </li>
               <li>
                 <input
@@ -87,22 +131,27 @@ export const ContactForm = ({ contactForm }) => {
                   type="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleChange}
-                  required
+                  onChange={onChange}
                   placeholder={email}
                 />
+                {errors.email && (
+                  <span className={styles.errorText}>{errors.email}</span>
+                )}
               </li>
               <li>
                 <textarea
                   className={styles.customImput}
                   name="message"
                   value={formData.message}
-                  onChange={handleChange}
+                  onChange={onChange}
                   placeholder={message}
-                  required
                 />
+                {errors.message && (
+                  <span className={styles.errorText}>{errors.message}</span>
+                )}
               </li>
             </ul>
+
             <button className={styles.formBtn} type="submit">
               Submit
             </button>
@@ -114,6 +163,7 @@ export const ContactForm = ({ contactForm }) => {
 };
 
 ContactForm.propTypes = {
+  errorsMessages: PropTypes.string,
   contactForm: PropTypes.shape({
     name: PropTypes.string,
     companyName: PropTypes.string,
