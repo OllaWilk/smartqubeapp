@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
+
 import { Link, NavLink } from "react-router-dom";
 import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
@@ -92,6 +93,7 @@ export const Navigation = () => {
               alt={value ? "hamburger" : "close"}
             />
           </div>
+
           <nav
             className={`${styles.sidebar} ${value ? "open" : "closed"}`}
             id="sidebarNav"
