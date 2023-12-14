@@ -5,8 +5,11 @@
   padding: 70px 0;
 }
 
-.leggalPrivacy {
+.technical {
   overflow: hidden;
+  .greenbackground {
+    background-color: var(--color-green-dark);
+  }
 
   .sectionWrap {
     padding: 20px 0;

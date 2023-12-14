@@ -20,7 +20,7 @@
   .navigationLogo {
     @include flex(column, center, center);
     position: relative;
-    min-width: 70px;
+    // min-width: 70px;
     z-index: 2;
     font-size: var(--fs-1);
     margin: 0.19em 0;

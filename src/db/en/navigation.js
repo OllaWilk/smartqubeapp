@@ -5,13 +5,13 @@ export const navigationNavbar = [
   "about",
   "solutions",
   "technical",
-  { portfolio: ["products", "integration", "services"] },
+  // { portfolio: ["products", "integration", "services"] },
   "contact",
 ];
 
 export const footer = {
   logo: {
-    imgUrl: logos.logo90px,
+    imgUrl: logos.logo80px,
     companyName: "SMARTqube Sp z o.o.",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Wrocław, Poland",

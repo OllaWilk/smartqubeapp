@@ -16,6 +16,14 @@
   }
 }
 
+.navColors {
+  background-color: var(--color-green-dark);
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0;
+}
+
 .logo {
   @include flex(row, center, center);
   padding: 1rem 0;

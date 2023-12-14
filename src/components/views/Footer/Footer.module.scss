@@ -56,14 +56,6 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 40px 0 40px 0;
-
-    .imgWrap {
-      // height: 35px;
-
-      img {
-        // @include img;
-      }
-    }
   }
 
   .isoWrap {
@@ -105,4 +97,7 @@
 
 .logoWrap {
   gap: 20px;
+  a img {
+    padding: 0 0 10px 0;
+  }
 }

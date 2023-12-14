@@ -8,6 +8,7 @@ export const NotFound = () => {
   const { info, image, error, button, linkTo } = notFound;
   return (
     <div className={styles.notfoundPage}>
+      <div className={styles.navColors}></div>
       <Link to="/home" className={styles.logo}>
         <img src={image} alt="Logo" />
       </Link>

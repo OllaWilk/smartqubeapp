@@ -24,7 +24,8 @@ import shield from "./icons/i-shield.png";
 /* logo */
 import logo from "./logo/logo.png";
 import logo100px from "./logo/logo100px.png";
-import logo90px from "./logo/logo90px.png";
+import logo70px from "./logo/logo70px.png";
+import logo80px from "./logo/logo80px.png";
 
 /* photos */
 
@@ -40,6 +41,9 @@ import fieldServices from "./photos/fieldServices.jpg";
 import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
 import efficientSite from "./photos/efficientSite.jpg";
+
+/* ICEqube products */
+import GroupPicture from "./photos/ICEqubeProducts/Group-Picture.png";
 
 /* iso */
 import ce from "./iso/ce.png";
@@ -78,7 +82,8 @@ export const icons = {
 export const logos = {
   logo,
   logo100px,
-  logo90px,
+  logo70px,
+  logo80px,
 };
 
 export const photos = {
@@ -104,4 +109,8 @@ export const iso = {
   iecx,
   sri,
   ukca,
+};
+
+export const icequbeProducts = {
+  GroupPicture,
 };
