@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { footer, navigationNavbar } from "../../../db/en/navigation";
 import { Link } from "react-router-dom";
-import styles from "./Footer.module.scss";
+import { footer, navigationNavbar } from "../../../db/en/navigation";
 import { removeSpaces } from "../../../utils/removeSpaces";
+import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const { logo, iso, certificates } = footer;
@@ -53,7 +53,6 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.navWrap}>
-          {/* <h3>Explore:</h3> */}
           <nav className={styles.linksWrap}>
             {navigationNavbar.map((item, index) => renderNavItem(item, index))}
           </nav>
@@ -72,14 +71,14 @@ export const Footer = () => {
         </div>
         <div className={styles.certificatesWrap}>
           {certificates.map((el, index) => (
-            <div key={`footerCert-${index}`} className={styles.imgWrap}>
-              <img alt={el.alt} src={el.url} />
+            <div key={`footerCert-${index}-${el}`} className={styles.imgWrap}>
+              <img alt={"iso"} src={el} />
             </div>
           ))}
         </div>
         <div className={styles.isoWrap}>
           {iso.map((el, index) => (
-            <p key={`footer-${index}`}>{el}</p>
+            <p key={`footer-${index}-last-${el}`}>{el}</p>
           ))}
         </div>
       </div>

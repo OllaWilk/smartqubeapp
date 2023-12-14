@@ -8,6 +8,7 @@
 
   .navWrap {
     @include flex(row, center, space-between);
+    gap: 20px;
 
     @include sm-max {
       flex-direction: column;
@@ -17,6 +18,7 @@
       @include flex(row, flex-start, space-between);
       width: 70%;
       flex-wrap: wrap;
+      gap: 20px;
 
       @include sm-max {
         flex-direction: column;
@@ -50,12 +52,23 @@
   }
 
   .certificatesWrap {
-    @include flex(row, center, space-between);
+    @include flex(row, stretch, space-between);
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 40px 0 40px 0;
+
+    .imgWrap {
+      height: 35px;
+
+      img {
+        @include img;
+      }
+    }
   }
 
   .isoWrap {
     @include flex(row, center, space-between);
+    gap: 20px;
 
     @include sm-max {
       flex-direction: column;
@@ -91,7 +104,5 @@
 }
 
 .logoWrap {
-  @include sm-max {
-    padding: 20px;
-  }
+  gap: 20px;
 }
