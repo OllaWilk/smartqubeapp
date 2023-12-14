@@ -1,18 +1,20 @@
 import React from "react";
-import { leggacyAndPrivacy } from "../../../db/en/leggacyAndPrivacy";
+import { leggacyAndPrivacy } from "../../../db/en/technical";
 import {
   CallToAction,
   GreenHeader,
   ImgWithTitleAndDescriptionBellowCart,
 } from "../../common";
 
-import styles from "./LeggalPrivacy.module.scss";
+import styles from "./Technical.module.scss";
 
-export const LeggalPrivacy = () => {
+export const Technical = () => {
   const { header, documents, callToaction } = leggacyAndPrivacy;
   return (
-    <div className={styles.leggalPrivacy}>
-      <GreenHeader mainTitle={header} />
+    <div className={styles.technical}>
+      <div className={styles.greenbackground}>
+        <GreenHeader mainTitle={header} />
+      </div>
       <div className={`${styles.sectionWrap} container`}>
         <div className={styles.documentsWrap}>
           {documents.map((document, index) => (
