@@ -1,0 +1,188 @@
+@import "../../../styles/mixins";
+@import "../../../styles/typography.scss";
+
+.carouselContainer {
+  position: relative;
+  @include flex(row, center, space-between);
+  height: 100%;
+  gap: 50px;
+
+  @include lg-max {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    color: var(--color-light);
+    @include flex(column, stretch, space-between);
+    padding: 20px 0px 20px 0;
+
+    @include lg-max {
+      max-width: 100%;
+    }
+
+    h2 {
+      @extend .h2;
+      // font-weight: var(--fw-300);
+
+      span {
+        font-weight: var(--fw-700);
+        letter-spacing: 1px;
+        text-transform: none;
+      }
+    }
+
+    p {
+      font-weight: var(--fw-400);
+      line-height: 1.5em;
+      padding-bottom: 27px;
+      font-size: 16px;
+      margin: 20px 0;
+      text-transform: lowercase;
+    }
+
+    .caltulatorBtn {
+      @include btn;
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      padding: 10px 50px;
+      font-weight: var(--fw-500);
+      transition: var(--transition);
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: #1595d2, $amount: 10);
+        background-color: #294d84;
+      }
+
+      @include md-max {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px 0;
+
+    @include lg-max {
+      margin-top: 0px;
+    }
+
+    @include md-max {
+      height: 400px;
+      margin-top: 0px;
+    }
+
+    @include sm-max {
+      display: none;
+    }
+  }
+
+  .slide {
+    height: 100%;
+    opacity: 0;
+    transition: opacity var(--transition);
+    transition-delay: 0.1s;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+
+    img {
+      @include img;
+    }
+
+    @include lg-max {
+      width: 100%;
+      margin-top: 0px;
+    }
+
+    @include sm-max {
+      height: auto;
+    }
+  }
+}
+
+.slideNavigation {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @include flex(row, flex-end, space-between);
+
+  .prevNext {
+    @include flex(row, flex-end, flex-end);
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .iceQubeName {
+      color: var(--color-light);
+      text-align: end;
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 2px;
+        background: var(--color-light);
+
+        @include sm-max {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: var(--color-main);
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--color-light);
+      cursor: pointer;
+      font-size: 2em;
+      color: var(--color-light);
+      transition: var(--transition);
+
+      @include sm-max {
+        display: none;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(-50%);
+}
+
+.slide:not(.active) {
+  transform: translateX(100%);
+}
