@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./Carousel.module.scss";
@@ -7,6 +7,14 @@ export const Carousel = ({ carousel }) => {
   const { header, span, text, button, linkTo, images } = carousel;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   const goToPrevious = () => {
     setCurrentIndex(

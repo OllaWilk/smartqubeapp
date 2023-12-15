@@ -69,4 +69,118 @@ export const solutions = {
       ],
     },
   },
+  certificatesSection: {
+    title: "Always Up-to-Date and Accessible",
+    subtitle: "Certificates",
+    description:
+      "Each certificate is carefully presented to provide you with easy access to detailed information. You can browse, download, and use these documents to verify the specifications and compliance of our products, which is essential for regulated industries requiring precise documentation.",
+    btnNames: ["EV Series", "EVZ2 Series", "EX Series"],
+    atex: "Related to certificates associated with the ATEX directive, which is a European Union standard for equipment intended for use in potentially explosive atmospheres.",
+    iecx: "Focuses on the global IECEX standard for equipment used in explosive atmospheres.",
+    eu: "Includes general declarations of conformity to EU standards and other important certificates related to safety and environment.",
+    downloads: {
+      ATEX_Certificates: [
+        {
+          name: "ATEX ZONE 1 Certificate",
+          url: "https://www.iceqube.com/certificates/ATX1682-1%20-%20ATEX%20EU%20TYPE%20Exam%20Certificate%20-%20QPS%2022ATEX5000X.pdf",
+        },
+        {
+          name: "ATEX ZONE 1 EU Declaration of Conformity",
+          url: "https://www.iceqube.com/certificates/Zone%201%20Declaration%20of%20Conformity%20Rev%207.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 Certificate - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/QPS%2016ATEX0002X05.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 EU Declaration of Conformity - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/EU%20DoC%20for%20Zone%202%20Air%20Conditioners.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 Certificate - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/QPS%2019ATEX0001X02.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 EU Declaration of Conformity - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/Zone%202%20DECLARATION%20OF%20CONFORMITY%20Heat%20Exchangers.pdf",
+        },
+      ],
+      IECEX_Certificates: [
+        {
+          name: "IECEX ZONE 1 Certificate of Conformity",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_18.0007X_005.pdf",
+        },
+        {
+          name: "IECEX ZONE 2 Certificate of Conformity - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_16.0015X_006.pdf",
+        },
+        {
+          name: "IECEX ZONE 2 Certificate of Conformity - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_19.0004X_003.pdf",
+        },
+      ],
+      EU_Declarations_of_Conformity_and_Other_Certificates: [
+        {
+          name: "EU Declaration of Conformity (Safe area products)",
+          url: "https://www.iceqube.com/certificates/CE%20Declaration%20of%20Conformity-3-8-21.pdf",
+        },
+        {
+          name: "Waste Electrical and Electronic Equipment (WEEE) Statement",
+          url: "https://www.iceqube.com/wp-content/uploads/2022/04/Ice-Qube-Incs-WEEE-Statement.pdf",
+        },
+        {
+          name: "REACH Declaration",
+          url: "https://www.iceqube.com/wp-content/uploads/2023/08/REACH-2023.pdf",
+        },
+        {
+          name: "RoHS Certificate of Compliance",
+          url: "https://www.iceqube.com/wp-content/uploads/2019/06/Ice-Qube-Inc-RoHS-Certificate-of-Compliance-6-12-19.pdf",
+        },
+        {
+          name: "Declaration of Conformity 316L Stainless steel",
+          url: "https://www.iceqube.com/wp-content/uploads/2022/04/IQ_Inc_Declaration_of_Conformity_316L.pdf",
+        },
+      ],
+      Zone_1_Certificates: [
+        {
+          name: "ATEX ZONE 1 Certificate",
+          url: "https://www.iceqube.com/certificates/ATX1682-1%20-%20ATEX%20EU%20TYPE%20Exam%20Certificate%20-%20QPS%2022ATEX5000X.pdf",
+        },
+        {
+          name: "ATEX ZONE 1 EU Declaration of Conformity",
+          url: "https://www.iceqube.com/certificates/Zone%201%20Declaration%20of%20Conformity%20Rev%207.pdf",
+        },
+        {
+          name: "IECEX ZONE 1 Certificate of Conformity",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_18.0007X_005.pdf",
+        },
+      ],
+      Zone_2_Certificates: [
+        {
+          name: "ATEX ZONE 2 Certificate - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/QPS%2016ATEX0002X05.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 EU Declaration of Conformity - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/EU%20DoC%20for%20Zone%202%20Air%20Conditioners.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 Certificate - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/QPS%2019ATEX0001X02.pdf",
+        },
+        {
+          name: "ATEX ZONE 2 EU Declaration of Conformity - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/Zone%202%20DECLARATION%20OF%20CONFORMITY%20Heat%20Exchangers.pdf",
+        },
+        {
+          name: "IECEX ZONE 2 Certificate of Conformity - Air Conditioners",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_16.0015X_006.pdf",
+        },
+        {
+          name: "IECEX ZONE 2 Certificate of Conformity - Heat Exchangers",
+          url: "https://www.iceqube.com/certificates/IECEx_QPS_19.0004X_003.pdf",
+        },
+      ],
+    },
+  },
 };

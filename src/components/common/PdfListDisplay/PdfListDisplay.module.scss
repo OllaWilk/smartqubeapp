@@ -1,11 +1,53 @@
+@import "../../../styles/mixins";
+@import "../../../styles/typography.scss";
+
+.componentWrap {
+  min-height: auto;
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+
+  @include lg-max {
+    // background-color: pink;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @include sm-max {
+    // background-color: green;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.pdfListWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
 .pdfList {
+  height: 200px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
   animation: fadeIn 0.5s ease-out forwards;
   transition-delay: var(--deley);
+  // background-color: var(--color-grey);
+  // background-color: var(--color-dark);
+  // color: var(--color-light);
+  padding: 0 30px;
+  // border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  // overflow: hidden;
+  border: 2px solid var(--color-main);
+
+  a {
+    color: black;
+  }
 }
 
 @keyframes fadeIn {
