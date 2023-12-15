@@ -21,6 +21,13 @@
   }
 }
 
+.certificates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
 .manuals {
   padding: 70px 0 90px 0;
   display: grid;
@@ -30,14 +37,6 @@
 
   @include lg-max {
     display: flex;
-  }
-
-  .textWrap {
-    h2,
-    h3 {
-      text-align: left;
-      text-transform: uppercase;
-    }
   }
 }
 
@@ -140,5 +139,24 @@
         }
       }
     }
+  }
+}
+
+.textWrap {
+  h2,
+  h3 {
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.background {
+  // background-color: var(--color-green-dark);
+  // margin-top: 70px;
+  overflow: hidden;
+  // background-color: red;
+
+  @include lg-max {
+    // background-color: pink;
   }
 }
