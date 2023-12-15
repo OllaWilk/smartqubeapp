@@ -20,12 +20,15 @@ import document from "./icons/i-document.png";
 import purchese from "./icons/i-purchase.png";
 import sale from "./icons/i-sale.png";
 import shield from "./icons/i-shield.png";
+import pdfFile from "./icons/pdfIcon.png";
 
 /* logo */
 import logo from "./logo/logo.png";
 import logo100px from "./logo/logo100px.png";
 import logo70px from "./logo/logo70px.png";
 import logo80px from "./logo/logo80px.png";
+import evLogo from "./logo/evLogo.png";
+import evz2Logo from "./logo/evz2Logo.png";
 
 /* photos */
 
@@ -80,6 +83,7 @@ export const icons = {
   purchese,
   sale,
   shield,
+  pdfFile,
 };
 
 export const logos = {
@@ -87,6 +91,8 @@ export const logos = {
   logo100px,
   logo70px,
   logo80px,
+  evLogo,
+  evz2Logo,
 };
 
 export const photos = {
