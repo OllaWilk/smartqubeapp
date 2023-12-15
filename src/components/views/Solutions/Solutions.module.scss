@@ -1,153 +1,22 @@
 @import "../../../styles/mixins";
 @import "../../../styles/typography.scss";
 
-/* IceQubeBanner.css */
-
 .bannerContainer {
   min-height: 85vh;
-  background: radial-gradient(var(--color-main), var(--color-green-dark));
+  background: var(--background-radial);
   @include flex(column, center, center);
   overflow: hidden;
 
-  .content {
-    position: relative;
-    width: 100%;
-    @include flex(row, center, space-between);
-    height: 100%;
-    gap: 20px;
-
-    @include lg-max {
-      flex-direction: column;
-      margin: 120px 0 40px;
-    }
-
-    .text {
-      width: 100%;
-      max-width: 600px;
-      text-align: left;
-      color: var(--color-light);
-      @include flex(column, stretch, space-between);
-      padding: 20px 0px 20px 0;
-      padding: 20px 0px 20px 0;
-
-      @include lg-max {
-        max-width: 100%;
-      }
-
-      h2 {
-        @extend .h2;
-        font-weight: var(--fw-300);
-
-        span {
-          font-weight: var(--fw-700);
-          letter-spacing: 1px;
-          text-transform: none;
-        }
-      }
-
-      p {
-        font-weight: var(--fw-400);
-        line-height: 1.5em;
-        padding-bottom: 27px;
-        font-size: 16px;
-        margin: 20px 0;
-        text-transform: lowercase;
-      }
-
-      .caltulatorBtn {
-        @include btn;
-        background-color: var(--color-dark);
-        color: var(--color-light);
-        padding: 10px 50px;
-        font-weight: var(--fw-500);
-        transition: var(--transition);
-
-        &:hover {
-          background-color: darken($color: #1595d2, $amount: 10);
-          background-color: #294d84;
-        }
-
-        @include md-max {
-          padding: 10px 20px;
-        }
-      }
-    }
-
-    .slider {
-      @include lg-max {
-        margin-top: 40px;
-      }
-
-      .slides {
-        .slides {
-          img {
-            max-width: 500px;
-            width: 100%;
-
-            @include lg-max {
-              width: 100%;
-              max-width: 420px;
-            }
-          }
-        }
-      }
-    }
+  @include lg-max {
+    padding: 120px 0 90px 0;
   }
 
-  .slideNavigation {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    @include flex(row, flex-end, space-between);
+  @include sm-max {
+    min-height: 100vh;
+    justify-content: space-around;
 
-    .prevNext {
-      @include flex(row, flex-end, flex-end);
-      user-select: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-
-      .iceQubeName {
-        color: var(--color-light);
-        text-align: end;
-        width: 100%;
-        position: relative;
-        cursor: pointer;
-        transition: var(--transition);
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 50%;
-          transform: translateY(-50%);
-          width: 50px;
-          height: 2px;
-          background: var(--color-light);
-        }
-
-        &:hover {
-          color: var(--color-main);
-        }
-      }
-
-      span {
-        position: relative;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border: 2px solid var(--color-light);
-        cursor: pointer;
-        font-size: 2em;
-        color: var(--color-light);
-        transition: var(--transition);
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-      }
+    .container {
+      height: 100%;
     }
   }
 }

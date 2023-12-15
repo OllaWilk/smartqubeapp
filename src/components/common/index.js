@@ -8,6 +8,7 @@ export { OurMission } from "./OurMission/OurMission";
 export { ImgOnTheLeftAndTextOnRight } from "./ImgOnTheLeftAndTextOnRight/ImgOnTheLeftAndTextOnRight";
 export { ImageBox } from "./ImageBox/ImageBox";
 export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
+export { Carousel } from "./Carousel/Carousel";
 /*forms*/
 export { ContactForm } from "./Forms/ContactForm/ContactForm";
 export { RequestCall } from "./Forms/RequestCall/RequestCall";

@@ -44,6 +44,9 @@ import efficientSite from "./photos/efficientSite.jpg";
 
 /* ICEqube products */
 import GroupPicture from "./photos/ICEqubeProducts/Group-Picture.png";
+import evSeries from "./photos/ICEqubeProducts/evSeries.png";
+import one from "./photos/ICEqubeProducts/one.png";
+import twoo from "./photos/ICEqubeProducts/twoo.png";
 
 /* iso */
 import ce from "./iso/ce.png";
@@ -113,4 +116,7 @@ export const iso = {
 
 export const icequbeProducts = {
   GroupPicture,
+  evSeries,
+  one,
+  twoo,
 };

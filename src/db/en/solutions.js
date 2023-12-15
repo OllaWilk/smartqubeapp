@@ -1,15 +1,17 @@
-import { photos, logos } from "../../images/index";
+import { photos, icons, logos, icequbeProducts } from "../../images/index";
 
-export const about = {
-  header: {
-    companyName: "WE WILL DESIGN THE FUTURE",
-    slogan: "SMARTqube",
-    greenBtn: "contact",
-    transparentBtn: "portfolio",
+export const solutions = {
+  carousel: {
+    header: "Calculate Your Air Conditioner with ",
+    span: "IceQube",
+    text: "enclosures fan systems, thermoelectric air conditioners , heat exchangers, hazardous location air conditioners, hazardous location heat exchangers, server rack/shelter container coolers",
+    button: "VISIT THE WEBSITE AND CALCULATE YOUR PROJECT TODAY",
+    linkTo: "https://www.iceqube.com/technical/calculator/",
+    images: [icequbeProducts.GroupPicture, icequbeProducts.evSeries],
   },
   companyDescription: [
     {
-      header: "OUR ROOTS",
+      header: "Calculate Your Air Conditioner with IceQube.",
       section1:
         "SMARTqube is a Polish company closely linked with ICEqube in Pennsylvania, USA. We bring together the best assets from both origins, blending the reliability of our solutions with a flexible and innovative approach. Our synergy creates a unique foundation, ensuring top-notch quality and cutting-edge innovation in everything we do.",
       section2:

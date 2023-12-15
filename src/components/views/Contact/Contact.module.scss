@@ -11,6 +11,7 @@
 
 .header {
   background-color: var(--color-green-dark);
+  // background: var(--background-linear);
   @include flex(column, center, center);
   margin-bottom: 70px;
 }
