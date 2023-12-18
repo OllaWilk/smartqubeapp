@@ -11,7 +11,6 @@
 
 .header {
   background-color: var(--color-green-dark);
-  // background: var(--background-linear);
   @include flex(column, center, center);
   margin-bottom: 70px;
 }
@@ -19,9 +18,11 @@
 .contactPage {
   @include flex(row, stretch, space-between);
 
-  background-color: white;
+  background-color: var(--color-light);
   padding: 30px;
   border-radius: 4px;
+
+  flex-grow: 1;
 
   @include lg-max {
     flex-direction: column;
