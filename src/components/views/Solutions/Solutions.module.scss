@@ -21,18 +21,17 @@
   }
 }
 
-.certificates {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 50px;
+.certifications {
+  background-color: #f5f5f5;
+  padding: 70px 0 90px 0;
+  min-height: 100vh;
 }
 
 .manuals {
   padding: 70px 0 90px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: justify;
   gap: 50px;
 
   @include lg-max {
@@ -56,16 +55,20 @@
   }
 
   .card {
-    width: calc(33.33% - 20px);
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    box-shadow: var(--shadow);
+    text-align: justify;
+    display: flex;
+    flex-grow: 1;
+    // gap: 20px;
+    width: calc(33.33% - 20px);
 
     @include lg-max {
-      width: 400px;
+      width: calc(33.33%);
     }
+
     @include md-max {
-      width: 100%;
+      width: calc(50% - 20px);
     }
 
     ul {
@@ -148,15 +151,57 @@
     text-align: left;
     text-transform: uppercase;
   }
+
+  p {
+    text-align: justify;
+    padding: 30px 0 60px 0;
+    width: 70%;
+
+    @include lg-max {
+      width: 100%;
+    }
+  }
 }
 
-.background {
-  // background-color: var(--color-green-dark);
-  // margin-top: 70px;
-  overflow: hidden;
-  // background-color: red;
+.certificationsCartWrap {
+  @include flex(row, stretch, space-between);
+  gap: 20px;
+  flex-wrap: wrap;
 
-  @include lg-max {
-    // background-color: pink;
+  @include md-max {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .toggleBtn,
+  .active {
+    @include btn;
+    background-color: var(--color-dark);
+    border: 2px solid var(--color-dark);
+    color: var(--color-light);
+    padding: 10px 20px;
+    font-weight: var(--fw-900);
+    transition: var(--transition);
+    cursor: pointer;
+    flex-grow: 1;
+    height: 80px;
+
+    @include md-max {
+      width: 260px;
+    }
+
+    @include sm-max {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: var(--color-green-dark);
+      border: 2px solid var(--color-green-dark);
+    }
+  }
+
+  .active {
+    background-color: var(--color-green-dark);
+    border: 2px solid var(--color-green-dark);
   }
 }

@@ -1,37 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./PdfListDisplay.module.scss";
+import { icons } from "../../../images";
 
-export const PdfListDisplay = ({ activeList, data, allSeriesKeys }) => {
-  const renderList = (list) => {
-    return list.map((item, index) => (
-      <li key={index} className={styles.pdfList}>
-        <a href={item.url} target="_blank" rel="noopener noreferrer">
-          {item.name}
-        </a>
-      </li>
-    ));
-  };
+export const PdfListDisplay = ({ certificate, data, allSeriesKeys }) => {
+  if (!certificate) {
+    return (
+      <div className={styles.certificateDetails}>
+        Please select a certificate to view details.
+      </div>
+    );
+  }
 
   return (
-    <div className="container">
+    <>
       {allSeriesKeys.map(
         (item) =>
-          activeList === item && (
+          certificate === item && (
             <ul
-              key={`${activeList}-active-list`}
+              key={`${certificate}-active-list`}
               className={styles.componentWrap}
             >
-              {renderList(data[item])}
+              {data[item].map((item, index) => (
+                <li key={index}>
+                  <img
+                    src={icons.pdfFile}
+                    alt={"pdfFile"}
+                    className={styles.image}
+                  />
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           )
       )}
-    </div>
+    </>
   );
 };
 
 PdfListDisplay.propTypes = {
-  activeList: PropTypes.string,
+  certificate: PropTypes.string,
   allSeriesKeys: PropTypes.arrayOf(PropTypes.string),
   data: PropTypes.objectOf(
     PropTypes.arrayOf(

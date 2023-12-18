@@ -6,17 +6,15 @@ import {
   PdfListDisplay,
   SectionTitle,
 } from "../../common";
-import styles from "./Solutions.module.scss";
 import { icons } from "../../../images";
 import { removeUnderlines } from "../../../utils/removeSpaces";
+import styles from "./Solutions.module.scss";
 
 export const Solutions = () => {
   const { carousel, manualsSection, certificatesSection } = solutions;
-  const allSeriesKeys = Object.keys(manualsSection.downloads);
   const allCertificationsKeys = Object.keys(certificatesSection.downloads);
-  console.log(allCertificationsKeys);
 
-  const [activeList, setActiveList] = useState("EV");
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   const renderDownloads = (downloads) => {
     return Object.keys(downloads).map((series) => (
@@ -52,6 +50,10 @@ export const Solutions = () => {
     ));
   };
 
+  const handleCertificateClick = (certificate) => {
+    setSelectedCertificate(certificate);
+  };
+
   return (
     <>
       <div className={styles.bannerContainer}>
@@ -72,33 +74,37 @@ export const Solutions = () => {
         {renderDownloads(solutions.manualsSection.downloads)}
       </div>
       {/* Certification  */}
-      <div className={`${styles.certificates} container`}>
-        <div className={styles.textWrap}>
-          <SectionTitle
-            h2={certificatesSection.title}
-            h3={certificatesSection.subtitle}
+      <div className={styles.certifications}>
+        <div className={`${styles.wrap} container`}>
+          <div className={styles.textWrap}>
+            <SectionTitle
+              h2={certificatesSection.title}
+              h3={certificatesSection.subtitle}
+            />
+            <p>{certificatesSection.description}</p>
+          </div>
+          <div className={styles.certificationsCartWrap}>
+            {/* Buttons */}
+            {allCertificationsKeys.map((serieKey) => (
+              <button
+                key={`${serieKey}-`}
+                className={
+                  selectedCertificate === serieKey
+                    ? styles.active
+                    : styles.toggleBtn
+                }
+                onClick={() => handleCertificateClick(`${serieKey}`)}
+              >
+                {removeUnderlines(serieKey)}
+              </button>
+            ))}
+          </div>
+          <PdfListDisplay
+            data={certificatesSection.downloads}
+            allSeriesKeys={allCertificationsKeys}
+            certificate={selectedCertificate}
           />
-          <p>{certificatesSection.description}</p>
-          <div className={styles.toggleBtns}></div>
         </div>
-        <div className={styles.manualCartWrap}>
-          {allCertificationsKeys.map((serieKey) => (
-            <button
-              key={`${serieKey}-`}
-              className={styles.toggleBtn}
-              onClick={() => setActiveList(`${serieKey}`)}
-            >
-              {removeUnderlines(serieKey)}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className={styles.background}>
-        <PdfListDisplay
-          activeList={activeList}
-          data={certificatesSection.downloads}
-          allSeriesKeys={allCertificationsKeys}
-        />
       </div>
     </>
   );
