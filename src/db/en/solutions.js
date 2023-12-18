@@ -79,7 +79,7 @@ export const solutions = {
     iecx: "Focuses on the global IECEX standard for equipment used in explosive atmospheres.",
     eu: "Includes general declarations of conformity to EU standards and other important certificates related to safety and environment.",
     downloads: {
-      ATEX_Certificates: [
+      ATEX: [
         {
           name: "ATEX ZONE 1 Certificate",
           url: "https://www.iceqube.com/certificates/ATX1682-1%20-%20ATEX%20EU%20TYPE%20Exam%20Certificate%20-%20QPS%2022ATEX5000X.pdf",
@@ -105,7 +105,7 @@ export const solutions = {
           url: "https://www.iceqube.com/certificates/Zone%202%20DECLARATION%20OF%20CONFORMITY%20Heat%20Exchangers.pdf",
         },
       ],
-      IECEX_Certificates: [
+      IECEX: [
         {
           name: "IECEX ZONE 1 Certificate of Conformity",
           url: "https://www.iceqube.com/certificates/IECEx_QPS_18.0007X_005.pdf",
@@ -119,7 +119,7 @@ export const solutions = {
           url: "https://www.iceqube.com/certificates/IECEx_QPS_19.0004X_003.pdf",
         },
       ],
-      EU_Declarations_of_Conformity_and_Other_Certificates: [
+      EU_and_Other_Certificates: [
         {
           name: "EU Declaration of Conformity (Safe area products)",
           url: "https://www.iceqube.com/certificates/CE%20Declaration%20of%20Conformity-3-8-21.pdf",
@@ -141,7 +141,7 @@ export const solutions = {
           url: "https://www.iceqube.com/wp-content/uploads/2022/04/IQ_Inc_Declaration_of_Conformity_316L.pdf",
         },
       ],
-      Zone_1_Certificates: [
+      Zone_1: [
         {
           name: "ATEX ZONE 1 Certificate",
           url: "https://www.iceqube.com/certificates/ATX1682-1%20-%20ATEX%20EU%20TYPE%20Exam%20Certificate%20-%20QPS%2022ATEX5000X.pdf",
@@ -155,7 +155,7 @@ export const solutions = {
           url: "https://www.iceqube.com/certificates/IECEx_QPS_18.0007X_005.pdf",
         },
       ],
-      Zone_2_Certificates: [
+      Zone_2: [
         {
           name: "ATEX ZONE 2 Certificate - Air Conditioners",
           url: "https://www.iceqube.com/certificates/QPS%2016ATEX0002X05.pdf",
