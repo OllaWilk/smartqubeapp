@@ -31,10 +31,14 @@
   }
 
   .contactList {
+    @include flex(column, flex-start, space-between);
+    height: 70%;
+
     @include lg-max {
-      @include flex(row, center, space-between);
+      @include flex(row, center, center);
       flex-wrap: wrap;
       gap: 20px;
+      flex-grow: 1;
     }
 
     @include md-max {
@@ -44,21 +48,12 @@
     .contactListLtem {
       @include flex(row, center, flex-start);
       gap: 18px;
-      margin-bottom: 30px;
-      margin-left: 20px;
       border: none;
 
-      &:last-child {
-        width: 100%;
-        height: auto;
-      }
-
       @include lg-max {
-        width: 100%;
         justify-content: space-around;
         align-items: space-between;
         padding: 0 20px;
-        width: 250px;
         height: 150px;
         border: 1px solid var(--color-main);
         margin-bottom: 0px;
