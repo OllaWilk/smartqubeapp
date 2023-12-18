@@ -2,11 +2,16 @@
 @import "../../../../styles/typography";
 
 .porftolioCart {
-  width: 330px;
+  width: calc(33% - 20px);
   border-radius: 1px;
+  flex-grow: 1;
 
   @include lg-max {
-    flex-grow: 1;
+    width: calc(50% - 20px);
+  }
+
+  @include md-max {
+    width: 100%;
   }
 
   .imgWrap {
@@ -26,7 +31,7 @@
   .abstract {
     @include flex(column, flex-start, space-between);
     transition: var(--transition);
-    height: 310px;
+    height: 330px;
     border-top: 4px solid var(--color-main);
     text-align: left;
     padding: 20px;

@@ -10,6 +10,7 @@
   @include splash;
   // height: 688px;
   height: 80vh;
+  // height: 100vh;
   @include flex(column, center, center);
 
   @include sm-max {
@@ -36,4 +37,5 @@
 .callToActionBackground {
   background-color: var(--color-green-dark);
   padding: 70px 0;
+  min-height: 30vh;
 }

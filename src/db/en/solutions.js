@@ -1,4 +1,4 @@
-import { photos, icons, logos, icequbeProducts } from "../../images/index";
+import { logos, icequbeProducts } from "../../images/index";
 
 export const solutions = {
   carousel: {

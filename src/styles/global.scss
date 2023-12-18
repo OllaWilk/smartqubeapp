@@ -68,4 +68,12 @@ button {
   }
 }
 
+.stickySection {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+  background-color: var(--color-light);
+}
+
 // TESTS
