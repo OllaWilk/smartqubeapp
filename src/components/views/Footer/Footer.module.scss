@@ -5,6 +5,7 @@
   background-color: var(--color-dark);
   padding: 50px 0;
   color: var(--color-light);
+  z-index: 999;
 
   .navWrap {
     @include flex(row, center, space-between);

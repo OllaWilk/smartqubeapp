@@ -14,7 +14,7 @@ export const Solutions = () => {
   const { carousel, manualsSection, certificatesSection } = solutions;
   const allCertificationsKeys = Object.keys(certificatesSection.downloads);
 
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [selectedCertificate, setSelectedCertificate] = useState("ATEX");
 
   const renderDownloads = (downloads) => {
     return Object.keys(downloads).map((series) => (

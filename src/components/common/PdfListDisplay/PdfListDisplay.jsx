@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./PdfListDisplay.module.scss";
 import { icons } from "../../../images";
+import styles from "./PdfListDisplay.module.scss";
 
 export const PdfListDisplay = ({ certificate, data, allSeriesKeys }) => {
   if (!certificate) {
