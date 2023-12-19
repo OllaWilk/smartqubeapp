@@ -117,6 +117,7 @@
   left: 0;
   width: 100%;
   @include flex(row, flex-end, space-between);
+  margin-bottom: 30px;
 
   .prevNext {
     @include flex(row, flex-end, flex-end);

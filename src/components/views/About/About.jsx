@@ -14,6 +14,9 @@ export const About = () => {
   const { header, companyDescription, carts, callToaction, location } = about;
   return (
     <div className={styles.aboutPage}>
+      <div className="test">
+        <div className="video"></div>
+      </div>
       <div className={styles.splashBackgroundImg}>
         <div className={styles.overlay}></div>
         <video src={videoBg} autoPlay loop muted type="video/mp4" />

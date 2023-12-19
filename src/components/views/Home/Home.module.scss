@@ -8,10 +8,9 @@
 .offerBackground {
   background-image: url("../../../images/photos/splash.jpg");
   @include splash;
-  // height: 688px;
   height: 80vh;
   // height: 100vh;
-  @include flex(column, center, center);
+  padding: 70px 0 0 90px;
 
   @include sm-max {
     height: 100vh;
