@@ -4,6 +4,7 @@ export const about = {
   header: {
     companyName: "WE WILL DESIGN THE FUTURE",
     slogan: "SMARTqube",
+    description: "Our team is our greatest asset.",
     greenBtn: "contact",
     transparentBtn: "portfolio",
   },
