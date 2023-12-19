@@ -15,6 +15,8 @@ export const About = () => {
   return (
     <div className={styles.aboutPage}>
       <div className={styles.splashBackgroundImg}>
+        <div className={styles.overlay}></div>
+        <video src={videoBg} autoPlay loop muted type="video/mp4" />
         <Header
           description={header.description}
           mainTitle={header.slogan}
@@ -76,7 +78,6 @@ export const About = () => {
           alt={location.title}
         />
       </div>
-      <video type="video/mp4" src={videoBg} autoPlay loop muted />
     </div>
   );
 };
