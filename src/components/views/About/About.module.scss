@@ -6,11 +6,11 @@
   text-align: justify;
 
   .splashBackgroundImg {
-    // background-image: url("../../../images/photos/splash.jpg");
     @include splash;
+    position: relative;
 
     height: 80vh;
-    @include flex(column, center, center);
+    // @include flex(column, center, center);
 
     @include sm-max {
       height: 100vh;
@@ -18,6 +18,24 @@
 
     &::before {
       background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -8;
+    }
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -9;
     }
   }
 
@@ -141,4 +159,16 @@
     background-color: var(--color-green-dark);
     padding: 70px 0;
   }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
