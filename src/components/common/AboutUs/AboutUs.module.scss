@@ -3,6 +3,5 @@
 .about {
   @include flex(column, center, center);
   overflow: hidden;
-  padding: 70px 0 90px 0;
-  min-height: 60vh;
+  min-height: 70vh;
 }

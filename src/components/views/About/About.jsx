@@ -6,6 +6,7 @@ import {
   ImageHeaderColumns,
   ImgOnTheLeftAndTextOnRight,
 } from "../../common/index";
+import videoBg from "../../../images/photos/videoBg.mp4";
 
 import styles from "./About.module.scss";
 
@@ -75,6 +76,7 @@ export const About = () => {
           alt={location.title}
         />
       </div>
+      <video type="video/mp4" src={videoBg} autoPlay loop muted />
     </div>
   );
 };
