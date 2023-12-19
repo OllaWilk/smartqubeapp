@@ -10,7 +10,7 @@
     position: relative;
 
     height: 80vh;
-    // @include flex(column, center, center);
+    @include flex(column, center, center);
 
     @include sm-max {
       height: 100vh;
