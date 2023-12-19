@@ -3,6 +3,8 @@
 
 .bannerContainer {
   min-height: 80vh;
+  padding: 70px 0 0 90px;
+
   background: var(--background-radial);
   @include flex(column, center, center);
   overflow: hidden;
