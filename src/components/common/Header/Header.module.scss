@@ -28,6 +28,8 @@
       color: var(--color-light);
       padding-bottom: 27px;
 
+      margin-bottom: 30px;
+
       @include sm-max {
         padding-bottom: 0;
       }

@@ -1,6 +1,8 @@
 import { photos, logos } from "../../images/index";
+import videoBlog from "../../images/photos/videoBg.mp4";
 
 export const about = {
+  videoHeader: videoBlog,
   header: {
     companyName: "WE WILL DESIGN THE FUTURE",
     slogan: "SMARTqube",
