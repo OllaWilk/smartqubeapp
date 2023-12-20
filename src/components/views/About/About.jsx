@@ -1,34 +1,68 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { about } from "../../../db/en/about";
+import useWindowWidth from "../../../utils/useWindowWidth";
+import useAutoPlayVideo from "../../../utils/useAutoPlayVideo";
+
 import {
   Header,
   CallToAction,
   ImageHeaderColumns,
   ImgOnTheLeftAndTextOnRight,
 } from "../../common/index";
-import videoBg from "../../../images/photos/videoBg.mp4";
 
 import styles from "./About.module.scss";
 
 export const About = () => {
-  const { header, companyDescription, carts, callToaction, location } = about;
+  const {
+    videoHeader,
+    header,
+    companyDescription,
+    carts,
+    callToaction,
+    location,
+  } = about;
+  const { videoRef, isLoaded } = useAutoPlayVideo(videoHeader);
+
+  console.log(isLoaded);
+
+  const width = useWindowWidth();
+  useEffect(() => {}, [videoHeader]);
+
   return (
     <div className={styles.aboutPage}>
-      <div className="test">
-        <div className="video"></div>
-      </div>
       <div className={styles.splashBackgroundImg}>
-        <div className={styles.overlay}></div>
-        <video src={videoBg} autoPlay loop muted type="video/mp4" />
-        <Header
-          description={header.description}
-          mainTitle={header.slogan}
-          subtitle={header.companyName}
-          greenBtn={header.greenBtn}
-          transparentBtn={header.transparentBtn}
-          greenBtnLinkTo={header.greenBtnLinkTo}
-          transparentBtnLinkTo={header.transparentBtnLinkTo}
-        />
+        {videoHeader && width > 800 ? (
+          <>
+            <div className={styles.overlay}></div>
+            <video
+              src={videoHeader}
+              ref={videoRef}
+              loop
+              muted
+              type="video/mp4"
+            />
+            <Header
+              description={header.description}
+              mainTitle={header.slogan}
+              subtitle={header.companyName}
+              greenBtn={header.greenBtn}
+              transparentBtn={header.transparentBtn}
+              greenBtnLinkTo={header.greenBtnLinkTo}
+              transparentBtnLinkTo={header.transparentBtnLinkTo}
+            />
+          </>
+        ) : null}
+        {!isLoaded && (
+          <Header
+            description={header.description}
+            mainTitle={header.slogan}
+            subtitle={header.companyName}
+            greenBtn={header.greenBtn}
+            transparentBtn={header.transparentBtn}
+            greenBtnLinkTo={header.greenBtnLinkTo}
+            transparentBtnLinkTo={header.transparentBtnLinkTo}
+          />
+        )}
       </div>
       <div className="container">
         <div className={styles.companyWrap}>

@@ -2,8 +2,7 @@
 @import "../../../styles/typography";
 
 .infoBox {
-  @include flex(row, center, space-between);
-
+  @include flex(row, flex-start, space-between);
   text-align: justify;
   text-justify: inter-word;
 

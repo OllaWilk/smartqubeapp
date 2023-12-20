@@ -76,24 +76,8 @@ button {
   background-color: var(--color-light);
 }
 
-// TESTS
-
-.test {
-  position: fixed;
-  background-color: red;
-  width: 100vw;
-  height: calc(80vh);
-  opacity: 0.5;
-
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 777;
-
-  .video {
-    background-color: greenyellow;
-    height: 100%;
-    width: 65%;
-    position: absolute;
-    right: 0;
-  }
+.none {
+  display: none;
 }
+
+// TESTS

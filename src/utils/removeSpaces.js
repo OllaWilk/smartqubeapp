@@ -5,5 +5,3 @@ export const removeSpaces = (text) => {
 export const removeUnderlines = (text) => {
   return text.replace(/_/g, " ");
 };
-
-console.log(removeUnderlines("ATEX_certifications"));

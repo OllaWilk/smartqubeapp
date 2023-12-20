@@ -5,6 +5,11 @@
   flex-wrap: wrap;
   position: relative;
   padding: 20px 0;
+
+  @include sm-max {
+    height: 100%;
+    align-items: center;
+  }
 }
 
 .headlingsWrap {
@@ -12,38 +17,29 @@
   text-align: left;
   font-family: var(--header-font);
   margin-right: 0px;
+  min-height: 200px;
 
-  @include xl-max {
-    padding: 55px 0;
-    min-height: 288px;
+  @include sm-max {
+    padding: 0 0;
   }
 
   .titleCall {
-    font-size: var(--font-d-section-subtitle);
-    line-height: 29px;
     font-weight: var(--normal);
     margin-bottom: 14px;
-
-    @include sm-max {
-      font-size: var(--font-m-subtitle);
-    }
   }
 
   .subtitleCall {
     font-size: var(--font-d-section-header);
     line-height: 40px;
     font-weight: var(--normal);
-
-    @include md-max {
-      font-size: var(--font-d-section-subtitle);
-      line-height: 26px;
-    }
   }
 }
 
 .callToAction {
   a {
+    position: absolute;
     margin: 30px 0 0 0px;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,11 +51,21 @@
     @include xl-max {
       position: absolute;
       right: 0;
-      bottom: 70px;
+      bottom: 20px;
+    }
+
+    @include lg-max {
+      bottom: 20px;
+      height: auto;
+    }
+
+    @include md-max {
+      bottom: 20px;
+      height: auto;
     }
 
     @include sm-max {
-      bottom: 50px;
+      bottom: 20px;
       height: auto;
     }
   }

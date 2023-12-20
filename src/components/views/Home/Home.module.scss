@@ -8,12 +8,13 @@
 .offerBackground {
   background-image: url("../../../images/photos/splash.jpg");
   @include splash;
-  height: 80vh;
-  // height: 100vh;
-  padding: 70px 0 0 90px;
+  min-height: 80vh;
+  height: 100vh;
 
   @include sm-max {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding: 70px 0;
   }
 
   &::before {
@@ -23,6 +24,7 @@
 
 .offerBackground {
   height: auto;
+  min-height: 100vh;
 
   &::before {
     background-color: rgba(0, 0, 0, 0.9);
@@ -35,6 +37,21 @@
 
 .callToActionBackground {
   background-color: var(--color-green-dark);
-  padding: 70px 0;
+  padding: 30px 0;
   min-height: 30vh;
+
+  @include lg-max {
+    display: flex;
+    align-items: center;
+  }
+
+  @include md-max {
+    padding: 20px 0;
+    min-height: 40vh;
+  }
+
+  @include sm-max {
+    min-height: 50vh;
+    height: 50vh;
+  }
 }

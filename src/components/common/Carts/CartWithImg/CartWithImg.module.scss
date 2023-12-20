@@ -20,7 +20,7 @@
 
     img {
       object-fit: cover;
-      height: 250px;
+      height: 200px;
       width: 100%;
 
       @include sm-max {
@@ -29,14 +29,13 @@
     }
   }
   .abstract {
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 4px 4px;
     @include flex(column, flex-start, space-between);
     transition: var(--transition);
-    height: 330px;
-    border-top: 4px solid var(--color-main);
+    height: 270px;
     text-align: left;
-    padding: 20px;
-    background-color: #fff;
+    padding: 10px 20px;
+    background-color: var(--color-light);
 
     @include sm-max {
       height: auto;
@@ -54,8 +53,12 @@
     }
 
     p {
-      padding: 10px 0 30px 0;
       font-size: 16px;
+      height: 100%;
+
+      @include sm-max {
+        padding: 10px 0;
+      }
     }
   }
 }
