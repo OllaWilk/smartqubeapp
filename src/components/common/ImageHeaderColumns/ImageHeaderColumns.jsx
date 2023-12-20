@@ -8,8 +8,8 @@ export const ImageHeaderColumns = ({ src, alt, header, text1, text2 }) => {
   return (
     <div className={styles.column}>
       <ImgHeader src={src} alt={alt} header={header} />
-      <p>{text1}</p>
-      <p>{text2}</p>
+      <p className={styles.text1}>{text1}</p>
+      <p className={styles.text2}>{text2}</p>
     </div>
   );
 };

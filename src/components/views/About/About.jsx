@@ -8,6 +8,7 @@ import {
   CallToAction,
   ImageHeaderColumns,
   ImgOnTheLeftAndTextOnRight,
+  SectionTitle,
 } from "../../common/index";
 
 import styles from "./About.module.scss";
@@ -17,6 +18,7 @@ export const About = () => {
     videoHeader,
     header,
     companyDescription,
+    team,
     carts,
     callToaction,
     location,
@@ -31,40 +33,18 @@ export const About = () => {
   return (
     <div className={styles.aboutPage}>
       <div className={styles.splashBackgroundImg}>
-        {videoHeader && width > 800 ? (
-          <>
-            <div className={styles.overlay}></div>
-            <video
-              src={videoHeader}
-              ref={videoRef}
-              loop
-              muted
-              type="video/mp4"
-            />
-            <Header
-              description={header.description}
-              mainTitle={header.slogan}
-              subtitle={header.companyName}
-              greenBtn={header.greenBtn}
-              transparentBtn={header.transparentBtn}
-              greenBtnLinkTo={header.greenBtnLinkTo}
-              transparentBtnLinkTo={header.transparentBtnLinkTo}
-            />
-          </>
-        ) : null}
-        {!isLoaded && (
-          <Header
-            description={header.description}
-            mainTitle={header.slogan}
-            subtitle={header.companyName}
-            greenBtn={header.greenBtn}
-            transparentBtn={header.transparentBtn}
-            greenBtnLinkTo={header.greenBtnLinkTo}
-            transparentBtnLinkTo={header.transparentBtnLinkTo}
-          />
-        )}
+        <Header
+          description={header.description}
+          mainTitle={header.slogan}
+          subtitle={header.companyName}
+          greenBtn={header.greenBtn}
+          transparentBtn={header.transparentBtn}
+          greenBtnLinkTo={header.greenBtnLinkTo}
+          transparentBtnLinkTo={header.transparentBtnLinkTo}
+        />
       </div>
       <div className="container">
+        {/* our people */}
         <div className={styles.companyWrap}>
           {companyDescription.map((el) => (
             <ImageHeaderColumns
@@ -77,8 +57,49 @@ export const About = () => {
             />
           ))}
         </div>
+      </div>
+      {/* team */}
+      <div className={styles.team}>
+        <div className="container">
+          <div className={styles.textWrap}>
+            <SectionTitle h2={team.title} h3={team.slogan} />
+            <p>{team.text}</p>
+          </div>
+          <div className={styles.peopleImagesWrap}>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>Senior Design Specialist</p>
+            </div>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>I&C, Automation Design and Commissioning Engineer</p>
+            </div>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>CEO</p>
+            </div>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>Chief Operating Officer</p>
+            </div>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>Emotional Support Specialist</p>
+            </div>
+            <div className={styles.person}>
+              <img src="" alt="" />
+              <p>Montarz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
         {/* offers */}
         <div className={styles.offers}>
+          <div className={styles.textWrap}>
+            <SectionTitle h2={"Explore Our  Services"} h3={team.slogan} />
+            <p>{team.text}</p>
+          </div>
           {carts.map((offer, index) => (
             <div
               key={`smartqubeoffer-${offer.title}`}

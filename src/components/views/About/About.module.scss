@@ -5,6 +5,7 @@
   word-wrap: break-word;
   text-align: justify;
 
+  //HEADER
   .splashBackgroundImg {
     @include splash;
     position: relative;
@@ -40,11 +41,98 @@
     }
   }
 
+  //OUR PEOPLE
   .companyWrap {
-    columns: 200px 2;
-    column-gap: 60px;
+    @include flex(row, center, space-between);
+    flex-wrap: wrap;
+    flex-grow: 1;
+    column-gap: 80px;
     padding: 70px 0 90px 0;
-    min-height: 60vh;
+
+    @include lg-max {
+      column-gap: 20px;
+    }
+
+    @include md-max {
+      row-gap: 80px;
+    }
+  }
+
+  //TEAM
+  .team {
+    background-color: var(--background-color);
+    padding: 70px 0 90px 0;
+
+    .textWrap {
+      h2,
+      h3 {
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      p {
+        text-align: justify;
+        padding: 30px 0 60px 0;
+        width: 70%;
+
+        @include lg-max {
+          width: 100%;
+        }
+      }
+    }
+
+    .peopleImagesWrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      flex-grow: 1;
+      justify-content: space-between;
+
+      @include md-max {
+        gap: 10px;
+      }
+
+      .person {
+        border: 1px solid #ccc;
+        box-shadow: var(--shadow);
+        text-align: justify;
+        // height: 300px;
+        width: calc(100% / 3 - 15px);
+
+        @include lg-max {
+          width: calc(100% / 2 - 15px);
+        }
+
+        @include md-max {
+          width: calc(100% / 2 - 10px);
+        }
+
+        @include sm-max {
+          width: calc(100% / 1 - 15px);
+        }
+
+        img {
+          // background-color: var(--color-green-dark);
+          width: 100%;
+          height: 300px;
+          background-color: red;
+
+          @include lg-max {
+            background-color: green;
+          }
+
+          @include sm-max {
+            background-color: yellow;
+          }
+        }
+        p {
+          background-color: black;
+          // height: 30%;
+          color: #ccc;
+          padding: 20px;
+        }
+      }
+    }
   }
 
   .offers {
@@ -104,7 +192,7 @@
 
       .text {
         width: calc(65% - 16px);
-        background-color: var(--color-grey);
+        background-color: var(--background-color);
         margin: 0 16px 0 0;
 
         @include md-max {

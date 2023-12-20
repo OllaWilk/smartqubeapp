@@ -4,8 +4,8 @@
   @include flex(row, flex-end, flex-end);
   break-inside: avoid-column;
   margin-bottom: 20px;
+  gap: 20px;
 
-  height: 100%;
   width: 100%;
 
   @include sm-max {
@@ -24,7 +24,6 @@
 
   .imgWrapTitle {
     width: 100px;
-    margin-right: 30px;
 
     img {
       object-fit: cover;
@@ -38,7 +37,6 @@
 
       @include sm-max {
         margin-right: 0;
-        margin-bottom: 30px;
       }
     }
   }
@@ -52,5 +50,6 @@
 
   @include sm-max {
     text-align: center;
+    margin-top: 0;
   }
 }
