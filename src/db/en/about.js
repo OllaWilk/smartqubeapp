@@ -28,6 +28,11 @@ export const about = {
       img: logos.logo,
     },
   ],
+  team: {
+    slogan: "DISCOVER OUR CREW",
+    title: "OUR PEOPLE ARE OUR GREATEST ASSET",
+    text: "In SMARTqube, we believe that the success of our company lies in the individuals who drive it. Our crew is composed not only of professionals in their fields but, more importantly, of people brimming with passion, creativity, and dedication",
+  },
   carts: [
     {
       id: 1,

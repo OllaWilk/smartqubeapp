@@ -14,7 +14,7 @@ export const Home = () => {
   const { header, about, offers, callToaction, mission } = home;
   return (
     <>
-      <div className={styles.splashBackgroundImg}>
+      <section className={styles.splashBackgroundImg}>
         <Header
           description={header.description}
           mainTitle={header.slogan}
@@ -24,7 +24,7 @@ export const Home = () => {
           greenBtnLinkTo={header.greenBtnLinkTo}
           transparentBtnLinkTo={header.transparentBtnLinkTo}
         />
-      </div>
+      </section>
       <AboutUs
         subtitle={about.subtitle}
         title={about.title}
