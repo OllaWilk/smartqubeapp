@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { about } from "../../../db/en/about";
-import useWindowWidth from "../../../utils/useWindowWidth";
-import useAutoPlayVideo from "../../../utils/useAutoPlayVideo";
 
 import {
   Header,
@@ -9,30 +7,19 @@ import {
   ImageHeaderColumns,
   ImgOnTheLeftAndTextOnRight,
   SectionTitle,
+  ScrollBtn,
 } from "../../common/index";
 
 import styles from "./About.module.scss";
 
 export const About = () => {
-  const {
-    videoHeader,
-    header,
-    companyDescription,
-    team,
-    carts,
-    callToaction,
-    location,
-  } = about;
-  const { videoRef, isLoaded } = useAutoPlayVideo(videoHeader);
-
-  console.log(isLoaded);
-
-  const width = useWindowWidth();
-  useEffect(() => {}, [videoHeader]);
+  const { header, companyDescription, team, carts, callToaction, location } =
+    about;
 
   return (
     <div className={styles.aboutPage}>
-      <div className={styles.splashBackgroundImg}>
+      <ScrollBtn />
+      <section className={styles.splashBackgroundImg}>
         <Header
           description={header.description}
           mainTitle={header.slogan}
@@ -42,10 +29,10 @@ export const About = () => {
           greenBtnLinkTo={header.greenBtnLinkTo}
           transparentBtnLinkTo={header.transparentBtnLinkTo}
         />
-      </div>
+      </section>
       <div className="container">
         {/* our people */}
-        <div className={styles.companyWrap}>
+        <section className={styles.ourPeople}>
           {companyDescription.map((el) => (
             <ImageHeaderColumns
               key={el.title}
@@ -56,10 +43,10 @@ export const About = () => {
               alt={el.title}
             />
           ))}
-        </div>
+        </section>
       </div>
       {/* team */}
-      <div className={styles.team}>
+      <section className={styles.team}>
         <div className="container">
           <div className={styles.textWrap}>
             <SectionTitle h2={team.title} h3={team.slogan} />
@@ -92,7 +79,7 @@ export const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div className="container">
         {/* offers */}
         <div className={styles.offers}>

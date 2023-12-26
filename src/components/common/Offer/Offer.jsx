@@ -9,7 +9,7 @@ export const Offer = ({ offers, title, subtitle }) => {
     <div className={`${styles.offer} container`}>
       <SectionTitle h2={title} h3={subtitle} />
 
-      <div className={styles.offerCart}>
+      <article className={styles.offerCart}>
         {offers.map((offer, index) => (
           <CartWithImg
             key={`${index}-home-cart `}
@@ -21,7 +21,7 @@ export const Offer = ({ offers, title, subtitle }) => {
             buttonUrl={offer.button[1]}
           />
         ))}
-      </div>
+      </article>
     </div>
   );
 };

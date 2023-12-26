@@ -12,7 +12,6 @@ export const useScrollFadeIn = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      console.log(scrollY);
 
       setVisible((prev) => ({
         header: scrollY + windowHeight * 1 > 0,

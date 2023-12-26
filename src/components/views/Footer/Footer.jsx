@@ -29,7 +29,7 @@ export const Footer = () => {
       const subItems = item[buttonLabel];
 
       return (
-        <div
+        <footer
           className={styles.stringBtnFooter}
           key={`stringBtnFooter-${index}`}
         >
@@ -45,7 +45,7 @@ export const Footer = () => {
               ))}
             </ul>
           )}
-        </div>
+        </footer>
       );
     }
   };

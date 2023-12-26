@@ -10,12 +10,11 @@
     @include splash;
     position: relative;
     background-image: url("../../../images/photos/splash.jpg");
-
-    min-height: 100vh;
+    min-height: 100svh;
     @include flex(column, center, center);
 
     @include sm-max {
-      height: 100vh;
+      height: 100svh;
     }
 
     &::before {
@@ -42,12 +41,15 @@
   }
 
   //OUR PEOPLE
-  .companyWrap {
+  .ourPeople {
     @include flex(row, center, space-between);
     flex-wrap: wrap;
-    flex-grow: 1;
-    column-gap: 80px;
-    padding: 70px 0 90px 0;
+    // flex-grow: 1;
+    // column-gap: 40px;
+    // padding: 70px 0 90px 0;
+    min-height: 50svh;
+    height: 50svh;
+    background-color: red;
 
     @include lg-max {
       column-gap: 20px;
@@ -60,7 +62,7 @@
 
   //TEAM
   .team {
-    background-color: var(--background-color);
+    background-color: var(--color-light);
     padding: 70px 0 90px 0;
 
     .textWrap {

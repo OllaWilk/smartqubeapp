@@ -14,7 +14,7 @@ export const AboutUs = ({
   linkTo,
 }) => {
   return (
-    <div className={`${styles.about} container`}>
+    <article className={`${styles.about} container`}>
       <ArticleWithSubstract
         subtitle={subtitle}
         title={title}
@@ -24,7 +24,7 @@ export const AboutUs = ({
         linkTo={linkTo}
         btnName={btnName}
       />
-    </div>
+    </article>
   );
 };
 

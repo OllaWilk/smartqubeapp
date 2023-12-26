@@ -1,5 +1,5 @@
 import { photos, logos } from "../../images/index";
-import videoBlog from "../../images/photos/videoBg.mp4";
+import videoBlog from "../../images/photos/videobgFlip.mp4";
 
 export const about = {
   videoHeader: videoBlog,

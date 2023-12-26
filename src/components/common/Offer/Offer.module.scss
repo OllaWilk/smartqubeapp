@@ -1,7 +1,7 @@
 @import "../../../styles/mixins";
 
 .offer {
-  @include flex(column, center, flex-start);
+  @include flex(column, center, center);
   padding: 70px 0 120px 0;
   overflow: hidden;
 
@@ -14,15 +14,9 @@
   }
 
   .offerCart {
-    @include flex(row, center, space-between);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 50px;
-    width: 100%;
-    gap: 30px;
-
-    @include sm-max {
-      margin-top: 100px;
-      margin-bottom: 50px;
-    }
+    gap: 50px;
   }
 }
