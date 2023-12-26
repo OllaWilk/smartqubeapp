@@ -2,25 +2,14 @@
 @import "../../../../styles/typography";
 
 .porftolioCart {
-  width: calc(33% - 80px);
-  flex-grow: 1;
-
-  @include lg-max {
-    width: calc(50% - 50px);
-  }
-
-  @include md-max {
-    width: 100%;
-  }
-
   .imgWrap {
-    border-radius: 8px 8px 0 0;
+    border-radius: 6px 6px 0 0;
     overflow: hidden;
     @include flex(column, flex-start, center);
 
     img {
       object-fit: cover;
-      height: 200px;
+      height: 250px;
       width: 100%;
 
       @include sm-max {
@@ -28,16 +17,18 @@
       }
     }
   }
+
   .abstract {
-    border-radius: 0 0 4px 4px;
     @include flex(column, flex-start, space-between);
+    border-radius: 0 0 6px 6px;
     transition: var(--transition);
-    height: 270px;
+    height: 280px;
     text-align: left;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: var(--color-light);
 
     @include sm-max {
+      padding: 20px 40px;
       height: auto;
     }
 
@@ -54,10 +45,9 @@
 
     p {
       font-size: 16px;
-      height: 100%;
 
       @include sm-max {
-        padding: 10px 0;
+        margin-bottom: 20px;
       }
     }
   }

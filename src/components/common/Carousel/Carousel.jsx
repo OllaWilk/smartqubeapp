@@ -68,10 +68,10 @@ export const Carousel = ({ carousel }) => {
           >
             ICEqube.com
           </a>
-          <span className="prev" onClick={goToPrevious}>
+          <span className={styles.prev} onClick={goToPrevious}>
             &lt;
           </span>
-          <span className="next" onClick={goToNext}>
+          <span className={styles.next} onClick={goToNext}>
             &gt;
           </span>
         </div>

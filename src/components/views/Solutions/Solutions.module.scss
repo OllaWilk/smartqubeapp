@@ -2,8 +2,9 @@
 @import "../../../styles/typography.scss";
 
 .bannerContainer {
-  min-height: 80vh;
-  padding: 70px 0 0 90px;
+  min-height: 100vh;
+  // padding: 70px 0 0 90px;
+  padding-top: 70px;
 
   background: var(--background-radial);
   @include flex(column, center, center);

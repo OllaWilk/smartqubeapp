@@ -9,8 +9,7 @@
   width: 100%;
 
   @include sm-max {
-    height: 100%;
-    padding: auto 0px;
+    padding: 30px 0 0 0;
   }
 
   .contentWrapper {
@@ -27,7 +26,6 @@
       @extend .text;
       color: var(--color-light);
       padding-bottom: 27px;
-
       margin-bottom: 30px;
 
       @include sm-max {

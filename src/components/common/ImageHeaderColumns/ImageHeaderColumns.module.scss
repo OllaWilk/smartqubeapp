@@ -2,7 +2,7 @@
 
 .column {
   width: calc(50% - 80px);
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, center, flex-start);
   height: 500px;
 
   @include lg-max {

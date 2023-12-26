@@ -9,6 +9,7 @@ export { ImgOnTheLeftAndTextOnRight } from "./ImgOnTheLeftAndTextOnRight/ImgOnTh
 export { ImageBox } from "./ImageBox/ImageBox";
 export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
 export { Carousel } from "./Carousel/Carousel";
+export { Video } from "./Video/Video";
 /*forms*/
 export { ContactForm } from "./Forms/ContactForm/ContactForm";
 export { RequestCall } from "./Forms/RequestCall/RequestCall";
@@ -26,6 +27,7 @@ export { MainColorBtn } from "./Buttons/MainColorBtn/MainColorBtn";
 export { TransparentBtn } from "./Buttons/TransparentBtn/TransparentBtn";
 export { GreenBtnWithoutBackground } from "./Buttons/GreenBtnWithoutBackground/GreenBtnWithoutBackground";
 export { BlackBtn } from "./Buttons/BlackBtn/BlackBtn";
+export { ScrollBtn } from "./Buttons/ScrollBtn/ScrollBtn";
 
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";

@@ -6,7 +6,7 @@ import styles from "./OurMission.module.scss";
 
 export const OurMission = ({ title, subtitle, description, src }) => {
   return (
-    <div className={`${styles.mission} container`}>
+    <article className={`${styles.mission} container`}>
       <ImgOnTheLeftAndTextOnRight
         src={src}
         alt={title}
@@ -14,7 +14,7 @@ export const OurMission = ({ title, subtitle, description, src }) => {
         subtitle={subtitle}
         description={description}
       />
-    </div>
+    </article>
   );
 };
 
