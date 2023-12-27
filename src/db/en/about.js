@@ -1,4 +1,4 @@
-import { photos, logos } from "../../images/index";
+import { photos, logos, people } from "../../images/index";
 import videoBlog from "../../images/photos/videobgFlip.mp4";
 
 export const about = {
@@ -8,7 +8,7 @@ export const about = {
     slogan: "SMARTqube",
     description: "Our team is our greatest asset.",
     greenBtn: "contact",
-    transparentBtn: "portfolio",
+    transparentBtn: "solutions",
   },
   companyDescription: [
     {
@@ -32,6 +32,32 @@ export const about = {
     slogan: "DISCOVER OUR CREW",
     title: "OUR PEOPLE ARE OUR GREATEST ASSET",
     text: "In SMARTqube, we believe that the success of our company lies in the individuals who drive it. Our crew is composed not only of professionals in their fields but, more importantly, of people brimming with passion, creativity, and dedication",
+    galery: [
+      {
+        img: people.greg,
+        name: "Senior Design Specialist",
+      },
+      {
+        img: people.witek,
+        name: "I&C, Automation Design and Commissioning Engineer",
+      },
+      {
+        img: "",
+        name: "CEO",
+      },
+      {
+        img: "",
+        name: "Chief Operating Officer",
+      },
+      {
+        img: "",
+        name: "Emotional Support Specialist",
+      },
+      {
+        img: "",
+        name: "Montarz",
+      },
+    ],
   },
   carts: [
     {

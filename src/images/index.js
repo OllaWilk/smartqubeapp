@@ -45,6 +45,10 @@ import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
 import efficientSite from "./photos/efficientSite.jpg";
 
+/* people */
+import witek from "./photos/people/Witold.png";
+import greg from "./photos/people/greg.png";
+
 /* ICEqube products */
 import GroupPicture from "./photos/ICEqubeProducts/Group-Picture.png";
 import evSeries from "./photos/ICEqubeProducts/evSeries.png";
@@ -107,6 +111,11 @@ export const photos = {
   iceProduct,
   tenderSupport,
   efficientSite,
+};
+
+export const people = {
+  greg,
+  witek,
 };
 
 export const iso = {

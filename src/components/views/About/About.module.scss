@@ -42,106 +42,42 @@
 
   //OUR PEOPLE
   .ourPeople {
-    @include flex(row, center, space-between);
-    flex-wrap: wrap;
-    // flex-grow: 1;
-    // column-gap: 40px;
-    // padding: 70px 0 90px 0;
-    min-height: 50svh;
-    height: 50svh;
-    background-color: red;
+    overflow: hidden;
+    padding: 70px 0 90px 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
 
-    @include lg-max {
-      column-gap: 20px;
-    }
+    gap: 80px;
+    flex-wrap: wrap;
+    min-height: 100svh;
+    height: 100svh;
 
     @include md-max {
-      row-gap: 80px;
+      height: auto;
+      grid-auto-flow: row;
+      align-content: space-between;
     }
   }
 
   //TEAM
   .team {
-    background-color: var(--color-light);
-    padding: 70px 0 90px 0;
+    padding: 120px 0 90px 0;
 
-    .textWrap {
-      h2,
-      h3 {
-        text-align: left;
-        text-transform: uppercase;
-      }
+    .peopleGalery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px 60px;
 
-      p {
-        text-align: justify;
-        padding: 30px 0 60px 0;
-        width: 70%;
-
-        @include lg-max {
-          width: 100%;
-        }
-      }
-    }
-
-    .peopleImagesWrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      flex-grow: 1;
-      justify-content: space-between;
-
-      @include md-max {
-        gap: 10px;
-      }
-
-      .person {
-        border: 1px solid #ccc;
-        box-shadow: var(--shadow);
-        text-align: justify;
-        // height: 300px;
-        width: calc(100% / 3 - 15px);
-
-        @include lg-max {
-          width: calc(100% / 2 - 15px);
-        }
-
-        @include md-max {
-          width: calc(100% / 2 - 10px);
-        }
-
-        @include sm-max {
-          width: calc(100% / 1 - 15px);
-        }
-
-        img {
-          // background-color: var(--color-green-dark);
-          width: 100%;
-          height: 300px;
-          background-color: red;
-
-          @include lg-max {
-            background-color: green;
-          }
-
-          @include sm-max {
-            background-color: yellow;
-          }
-        }
-        p {
-          background-color: black;
-          // height: 30%;
-          color: #ccc;
-          padding: 20px;
-        }
+      @include sm-max {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
     }
   }
 
   .offers {
-    margin: 30px 0 70px 0;
-    @include md-max {
-      width: 100%;
-    }
+    padding: 120px 0 90px 0;
+
     .even,
     .odd {
       min-height: fit-content;
@@ -243,7 +179,11 @@
   }
 
   .location {
-    padding: 50px 0;
+    min-height: 85svh;
+    padding: 70px 0 90px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .background {
@@ -262,4 +202,22 @@
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.textWrap {
+  h2,
+  h3 {
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  p {
+    text-align: justify;
+    padding: 30px 0 60px 0;
+    width: 70%;
+
+    @include lg-max {
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,25 @@
+@import "../../../../styles/mixins.scss";
+
+.person {
+  border: 1px solid #ccc;
+  box-shadow: var(--shadow);
+  text-align: justify;
+  @include flex(column, flex-start, space-between);
+  flex-grow: 1;
+
+  img {
+    margin-top: 30px;
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    background-color: black;
+    width: 100%;
+    height: 30%;
+    // height: clamp(100px, 10%, 350px);
+    color: #ccc;
+    padding: 20px;
+  }
+}
