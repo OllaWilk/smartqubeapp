@@ -34,3 +34,4 @@ export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";
 export { ImgWithTitleAndDescriptionBellowCart } from "./Carts/ImgWithTitleAndDescriptionBellowCart/ImgWithTitleAndDescriptionBellowCart";
 export { ContactCart } from "./Carts/ContactCart/ContactCart";
 export { PdfListDisplay } from "./PdfListDisplay/PdfListDisplay";
+export { GaleryCart } from "./Carts/GaleryCart/GaleryCart";
