@@ -12,6 +12,7 @@ import {
 } from "../../common/index";
 
 import styles from "./About.module.scss";
+import { people } from "../../../images";
 
 export const About = () => {
   const { header, companyDescription, team, carts, callToaction, location } =
@@ -46,15 +47,17 @@ export const About = () => {
         ))}
       </section>
       {/* TEAM */}
-      <section className={`${styles.team} container`}>
-        <div className={styles.textWrap}>
-          <SectionTitle h2={team.title} h3={team.slogan} />
-          <p>{team.text}</p>
-        </div>
-        <div className={styles.peopleGalery}>
-          {team.galery.map((person, index) => (
-            <GaleryCart key={person.name} name={person.name} img={person.img} />
-          ))}
+      <section className={`${styles.team} `}>
+        <div className="container">
+          <ImgOnTheLeftAndTextOnRight
+            alt={"ss"}
+            src={
+              "https://media.licdn.com/dms/image/D4D22AQHhyt0ieNY3eg/feedshare-shrink_800/0/1682522259728?e=1704326400&v=beta&t=E-VOQ44SVFJMgAa5ocMGVWZGEspDFgFKuE6M3S_i6is"
+            }
+            title={team.title}
+            subtitle={team.slogan}
+            description={team.text}
+          />
         </div>
       </section>
 
