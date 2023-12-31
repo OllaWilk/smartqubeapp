@@ -6,7 +6,9 @@ import styles from "./GaleryCart.module.scss";
 export const GaleryCart = ({ name, img }) => {
   return (
     <div className={styles.person}>
-      <img src={img} alt="" />
+      <div className={styles.imgWrap}>
+        <img src={img} alt="" />
+      </div>
       <p>{name}</p>
     </div>
   );

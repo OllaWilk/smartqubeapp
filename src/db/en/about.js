@@ -42,20 +42,8 @@ export const about = {
         name: "I&C, Automation Design and Commissioning Engineer",
       },
       {
-        img: "",
+        img: people.piotr,
         name: "CEO",
-      },
-      {
-        img: "",
-        name: "Chief Operating Officer",
-      },
-      {
-        img: "",
-        name: "Emotional Support Specialist",
-      },
-      {
-        img: "",
-        name: "Montarz",
       },
     ],
   },
@@ -110,7 +98,7 @@ export const about = {
   },
 
   location: {
-    src: "https://www.s8park.pl/wp-content/uploads/2022/06/Wizualizacja1.jpg",
+    src: photos.headquarters,
     title: "Wrocław Headquarters",
     subtitle: "VISIT OUR SMARTqube TEAM",
     description: `Our Smartqube facility is strategically located in Wrocław, Poland, right next to the A8 highway, ensuring easy access for all types of freight, including oversize transport. Guests can conveniently reach Wrocław International Airport, just 5 minutes away. Our headquarters encompass a warehouse, a duty-free zone for incoming equipment from the United States, a workshop, and offices`,
