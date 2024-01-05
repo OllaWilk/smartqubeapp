@@ -8,14 +8,12 @@ import {
   ImgOnTheLeftAndTextOnRight,
   SectionTitle,
   ScrollBtn,
-  GaleryCart,
 } from "../../common/index";
 
 import styles from "./About.module.scss";
-import { people } from "../../../images";
 
 export const About = () => {
-  const { header, companyDescription, team, carts, callToaction, location } =
+  const { header, companyDescription, team, offers, callToaction, location } =
     about;
 
   return (
@@ -51,40 +49,43 @@ export const About = () => {
         <div className="container">
           <ImgOnTheLeftAndTextOnRight
             alt={"ss"}
-            src={
-              "https://media.licdn.com/dms/image/D4D22AQHhyt0ieNY3eg/feedshare-shrink_800/0/1682522259728?e=1704326400&v=beta&t=E-VOQ44SVFJMgAa5ocMGVWZGEspDFgFKuE6M3S_i6is"
-            }
+            src={team.galery}
             title={team.title}
             subtitle={team.slogan}
             description={team.text}
           />
         </div>
       </section>
-
+      {/* OFFERS */}
       <section className={` ${styles.offers} container`}>
-        {/* offers */}
-        <div className={styles.textWrap}>
-          <SectionTitle h2={"Explore Our  Services"} h3={team.slogan} />
+        <div className={styles.headerTextWrap}>
+          <SectionTitle h2={offers.title} h3={team.slogan} />
           <p>{team.text}</p>
         </div>
-        {carts.map((offer, index) => (
-          <div
-            key={`smartqubeoffer-${offer.title}`}
-            className={index % 2 === 0 ? `${styles.even}` : `${styles.odd}`}
-          >
-            <div className={styles.text}>
-              <span className={styles.cartNumb}>{offer.id}</span>
-              <h6 className={styles.title}>{offer.title}</h6>
-              <p>{offer.content}</p>
+        <div className={styles.offersCart}>
+          {offers.carts.map((offer, index) => (
+            <div
+              key={`smartqubeoffer-${offer.title}`}
+              className={
+                index % 2 === 0
+                  ? `${styles.cart} ${styles.even}`
+                  : `${styles.cart} ${styles.odd}`
+              }
+            >
+              <div className={styles.text}>
+                <span className={styles.cartNumb}>{offer.id}</span>
+                <h6 className={styles.title}>{offer.title}</h6>
+                <p>{offer.content}</p>
+              </div>
+              <div className={styles.imgWrap}>
+                <img src={offer.img} alt={offer.title} />
+              </div>
             </div>
-            <div className={styles.imgWrap}>
-              <img src={offer.img} alt={offer.title} />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
       {/* call to action */}
-      <section className={`${styles.background} `}>
+      <section className={`${styles.callToActionBackground} `}>
         <CallToAction
           h4={callToaction.subtitle}
           h2={callToaction.titile}
@@ -102,6 +103,7 @@ export const About = () => {
           alt={location.title}
         />
       </section>
+      <section></section>
     </div>
   );
 };

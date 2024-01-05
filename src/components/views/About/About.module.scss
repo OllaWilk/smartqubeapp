@@ -68,46 +68,86 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
   }
+
+  //OFFERS
 
   .offers {
     padding: 120px 0 90px 0;
 
-    .even,
-    .odd {
-      min-height: fit-content;
+    .headerTextWrap {
+      h2,
+      h3 {
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      p {
+        text-align: justify;
+        padding: 30px 0 60px 0;
+        width: 70%;
+
+        @include lg-max {
+          width: 100%;
+        }
+      }
+    }
+
+    .offersCart {
+      @include flex(column, center, space-between);
+      gap: 20px;
+    }
+
+    .cart {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
       width: 100%;
-      height: 250px;
-      margin: 16px 0;
-
-      &:nth-child(2) {
-        min-height: 220px;
-      }
-
-      @include md-max {
-        height: auto;
-        margin: 20px 0;
-      }
 
       .text {
         padding: 30px;
-        height: 100%;
+        width: 50%;
+
+        @include md-max {
+          width: 100%;
+        }
+
+        h6 {
+          text-align: left;
+        }
 
         .cartNumb {
           font-weight: var(--fw-900);
           font-size: 25px;
-          margin-bottom: 12px;
         }
 
         .title {
           font-weight: bold;
           font-size: 16px;
           text-transform: uppercase;
-          width: 100%;
         }
       }
 
       .imgWrap {
+        width: 50%;
+        align-items: left;
+        height: 420px;
+
+        @include lg-max {
+          width: 50%;
+          height: 450px;
+        }
+
+        @include md-max {
+          height: 450px;
+          width: 100%;
+        }
+
+        @include sm-max {
+          display: none;
+        }
+
         img {
           height: 100%;
           object-fit: cover;
@@ -115,60 +155,18 @@
         }
       }
     }
-
-    .even {
-      @include flex(row, flex-start, space-between);
-
-      @include md-max {
-        flex-direction: column-reverse;
-      }
+    .odd {
+      flex-direction: row-reverse;
 
       .text {
-        width: calc(65% - 16px);
-        background-color: var(--background-color);
-        margin: 0 16px 0 0;
-
-        @include md-max {
-          width: 100%;
-          margin: 0 0 0 0;
-        }
-      }
-
-      .imgWrap {
-        width: 35%;
-        height: 100%;
-
-        @include md-max {
-          width: 100%;
-        }
+        background-color: var(--color-green-dark);
+        color: var(--color-light);
       }
     }
 
-    .odd {
-      @include flex(row-reverse, flex-start, space-between);
-
-      @include md-max {
-        flex-direction: column-reverse;
-      }
-
+    .even {
       .text {
-        width: calc(50% - 16px);
-        background-color: var(--color-green-dark);
-        color: var(--color-light);
-
-        @include md-max {
-          width: 100%;
-          margin: 0 0 0 0;
-        }
-      }
-
-      .imgWrap {
-        width: 50%;
-        height: 100%;
-
-        @include md-max {
-          width: 100%;
-        }
+        background-color: var(--background-color);
       }
     }
   }
@@ -180,39 +178,25 @@
     align-items: center;
     justify-content: center;
   }
-
-  .background {
-    background-color: var(--color-green-dark);
-    padding: 70px 0;
-  }
 }
 
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
+.callToActionBackground {
+  background-color: var(--color-green-dark);
+  padding: 100px 0;
+  min-height: 30svh;
 
-.textWrap {
-  h2,
-  h3 {
-    text-align: left;
-    text-transform: uppercase;
+  @include lg-max {
+    display: flex;
+    align-items: center;
   }
 
-  p {
-    text-align: justify;
-    padding: 30px 0 60px 0;
-    width: 70%;
+  @include md-max {
+    padding: 20px 0;
+    min-height: 40vh;
+  }
 
-    @include lg-max {
-      width: 100%;
-    }
+  @include sm-max {
+    min-height: 50vh;
+    height: 50vh;
   }
 }

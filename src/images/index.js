@@ -45,12 +45,14 @@ import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
 import efficientSite from "./photos/efficientSite.jpg";
 import headquarters from "./photos/headquorters.png";
+import support from "./photos/support.jpg";
+import logistic from "./photos/logistic.jpg";
 
 /* people */
 import witek from "./photos/people/Witold.png";
 import greg from "./photos/people/greg.png";
 import piotr from "./photos/people/psztyr.png";
-import team from "./photos/people/team.png";
+import team from "./photos/team.jpg";
 
 /* ICEqube products */
 import GroupPicture from "./photos/ICEqubeProducts/Group-Picture.png";
@@ -115,6 +117,8 @@ export const photos = {
   tenderSupport,
   efficientSite,
   headquarters,
+  support,
+  logistic,
 };
 
 export const people = {
