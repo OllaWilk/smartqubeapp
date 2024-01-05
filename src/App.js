@@ -11,7 +11,6 @@ import {
   Navigation,
   Solutions,
 } from "./components/views/index";
-import { Test } from "./components/views/Test/test";
 
 export const App = () => {
   return (
@@ -25,7 +24,6 @@ export const App = () => {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/technical" element={<Technical />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<Test />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

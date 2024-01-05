@@ -62,6 +62,7 @@ export const Home = () => {
           description={mission.description}
         />
       </section>
+      <section></section>
     </>
   );
 };

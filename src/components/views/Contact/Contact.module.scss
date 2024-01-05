@@ -13,6 +13,15 @@
   background-color: var(--color-green-dark);
   @include flex(column, center, center);
   margin-bottom: 70px;
+  // padding: 30px 0 0 0;
+
+  @include md-max {
+    padding: 10px 0;
+  }
+
+  @include sm-max {
+    padding: 80px 0;
+  }
 }
 
 .contactPage {

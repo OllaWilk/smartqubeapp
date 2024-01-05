@@ -3,7 +3,6 @@ export { Home } from "./Home/Home";
 export { Contact } from "./Contact/Contact";
 export { NotFound } from "./NotFound/NotFound";
 export { Redirect } from "./Redirect/Redirect";
-// export { Portfolio } from "./Portfolio/Portfolio";
 export { Solutions } from "./Solutions/Solutions";
 export { Technical } from "./Technical/Technical";
 export { Footer } from "./Footer/Footer";

@@ -4,6 +4,7 @@ import {
   Carousel,
   ImgWithTitleAndDescriptionBellowCart,
   PdfListDisplay,
+  ScrollBtn,
   SectionTitle,
 } from "../../common";
 import { icons } from "../../../images";
@@ -56,25 +57,26 @@ export const Solutions = () => {
 
   return (
     <>
-      <div className={styles.bannerContainer}>
+      <ScrollBtn />
+      <section className={styles.bannerContainer}>
         <div className={`container`}>
           <Carousel carousel={carousel} />
         </div>
-      </div>
-      <div className={`${styles.manuals} container`}>
+      </section>
+      {/* Manuals */}
+      <section className={`${styles.manuals} container`}>
         <div className={styles.textWrap}>
           <SectionTitle
             h2={manualsSection.title}
             h3={manualsSection.subtitle}
           />
         </div>
-      </div>
-      {/* Manuals */}
+      </section>
       <div className={`${styles.cartContainer} container`}>
         {renderDownloads(solutions.manualsSection.downloads)}
       </div>
       {/* Certification  */}
-      <div className={styles.certifications}>
+      <section className={styles.certifications}>
         <div className={`${styles.wrap} container`}>
           <div className={styles.textWrap}>
             <SectionTitle
@@ -105,7 +107,8 @@ export const Solutions = () => {
             certificate={selectedCertificate}
           />
         </div>
-      </div>
+      </section>
+      <section></section>
     </>
   );
 };
