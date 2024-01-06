@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { solutions } from "../../../db/en/solutions";
 import {
   Carousel,
+  GreenBtnWithoutBackground,
   ImgWithTitleAndDescriptionBellowCart,
   PdfListDisplay,
   ScrollBtn,
@@ -20,9 +21,10 @@ export const Solutions = () => {
   const renderDownloads = (downloads) => {
     return Object.keys(downloads).map((series) => (
       <div key={series} className={styles.card}>
-        <ul>
-          {downloads[series].map((item, index) => (
-            <>
+        {downloads[series].map((item, index) => (
+          // Title
+          <>
+            <div>
               {item.series && (
                 <div className={styles.titleWrap}>
                   <ImgWithTitleAndDescriptionBellowCart
@@ -32,8 +34,11 @@ export const Solutions = () => {
                   />
                 </div>
               )}
-
-              {item.series && <div className={styles.text}>{item.text}</div>}
+              {/* Tekst */}
+              {item.series && <div className={styles.text}>{item.text} </div>}
+            </div>
+            {/* donload pdf */}
+            <ul>
               <li key={index}>
                 <img
                   src={icons.pdfFile}
@@ -44,9 +49,9 @@ export const Solutions = () => {
                   {item.name}
                 </a>
               </li>
-            </>
-          ))}
-        </ul>
+            </ul>
+          </>
+        ))}
       </div>
     ));
   };

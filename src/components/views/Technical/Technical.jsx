@@ -1,10 +1,6 @@
 import React from "react";
 import { leggacyAndPrivacy } from "../../../db/en/technical";
-import {
-  CallToAction,
-  GreenHeader,
-  ImgWithTitleAndDescriptionBellowCart,
-} from "../../common";
+import { CallToAction, GreenHeader } from "../../common";
 
 import styles from "./Technical.module.scss";
 
@@ -19,12 +15,13 @@ export const Technical = () => {
         <div className={styles.documentsWrap}>
           {documents.map((document, index) => (
             <div key={`document-${index}`} className={styles.card}>
-              <ImgWithTitleAndDescriptionBellowCart
-                image={document.img}
-                alt={"document icon"}
-                title={document.english}
-                text={document.text}
-              />
+              <div className={styles.cartWrap}>
+                <div className={styles.logos}>
+                  <img src={document.img} alt={"document icon"} />
+                  <h6 className={styles.header}>{document.english}</h6>
+                </div>
+                <p className={styles.text}>{document.text}</p>
+              </div>
               <div className={styles.btnDownloadWrap}>
                 <a
                   href="link_do_pobrania_pdf_angielski.pdf"
