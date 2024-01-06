@@ -4,7 +4,7 @@ export const solutions = {
   carousel: {
     header: "Calculate Your Air Conditioner with ",
     span: "IceQube",
-    text: "enclosures fan systems, thermoelectric air conditioners , heat exchangers, hazardous location air conditioners, hazardous location heat exchangers, server rack/shelter container coolers",
+    text: "Enclosures fan systems, thermoelectric air conditioners , heat exchangers, hazardous location air conditioners, hazardous location heat exchangers, server rack/shelter container coolers",
     button: "VISIT THE WEBSITE AND CALCULATE YOUR PROJECT TODAY",
     linkTo: "https://www.iceqube.com/technical/calculator/",
     images: [icequbeProducts.GroupPicture, icequbeProducts.evSeries],
@@ -55,9 +55,9 @@ export const solutions = {
       ],
       EX: [
         {
-          series: "Evolution Series Zone 2",
-          imgLogo: logos.evz2Logo,
-          text: "The Evolution Series by Ice Qube introduces advanced cooling solutions for hazardous locations with features like Subpanel Airflow Technology, solid-state tech, and high operating temperatures, revolutionizing efficiency and durability in the industry.",
+          series: "Ex Series Zone 1",
+          imgLogo: logos.exz1Logo,
+          text: "Lorem ipsum ",
 
           name: "Zone 1 Air Conditioners",
           url: "https://www.iceqube.com/manuals/QD-ENG-74%20Operation%20and%20Installation%20Manual%20-%20Zone%201%20EX%20series%20ATEX%20IECEx%20Rev%201.pdf",

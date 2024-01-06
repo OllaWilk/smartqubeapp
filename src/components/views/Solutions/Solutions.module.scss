@@ -76,6 +76,7 @@
       position: relative;
       @include flex(column, flex-start, flex-end);
       height: 100%;
+      width: 100%;
 
       .titleWrap {
         position: absolute;
@@ -84,7 +85,7 @@
         height: 150px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         @include md-max {
           height: auto;
