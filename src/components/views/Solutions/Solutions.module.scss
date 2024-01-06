@@ -45,7 +45,6 @@
   @include flex(row, stretch, space-between);
   padding: 0px 0 90px 0;
   gap: 20px;
-
   flex-wrap: wrap;
 
   @include lg-max {
@@ -57,10 +56,11 @@
   }
 
   .card {
+    padding: 20px 0px 40px 0px;
     border: 1px solid #ccc;
     box-shadow: var(--shadow);
     text-align: justify;
-    display: flex;
+    @include flex(column, flex-start, space-between);
     flex-grow: 1;
     width: calc(33.33% - 20px);
 
@@ -72,49 +72,35 @@
       width: calc(50% - 20px);
     }
 
-    ul {
-      position: relative;
-      @include flex(column, flex-start, flex-end);
-      height: 100%;
+    @include sm-max {
+      padding: 30px 10px 40px 10px;
+    }
+
+    div {
       width: 100%;
+    }
 
-      .titleWrap {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .titleWrap {
+      min-height: 100px;
+      @include flex(row, flex-end, space-between);
+      padding: 0 30px;
+    }
 
-        @include md-max {
-          height: auto;
-          position: relative;
-        }
-      }
-      .text {
-        padding: 150px 20px 40px 20px;
-        height: 80%;
+    .text {
+      padding: 40px 30px 40px 30px;
+      min-height: 250px;
+    }
 
-        @include lg-max {
-          margin-bottom: 0px;
-        }
-
-        @include md-max {
-          padding: 0px 20px 40px 20px;
-        }
-      }
+    ul {
+      @include flex(column, flex-start, center);
+      width: 100%;
 
       li {
         @include flex(row, center, flex-start);
         width: 100%;
-        padding: 20px;
+        padding: 15px 20px;
         gap: 10px;
-        height: 20%;
-
-        &:last-child {
-          margin-bottom: 20px;
-        }
+        text-align: left;
 
         cursor: pointer;
         transition: var(--transition);
@@ -124,7 +110,7 @@
         }
 
         @include md-max {
-          padding: 0 10px 10px 10px;
+          padding: 10px 10px 10px 10px;
         }
 
         .image {

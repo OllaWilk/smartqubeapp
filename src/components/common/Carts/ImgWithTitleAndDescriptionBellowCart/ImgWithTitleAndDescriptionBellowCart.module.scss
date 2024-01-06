@@ -1,25 +1,22 @@
 @import "../../../../styles/mixins";
 
 .cartWrap {
-  @include flex(column, flex-start, flex-start);
-  max-width: 100%;
-  min-width: 100%;
-  padding: 30px;
+  @include flex(column, space-around, space-around);
 
   @include xl-max {
-    max-width: 100%;
-    min-width: 100%;
+    // max-width: 100%;
+    // min-width: 100%;
   }
 
   @include md-max {
-    padding: 20px 10px;
-    justify-content: center;
+    // padding: 20px 10px;
+    // justify-content: center;
   }
 
   .logos {
-    height: 100%;
-    width: 100%;
-    @include flex(row, flex-end, flex-end);
+    // height: 100%;
+    // width: 100%;
+    @include flex(row, flex-end, space-between);
 
     @include sm-max {
       flex-direction: column;
@@ -27,7 +24,7 @@
     }
 
     img {
-      object-fit: cover;
+      object-fit: contain;
       width: 100px;
       height: 100%;
       margin-right: 30px;
