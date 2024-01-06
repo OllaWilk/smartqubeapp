@@ -62,6 +62,7 @@ export const Footer = () => {
                 src={logo.imgUrl}
                 alt={logo.companyName}
                 className={styles.logo}
+                onClick={handleToggle}
               />
             </Link>
             <p>{logo.companyName}</p>

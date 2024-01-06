@@ -29,6 +29,7 @@ import logo70px from "./logo/logo70px.png";
 import logo80px from "./logo/logo80px.png";
 import evLogo from "./logo/evLogo.png";
 import evz2Logo from "./logo/evz2Logo.png";
+import exz1Logo from "./logo/exz1Logo2.png";
 
 /* photos */
 
@@ -102,6 +103,7 @@ export const logos = {
   logo80px,
   evLogo,
   evz2Logo,
+  exz1Logo,
 };
 
 export const photos = {

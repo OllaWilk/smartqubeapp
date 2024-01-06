@@ -53,7 +53,7 @@
   }
 
   .certificatesWrap {
-    @include flex(row, stretch, space-between);
+    @include flex(row, stretch, center);
     flex-wrap: wrap;
     gap: 20px;
     padding: 40px 0 40px 0;
@@ -100,5 +100,7 @@
   gap: 20px;
   a img {
     padding: 0 0 10px 0;
+    width: 100px;
+    object-fit: contain;
   }
 }

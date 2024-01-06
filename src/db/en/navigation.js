@@ -11,7 +11,7 @@ export const navigationNavbar = [
 
 export const footer = {
   logo: {
-    imgUrl: logos.logo80px,
+    imgUrl: logos.logo,
     companyName: "SMARTqube Sp z o.o.",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Wrocław, Poland",

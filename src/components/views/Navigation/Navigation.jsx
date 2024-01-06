@@ -77,7 +77,7 @@ export const Navigation = () => {
         <div className={`${styles.navWrap} container`}>
           <Link to="/home">
             <h1 className={styles.navigationLogo}>
-              <img src={logos.logo70px} alt="Smartqube" />
+              <img src={logos.logo} alt="Smartqube" />
             </h1>
           </Link>
           <nav className={styles.navigationList}>
