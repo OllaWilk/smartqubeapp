@@ -40,7 +40,7 @@ export const solutions = {
           series: "Evolution Series Zone 2",
           imgLogo: logos.evz2Logo,
 
-          text: "The Evolution Series by Ice Qube introduces advanced cooling solutions for hazardous locations with features like Subpanel Airflow Technology, solid-state tech, and high operating temperatures, revolutionizing efficiency and durability in the industry.",
+          text: "The Evolution Series by Ice Qube introduces advanced cooling solutions for Zone 2 hazardous locations with features like Subpanel Airflow Technology, solid-state tech, and high operating temperatures, revolutionizing efficiency and durability in the industry.",
           name: "Zone 2 Air Conditioners",
           url: "https://www.iceqube.com/manuals/QD-ENG-71%20Operation%20and%20Installation%20Manual%20-%20Zone%202%20Evolution%20series%20ATEX%20IECEx%20REV7.pdf",
         },
