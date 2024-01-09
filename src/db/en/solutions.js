@@ -22,7 +22,7 @@ export const solutions = {
         {
           series: "Evolution Series",
           imgLogo: logos.evLogo,
-          text: "EV Series by Ice Qube redefines industry standards with cutting-edge technology, offering UL-certified air conditioning solutions with enhanced efficiency, durability, and a high operating temperature of 140°F/60°C.",
+          text: "EV Series by Ice Qube redefines industry standards with cutting-edge technology, offering CE- marked air conditioning solutions with enhanced efficiency, durability, and a high operating temperature of 60*C (140*F). Dedicated for ordinary locations.",
           name: "Safe area Air Conditioners",
           url: "https://www.iceqube.com/manuals/QD-ENG-69%20Operation%20and%20Installation%20Manual%20-%20Evolution%20Series%20Rev%203.pdf",
         },
@@ -57,7 +57,7 @@ export const solutions = {
         {
           series: "Ex Series Zone 1",
           imgLogo: logos.exz1Logo,
-          text: "Lorem ipsum ",
+          text: "The new EX Series air conditioners are designed specifically for hazardous environments, purged or non-purged enclosure systems, and comes in a 316 stainless steel cabinet. Ice Qube’s Surface Vertical Mount Zone 1- ATEX/IECEx/UK CA hazardous air conditioners range 1172-3517 Watts (4000-12000 Btu/h) of closed-loop cooling capacity.",
 
           name: "Zone 1 Air Conditioners",
           url: "https://www.iceqube.com/manuals/QD-ENG-74%20Operation%20and%20Installation%20Manual%20-%20Zone%201%20EX%20series%20ATEX%20IECEx%20Rev%201.pdf",
