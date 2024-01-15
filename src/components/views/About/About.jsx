@@ -8,6 +8,7 @@ import {
   ImgOnTheLeftAndTextOnRight,
   SectionTitle,
   ScrollBtn,
+  ImageTextPanelGreenGreyBackground,
 } from "../../common/index";
 
 import styles from "./About.module.scss";
@@ -48,7 +49,7 @@ export const About = () => {
       <section className={`${styles.team} `}>
         <div className="container">
           <ImgOnTheLeftAndTextOnRight
-            alt={"ss"}
+            alt={"team"}
             src={team.galery}
             title={team.title}
             subtitle={team.slogan}
@@ -63,25 +64,7 @@ export const About = () => {
           <p>{team.text}</p>
         </div>
         <div className={styles.offersCart}>
-          {offers.carts.map((offer, index) => (
-            <div
-              key={`smartqubeoffer-${offer.title}`}
-              className={
-                index % 2 === 0
-                  ? `${styles.cart} ${styles.even}`
-                  : `${styles.cart} ${styles.odd}`
-              }
-            >
-              <div className={styles.text}>
-                <span className={styles.cartNumb}>{offer.id}</span>
-                <h6 className={styles.title}>{offer.title}</h6>
-                <p>{offer.content}</p>
-              </div>
-              <div className={styles.imgWrap}>
-                <img src={offer.img} alt={offer.title} />
-              </div>
-            </div>
-          ))}
+          <ImageTextPanelGreenGreyBackground offers={offers.carts} />
         </div>
       </section>
       {/* call to action */}

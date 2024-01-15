@@ -1,0 +1,73 @@
+@import "../../../../styles//mixins.scss";
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  .text {
+    padding: 30px;
+    width: 50%;
+
+    @include md-max {
+      width: 100%;
+    }
+
+    h6 {
+      text-align: left;
+    }
+
+    .cartNumb {
+      font-weight: var(--fw-900);
+      font-size: 25px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  .imgWrap {
+    width: 50%;
+    align-items: left;
+    height: 420px;
+
+    @include lg-max {
+      width: 50%;
+      height: 450px;
+    }
+
+    @include md-max {
+      height: 450px;
+      width: 100%;
+    }
+
+    @include sm-max {
+      display: none;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.odd {
+  flex-direction: row-reverse;
+
+  .text {
+    background-color: var(--color-green-dark);
+    color: var(--color-light);
+  }
+}
+
+.even {
+  .text {
+    background-color: var(--background-color);
+  }
+}

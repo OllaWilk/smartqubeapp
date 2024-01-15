@@ -9,9 +9,7 @@ export const ScrollBtn = () => {
       (section) => section.getBoundingClientRect().top >= 0
     );
 
-    console.log(visibleSectionIndex < sections.length - 1);
     if (visibleSectionIndex >= 0 && visibleSectionIndex < sections.length - 1) {
-      console.log(sections.length);
       sections[visibleSectionIndex + 1].scrollIntoView({ behavior: "smooth" });
     }
   };

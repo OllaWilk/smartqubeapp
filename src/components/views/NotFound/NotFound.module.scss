@@ -2,7 +2,9 @@
 
 .notfoundPage {
   @include flex(column, center, center);
-  height: calc(100vh - 180px);
+  overflow: hidden;
+
+  height: 100vh;
 
   a {
     width: 200px;
@@ -11,6 +13,7 @@
   .errorWrap {
     padding: 2rem;
   }
+
   .resInfo {
     font-size: var(--fs-2);
   }
@@ -19,7 +22,7 @@
 .navColors {
   background-color: var(--color-green-dark);
   width: 100vw;
-  height: 100px;
+  height: 110px;
   position: absolute;
   top: 0;
 }

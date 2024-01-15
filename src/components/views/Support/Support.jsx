@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { solutions } from "../../../db/en/solutions";
+import { support } from "../../../db/en/support";
 import {
   Carousel,
-  GreenBtnWithoutBackground,
   ImgWithTitleAndDescriptionBellowCart,
   PdfListDisplay,
   ScrollBtn,
@@ -10,10 +9,10 @@ import {
 } from "../../common";
 import { icons } from "../../../images";
 import { removeUnderlines } from "../../../utils/removeSpaces";
-import styles from "./Solutions.module.scss";
+import styles from "./Support.module.scss";
 
-export const Solutions = () => {
-  const { carousel, manualsSection, certificatesSection } = solutions;
+export const Support = () => {
+  const { carousel, manualsSection, certificatesSection } = support;
   const allCertificationsKeys = Object.keys(certificatesSection.downloads);
 
   const [selectedCertificate, setSelectedCertificate] = useState("ATEX");
@@ -78,7 +77,7 @@ export const Solutions = () => {
         </div>
       </section>
       <div className={`${styles.cartContainer} container`}>
-        {renderDownloads(solutions.manualsSection.downloads)}
+        {renderDownloads(support.manualsSection.downloads)}
       </div>
       {/* Certification  */}
       <section className={styles.certifications}>

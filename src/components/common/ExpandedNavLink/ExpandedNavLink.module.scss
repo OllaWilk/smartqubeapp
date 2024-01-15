@@ -1,0 +1,47 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.link {
+  transition: var(--transition);
+  padding: 20px;
+  color: var(--color-light);
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-light);
+  }
+}
+
+.navigationList {
+  position: relative;
+  transition: var(--transition);
+}
+
+.dropList {
+  position: absolute;
+  @include flex(column, flex-start, flex-start);
+  background-color: var(--color-dark);
+  top: 100%;
+}
+
+.dropdonwLi {
+  width: 100%;
+  display: flex;
+  text-align: left;
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-light);
+  }
+
+  a {
+    color: var(--color-light);
+    width: 100%;
+    height: 100%;
+    padding: 20px 60px 20px 20px;
+  }
+}

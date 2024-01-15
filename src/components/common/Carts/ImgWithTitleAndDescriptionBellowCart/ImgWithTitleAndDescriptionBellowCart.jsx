@@ -19,7 +19,7 @@ export const ImgWithTitleAndDescriptionBellowCart = ({
         {title && <h6 className={styles.header}>{title}</h6>}
         {text && <p className={styles.text}>{text}</p>}
       </div>
-      {span && <p className={styles.text}>{span}xxxx</p>}
+      {span && <p className={styles.text}>{span}</p>}
     </div>
   );
 };
