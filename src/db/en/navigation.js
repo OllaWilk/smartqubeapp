@@ -3,9 +3,8 @@ import { logos, iso } from "../../images";
 export const navigationNavbar = [
   "home",
   "about",
-  "solutions",
+  { solutions: ["support", "integration", "services"] },
   "technical",
-  // { portfolio: ["products", "integration", "services"] },
   "contact",
 ];
 

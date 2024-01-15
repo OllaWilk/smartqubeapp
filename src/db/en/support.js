@@ -1,6 +1,6 @@
 import { logos, icequbeProducts } from "../../images/index";
 
-export const solutions = {
+export const support = {
   carousel: {
     header: "Calculate Your Air Conditioner with ",
     span: "IceQube",

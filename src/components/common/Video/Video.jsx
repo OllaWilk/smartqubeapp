@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./Video.module.scss";
-
 export const Video = ({ video, videoRef }) => {
   return (
     <>

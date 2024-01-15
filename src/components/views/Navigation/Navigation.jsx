@@ -1,70 +1,21 @@
 /* eslint-disable indent */
-import React, { useState } from "react";
+import React from "react";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
 import useScroll from "../../../utils/useScrool";
 import { icons, logos } from "../../../images/index";
 import { SideNavigation } from "../SideNavigation/SideNavigation";
+import { ExpandedNavLink } from "../../common/index.js";
 import styles from "./Navigation.module.scss";
 
 export const Navigation = () => {
   const [value, toggle] = useToggle(false);
-  const [expandedItem, setExpandedItem] = useState(null);
   const scrollPosition = useScroll();
 
   const animateSidebar = () => {
     toggle(!value);
-  };
-
-  const handleToggle = (index) => {
-    window.scrollTo(0, 0);
-    setExpandedItem((prev) => (prev === index ? null : index));
-  };
-
-  const handleNavLinkClick = () => {
-    window.scrollTo(0, 0);
-    setExpandedItem(null);
-  };
-
-  const renderNavItem = (item, index) => {
-    if (typeof item === "string") {
-      return (
-        <NavLink
-          key={index}
-          to={`/${item.toLowerCase()}`}
-          onClick={handleNavLinkClick}
-          className={styles.link}
-        >
-          {item}
-        </NavLink>
-      );
-    } else if (typeof item === "object") {
-      const buttonLabel = Object.keys(item)[0];
-      const subItems = item[buttonLabel];
-
-      return (
-        <div key={`stringBtn-${index}`} className={styles.dropdownMenu}>
-          <p onClick={() => handleToggle(index)}>{buttonLabel}</p>
-          {expandedItem === index && (
-            <ul className={styles.navigationList}>
-              {subItems.map((subItem, subIndex) => (
-                <li key={`dropdownBtnNav-${subIndex}`}>
-                  <NavLink
-                    to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
-                    onClick={handleNavLinkClick}
-                  >
-                    {subItem}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      );
-    }
-    return null;
   };
 
   return (
@@ -81,7 +32,9 @@ export const Navigation = () => {
             </h1>
           </Link>
           <nav className={styles.navigationList}>
-            {navigationNavbar.map((item, index) => renderNavItem(item, index))}
+            {navigationNavbar.map((item, index) => (
+              <ExpandedNavLink key={item} item={item} index={index} />
+            ))}
           </nav>
           <div
             className={styles.sidebarIcon}

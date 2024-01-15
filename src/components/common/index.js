@@ -10,6 +10,8 @@ export { ImageBox } from "./ImageBox/ImageBox";
 export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
 export { Carousel } from "./Carousel/Carousel";
 export { Video } from "./Video/Video";
+export { ExpandedNavLink } from "./ExpandedNavLink/ExpandedNavLink";
+
 /*forms*/
 export { ContactForm } from "./Forms/ContactForm/ContactForm";
 export { RequestCall } from "./Forms/RequestCall/RequestCall";
@@ -34,4 +36,4 @@ export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";
 export { ImgWithTitleAndDescriptionBellowCart } from "./Carts/ImgWithTitleAndDescriptionBellowCart/ImgWithTitleAndDescriptionBellowCart";
 export { ContactCart } from "./Carts/ContactCart/ContactCart";
 export { PdfListDisplay } from "./PdfListDisplay/PdfListDisplay";
-export { GaleryCart } from "./Carts/GaleryCart/GaleryCart";
+export { ImageTextPanelGreenGreyBackground } from "./Carts/ImageTextPanelGreenGreyBackground/ImageTextPanelGreenGreyBackground";

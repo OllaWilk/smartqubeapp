@@ -9,7 +9,7 @@ export const Footer = () => {
   const [expandedItem, setExpandedItem] = useState(null);
 
   const handleToggle = (index) => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     setExpandedItem((prev) => (prev === index ? null : index));
   };
 
@@ -19,7 +19,7 @@ export const Footer = () => {
         <Link
           key={`${index}-${item}-footer`}
           to={`/${removeSpaces(item.toLowerCase())}`}
-          onClick={handleToggle}
+          onClick={() => window.scrollTo(0, 0)}
         >
           {item}
         </Link>
@@ -38,7 +38,10 @@ export const Footer = () => {
             <ul className={styles.expandedItem}>
               {subItems.map((subItem, subIndex) => (
                 <li key={`dropdownBtnNav-${subIndex}`}>
-                  <Link to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}>
+                  <Link
+                    to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     {subItem}
                   </Link>
                 </li>
@@ -49,6 +52,7 @@ export const Footer = () => {
       );
     }
   };
+
   return (
     <footer className={styles.footer}>
       <div className="container">

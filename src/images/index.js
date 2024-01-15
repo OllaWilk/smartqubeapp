@@ -1,16 +1,7 @@
 /* Icons */
 import close from "./icons/close-icon.png";
 import hamburger from "./icons/hamburger-icon.png";
-import advice from "./icons/i-advice.png";
-import design from "./icons/i-design.png";
-import integrationIcon from "./icons/i-integration.png";
-import mail from "./icons/i-mail.png";
-import map from "./icons/i-map.png";
-import mobile from "./icons/i-phone.png";
-import service from "./icons/i-service.png";
-import upgrade from "./icons/i-upgrade.png";
-import next from "./icons/slick-next-icon.png";
-import prev from "./icons/slick-prev-icon.png";
+
 import world from "./icons/world.png";
 import phone from "./icons/phone.png";
 import location from "./icons/location.png";
@@ -21,6 +12,9 @@ import purchese from "./icons/i-purchase.png";
 import sale from "./icons/i-sale.png";
 import shield from "./icons/i-shield.png";
 import pdfFile from "./icons/pdfIcon.png";
+import mechanical from "./icons/mechanical.png";
+import explose from "./icons/exdesign.png";
+import electrical from "./icons/electrical.png";
 
 /* logo */
 import logo from "./logo/logo.png";
@@ -46,14 +40,11 @@ import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
 import efficientSite from "./photos/efficientSite.jpg";
 import headquarters from "./photos/headquorters.png";
+// import logistic from "./photos/logistic.jpg";
 import support from "./photos/support.jpg";
-import logistic from "./photos/logistic.jpg";
-
-/* people */
-import witek from "./photos/people/Witold.png";
-import greg from "./photos/people/greg.png";
-import piotr from "./photos/people/psztyr.png";
-import team from "./photos/team.jpg";
+import integrator from "./photos/integrator.jpg";
+import designer from "./photos/designer.jpg";
+import logistic from "./photos/logistic2.jpg";
 
 /* ICEqube products */
 import GroupPicture from "./photos/ICEqubeProducts/Group-Picture.png";
@@ -74,18 +65,7 @@ import ukca from "./iso/ukca.png";
 export const icons = {
   close,
   hamburger,
-  advice,
-  design,
-  integrationIcon,
-  mail,
-  map,
   phone,
-  service,
-  upgrade,
-  next,
-  prev,
-  world,
-  mobile,
   location,
   hours,
   envelop,
@@ -94,6 +74,10 @@ export const icons = {
   sale,
   shield,
   pdfFile,
+  mechanical,
+  explose,
+  electrical,
+  world,
 };
 
 export const logos = {
@@ -121,13 +105,8 @@ export const photos = {
   headquarters,
   support,
   logistic,
-};
-
-export const people = {
-  greg,
-  witek,
-  piotr,
-  team,
+  integrator,
+  designer,
 };
 
 export const iso = {

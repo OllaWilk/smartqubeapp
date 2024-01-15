@@ -1,6 +1,6 @@
 import React from "react";
 import { leggacyAndPrivacy } from "../../../db/en/technical";
-import { CallToAction, GreenHeader } from "../../common";
+import { CallToAction, GreenHeader, ScrollBtn } from "../../common";
 
 import styles from "./Technical.module.scss";
 
@@ -8,10 +8,11 @@ export const Technical = () => {
   const { header, documents, callToaction } = leggacyAndPrivacy;
   return (
     <div className={styles.technical}>
-      <div className={styles.greenbackground}>
+      <ScrollBtn />
+      <section className={styles.greenbackground}>
         <GreenHeader mainTitle={header} />
-      </div>
-      <div className={`${styles.sectionWrap} container`}>
+      </section>
+      <section className={`${styles.sectionWrap} container`}>
         <div className={styles.documentsWrap}>
           {documents.map((document, index) => (
             <div key={`document-${index}`} className={styles.card}>
@@ -34,15 +35,15 @@ export const Technical = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={styles.callToActionBackground}>
+      </section>
+      <section className={styles.callToActionBackground}>
         <CallToAction
           h4={callToaction.subtitle}
           h2={callToaction.titile}
           btnTitle={callToaction.button[0]}
           url={callToaction.button[1]}
         />
-      </div>
+      </section>
     </div>
   );
 };

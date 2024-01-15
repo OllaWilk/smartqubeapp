@@ -15,6 +15,7 @@
     @include flex(row, center, space-between);
     transition: var(--transition);
     transition-delay: --var(--deley);
+    overflow: visible;
   }
 
   .navigationLogo {
@@ -22,57 +23,21 @@
     position: relative;
     z-index: 2;
     font-size: var(--fs-1);
-    margin: 0.19em 0;
+    margin: 0.2em 0;
 
     img {
-      width: 90px;
+      width: 85px;
       object-fit: contain;
     }
   }
 
   .navigationList {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-end);
     text-transform: uppercase;
+    position: relative;
 
     @include lg-max {
       display: none;
-    }
-
-    .dropdownMenu {
-      color: var(--color-light);
-      cursor: pointer;
-      transition: var(--transition);
-      width: 150px;
-
-      &:hover {
-        background-color: var(--color-main);
-      }
-
-      p {
-        padding: 20px 0;
-      }
-
-      .navigationList {
-        text-align: left;
-        position: absolute;
-        @include flex(column, flex-start, flex-end);
-
-        li {
-          padding: 20px;
-          width: 150px;
-          height: auto;
-          transition: var(--transition);
-
-          &:hover {
-            background-color: var(--color-main);
-          }
-
-          a {
-            color: var(--color-light);
-            transition: var(--transition);
-          }
-        }
-      }
     }
   }
 
@@ -89,18 +54,6 @@
     img {
       @include img;
     }
-  }
-}
-
-.link {
-  transition: var(--transition);
-  padding: 20px;
-  color: var(--color-light);
-  width: 150px;
-
-  &:hover {
-    background-color: var(--color-main);
-    color: var(--color-light);
   }
 }
 
