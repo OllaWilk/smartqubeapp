@@ -11,6 +11,7 @@ import {
   Navigation,
   Support,
   Integration,
+  Services,
 } from "./components/views/index";
 
 export const App = () => {
@@ -24,6 +25,7 @@ export const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
         <Route path="/integration" element={<Integration />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/technical" element={<Technical />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />

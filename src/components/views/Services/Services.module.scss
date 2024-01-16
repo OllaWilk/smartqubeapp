@@ -1,0 +1,106 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.greenbackground {
+  background-color: var(--color-green-dark);
+  padding: 40px 0;
+
+  @include md-max {
+    padding: 10px 0;
+  }
+
+  @include sm-max {
+    padding: 80px 0;
+  }
+}
+
+.resourses,
+.integration,
+.design,
+.execution {
+  padding: 120px 0 90px 0;
+  text-align: left;
+}
+
+.integration {
+  min-height: 100vh;
+  @include flex(column, center, center);
+}
+
+.callToActionBackground {
+  background-color: var(--color-green-dark);
+  padding: 100px 0;
+  min-height: 30svh;
+
+  @include lg-max {
+    display: flex;
+    align-items: center;
+  }
+
+  @include md-max {
+    padding: 20px 0;
+    min-height: 40vh;
+  }
+
+  @include sm-max {
+    min-height: 50vh;
+    height: 50vh;
+  }
+}
+
+.execution {
+  background-color: var(--color-grey);
+  min-height: 100vh;
+  @include flex(column, center, center);
+}
+
+.resourses {
+  .contentWrap {
+    @include flex(row, center, space-between);
+    gap: 30px;
+    margin-top: 30px;
+
+    @include lg-max {
+      flex-direction: column;
+    }
+
+    .imgWrap {
+      @include flex(row, center, flex-start);
+      width: 46%;
+
+      @include lg-max {
+        justify-content: center;
+      }
+
+      @include md-max {
+        width: 100%;
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .acapitWrap {
+      width: 48%;
+
+      @include lg-max {
+        width: 100%;
+      }
+
+      h3 {
+        text-transform: uppercase;
+      }
+      p {
+        margin-top: 20px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .acapit {
+    margin-top: 20px;
+  }
+}

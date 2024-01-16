@@ -1,7 +1,7 @@
 @import "../../../styles/mixins";
 
 .contentWrap {
-  @include flex(row, flex-start, space-between);
+  @include flex(row, center, space-between);
   gap: 30px;
 
   @include md-max {
