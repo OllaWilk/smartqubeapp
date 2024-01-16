@@ -35,12 +35,15 @@ import integration from "./photos/integration.jpg";
 import cemsCabinet from "./photos/cemsCabinet.jpg";
 import gasMetering from "./photos/gasMetering.jpg";
 import fieldServices from "./photos/fieldServices.jpg";
+import plugAndPlay from "./photos/plugAndPlay.jpeg";
+import plugAndPlayHorizontal from "./photos/plugAndPlayhorizontal.jpeg";
+import onSite from "./photos/onSite.jpeg";
+import resouces from "./photos/resources.jpg";
 
 import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
 import efficientSite from "./photos/efficientSite.jpg";
 import headquarters from "./photos/headquorters.png";
-// import logistic from "./photos/logistic.jpg";
 import support from "./photos/support.jpg";
 import integrator from "./photos/integrator.jpg";
 import designer from "./photos/designer.jpg";
@@ -107,6 +110,10 @@ export const photos = {
   logistic,
   integrator,
   designer,
+  plugAndPlay,
+  plugAndPlayHorizontal,
+  onSite,
+  resouces,
 };
 
 export const iso = {

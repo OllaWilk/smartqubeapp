@@ -18,27 +18,29 @@
 .integration,
 .design,
 .execution {
-  padding: 120px 0 90px 0;
+  padding: 120px 0 40px 0;
   text-align: left;
 }
 
 .integration {
   min-height: 100vh;
+
   @include flex(column, center, center);
 }
 
 .design {
   min-height: 100vh;
+  @include flex(row, center, center);
 
   .designCarts {
     @include flex(row, flex-start, space-between);
     flex-wrap: wrap;
-    padding: 70px 0 0 0;
+    padding: 50px 0 0 0;
     flex-grow: 1;
     gap: 30px;
 
     .cart {
-      @include flex(column, center, center);
+      @include flex(column, space-between, center);
       flex-grow: 1;
 
       @include md-max {
@@ -71,10 +73,11 @@
         background-color: var(--color-dark);
         color: var(--color-light);
         padding: 10px 20px;
-        width: 100%;
+        width: 300px;
 
         @include md-max {
           height: auto;
+          width: 100%;
         }
       }
 
@@ -86,8 +89,13 @@
         gap: 20px;
         @include flex(column, flex-start, flex-start);
         transition: var(--transition);
-        width: 100%;
+        width: 300px;
+
         height: 270px;
+
+        @include md-max {
+          width: 100%;
+        }
 
         @include sm-max {
           height: auto;
