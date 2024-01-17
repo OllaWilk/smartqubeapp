@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { support } from "../../../db/en/support";
+import { coolingSolutions } from "../../../db/en/coolingSolutions";
 import {
   Carousel,
   ImgWithTitleAndDescriptionBellowCart,
@@ -9,10 +9,10 @@ import {
 } from "../../common";
 import { icons } from "../../../images";
 import { removeUnderlines } from "../../../utils/removeSpaces";
-import styles from "./Support.module.scss";
+import styles from "./Coolingsolutions.module.scss";
 
-export const Support = () => {
-  const { carousel, manualsSection, certificatesSection } = support;
+export const Coolingsolutions = () => {
+  const { carousel, manualsSection, certificatesSection } = coolingSolutions;
   const allCertificationsKeys = Object.keys(certificatesSection.downloads);
 
   const [selectedCertificate, setSelectedCertificate] = useState("ATEX");
@@ -77,7 +77,7 @@ export const Support = () => {
         </div>
       </section>
       <div className={`${styles.cartContainer} container`}>
-        {renderDownloads(support.manualsSection.downloads)}
+        {renderDownloads(coolingSolutions.manualsSection.downloads)}
       </div>
       {/* Certification  */}
       <section className={styles.certifications}>

@@ -3,7 +3,7 @@ export { Home } from "./Home/Home";
 export { Contact } from "./Contact/Contact";
 export { NotFound } from "./NotFound/NotFound";
 export { Redirect } from "./Redirect/Redirect";
-export { Support } from "./Support/Support";
+export { Coolingsolutions } from "./Coolingsolutions/Coolingsolutions";
 export { Technical } from "./Technical/Technical";
 export { Footer } from "./Footer/Footer";
 export { Navigation } from "./Navigation/Navigation";

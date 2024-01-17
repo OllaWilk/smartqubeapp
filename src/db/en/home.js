@@ -22,7 +22,7 @@ export const home = {
     button: ["about", "see more"],
   },
   offers: {
-    title: "WORLD OF POSSIBILIETES",
+    title: "WORLD OF POSSIBILITIES",
     subtitle: "OUR OFFER",
     carts: [
       {

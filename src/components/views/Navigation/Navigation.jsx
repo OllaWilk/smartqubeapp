@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
@@ -22,7 +21,7 @@ export const Navigation = () => {
     <>
       <div
         className={
-          scrollPosition > 100 ? styles.navigationActive : styles.navigation
+          scrollPosition > 50 ? styles.navigationActive : styles.navigation
         }
       >
         <div className={`${styles.navWrap} container`}>

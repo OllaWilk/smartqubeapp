@@ -23,8 +23,8 @@
 }
 
 .integration {
-  min-height: 100vh;
   @include flex(column, center, center);
+  min-height: 80vh;
 }
 
 .callToActionBackground {
@@ -50,7 +50,7 @@
 
 .execution {
   background-color: var(--color-grey);
-  min-height: 100vh;
+  min-height: 80vh;
   @include flex(column, center, center);
 }
 
