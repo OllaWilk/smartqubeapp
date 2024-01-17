@@ -16,8 +16,6 @@ export const CartWithImg = ({
 
   const handleNavLinkClick = () => {
     window.scrollTo(0, 0);
-    console.log("kliknij");
-    // setExpandedItem(null);
   };
 
   return (

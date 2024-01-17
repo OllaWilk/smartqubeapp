@@ -17,6 +17,11 @@ export const Navigation = () => {
     toggle(!value);
   };
 
+  /*SCROOL TO BEGINING OF THE VIEW */
+  const handleNavLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div
@@ -24,7 +29,10 @@ export const Navigation = () => {
           scrollPosition > 50 ? styles.navigationActive : styles.navigation
         }
       >
-        <div className={`${styles.navWrap} container`}>
+        <div
+          className={`${styles.navWrap} container`}
+          onClick={handleNavLinkClick}
+        >
           <Link to="/home">
             <h1 className={styles.navigationLogo}>
               <img src={logos.logo} alt="Smartqube" />

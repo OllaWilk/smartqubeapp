@@ -1,4 +1,5 @@
 import React from "react";
+
 import { home } from "../../../db/en/home";
 import {
   Header,
@@ -13,19 +14,22 @@ import styles from "./Home.module.scss";
 
 export const Home = () => {
   const { header, about, offers, callToaction, mission } = home;
+
   return (
     <>
       <ScrollBtn />
       <section className={styles.splashBackgroundImg} id="header">
-        <Header
-          description={header.description}
-          mainTitle={header.slogan}
-          subtitle={header.companyName}
-          greenBtn={header.greenBtn}
-          transparentBtn={header.transparentBtn}
-          greenBtnLinkTo={header.greenBtnLinkTo}
-          transparentBtnLinkTo={header.transparentBtnLinkTo}
-        />
+        <>
+          <Header
+            description={header.description}
+            mainTitle={header.slogan}
+            subtitle={header.companyName}
+            greenBtn={header.greenBtn}
+            transparentBtn={header.transparentBtn}
+            greenBtnLinkTo={header.greenBtnLinkTo}
+            transparentBtnLinkTo={header.transparentBtnLinkTo}
+          />
+        </>
       </section>
       <section id="about">
         <AboutUs

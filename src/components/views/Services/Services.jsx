@@ -9,6 +9,8 @@ import {
 } from "../../common";
 import styles from "./Services.module.scss";
 
+import videoBg from "../../../images/WideoServices.mp4";
+
 export const Services = () => {
   const { header, fieldServices, callToaction, onSite, resourses } = services;
   return (
@@ -60,6 +62,8 @@ export const Services = () => {
         <div className={styles.contentWrap}>
           <div className={styles.imgWrap}>
             <img src={resourses.img} alt={resourses.title} />
+
+            <video type="video/mp4" src={videoBg} autoPlay loop muted />
           </div>
           <div className={styles.acapitWrap}>
             {resourses.description.map((acapit) => (
@@ -71,6 +75,7 @@ export const Services = () => {
           </div>
         </div>
       </section>
+
       <section></section>
     </>
   );
