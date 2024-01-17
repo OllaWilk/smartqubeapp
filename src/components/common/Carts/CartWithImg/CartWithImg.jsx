@@ -14,6 +14,12 @@ export const CartWithImg = ({
 }) => {
   useEffect(() => {}, [src, buttonUrl, buttonName]);
 
+  const handleNavLinkClick = () => {
+    window.scrollTo(0, 0);
+    console.log("kliknij");
+    // setExpandedItem(null);
+  };
+
   return (
     <div className={styles.porftolioCart}>
       {buttonName ? (
@@ -31,7 +37,7 @@ export const CartWithImg = ({
         <h3>{title}</h3>
         <p>{description}</p>
         {buttonName && (
-          <div>
+          <div onClick={handleNavLinkClick}>
             <GreenBtnWithoutBackground text={buttonName} linkTo={buttonUrl} />
           </div>
         )}

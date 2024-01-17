@@ -9,7 +9,7 @@ import {
   Contact,
   Footer,
   Navigation,
-  Support,
+  Coolingsolutions,
   Integration,
   Services,
 } from "./components/views/index";
@@ -23,7 +23,7 @@ export const App = () => {
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/support" element={<Support />} />
+        <Route path="/coolingsolutions" element={<Coolingsolutions />} />
         <Route path="/integration" element={<Integration />} />
         <Route path="/services" element={<Services />} />
         <Route path="/technical" element={<Technical />} />
