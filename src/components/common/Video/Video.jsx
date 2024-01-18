@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-export const Video = ({ video, videoRef }) => {
+export const Video = ({ src }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (
+      /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+        userAgent
+      )
+    ) {
+      setIsMobile(true);
+    }
+  }, []);
   return (
     <>
-      {/* <div className={styles.overlay}></div> */}
-      <video src={video} ref={videoRef} loop muted type="video/mp4" />
+      <video src={src} autoPlay={!isMobile} loop muted type="video/mp4" />
     </>
   );
 };
 
 Video.propTypes = {
-  video: PropTypes.string,
-  videoRef: PropTypes.string,
+  src: PropTypes.string,
 };
