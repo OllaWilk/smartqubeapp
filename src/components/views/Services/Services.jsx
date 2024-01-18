@@ -1,4 +1,6 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
+
 import { services } from "../../../db/en/services";
 import {
   CallToAction,
@@ -6,6 +8,7 @@ import {
   ImgOnTheLeftAndTextOnRight,
   ScrollBtn,
   SectionTitle,
+  Video,
 } from "../../common";
 import styles from "./Services.module.scss";
 
@@ -61,9 +64,11 @@ export const Services = () => {
         <SectionTitle h2={resourses.title} h3={resourses.subtitle} />
         <div className={styles.contentWrap}>
           <div className={styles.imgWrap}>
-            <img src={resourses.img} alt={resourses.title} />
-
-            <video type="video/mp4" src={videoBg} autoPlay loop muted />
+            {isMobile ? (
+              <img src={resourses.img} alt={resourses.title} />
+            ) : (
+              <Video src={videoBg} />
+            )}
           </div>
           <div className={styles.acapitWrap}>
             {resourses.description.map((acapit) => (

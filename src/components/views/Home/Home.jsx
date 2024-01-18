@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 
 import { home } from "../../../db/en/home";
 import {
@@ -22,8 +23,11 @@ export const Home = () => {
 
       <section className={styles.splashBackgroundImg} id="header">
         <div className={styles.videoWrap}>
-          <img src={imgBg} alt="splash" />
-          <Video src={videoBg} />
+          {isMobile ? (
+            <img src={imgBg} alt="splash" />
+          ) : (
+            <Video src={videoBg} />
+          )}
         </div>
 
         <Header
