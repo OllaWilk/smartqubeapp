@@ -11,6 +11,7 @@ import {
 } from "../../common/index";
 
 import styles from "./Home.module.scss";
+import videoBg from "../../../images/videoBg.mp4";
 
 export const Home = () => {
   const { header, about, offers, callToaction, mission } = home;
@@ -18,7 +19,11 @@ export const Home = () => {
   return (
     <>
       <ScrollBtn />
+
       <section className={styles.splashBackgroundImg} id="header">
+        <div className={styles.videoWrap}>
+          <video type="video/mp4" src={videoBg} autoPlay loop muted />
+        </div>
         <>
           <Header
             description={header.description}
