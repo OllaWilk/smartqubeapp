@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { home } from "../../../db/en/home";
 import {
@@ -15,6 +15,18 @@ import videoBg from "../../../images/videoBg.mp4";
 
 export const Home = () => {
   const { header, about, offers, callToaction, mission } = home;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (
+      /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+        userAgent
+      )
+    ) {
+      setIsMobile(true);
+    }
+  }, []);
 
   return (
     <>
@@ -22,7 +34,13 @@ export const Home = () => {
 
       <section className={styles.splashBackgroundImg} id="header">
         <div className={styles.videoWrap}>
-          <video type="video/mp4" src={videoBg} autoPlay loop muted />
+          <video
+            type="video/mp4"
+            src={videoBg}
+            autoPlay={!isMobile}
+            loop
+            muted
+          />
         </div>
         <>
           <Header
