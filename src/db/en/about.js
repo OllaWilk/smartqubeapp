@@ -1,8 +1,7 @@
 import { photos, logos, icequbeProducts } from "../../images/index";
-import videoBlog from "../../images/photos/videobgFlip.mp4";
 
 export const about = {
-  videoHeader: videoBlog,
+  imgBg: photos.splash,
   header: {
     companyName: "WE WILL DESIGN THE FUTURE",
     slogan: "SMARTqube",

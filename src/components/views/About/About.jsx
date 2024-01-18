@@ -14,14 +14,24 @@ import {
 import styles from "./About.module.scss";
 
 export const About = () => {
-  const { header, companyDescription, team, offers, callToaction, location } =
-    about;
+  const {
+    imgBg,
+    header,
+    companyDescription,
+    team,
+    offers,
+    callToaction,
+    location,
+  } = about;
 
   return (
     <div className={styles.aboutPage}>
       <ScrollBtn />
       {/* HEADER */}
       <section className={styles.splashBackgroundImg}>
+        <div className={styles.videoWrap}>
+          <img src={imgBg} alt="splash" />
+        </div>
         <Header
           description={header.description}
           mainTitle={header.slogan}
