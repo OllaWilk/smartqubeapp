@@ -11,10 +11,9 @@ import {
 } from "../../common/index";
 
 import styles from "./Home.module.scss";
-import videoBg from "../../../images/videoBg.mp4";
 
 export const Home = () => {
-  const { header, about, offers, callToaction, mission } = home;
+  const { imgBg, videoBg, header, about, offers, callToaction, mission } = home;
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -34,6 +33,7 @@ export const Home = () => {
 
       <section className={styles.splashBackgroundImg} id="header">
         <div className={styles.videoWrap}>
+          <img src={imgBg} alt="splash" />
           <video
             type="video/mp4"
             src={videoBg}
@@ -42,17 +42,16 @@ export const Home = () => {
             muted
           />
         </div>
-        <>
-          <Header
-            description={header.description}
-            mainTitle={header.slogan}
-            subtitle={header.companyName}
-            greenBtn={header.greenBtn}
-            transparentBtn={header.transparentBtn}
-            greenBtnLinkTo={header.greenBtnLinkTo}
-            transparentBtnLinkTo={header.transparentBtnLinkTo}
-          />
-        </>
+
+        <Header
+          description={header.description}
+          mainTitle={header.slogan}
+          subtitle={header.companyName}
+          greenBtn={header.greenBtn}
+          transparentBtn={header.transparentBtn}
+          greenBtnLinkTo={header.greenBtnLinkTo}
+          transparentBtnLinkTo={header.transparentBtnLinkTo}
+        />
       </section>
       <section id="about">
         <AboutUs

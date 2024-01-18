@@ -1,6 +1,9 @@
 import { photos, icons } from "../../images/index";
+import videoBg from "../../images/videoBg.mp4";
 
 export const home = {
+  imgBg: photos.splash,
+  videoBg: videoBg,
   header: {
     companyName: "WE ARE SMARTQUBE ENGINEERS",
     slogan: "WE WILL DESIGN THE FUTURE",
