@@ -1,30 +1,31 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import styles from "./ExpandedNavLink.module.scss";
 import { useToggle } from "../../../utils/useToggle";
+import useScroll from "../../../utils/useScrool";
+import styles from "./ExpandedNavLink.module.scss";
 
 export const ExpandedNavLink = ({ item, index }) => {
   const [value, toggle] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
+  const scrollPosition = useScroll();
 
-  const handleNavLinkClick = () => {
+  const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-    setExpandedItem(null);
   };
 
   const handleToggle = (index) => {
-    // window.scrollTo(0, 0);
     setExpandedItem((prev) => (prev === index ? null : index));
     toggle(!value);
   };
 
   if (typeof item == "string") {
     return (
+      /* NORMAL BUTTON */
       <NavLink
         key={index}
         to={`/${item.toLowerCase()}`}
-        onClick={handleNavLinkClick}
+        onClick={handleScrollToTop}
         className={styles.link}
       >
         {item}
@@ -34,13 +35,20 @@ export const ExpandedNavLink = ({ item, index }) => {
     const buttonLabel = Object.keys(item)[0];
     const subItems = item[buttonLabel];
 
+    /* DROPDOWN BUTTON */
     return (
       <div key={`stringBtn-${index}`} className={styles.navigationList}>
         <p onClick={() => handleToggle(index)} className={styles.link}>
           {buttonLabel}
         </p>
         {expandedItem === index && (
-          <ul className={styles.dropList}>
+          <ul
+            className={
+              scrollPosition > 50
+                ? `${styles.dropList} ${styles.navigationActive}`
+                : `${styles.dropList} ${styles.navigation}`
+            }
+          >
             {subItems.map((subItem, subIndex) => (
               <li
                 key={`dropdownBtnNav-${subIndex}`}
@@ -48,7 +56,7 @@ export const ExpandedNavLink = ({ item, index }) => {
               >
                 <NavLink
                   to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
-                  onClick={handleNavLinkClick}
+                  onClick={handleScrollToTop}
                 >
                   {subItem}
                 </NavLink>
