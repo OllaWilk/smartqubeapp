@@ -29,20 +29,20 @@ export const Navigation = () => {
           scrollPosition > 50 ? styles.navigationActive : styles.navigation
         }
       >
-        <div
-          className={`${styles.navWrap} container`}
-          onClick={handleNavLinkClick}
-        >
-          <Link to="/home">
+        <div className={`${styles.navWrap} container`}>
+          {/* LOGO */}
+          <Link to="/home" onClick={handleNavLinkClick}>
             <h1 className={styles.navigationLogo}>
               <img src={logos.logo} alt="Smartqube" />
             </h1>
           </Link>
+          {/* NAVIGATION */}
           <nav className={styles.navigationList}>
             {navigationNavbar.map((item, index) => (
               <ExpandedNavLink key={item} item={item} index={index} />
             ))}
           </nav>
+          {/* HAMBUTGER */}
           <div
             className={styles.sidebarIcon}
             onClick={animateSidebar}
@@ -53,7 +53,7 @@ export const Navigation = () => {
               alt={value ? "hamburger" : "close"}
             />
           </div>
-
+          {/* SIDE NAVIGATION */}
           <nav
             className={`${styles.sidebar} ${value ? "open" : "closed"}`}
             id="sidebarNav"

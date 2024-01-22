@@ -20,6 +20,10 @@ export const ArticleWithSubstract = ({
 }) => {
   useEffect(() => {}, [abstract, title, subtitle, section1, section2]);
 
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={styles.infoBox}>
       <div className={styles.headingBlock}>
@@ -30,7 +34,9 @@ export const ArticleWithSubstract = ({
       <div className={styles.textBlock}>
         <p className={styles.text}>{section1}</p>
         <p className={styles.text}>{section2}</p>
-        <GreenBtnWithoutBackground text={btnName} linkTo={linkTo} />
+        <div onClick={handleScrollToTop}>
+          <GreenBtnWithoutBackground text={btnName} linkTo={linkTo} />
+        </div>
       </div>
     </div>
   );

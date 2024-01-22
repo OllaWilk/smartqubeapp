@@ -22,8 +22,10 @@
 .dropList {
   position: absolute;
   @include flex(column, flex-start, flex-start);
-  background-color: var(--color-dark);
   top: 100%;
+  width: 15vw;
+  margin-top: 10px;
+  transition: var(--transition);
 }
 
 .dropdonwLi {
@@ -44,4 +46,11 @@
     height: 100%;
     padding: 20px 60px 20px 20px;
   }
+}
+
+.navigationActive {
+  padding: 0px 0;
+  background-color: var(--color-dark);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
 }
