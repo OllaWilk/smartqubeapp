@@ -14,7 +14,6 @@ export const Footer = ({ footer, navigationNavbar }) => {
   };
 
   const renderNavItem = (item, index) => {
-    console.log(navigationLinks);
     if (typeof item === "string") {
       return (
         <Link
