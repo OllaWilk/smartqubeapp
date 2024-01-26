@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
+import { LanguageContext } from "./contexts/LanguageContext";
+import { loadLanguageData } from "./utils/loadLanguageData";
 import {
   About,
   Home,
@@ -15,22 +17,40 @@ import {
 } from "./components/views/index";
 
 export const App = () => {
+  const { language } = useContext(LanguageContext);
+  const data = loadLanguageData(language);
+
   return (
     <>
-      <Navigation />
+      <Navigation navigationNavbar={data.navigationNavbar} />
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/coolingsolutions" element={<Coolingsolutions />} />
-        <Route path="/integration" element={<Integration />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/technical" element={<Technical />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/home" element={<Home home={data.home} />} />
+        <Route path="/about" element={<About about={data.about} />} />
+        <Route
+          path="/coolingsolutions"
+          element={
+            <Coolingsolutions coolingSolutions={data.coolingSolutions} />
+          }
+        />
+        <Route
+          path="/integration"
+          element={<Integration integration={data.integration} />}
+        />
+        <Route
+          path="/services"
+          element={<Services services={data.services} />}
+        />
+        <Route
+          path="/technical"
+          element={<Technical technical={data.technical} />}
+        />
+        <Route path="/contact" element={<Contact contact={data.contact} />} />
+        <Route path="*" element={<NotFound notFound={data.notFound} />} />
       </Routes>
-      <Footer />
+
+      <Footer footer={data.footer} navigationNavbar={data.navigationNavbar} />
     </>
   );
 };

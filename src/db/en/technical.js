@@ -1,6 +1,6 @@
 import { icons } from "../../images/index";
 
-export const leggacyAndPrivacy = {
+export const technical = {
   header: "Legal Guidelines and Your Privacy",
   description:
     "Explore our essential documents to gain a better understanding of our policies, ensuring clarity regarding your rights and obligations when engaging with our products or services.",

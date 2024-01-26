@@ -1,0 +1,23 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.languageLocationWrap {
+  color: var(--color-light);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 0;
+
+  option {
+    background-color: var(--color-dark);
+    border-radius: none;
+    cursor: pointer;
+  }
+}

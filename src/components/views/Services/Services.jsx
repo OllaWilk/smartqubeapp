@@ -1,7 +1,7 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
+import PropTypes from "prop-types";
 
-import { services } from "../../../db/en/services";
 import {
   CallToAction,
   GreenHeader,
@@ -14,7 +14,7 @@ import styles from "./Services.module.scss";
 
 import videoBg from "../../../images/WideoServices.mp4";
 
-export const Services = () => {
+export const Services = ({ services }) => {
   const { header, fieldServices, callToaction, onSite, resourses } = services;
   return (
     <>
@@ -84,4 +84,8 @@ export const Services = () => {
       <section></section>
     </>
   );
+};
+
+Services.propTypes = {
+  services: PropTypes.node.isRequired,
 };

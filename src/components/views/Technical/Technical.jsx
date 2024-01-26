@@ -1,11 +1,12 @@
 import React from "react";
-import { leggacyAndPrivacy } from "../../../db/en/technical";
+import PropTypes from "prop-types";
+
 import { CallToAction, GreenHeader, ScrollBtn } from "../../common";
 
 import styles from "./Technical.module.scss";
 
-export const Technical = () => {
-  const { header, documents, callToaction } = leggacyAndPrivacy;
+export const Technical = ({ technical }) => {
+  const { header, documents, callToaction } = technical;
   return (
     <div className={styles.technical}>
       <ScrollBtn />
@@ -46,4 +47,8 @@ export const Technical = () => {
       </section>
     </div>
   );
+};
+
+Technical.propTypes = {
+  technical: PropTypes.node.isRequired,
 };

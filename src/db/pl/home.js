@@ -1,6 +1,9 @@
 import { icons, photos } from "../../images";
+import videoBg from "../../images/videoBg.mp4";
 
 export const home = {
+  imgBg: photos.splash,
+  videoBg: videoBg,
   header: {
     companyName: "JESTEŚMY INŻYNIERAMI SMARTQUBE",
     slogan: "BUDUJEMY PRZYSZŁOŚĆ",
@@ -44,7 +47,7 @@ export const home = {
   callToaction: {
     titile: "Nie wahaj się kontaktować z nami o dowolnej porze.",
     subtitle: "Masz jakieś pytania?",
-    button: ["Skontaktuj się z nami", "kontakt"],
+    button: ["Skontaktuj się z nami", "contact"],
   },
 
   mission: {
