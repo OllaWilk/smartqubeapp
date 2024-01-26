@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
 import { NavLink } from "react-router-dom";
 import styles from "./SideNavigation.module.scss";
@@ -20,7 +20,7 @@ export const SideNavigation = ({ item, index }) => {
       return (
         <NavLink
           key={index}
-          to={`/${item.toLowerCase()}`}
+          to={`/${navigationNavbar[index].toLowerCase()}`}
           className={styles.link}
         >
           {item}
@@ -43,7 +43,9 @@ export const SideNavigation = ({ item, index }) => {
               {subItems.map((subItem, subIndex) => (
                 <NavLink
                   key={`dropdownBtnNav-${subIndex}`}
-                  to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
+                  to={`/${navigationNavbar[2].solutions[subIndex]
+                    .replace(/\s/g, "")
+                    .toLowerCase()}`}
                   className={styles.link}
                 >
                   {subItem}

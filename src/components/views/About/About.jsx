@@ -1,5 +1,5 @@
 import React from "react";
-import { about } from "../../../db/en/about";
+import PropTypes from "prop-types";
 
 import {
   Header,
@@ -13,7 +13,7 @@ import {
 
 import styles from "./About.module.scss";
 
-export const About = () => {
+export const About = ({ about }) => {
   const {
     imgBg,
     header,
@@ -99,4 +99,8 @@ export const About = () => {
       <section></section>
     </div>
   );
+};
+
+About.propTypes = {
+  about: PropTypes.node,
 };

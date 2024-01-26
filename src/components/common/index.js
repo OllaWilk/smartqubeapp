@@ -30,6 +30,8 @@ export { TransparentBtn } from "./Buttons/TransparentBtn/TransparentBtn";
 export { GreenBtnWithoutBackground } from "./Buttons/GreenBtnWithoutBackground/GreenBtnWithoutBackground";
 export { BlackBtn } from "./Buttons/BlackBtn/BlackBtn";
 export { ScrollBtn } from "./Buttons/ScrollBtn/ScrollBtn";
+export { LanguageOptions } from "./LanguageOptions/LanguageOptions";
+export { LocationOptions } from "./LocationOptions/LocationOptions";
 
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";

@@ -1,10 +1,11 @@
 import React from "react";
-import { notFound } from "../../../db/en/notFound";
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 import styles from "./NotFound.module.scss";
 
-export const NotFound = () => {
+export const NotFound = ({ notFound }) => {
   const { info, image, error, button, linkTo } = notFound;
   return (
     <div className={styles.notfoundPage}>
@@ -19,4 +20,8 @@ export const NotFound = () => {
       <Link to={`/${linkTo}`}>{button}</Link>
     </div>
   );
+};
+
+NotFound.propTypes = {
+  notFound: PropTypes.node.isRequired,
 };

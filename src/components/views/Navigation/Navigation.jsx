@@ -1,15 +1,18 @@
-/* eslint-disable indent */
 import React from "react";
 import { Link } from "react-router-dom";
-import { navigationNavbar } from "../../../db/en/navigation";
+import PropTypes from "prop-types";
 import { useToggle } from "../../../utils/useToggle";
 import useScroll from "../../../utils/useScrool";
 import { icons, logos } from "../../../images/index";
 import { SideNavigation } from "../SideNavigation/SideNavigation";
-import { ExpandedNavLink } from "../../common/index.js";
+import {
+  ExpandedNavLink,
+  LanguageOptions,
+  LocationOptions,
+} from "../../common/index.js";
 import styles from "./Navigation.module.scss";
 
-export const Navigation = () => {
+export const Navigation = ({ navigationNavbar }) => {
   const [value, toggle] = useToggle(false);
   const scrollPosition = useScroll();
 
@@ -41,7 +44,11 @@ export const Navigation = () => {
             {navigationNavbar.map((item, index) => (
               <ExpandedNavLink key={item} item={item} index={index} />
             ))}
+            {/* LANGUAGE & LOCATION */}
+            <LanguageOptions />
+            <LocationOptions />
           </nav>
+
           {/* HAMBUTGER */}
           <div
             className={styles.sidebarIcon}
@@ -70,4 +77,8 @@ export const Navigation = () => {
       </div>
     </>
   );
+};
+
+Navigation.propTypes = {
+  navigationNavbar: PropTypes.node,
 };

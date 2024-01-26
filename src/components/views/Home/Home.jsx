@@ -1,7 +1,7 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
+import PropTypes from "prop-types";
 
-import { home } from "../../../db/en/home";
 import {
   Header,
   AboutUs,
@@ -14,13 +14,12 @@ import {
 
 import styles from "./Home.module.scss";
 
-export const Home = () => {
+export const Home = ({ home }) => {
   const { imgBg, videoBg, header, about, offers, callToaction, mission } = home;
 
   return (
     <>
       <ScrollBtn />
-
       <section className={styles.splashBackgroundImg} id="header">
         <div className={styles.videoWrap}>
           {isMobile ? (
@@ -40,6 +39,7 @@ export const Home = () => {
           transparentBtnLinkTo={header.transparentBtnLinkTo}
         />
       </section>
+      {/* <Welcome /> */}
       <section id="about">
         <AboutUs
           subtitle={about.subtitle}
@@ -78,4 +78,8 @@ export const Home = () => {
       <section></section>
     </>
   );
+};
+
+Home.propTypes = {
+  home: PropTypes.node.isRequired,
 };

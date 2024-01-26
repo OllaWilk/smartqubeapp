@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { coolingSolutions } from "../../../db/en/coolingSolutions";
+import PropTypes from "prop-types";
+
 import {
   Carousel,
   ImgWithTitleAndDescriptionBellowCart,
@@ -11,7 +12,7 @@ import { icons } from "../../../images";
 import { removeUnderlines } from "../../../utils/removeSpaces";
 import styles from "./Coolingsolutions.module.scss";
 
-export const Coolingsolutions = () => {
+export const Coolingsolutions = ({ coolingSolutions }) => {
   const { carousel, manualsSection, certificatesSection } = coolingSolutions;
   const allCertificationsKeys = Object.keys(certificatesSection.downloads);
 
@@ -115,4 +116,8 @@ export const Coolingsolutions = () => {
       <section></section>
     </>
   );
+};
+
+Coolingsolutions.propTypes = {
+  coolingSolutions: PropTypes.node.isRequired,
 };

@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { footer, navigationNavbar } from "../../../db/en/navigation";
+import PropTypes from "prop-types";
+import { navigationNavbar as navigationLinks } from "../../../db/en/navigation";
 import { removeSpaces } from "../../../utils/removeSpaces";
 import styles from "./Footer.module.scss";
 
-export const Footer = () => {
+export const Footer = ({ footer, navigationNavbar }) => {
   const { logo, iso, certificates } = footer;
   const [expandedItem, setExpandedItem] = useState(null);
 
   const handleToggle = (index) => {
-    // window.scrollTo(0, 0);
     setExpandedItem((prev) => (prev === index ? null : index));
   };
 
   const renderNavItem = (item, index) => {
+    console.log(navigationLinks);
     if (typeof item === "string") {
       return (
         <Link
           key={`${index}-${item}-footer`}
-          to={`/${removeSpaces(item.toLowerCase())}`}
+          to={`/${removeSpaces(navigationLinks[index].toLowerCase())}`}
           onClick={() => window.scrollTo(0, 0)}
         >
           {item}
@@ -39,7 +40,9 @@ export const Footer = () => {
               {subItems.map((subItem, subIndex) => (
                 <li key={`dropdownBtnNav-${subIndex}`}>
                   <Link
-                    to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
+                    to={`/${navigationLinks[2].solutions[subIndex]
+                      .replace(/\s/g, "")
+                      .toLowerCase()}`}
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     {subItem}
@@ -89,4 +92,9 @@ export const Footer = () => {
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  footer: PropTypes.node.isRequired,
+  navigationNavbar: PropTypes.node.isRequired,
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import { integration } from "../../../db/en/integration";
+import PropTypes from "prop-types";
+
 import {
   CallToAction,
   GreenHeader,
@@ -9,7 +10,7 @@ import {
 } from "../../common";
 import styles from "./Integration.module.scss";
 
-export const Integration = () => {
+export const Integration = ({ integration }) => {
   const {
     header,
     whatIsIntegration,
@@ -94,4 +95,8 @@ export const Integration = () => {
       <section></section>
     </>
   );
+};
+
+Integration.propTypes = {
+  integration: PropTypes.node.isRequired,
 };

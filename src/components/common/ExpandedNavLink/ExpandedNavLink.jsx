@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
-import useScroll from "../../../utils/useScrool";
 import styles from "./ExpandedNavLink.module.scss";
 
 export const ExpandedNavLink = ({ item, index }) => {
   const [value, toggle] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
-  const scrollPosition = useScroll();
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
@@ -24,7 +23,7 @@ export const ExpandedNavLink = ({ item, index }) => {
       /* NORMAL BUTTON */
       <NavLink
         key={index}
-        to={`/${item.toLowerCase()}`}
+        to={`/${navigationNavbar[index].toLowerCase()}`}
         onClick={handleScrollToTop}
         className={styles.link}
       >
@@ -42,20 +41,16 @@ export const ExpandedNavLink = ({ item, index }) => {
           {buttonLabel}
         </p>
         {expandedItem === index && (
-          <ul
-            className={
-              scrollPosition > 50
-                ? `${styles.dropList} ${styles.navigationActive}`
-                : `${styles.dropList} ${styles.navigation}`
-            }
-          >
+          <ul className={`${styles.dropList} ${styles.navigationActive}`}>
             {subItems.map((subItem, subIndex) => (
               <li
                 key={`dropdownBtnNav-${subIndex}`}
                 className={styles.dropdonwLi}
               >
                 <NavLink
-                  to={`/${subItem.replace(/\s/g, "").toLowerCase()}`}
+                  to={`/${navigationNavbar[2].solutions[subIndex]
+                    .replace(/\s/g, "")
+                    .toLowerCase()}`}
                   onClick={handleScrollToTop}
                 >
                   {subItem}

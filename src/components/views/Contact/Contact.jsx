@@ -1,5 +1,5 @@
 import React from "react";
-import { contact } from "../../../db/en/contact";
+import PropTypes from "prop-types";
 
 import {
   ContactCart,
@@ -9,7 +9,7 @@ import {
 } from "../../common";
 import styles from "./Contact.module.scss";
 
-export const Contact = () => {
+export const Contact = ({ contact }) => {
   const {
     contactTitle,
     cartTitle,
@@ -46,4 +46,8 @@ export const Contact = () => {
       </div>
     </div>
   );
+};
+
+Contact.propTypes = {
+  contact: PropTypes.node.isRequired,
 };
