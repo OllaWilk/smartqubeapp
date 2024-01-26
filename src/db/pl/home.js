@@ -5,7 +5,7 @@ export const home = {
   imgBg: photos.splash,
   videoBg: videoBg,
   header: {
-    companyName: "JESTEŚMY INŻYNIERAMI SMARTQUBE",
+    companyName: "JESTEŚMY INŻYNIERAMI SMARTqube",
     slogan: "BUDUJEMY PRZYSZŁOŚĆ",
     description:
       "SMARTqube sp z o.o. to zespół inżynierów, którzy z pasją projektują przyszłość, korzystając z najnowszych rozwiązań technologicznych.",
