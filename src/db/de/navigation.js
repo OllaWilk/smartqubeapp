@@ -1,11 +1,11 @@
 import { logos, iso } from "../../images";
 
 export const navigationNavbar = [
-  "home",
-  "o nas",
-  { rozwiazania: ["rozwiazania chłodnicze", "integracja", "usługi"] },
-  "techniczne",
-  "kontakt",
+  "Startseite",
+  "Über uns",
+  { Lösungen: ["Kühlungslösungen", "Integration", "Dienstleistungen"] },
+  "Technik",
+  "Kontakt",
 ];
 
 export const footer = {
@@ -13,13 +13,13 @@ export const footer = {
     imgUrl: logos.logo,
     companyName: "SMARTqube Sp z o.o.",
     street: "ul. Rakietowa 29E",
-    zip: "51-311 Wrocław, Poland",
+    zip: "51-311 Breslau, Polen",
   },
 
   iso: [
-    "ISO 9001:2015 Certificate Number: 017884",
+    "ISO 9001:2015 Zertifikatsnummer: 017884",
     "© 2024 SMARTqube sp.z.o.o",
-    "All Rights Reserved",
+    "Alle Rechte vorbehalten",
   ],
 
   certificates: [

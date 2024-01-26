@@ -18,7 +18,7 @@ export const footer = {
 
   iso: [
     "ISO 9001:2015 Certificate Number: 017884",
-    "© 2024 Smart Qube sp.z.o.o",
+    "© 2024 SMARTqube sp.z.o.o",
     "All Rights Reserved",
   ],
 
