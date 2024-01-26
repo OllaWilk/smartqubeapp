@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import { LanguageContext } from "./contexts/LanguageContext";
-import { loadLanguageData } from "./utils/loadLanguageData";
+import { loadLanguage } from "./utils/loadLanguage";
 import {
   About,
   Home,
@@ -18,7 +18,7 @@ import {
 
 export const App = () => {
   const { language } = useContext(LanguageContext);
-  const data = loadLanguageData(language);
+  const data = loadLanguage(language);
 
   return (
     <>
