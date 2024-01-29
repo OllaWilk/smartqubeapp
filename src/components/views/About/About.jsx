@@ -13,16 +13,20 @@ import {
 
 import styles from "./About.module.scss";
 
-export const About = ({ about }) => {
+export const About = ({ about, region }) => {
   const {
     imgBg,
     header,
     companyDescription,
     team,
     offers,
+
     callToaction,
     location,
+    locationUSA,
   } = about;
+
+  console.log(region);
 
   return (
     <div className={styles.aboutPage}>
@@ -74,7 +78,11 @@ export const About = ({ about }) => {
           <p>{team.text}</p>
         </div>
         <div className={styles.offersCart}>
-          <ImageTextPanelGreenGreyBackground offers={offers.carts} />
+          {region === "usa" ? (
+            <ImageTextPanelGreenGreyBackground offers={offers.cartsUSA} />
+          ) : (
+            <ImageTextPanelGreenGreyBackground offers={offers.carts} />
+          )}
         </div>
       </section>
       {/* call to action */}
@@ -88,13 +96,23 @@ export const About = ({ about }) => {
       </section>
       {/* location */}
       <section className={`${styles.location} container`}>
-        <ImgOnTheLeftAndTextOnRight
-          title={location.title}
-          subtitle={location.subtitle}
-          description={location.description}
-          src={location.src}
-          alt={location.title}
-        />
+        {region === "usa" ? (
+          <ImgOnTheLeftAndTextOnRight
+            title={locationUSA.title}
+            subtitle={locationUSA.subtitle}
+            description={locationUSA.description}
+            src={locationUSA.src}
+            alt={locationUSA.title}
+          />
+        ) : (
+          <ImgOnTheLeftAndTextOnRight
+            title={location.title}
+            subtitle={location.subtitle}
+            description={location.description}
+            src={location.src}
+            alt={location.title}
+          />
+        )}
       </section>
       <section></section>
     </div>
@@ -103,4 +121,5 @@ export const About = ({ about }) => {
 
 About.propTypes = {
   about: PropTypes.node,
+  region: PropTypes.string,
 };

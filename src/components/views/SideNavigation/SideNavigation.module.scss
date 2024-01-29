@@ -8,6 +8,12 @@
   width: 80%;
   transition: var(--transition);
   padding: 20px;
+  word-wrap: break-word;
+
+  @include sm-max {
+    width: 100%;
+    padding: 20px 10px;
+  }
 
   .nestedNav {
     @include flex(column, center, center);

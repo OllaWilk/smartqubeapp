@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import { LanguageContext } from "./contexts/LanguageContext";
+import { LocaleContext } from "./contexts/LocaleContext";
 import { loadLanguage } from "./utils/loadLanguage";
 import {
   About,
@@ -17,7 +17,7 @@ import {
 } from "./components/views/index";
 
 export const App = () => {
-  const { language } = useContext(LanguageContext);
+  const { language, region } = useContext(LocaleContext);
   const data = loadLanguage(language);
 
   return (
@@ -27,7 +27,10 @@ export const App = () => {
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/home" element={<Home home={data.home} />} />
-        <Route path="/about" element={<About about={data.about} />} />
+        <Route
+          path="/about"
+          element={<About about={data.about} region={region} />}
+        />
         <Route
           path="/coolingsolutions"
           element={
@@ -46,11 +49,18 @@ export const App = () => {
           path="/technical"
           element={<Technical technical={data.technical} />}
         />
-        <Route path="/contact" element={<Contact contact={data.contact} />} />
+        <Route
+          path="/contact"
+          element={<Contact contact={data.contact} region={region} />}
+        />
         <Route path="*" element={<NotFound notFound={data.notFound} />} />
       </Routes>
 
-      <Footer footer={data.footer} navigationNavbar={data.navigationNavbar} />
+      <Footer
+        footer={data.footer}
+        navigationNavbar={data.navigationNavbar}
+        region={region}
+      />
     </>
   );
 };

@@ -15,6 +15,8 @@ export const Header = ({
   subtitle,
   greenBtn,
   transparentBtn,
+  transparentBtnLinkTo,
+  greenBtnLinkTo,
 }) => {
   useEffect(() => {}, [description, greenBtn, transparentBtn, subtitle]);
 
@@ -26,9 +28,12 @@ export const Header = ({
         {description && <p className={styles.text}>{description}</p>}
 
         <div className={styles.btnsWrap}>
-          {greenBtn && <MainColorBtn text={greenBtn} linkTo={greenBtn} />}
+          {greenBtn && <MainColorBtn text={greenBtn} linkTo={greenBtnLinkTo} />}
           {transparentBtn && (
-            <TransparentBtn text={transparentBtn} linkTo={transparentBtn} />
+            <TransparentBtn
+              text={transparentBtn}
+              linkTo={transparentBtnLinkTo}
+            />
           )}
         </div>
       </div>

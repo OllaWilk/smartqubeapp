@@ -19,7 +19,7 @@ export const services = {
   callToaction: {
     titile: "Nie wahaj się skontaktować z nami w dowolnym momencie.",
     subtitle: "Masz jakieś pytania?",
-    button: ["Skontaktuj się z nami", "kontakt"],
+    button: ["Skontaktuj się z nami", "contact"],
   },
 
   resourses: {

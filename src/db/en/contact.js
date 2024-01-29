@@ -28,13 +28,38 @@ export const contact = {
       EURIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
     },
   ],
+  contactCartUSA: [
+    {
+      imgUrl: icons.location,
+      companyName: "Smartqube ",
+      street: "141 Wilson Avenue ",
+      zip: "Greensburg, PA 15601",
+    },
+    {
+      imgUrl: icons.envelop,
+      mail: "info@smartqube.pl !!!!! LOREM",
+    },
+    {
+      imgUrl: icons.hours,
+      hours: "Business Hours:",
+      workWeek: "Mon-Fri: 8am - 6pm Eastern Standard Time",
+      weekend: "Sat, Sun: Closed",
+    },
+    {
+      VAT: "VAT ID: PL 897 190 96 51",
+      USDIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
+      EURIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
+    },
+  ],
   contactForm: {
-    name: "Enter Your name",
-    companyName: "Enter Your company name",
-    email: "Enter Your valid email",
+    name: "Enter Your name *",
+    companyName: "Enter Your company name *",
+    email: "Enter Your valid email *",
     position: "Enter Your job position",
-    phoneNumber: "Enter Your phone number",
-    message: "Enter Your message",
+    phoneNumber: "Enter Your phone number *",
+    message: "Enter Your message *",
+    requiredFields:
+      "Please note: All fields marked with an asterisk (*) are required",
   },
   errorsMessages: {
     name: "Please enter your name",

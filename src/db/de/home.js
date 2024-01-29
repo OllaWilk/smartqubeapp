@@ -10,7 +10,9 @@ export const home = {
     description:
       "SMARTqube sp z.o.o ist ein Team von Ingenieuren, das die Zukunft leidenschaftlich mit den neuesten technologischen Lösungen gestaltet.",
     greenBtn: "kontakt",
+    greenBtnLinkTo: "contact",
     transparentBtn: "über uns",
+    transparentBtnLinkTo: "about",
   },
   about: {
     subtitle: "willkommen bei",
@@ -21,7 +23,7 @@ export const home = {
       eine effektive Verbesserung der industriellen Produktionsprozesse ermöglicht. Dies kann nur durch eine detaillierte Analyse, Planung, Auswahl der richtigen Ausrüstung und Beseitigung der Auswirkungen von
       negativen Faktoren erreicht werden.`,
     section2: `Das ist die Rolle, die SMARTqube übernehmen will - ein Logistik- und Servicezentrum für das Klimakontroll- und Gehäuseportfolio von ICEqube in der EU und ein Mehrwertanbieter als Systemintegrationsanlage. Mit unserem eigenen Lager, moderner Werkstatt und einem hocherfahrenen Team führen unsere Aktivitäten zur Vereinfachung des Zugangs zu den in den USA entwickelten Lösungen und erweitern die Kundenbetreuung durch lokale technische Unterstützung, Service, Logistik und schlüsselfertiges Engineering.`,
-    button: ["über uns", "mehr sehen"],
+    button: ["about", "mehr sehen"],
   },
   offers: {
     title: "WELT DER MÖGLICHKEITEN",

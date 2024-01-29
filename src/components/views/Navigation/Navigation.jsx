@@ -40,14 +40,19 @@ export const Navigation = ({ navigationNavbar }) => {
             </h1>
           </Link>
           {/* NAVIGATION */}
-          <nav className={styles.navigationList}>
-            {navigationNavbar.map((item, index) => (
-              <ExpandedNavLink key={item} item={item} index={index} />
-            ))}
+          <div className={styles.navLangOptionsWrap}>
             {/* LANGUAGE & LOCATION */}
-            <LanguageOptions />
-            <LocationOptions />
-          </nav>
+
+            <nav className={styles.navigationList}>
+              {navigationNavbar.map((item, index) => (
+                <ExpandedNavLink key={item} item={item} index={index} />
+              ))}
+            </nav>
+            <div className={styles.lanRegWrap}>
+              <LanguageOptions />
+              <LocationOptions />
+            </div>
+          </div>
 
           {/* HAMBUTGER */}
           <div
@@ -61,6 +66,7 @@ export const Navigation = ({ navigationNavbar }) => {
             />
           </div>
           {/* SIDE NAVIGATION */}
+
           <nav
             className={`${styles.sidebar} ${value ? "open" : "closed"}`}
             id="sidebarNav"

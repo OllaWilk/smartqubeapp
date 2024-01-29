@@ -5,8 +5,8 @@ import { navigationNavbar as navigationLinks } from "../../../db/en/navigation";
 import { removeSpaces } from "../../../utils/removeSpaces";
 import styles from "./Footer.module.scss";
 
-export const Footer = ({ footer, navigationNavbar }) => {
-  const { logo, iso, certificates } = footer;
+export const Footer = ({ footer, navigationNavbar, region }) => {
+  const { logo, logoUSA, iso, certificates } = footer;
   const [expandedItem, setExpandedItem] = useState(null);
 
   const handleToggle = (index) => {
@@ -71,9 +71,19 @@ export const Footer = ({ footer, navigationNavbar }) => {
                 onClick={handleToggle}
               />
             </Link>
-            <p>{logo.companyName}</p>
-            <p>{logo.street}</p>
-            <p>{logo.zip}</p>
+            {region === "usa" ? (
+              <>
+                <p>{logoUSA.companyName}</p>
+                <p>{logoUSA.street}</p>
+                <p>{logoUSA.zip}</p>
+              </>
+            ) : (
+              <>
+                <p>{logo.companyName}</p>
+                <p>{logo.street}</p>
+                <p>{logo.zip}</p>
+              </>
+            )}
           </div>
         </div>
         <div className={styles.certificatesWrap}>
@@ -96,4 +106,5 @@ export const Footer = ({ footer, navigationNavbar }) => {
 Footer.propTypes = {
   footer: PropTypes.node.isRequired,
   navigationNavbar: PropTypes.node.isRequired,
+  region: PropTypes.string,
 };

@@ -31,13 +31,25 @@
     }
   }
 
-  .navigationList {
-    @include flex(row, center, flex-end);
-    text-transform: uppercase;
-    position: relative;
+  .navLangOptionsWrap {
+    @include flex(row, center, space-between);
 
-    @include lg-max {
-      display: none;
+    .navigationList {
+      @include flex(row, center, flex-end);
+      text-transform: uppercase;
+      position: relative;
+
+      @include lg-max {
+        display: none;
+      }
+    }
+    .lanRegWrap {
+      // width: 80%;
+      // margin-bottom: 2rem;
+      display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // width: 200px;
     }
   }
 
@@ -75,7 +87,6 @@
   transition: var(--transition);
   transition-delay: 0.1s;
   z-index: -90;
-
   overflow-y: auto;
 
   @include lg-min {

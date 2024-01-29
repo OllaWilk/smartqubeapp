@@ -51,7 +51,7 @@ export const integration = {
   callToaction: {
     titile: "Zögern Sie nicht, uns jederzeit zu kontaktieren.",
     subtitle: "Haben Sie Fragen?",
-    button: ["Kontaktieren Sie uns", "kontakt"],
+    button: ["Kontaktieren Sie uns", "contact"],
   },
   projectExecution: {
     title: "PROJEKTDURCHFÜHRUNG",
