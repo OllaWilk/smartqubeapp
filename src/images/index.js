@@ -39,6 +39,7 @@ import plugAndPlay from "./photos/plugAndPlay.jpeg";
 import plugAndPlayHorizontal from "./photos/plugAndPlayhorizontal.jpeg";
 import onSite from "./photos/onSite.jpeg";
 import resouces from "./photos/resources.jpg";
+import sartQubeHeadquarters from "./photos/smartQubeHeadquarters.jpg";
 
 import iceProduct from "./photos/iceProduct.jpg";
 import tenderSupport from "./photos/tenderSupport.jpg";
@@ -114,6 +115,7 @@ export const photos = {
   plugAndPlayHorizontal,
   onSite,
   resouces,
+  sartQubeHeadquarters,
 };
 
 export const iso = {

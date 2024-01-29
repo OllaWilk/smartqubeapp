@@ -6,8 +6,15 @@ import "react-phone-number-input/style.css";
 import styles from "./ContactForm.module.scss";
 
 export const ContactForm = ({ contactForm, errorsMessages }) => {
-  const { name, companyName, email, position, phoneNumber, message } =
-    contactForm;
+  const {
+    name,
+    companyName,
+    email,
+    position,
+    phoneNumber,
+    message,
+    requiredFields,
+  } = contactForm;
 
   const { formData, errors, setFieldValue, validateForm } = useFormValidation(
     {
@@ -156,6 +163,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
               Submit
             </button>
           </form>
+          <p className={styles.note}>{requiredFields}</p>
         </div>
       </div>
     </>
@@ -171,5 +179,6 @@ ContactForm.propTypes = {
     position: PropTypes.string,
     phoneNumber: PropTypes.string,
     message: PropTypes.string,
+    requiredFields: PropTypes.string,
   }).isRequired,
 };

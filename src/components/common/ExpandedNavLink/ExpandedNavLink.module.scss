@@ -23,7 +23,6 @@
   position: absolute;
   @include flex(column, flex-start, flex-start);
   top: 100%;
-  width: 15vw;
   margin-top: 10px;
   transition: var(--transition);
 }
@@ -53,4 +52,6 @@
   background-color: var(--color-dark);
   backdrop-filter: blur(10px);
   transition: var(--transition);
+  width: auto;
+  word-wrap: break-word;
 }

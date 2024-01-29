@@ -2,20 +2,12 @@
 @import "../../../styles/variable";
 
 .languageLocationWrap {
-  margin-left: 2rem;
-
   div {
     color: var(--color-light);
-    background-color: transparent;
     border: none;
-    outline: none;
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
+    transition: 0.2s linear;
   }
-
-  // cursor: pointer;
-  // border-right: 1px solid var(--color-light);
-  // padding: 2px 20px;
-  // border-radius: 0;
 }
