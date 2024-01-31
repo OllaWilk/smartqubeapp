@@ -9,7 +9,7 @@ export const about = {
     greenBtn: "kontakt",
     transparentBtn: "lösungen",
     greenBtnLinkTo: "contact",
-    transparentBtnLinkTo: "solutions",
+    transparentBtnLinkTo: "coolingsolutions",
   },
   companyDescription: [
     {

@@ -23,12 +23,13 @@ export const App = () => {
   return (
     <>
       <Navigation navigationNavbar={data.navigationNavbar} />
+
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/home" element={<Home home={data.home} />} />
         <Route
-          path="/about"
+          path={`/about`}
           element={<About about={data.about} region={region} />}
         />
         <Route

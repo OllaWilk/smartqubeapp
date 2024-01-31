@@ -26,8 +26,6 @@ export const About = ({ about, region }) => {
     locationUSA,
   } = about;
 
-  console.log(region);
-
   return (
     <div className={styles.aboutPage}>
       <ScrollBtn />
