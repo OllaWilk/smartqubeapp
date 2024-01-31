@@ -37,7 +37,7 @@ export const contact = {
     },
     {
       imgUrl: icons.envelop,
-      mail: "info@smartqube.pl !!!!! LOREM",
+      mail: "sales@smartqube.com",
     },
     {
       imgUrl: icons.hours,
