@@ -3,6 +3,7 @@ import { ImgOnTheLeftAndTextOnRight } from "../index";
 import PropTypes from "prop-types";
 
 import styles from "./OurMission.module.scss";
+import { footer } from "../../../db/en";
 
 export const OurMission = ({ title, subtitle, description, src }) => {
   return (
@@ -14,6 +15,22 @@ export const OurMission = ({ title, subtitle, description, src }) => {
         subtitle={subtitle}
         description={description}
       />
+      <div className={styles.addressWrap}>
+        <div className={styles.usa}>
+          <div className={styles.usaAdress}>
+            <p>SMARTqube</p>
+            <p>{footer.logoUSA.street}</p>
+            <p>{footer.logoUSA.zip}</p>
+          </div>
+        </div>
+        <div className={styles.europe}>
+          <div className={styles.europeAdress}>
+            <p>SMARTqube</p>
+            <p>{footer.logo.street}</p>
+            <p>{footer.logo.zip}</p>
+          </div>
+        </div>
+      </div>
     </article>
   );
 };

@@ -1,6 +1,7 @@
 @import "../../../styles/mixins";
 
 .mission {
+  position: relative;
   @include flex(row, center, center);
   padding: 120px 0 90px 0;
   text-align: justify;
@@ -13,6 +14,94 @@
 
     &::after {
       margin: left;
+    }
+  }
+
+  .addressWrap {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 50%;
+
+    .usa,
+    .europe {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .usa {
+      top: 35%;
+      width: 30%;
+      height: 30%;
+
+      @include md-max {
+        top: 30%;
+      }
+
+      &:hover {
+        .usaAdress {
+          opacity: 1;
+        }
+      }
+    }
+
+    .europe {
+      top: 30%;
+      left: 45%;
+      width: 20%;
+      height: 20%;
+
+      @include md-max {
+        top: 33%;
+      }
+
+      &:hover {
+        .europeAdress {
+          opacity: 1;
+        }
+      }
+    }
+
+    .europeAdress,
+    .usaAdress {
+      @include flex(column, center, center);
+      background-color: var(--color-light);
+      border-radius: 2px;
+      box-shadow: var(--shadow);
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      transition: var(--transition);
+      position: absolute;
+      opacity: 0;
+    }
+
+    .europeAdress {
+      top: 80px;
+      left: -80px;
+
+      @include md-max {
+        top: 100px;
+        left: -70px;
+      }
+    }
+
+    .usaAdress {
+      top: 90px;
+      left: 0px;
+
+      @include md-max {
+        top: 130px;
+      }
+    }
+
+    @include md-max {
+      top: 0%;
+      width: 100%;
+    }
+
+    @include sm-max {
+      display: none;
     }
   }
 }

@@ -51,7 +51,10 @@ export const ExpandedNavLink = ({ item, index }) => {
                   to={`/${navigationNavbar[2].solutions[subIndex]
                     .replace(/\s/g, "")
                     .toLowerCase()}`}
-                  onClick={handleScrollToTop}
+                  onClick={() => {
+                    handleScrollToTop();
+                    handleToggle(index);
+                  }}
                 >
                   {subItem}
                 </NavLink>
