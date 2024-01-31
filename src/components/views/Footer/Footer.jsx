@@ -97,7 +97,13 @@ export const Footer = ({ footer, navigationNavbar, region }) => {
           {iso.map((el, index) => (
             <p key={`footer-${index}-last-${el}`}>{el}</p>
           ))}
+          <div className={styles.logoWrap}>
+            <Link to={"/privacy"} className={styles.logoWrap}>
+              Privacy and leggacy
+            </Link>
+          </div>
         </div>
+        <div></div>
       </div>
     </footer>
   );
