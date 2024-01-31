@@ -17,7 +17,7 @@ export const footerNavigation = [
 export const footer = {
   logo: {
     imgUrl: logos.logo,
-    companyName: "SMARTqube Sp z o.o.",
+    companyName: "SMARTqube",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Wrocław, Poland",
   },
@@ -30,7 +30,7 @@ export const footer = {
 
   iso: [
     "ISO 9001:2015 Certificate Number: 017884",
-    "© 2024 SMARTqube sp.z.o.o",
+    "© 2024 SMARTqube",
     "All Rights Reserved",
   ],
 
