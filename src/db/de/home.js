@@ -8,7 +8,7 @@ export const home = {
     companyName: "WIR SIND SMARTqube INGENIEURE",
     slogan: "WIR WERDEN DIE ZUKUNFT GESTALTEN",
     description:
-      "SMARTqube sp z.o.o ist ein Team von Ingenieuren, das die Zukunft leidenschaftlich mit den neuesten technologischen Lösungen gestaltet.",
+      "SMARTqube ist ein Team von Ingenieuren, das die Zukunft leidenschaftlich mit den neuesten technologischen Lösungen gestaltet.",
     greenBtn: "kontakt",
     greenBtnLinkTo: "contact",
     transparentBtn: "über uns",

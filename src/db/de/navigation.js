@@ -10,7 +10,7 @@ export const navigationNavbar = [
 export const footer = {
   logo: {
     imgUrl: logos.logo,
-    companyName: "SMARTqube Sp z o.o.",
+    companyName: "SMARTqube",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Breslau, Polen",
   },
@@ -22,7 +22,7 @@ export const footer = {
 
   iso: [
     "ISO 9001:2015 Zertifikatsnummer: 017884",
-    "© 2024 SMARTqube sp.z.o.o",
+    "© 2024 SMARTqube",
     "Alle Rechte vorbehalten",
   ],
 

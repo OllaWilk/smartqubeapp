@@ -8,7 +8,7 @@ export const home = {
     companyName: "WE ARE SMARTqube ENGINEERS",
     slogan: "WE WILL DESIGN THE FUTURE",
     description:
-      "SMARTqube sp z.o.o is a team of engineers who passionately design the future using the latest technological solutions.",
+      "SMARTqube is a team of engineers who passionately design the future using the latest technological solutions.",
     greenBtn: "contact",
     greenBtnLinkTo: "contact",
     transparentBtn: "about",

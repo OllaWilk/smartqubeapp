@@ -8,7 +8,7 @@ export const contact = {
   contactCart: [
     {
       imgUrl: icons.location,
-      companyName: "Smartqube Sp z o.o.",
+      companyName: "Smartqube",
       street: "ul. Rakietowa 29E",
       zip: "51-311 Wrocław, Poland",
     },
