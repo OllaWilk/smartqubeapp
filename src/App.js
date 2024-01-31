@@ -47,7 +47,7 @@ export const App = () => {
           element={<Services services={data.services} />}
         />
         <Route
-          path="/technical"
+          path="/privacy"
           element={<Technical technical={data.technical} />}
         />
         <Route

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { CallToAction, GreenHeader, ScrollBtn } from "../../common";
+import { GreenHeader, ScrollBtn } from "../../common";
 
 import styles from "./Technical.module.scss";
 
 export const Technical = ({ technical }) => {
-  const { header, documents, callToaction } = technical;
+  const { header, documents } = technical;
   return (
     <div className={styles.technical}>
       <ScrollBtn />
@@ -36,14 +36,6 @@ export const Technical = ({ technical }) => {
             </div>
           ))}
         </div>
-      </section>
-      <section className={styles.callToActionBackground}>
-        <CallToAction
-          h4={callToaction.subtitle}
-          h2={callToaction.titile}
-          btnTitle={callToaction.button[0]}
-          url={callToaction.button[1]}
-        />
       </section>
     </div>
   );
