@@ -4,7 +4,13 @@ export const navigationNavbar = [
   "home",
   "about",
   { solutions: ["cooling solutions", "integration", "services"] },
-  "technical",
+  "contact",
+];
+
+export const footerNavigation = [
+  "home",
+  "about",
+  { solutions: ["cooling solutions", "integration", "services"] },
   "contact",
 ];
 

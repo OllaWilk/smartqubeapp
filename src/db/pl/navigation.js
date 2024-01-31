@@ -4,7 +4,6 @@ export const navigationNavbar = [
   "home",
   "o nas",
   { rozwiazania: ["rozwiazania chłodnicze", "integracja", "usługi"] },
-  "techniczne",
   "kontakt",
 ];
 
