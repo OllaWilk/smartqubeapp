@@ -27,6 +27,7 @@ export const ContactCart = ({ cartDescription, cartSubtitle, contactCart }) => {
               {item.VAT && <p>{item.VAT}</p>}
               {item.USDIBAN && <p>{item.USDIBAN}</p>}
               {item.EURIBAN && <p>{item.EURIBAN}</p>}
+              {item.PLNIBAN && <p>{item.PLNIBAN}</p>}
             </div>
           </div>
         ))}
