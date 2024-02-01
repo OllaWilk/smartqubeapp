@@ -24,8 +24,9 @@ export const contact = {
     },
     {
       VAT: "VAT ID: PL 897 190 96 51",
-      USDIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
-      EURIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
+      USDIBAN: "USD IBAN: 17 1050 1575 1000 0090 3282 4709",
+      EURIBAN: "EUR IBAN: 40 1050 1575 1000 0090 3282 4683",
+      PLNIBAN: "PLN IBAN: 62 1050 1575 1000 0090 3282 4675",
     },
   ],
   contactCartUSA: [
@@ -44,11 +45,6 @@ export const contact = {
       hours: "Godziny pracy:",
       workWeek: "Mo-Fr: 8:00 - 18:00 ",
       weekend: "Sa, So: Zamknięte",
-    },
-    {
-      VAT: "VAT ID: PL 897 190 96 51",
-      USDIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
-      EURIBAN: "USD IBAN: 00 0000 0000 0000 0000 ",
     },
   ],
   contactForm: {
