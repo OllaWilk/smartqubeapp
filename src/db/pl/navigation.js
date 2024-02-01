@@ -3,7 +3,7 @@ import { logos, iso } from "../../images";
 export const navigationNavbar = [
   "home",
   "o nas",
-  { rozwiazania: ["rozwiazania chłodnicze", "integracja", "usługi"] },
+  { rozwiazania: ["integracja", "rozwiazania chłodnicze", "usługi"] },
   "kontakt",
 ];
 

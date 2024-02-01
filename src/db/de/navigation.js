@@ -3,7 +3,7 @@ import { logos, iso } from "../../images";
 export const navigationNavbar = [
   "Startseite",
   "Über uns",
-  { Lösungen: ["Kühlungslösungen", "Integration", "Dienstleistungen"] },
+  { Lösungen: ["Integration", "Kühlungslösungen", "Dienstleistungen"] },
   "Kontakt",
 ];
 
