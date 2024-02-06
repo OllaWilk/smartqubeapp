@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-
-import styles from "./SideOpenSubMenu.module.scss";
 import { MainColorBtn } from "../Buttons/MainColorBtn/MainColorBtn";
 
+import styles from "./SideOpenSubMenu.module.scss";
+
 export const SideOpenSubMenu = ({ data, onHide }) => {
-  const { abstract, linkTo } = data;
+  const { abstract, linkTo, subjects } = data;
+  useEffect(() => {}, [subjects]);
 
   const handleToggle = () => {
     onHide();
@@ -13,9 +14,24 @@ export const SideOpenSubMenu = ({ data, onHide }) => {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.blackBackground}>sssssss</div>
       <div className={`${styles.sideOpenMenu}`}>
         <h4 className={styles.headerName}>{abstract}</h4>
-        <div></div>
+        {subjects && (
+          <div className={styles.megaWrap}>
+            {subjects.map((subject, index) => (
+              <div
+                key={`${subject.name}-${index}`}
+                className={styles.megaCartWrap}
+              >
+                <p className={styles.mainTitle}>{subject.name}</p>
+                <ul>
+                  <li className={styles.listItems}>{subject.btnsList}</li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
         <div className={styles.btnWrap} onClick={handleToggle}>
           <MainColorBtn text={linkTo[0]} linkTo={linkTo[1]} />
         </div>

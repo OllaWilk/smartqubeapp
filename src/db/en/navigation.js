@@ -54,8 +54,30 @@ export const solutionsNav = [
   {
     name: "integration",
     abstract:
-      "Integration involves a comprehensive range of activities during project execution, including engineering, procurement, testing, packing, loading, shipment, and site commissioning, whereas assembly is just one part of this process. Specialized competencies include expertise in engineering design, mechanical and electrical systems, LV power distribution, control systems, and commissioning of OEM devices, all adhering to international standards",
+      "Integration covers a broad range of project activities including engineering, procurement, testing, packaging, shipping, and commissioning at the site, while assembly is just a part of this extensive process. We specialize in engineering design, mechanical and electrical systems, low-voltage power distribution, control systems, and commissioning of OEM devices, adhering to international standards.",
     linkTo: ["explore integration", "integration"],
+    subjects: [
+      {
+        name: "Motor Control",
+        btnsList: ["Variable Speed Solutions", "Soft Start Solutions"],
+      },
+      {
+        name: "Measurement & Analytics",
+        btnsList: ["CEMS Solutions", "Chroma Solutions", "Spectro Solutions"],
+      },
+      {
+        name: "Power",
+        btnsList: ["UPS Solutions"],
+      },
+      {
+        name: "Network",
+        btnsList: ["RF Solutions", "Fiber Solutions"],
+      },
+      {
+        name: "Custom",
+        btnsList: ["Engineered Solutions", "Build To Spec Solutions"],
+      },
+    ],
   },
   {
     name: "climate control",
