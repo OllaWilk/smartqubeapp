@@ -45,9 +45,6 @@ export const Integration = ({ integration }) => {
           <div className={styles.designCarts}>
             {design.designCart.map((cart) => (
               <div key={cart.title} className={styles.cart}>
-                {/* <div className={styles.imgWrap}>
-                  <img src={cart.designIcon} alt={cart.title} />
-                </div> */}
                 <h3 className={styles.header}>{cart.title}</h3>
                 <ul className={styles.list}>
                   {cart.elements.map((el) => (
@@ -98,5 +95,5 @@ export const Integration = ({ integration }) => {
 };
 
 Integration.propTypes = {
-  integration: PropTypes.node.isRequired,
+  integration: PropTypes.object.isRequired,
 };

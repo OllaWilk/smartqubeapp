@@ -6,24 +6,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px 0;
   z-index: 999;
   width: 100%;
   transition: var(--transition);
 
   .navWrap {
-    @include flex(row, center, space-between);
+    @include flex(row, flex-end, space-between);
     transition: var(--transition);
     transition-delay: --var(--deley);
     overflow: visible;
+    padding-bottom: 10px;
   }
 
-  .navigationLogo {
+  .navigationLogo,
+  .navigationLogoActive {
     @include flex(column, center, center);
-    position: relative;
     z-index: 2;
     font-size: var(--fs-1);
-    margin: 0.2em 0;
+    margin: 0;
+    transition: var(--transition);
 
     img {
       width: 85px;
@@ -32,24 +33,20 @@
   }
 
   .navLangOptionsWrap {
-    @include flex(row, center, space-between);
+    @include flex(row, center, center);
+    width: 80%;
 
     .navigationList {
-      @include flex(row, center, flex-end);
+      @include flex(row, stretch, flex-end);
       text-transform: uppercase;
-      position: relative;
+      width: 80%;
 
       @include lg-max {
         display: none;
       }
     }
     .lanRegWrap {
-      // width: 80%;
-      // margin-bottom: 2rem;
       display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // width: 200px;
     }
   }
 
@@ -57,6 +54,7 @@
     display: none;
     cursor: pointer;
     width: 20px;
+
     height: 20px;
 
     @include lg-max {
@@ -69,10 +67,13 @@
   }
 }
 
+.navigation {
+  padding: 17px 0 0 0;
+}
+
 .navigationActive {
-  padding: 0px 0;
   background-color: var(--color-dark);
-  backdrop-filter: blur(10px);
+  padding: 0.2rem 0 7px 0;
 }
 
 .sidebar {
@@ -92,4 +93,8 @@
   @include lg-min {
     display: none;
   }
+}
+
+.link {
+  width: auto;
 }

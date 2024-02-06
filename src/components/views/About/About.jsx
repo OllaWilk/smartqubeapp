@@ -118,6 +118,6 @@ export const About = ({ about, region }) => {
 };
 
 About.propTypes = {
-  about: PropTypes.node,
+  about: PropTypes.object,
   region: PropTypes.string,
 };

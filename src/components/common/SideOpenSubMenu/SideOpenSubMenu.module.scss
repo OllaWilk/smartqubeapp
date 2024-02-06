@@ -1,0 +1,35 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.wrapper {
+  @include flex(row, center, flex-end);
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -99;
+}
+.sideOpenMenu {
+  background-color: var(--color-dark);
+  height: 100%;
+  padding: 30px;
+  color: var(--color-light);
+  width: 70%;
+  transition: var(--transition);
+  background-color: var(--color-grey-dark);
+  @include flex(column, stretch, flex-start);
+
+  .headerName {
+    font-size: var(--font-d-btn);
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid var(--color-main);
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .btnWrap {
+    @include flex(column, stretch, flex-start);
+    margin-top: 50px;
+  }
+}

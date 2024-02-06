@@ -64,6 +64,6 @@ export const Contact = ({ contact, region }) => {
 };
 
 Contact.propTypes = {
-  contact: PropTypes.node.isRequired,
+  contact: PropTypes.object.isRequired,
   region: PropTypes.string,
 };

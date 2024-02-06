@@ -1,0 +1,12 @@
+.link {
+  transition: var(--transition);
+  padding: 20px;
+  color: var(--color-light);
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-light);
+  }
+}

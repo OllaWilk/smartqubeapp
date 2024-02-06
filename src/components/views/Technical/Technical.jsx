@@ -49,5 +49,5 @@ export const Technical = ({ technical }) => {
 };
 
 Technical.propTypes = {
-  technical: PropTypes.node.isRequired,
+  technical: PropTypes.object.isRequired,
 };
