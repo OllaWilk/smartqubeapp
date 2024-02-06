@@ -87,5 +87,5 @@ export const Services = ({ services }) => {
 };
 
 Services.propTypes = {
-  services: PropTypes.node.isRequired,
+  services: PropTypes.object.isRequired,
 };

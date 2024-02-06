@@ -32,6 +32,9 @@ export { BlackBtn } from "./Buttons/BlackBtn/BlackBtn";
 export { ScrollBtn } from "./Buttons/ScrollBtn/ScrollBtn";
 export { LanguageOptions } from "./LanguageOptions/LanguageOptions";
 export { LocationOptions } from "./LocationOptions/LocationOptions";
+export { NormalLink } from "./NormalLink/NormalLink";
+export { Dropdown } from "./Dropdown/Dropdown";
+export { SideOpenSubMenu } from "./SideOpenSubMenu/SideOpenSubMenu";
 
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";

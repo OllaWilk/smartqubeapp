@@ -7,6 +7,7 @@ import styles from "./NotFound.module.scss";
 
 export const NotFound = ({ notFound }) => {
   const { info, image, error, button, linkTo } = notFound;
+
   return (
     <div className={styles.notfoundPage}>
       <div className={styles.navColors}></div>
@@ -23,5 +24,5 @@ export const NotFound = ({ notFound }) => {
 };
 
 NotFound.propTypes = {
-  notFound: PropTypes.node.isRequired,
+  notFound: PropTypes.object.isRequired,
 };

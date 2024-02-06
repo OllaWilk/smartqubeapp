@@ -3,14 +3,18 @@ import { logos, iso } from "../../images";
 export const navigationNavbar = [
   "home",
   "about",
-  { solutions: ["integration", "cooling solutions", "services"] },
+  {
+    solutions: ["integration", "climate control", "services"],
+  },
   "contact",
 ];
+
+export const coolingSolutions = {};
 
 export const footerNavigation = [
   "home",
   "about",
-  { solutions: ["cooling solutions", "integration", "services"] },
+  { solutions: ["integration", "cooling solutions", "services"] },
   "contact",
 ];
 
@@ -45,3 +49,24 @@ export const footer = {
     iso.ukca,
   ],
 };
+
+export const solutionsNav = [
+  {
+    name: "integration",
+    abstract:
+      "Integration involves a comprehensive range of activities during project execution, including engineering, procurement, testing, packing, loading, shipment, and site commissioning, whereas assembly is just one part of this process. Specialized competencies include expertise in engineering design, mechanical and electrical systems, LV power distribution, control systems, and commissioning of OEM devices, all adhering to international standards",
+    linkTo: ["explore integration", "integration"],
+  },
+  {
+    name: "climate control",
+    abstract:
+      "Climate Control involves creating optimal conditions for sensitive equipment by regulating temperature and humidity. Our solutions encompass the design and installation of HVAC systems, clean rooms, and environmental monitoring systems.",
+    linkTo: ["explore climate control", "climatecontrol"],
+  },
+  {
+    name: "services",
+    abstract:
+      "We offer a wide range of services, including equipment maintenance, calibration, and troubleshooting. Our team of experts ensures that your systems operate at peak performance and compliance with industry standards.",
+    linkTo: ["explore services", "services"],
+  },
+];

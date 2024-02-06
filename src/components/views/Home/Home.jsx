@@ -81,5 +81,5 @@ export const Home = ({ home }) => {
 };
 
 Home.propTypes = {
-  home: PropTypes.node.isRequired,
+  home: PropTypes.object.isRequired,
 };

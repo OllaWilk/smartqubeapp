@@ -36,19 +36,24 @@ export const Navigation = ({ navigationNavbar }) => {
         <div className={`${styles.navWrap} container`}>
           {/* LOGO */}
           <Link to="/home" onClick={handleNavLinkClick}>
-            <h1 className={styles.navigationLogo}>
+            <h1
+              className={
+                scrollPosition > 50
+                  ? styles.navigationLogoActive
+                  : styles.navigationLogo
+              }
+            >
               <img src={logos.logo} alt="Smartqube" />
             </h1>
           </Link>
           {/* NAVIGATION */}
           <div className={styles.navLangOptionsWrap}>
-            {/* LANGUAGE & LOCATION */}
-
             <nav className={styles.navigationList}>
               {navigationNavbar.map((item, index) => (
                 <ExpandedNavLink key={item} item={item} index={index} />
               ))}
             </nav>
+            {/* LANGUAGE & LOCATION */}
             <div className={styles.lanRegWrap}>
               <LanguageOptions />
               <LocationOptions />
@@ -87,5 +92,5 @@ export const Navigation = ({ navigationNavbar }) => {
 };
 
 Navigation.propTypes = {
-  navigationNavbar: PropTypes.node,
+  navigationNavbar: PropTypes.array,
 };

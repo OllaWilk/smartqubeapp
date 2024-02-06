@@ -63,6 +63,6 @@ export const SideNavigation = ({ item, index }) => {
 };
 
 SideNavigation.propTypes = {
-  item: PropTypes.string,
+  item: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   index: PropTypes.number,
 };

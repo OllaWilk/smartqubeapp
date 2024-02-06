@@ -110,7 +110,7 @@ export const Footer = ({ footer, navigationNavbar, region }) => {
 };
 
 Footer.propTypes = {
-  footer: PropTypes.node.isRequired,
-  navigationNavbar: PropTypes.node.isRequired,
+  footer: PropTypes.object,
+  navigationNavbar: PropTypes.array,
   region: PropTypes.string,
 };

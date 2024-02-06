@@ -119,5 +119,5 @@ export const Coolingsolutions = ({ coolingSolutions }) => {
 };
 
 Coolingsolutions.propTypes = {
-  coolingSolutions: PropTypes.node.isRequired,
+  coolingSolutions: PropTypes.object.isRequired,
 };

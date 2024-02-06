@@ -33,7 +33,7 @@ export const App = () => {
           element={<About about={data.about} region={region} />}
         />
         <Route
-          path="/coolingsolutions"
+          path="/climatecontrol"
           element={
             <Coolingsolutions coolingSolutions={data.coolingSolutions} />
           }
