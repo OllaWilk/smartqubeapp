@@ -37,22 +37,25 @@ export const Dropdown = ({
         {buttonLabel}
       </p>
       {expanded && (
-        <ul className={`${styles.dropList} `}>
-          {subItems.map((subItem, subIndex) => (
-            <li
-              key={`dropdownBtnNav-${subItem}`}
-              className={`${styles.expandedLink} ${
-                subItem === selectedSubItem ? styles.selectedItem : ""
-              }`}
-              onClick={() => handleToggle(subItem)}
-            >
-              {subItem}
-            </li>
-          ))}
-          {selectedSubItem && (
-            <SideOpenSubMenu data={selectedData} onHide={toggleExpand} />
-          )}
-        </ul>
+        <>
+          <div></div>
+          <ul className={`${styles.dropList} `}>
+            {subItems.map((subItem, subIndex) => (
+              <li
+                key={`dropdownBtnNav-${subItem}`}
+                className={`${styles.expandedLink} ${
+                  subItem === selectedSubItem ? styles.selectedItem : ""
+                }`}
+                onClick={() => handleToggle(subItem)}
+              >
+                {subItem}
+              </li>
+            ))}
+            {selectedSubItem && (
+              <SideOpenSubMenu data={selectedData} onHide={toggleExpand} />
+            )}
+          </ul>
+        </>
       )}
     </div>
   );

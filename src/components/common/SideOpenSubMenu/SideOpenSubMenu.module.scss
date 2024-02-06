@@ -4,11 +4,20 @@
 .wrapper {
   @include flex(row, center, flex-end);
   width: 100%;
-  height: 500px;
+  min-height: auto;
   position: absolute;
   right: 0;
   top: 0;
   z-index: -99;
+}
+
+.blackBackground {
+  background-color: var(--color-dark);
+  position: absolute;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  z-index: -999;
 }
 .sideOpenMenu {
   background-color: var(--color-dark);
@@ -19,6 +28,7 @@
   transition: var(--transition);
   background-color: var(--color-grey-dark);
   @include flex(column, stretch, flex-start);
+  overflow-wrap: scroll;
 
   .headerName {
     font-size: var(--font-d-btn);
@@ -31,5 +41,26 @@
   .btnWrap {
     @include flex(column, stretch, flex-start);
     margin-top: 50px;
+  }
+
+  .megaWrap {
+    @include flex(row, stretch, space-between);
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+
+    .megaCartWrap {
+      flex-grow: 1;
+      width: 250px;
+
+      .mainTitle {
+        font-weight: bold;
+      }
+
+      .listItems {
+        font-weight: lighter;
+        text-transform: none;
+      }
+    }
   }
 }
