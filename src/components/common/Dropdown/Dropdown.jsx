@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable indent */
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { useToggle } from "../../../utils/useToggle";
 import { SideOpenSubMenu } from "../index";
 import styles from "./Dropdown.module.scss";
+import { LocaleContext } from "../../../contexts/LocaleContext";
 
 export const Dropdown = ({
   index,
@@ -12,13 +14,14 @@ export const Dropdown = ({
   toggleExpand,
   integrationNav,
 }) => {
+  const { region } = useContext(LocaleContext);
+
   const [value, toggle] = useToggle(true);
   const [selectedSubItem, setSelectedSubItem] = useState(subItems[0]);
   const [selectedData, setSelectedData] = useState(integrationNav[0]);
 
   useEffect(() => {
     if (selectedSubItem) {
-      console.log(`${selectedSubItem} has changed.`);
       const data = integrationNav.find((item) => item.name === selectedSubItem);
       if (data) {
         setSelectedData(data);
@@ -40,21 +43,43 @@ export const Dropdown = ({
         <>
           <div></div>
           <ul className={`${styles.dropList} `}>
-            {integrationNav.map((integrationLink) => (
-              <li
-                key={`dropdownBtnNav-${integrationLink.name}`}
-                className={`${styles.expandedLink} ${
-                  integrationLink.name === selectedSubItem
-                    ? styles.selectedItem
-                    : ""
-                }`}
-                onClick={() => handleToggle(integrationLink.name)}
-              >
-                {integrationLink.name}
-
-                <SideOpenSubMenu data={selectedData} onHide={toggleExpand} />
-              </li>
-            ))}
+            {region === "usa"
+              ? integrationNav.map((integrationLink) => (
+                  <li
+                    key={`dropdownBtnNav-${integrationLink.name}`}
+                    className={`${styles.expandedLink} ${
+                      integrationLink.name === selectedSubItem
+                        ? styles.selectedItem
+                        : ""
+                    }`}
+                    onClick={() => handleToggle(integrationLink.name)}
+                  >
+                    {integrationLink.name}
+                    <SideOpenSubMenu
+                      data={selectedData}
+                      onHide={toggleExpand}
+                    />
+                  </li>
+                ))
+              : integrationNav
+                  .filter((integrationLink) => integrationLink.id !== "usa")
+                  .map((integrationLink) => (
+                    <li
+                      key={`dropdownBtnNav-${integrationLink.name}`}
+                      className={`${styles.expandedLink} ${
+                        integrationLink.name === selectedSubItem
+                          ? styles.selectedItem
+                          : ""
+                      }`}
+                      onClick={() => handleToggle(integrationLink.name)}
+                    >
+                      {integrationLink.name}
+                      <SideOpenSubMenu
+                        data={selectedData}
+                        onHide={toggleExpand}
+                      />
+                    </li>
+                  ))}
           </ul>
         </>
       )}
@@ -69,4 +94,5 @@ Dropdown.propTypes = {
   expanded: PropTypes.bool,
   toggleExpand: PropTypes.func,
   integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  region: PropTypes.string,
 };

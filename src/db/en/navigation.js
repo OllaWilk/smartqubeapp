@@ -1,4 +1,4 @@
-import { logos, iso } from "../../images";
+import { logos, iso, photos } from "../../images";
 
 export const navigationNavbar = [
   "home",
@@ -43,6 +43,14 @@ export const integrationNav = [
     abstract:
       "Climate Control involves creating optimal conditions for sensitive equipment by regulating temperature and humidity. Our solutions encompass the design and installation of HVAC systems, clean rooms, and environmental monitoring systems.",
     linkTo: ["explore climate control", "climatecontrol"],
+  },
+  {
+    id: "usa",
+    name: "Enclosures",
+    img: photos.iceCube,
+    abstract:
+      "Ice Qube supplies a wide variety of high quality climate control products. Smart Qube utilizes their solutions and also acts as a distributor for Europe.",
+    linkTo: ["visit ICEqube ", "https://www.iceqube.com"],
   },
   {
     name: "services",

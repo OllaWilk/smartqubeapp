@@ -5,10 +5,9 @@ import { icons } from "../../../images/index";
 
 import styles from "./SideOpenSubMenu.module.scss";
 
-export const SideOpenSubMenu = ({ name, data, onHide }) => {
-  const { abstract, linkTo, subjects } = data;
+export const SideOpenSubMenu = ({ data, onHide }) => {
+  const { img, abstract, linkTo, subjects } = data;
   useEffect(() => {}, [subjects]);
-
   const handleToggle = () => {
     onHide();
   };
@@ -19,7 +18,10 @@ export const SideOpenSubMenu = ({ name, data, onHide }) => {
       <div className={`${styles.sideOpenMenu}`}>
         <div className={styles.abstractWrap}>
           <img src={icons.close} alt={"close"} onClick={handleToggle} />
-          <h4 className={styles.headerName}>{abstract}</h4>
+          <div className={styles.imgAbstract}>
+            {img && <img src={img} alt={"logo"} />}
+            <h4 className={styles.headerName}>{abstract}</h4>
+          </div>
         </div>
 
         {subjects && (
@@ -31,7 +33,7 @@ export const SideOpenSubMenu = ({ name, data, onHide }) => {
               >
                 <p className={styles.mainTitle}>{subject.name}</p>
                 <ul>
-                  {subject.btnsList.map((el, index) => (
+                  {subject.btnsList.map((el) => (
                     <li key={`${el}`} className={styles.listItems}>
                       {el}
                     </li>
@@ -52,5 +54,4 @@ export const SideOpenSubMenu = ({ name, data, onHide }) => {
 SideOpenSubMenu.propTypes = {
   data: PropTypes.object,
   onHide: PropTypes.func,
-  name: PropTypes.string,
 };

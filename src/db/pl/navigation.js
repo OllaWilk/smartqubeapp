@@ -1,4 +1,4 @@
-import { logos, iso } from "../../images";
+import { logos, iso, photos } from "../../images";
 
 export const navigationNavbar = [
   "home",
@@ -51,6 +51,14 @@ export const integrationNav = [
     abstract:
       "Kontrola klimatu polega na tworzeniu optymalnych warunków dla wrażliwego sprzętu poprzez regulację temperatury i wilgotności. Nasze rozwiązania obejmują projektowanie i instalację systemów HVAC, pomieszczeń czystych i systemów monitorowania środowiska.",
     linkTo: ["eksploruj kontrolę klimatu", "kontrolaklimatu"],
+  },
+  {
+    id: "usa",
+    name: "Obudowy",
+    img: photos.iceCube,
+    abstract:
+      "Ice Qube oferuje szeroką gamę wysokiej jakości produktów do kontroli klimatu. Smart Qube wykorzystuje ich rozwiązania oraz pełni funkcję dystrybutora na Europę.",
+    linkTo: ["odwiedź ICEqube", "https://www.iceqube.com"],
   },
   {
     name: "Usługi",
