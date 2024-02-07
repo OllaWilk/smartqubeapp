@@ -49,7 +49,7 @@ export const integrationNav = [
   {
     name: "Kontrola klimatu",
     abstract:
-      "Kontrola klimatu polega na tworzeniu optymalnych warunków dla wrażliwego sprzętu poprzez regulację temperatury i wilgotności. Nasze rozwiązania obejmują projektowanie i instalację systemów HVAC, pomieszczeń czystych i systemów monitorowania środowiska.",
+      "KONTROLA KLIMATU POLEGA NA TWORZENIU OPTYMALNYCH WARUNKÓW DLA WRAŻLIWEGO SPRZĘTU PRZEZ REGULACJĘ TEMPERATURY I WILGOTNOŚCI. NASZE ROZWIĄZANIA OBEJMUJĄ NAJMNIEJSZĄ NA RYNKU JEDNOSTKĘ KLIMATYZACYJNĄ, NAJCIEŃSZĄ JEDNOSTKĘ KLIMATYZACYJNĄ, JEDNOSTKĘ Z NAJWYŻSZĄ DOPUSZCZALNĄ TEMPERATURĄ EKSPLOATACJI, NAJWIĘKSZY WYBÓR KLIMATYZACJI DO STREF ZAGROŻONYCH I WIELE INNYCH.",
     linkTo: ["eksploruj kontrolę klimatu", "kontrolaklimatu"],
   },
   {

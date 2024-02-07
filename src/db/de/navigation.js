@@ -42,7 +42,7 @@ export const integrationNav = [
   {
     name: "Klimakontrolle",
     abstract:
-      "Klimakontrolle beinhaltet die Schaffung optimaler Bedingungen für empfindliche Ausrüstung durch Regulierung von Temperatur und Luftfeuchtigkeit. Unsere Lösungen umfassen die Planung und Installation von HVAC-Systemen, Reinräumen und Umweltüberwachungssystemen.",
+      "KLIMAKONTROLLE BESTEHT DARIN, OPTIMALE BEDINGUNGEN FÜR EMPFINDLICHE GERÄTE DURCH REGELUNG VON TEMPERATUR UND FEUCHTIGKEIT ZU SCHAFFEN. UNSERE LÖSUNGEN UMFASSEN DIE KLEINSTE KLIMAANLAGE AUF DEM MARKT, DIE DÜNNSTE KLIMAANLAGE, DIE EINHEIT MIT DER HÖCHSTEN BETRIEBSTEMPERATUR, DIE GRÖSSTE AUSWAHL AN KLIMAKONTROLLEN FÜR GEFAHRENGEBIETE UND VIELES MEHR.",
     linkTo: ["Klimakontrolle erkunden", "Klimakontrolle"],
   },
   {
