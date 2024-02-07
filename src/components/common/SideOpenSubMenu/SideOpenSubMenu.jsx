@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { MainColorBtn } from "../Buttons/MainColorBtn/MainColorBtn";
+import { icons } from "../../../images/index";
 
 import styles from "./SideOpenSubMenu.module.scss";
 
@@ -16,7 +17,11 @@ export const SideOpenSubMenu = ({ name, data, onHide }) => {
     <div className={styles.wrapper}>
       <div className={styles.blackBackground}></div>
       <div className={`${styles.sideOpenMenu}`}>
-        <h4 className={styles.headerName}>{abstract}</h4>
+        <div className={styles.abstractWrap}>
+          <img src={icons.close} alt={"close"} onClick={handleToggle} />
+          <h4 className={styles.headerName}>{abstract}</h4>
+        </div>
+
         {subjects && (
           <div className={styles.megaWrap}>
             {subjects.map((subject, index) => (
