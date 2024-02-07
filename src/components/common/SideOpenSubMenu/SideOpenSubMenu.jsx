@@ -4,7 +4,7 @@ import { MainColorBtn } from "../Buttons/MainColorBtn/MainColorBtn";
 
 import styles from "./SideOpenSubMenu.module.scss";
 
-export const SideOpenSubMenu = ({ data, onHide }) => {
+export const SideOpenSubMenu = ({ name, data, onHide }) => {
   const { abstract, linkTo, subjects } = data;
   useEffect(() => {}, [subjects]);
 
@@ -14,7 +14,7 @@ export const SideOpenSubMenu = ({ data, onHide }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.blackBackground}>sssssss</div>
+      <div className={styles.blackBackground}></div>
       <div className={`${styles.sideOpenMenu}`}>
         <h4 className={styles.headerName}>{abstract}</h4>
         {subjects && (
@@ -26,7 +26,11 @@ export const SideOpenSubMenu = ({ data, onHide }) => {
               >
                 <p className={styles.mainTitle}>{subject.name}</p>
                 <ul>
-                  <li className={styles.listItems}>{subject.btnsList}</li>
+                  {subject.btnsList.map((el, index) => (
+                    <li key={`${el}`} className={styles.listItems}>
+                      {el}
+                    </li>
+                  ))}
                 </ul>
               </div>
             ))}
@@ -43,4 +47,5 @@ export const SideOpenSubMenu = ({ data, onHide }) => {
 SideOpenSubMenu.propTypes = {
   data: PropTypes.object,
   onHide: PropTypes.func,
+  name: PropTypes.string,
 };

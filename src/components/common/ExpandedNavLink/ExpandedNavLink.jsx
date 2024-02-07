@@ -4,10 +4,15 @@ import { navigationNavbar } from "../../../db/en/navigation";
 import { NormalLink, Dropdown } from "../index";
 import { useToggle } from "../../../utils/useToggle";
 
-export const ExpandedNavLink = ({ item, index }) => {
+export const ExpandedNavLink = ({
+  item,
+  index,
+  solutionsNav,
+  integrationNav,
+}) => {
   const [value, toggle] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
-
+  // console.log(integrationNav);
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -30,6 +35,8 @@ export const ExpandedNavLink = ({ item, index }) => {
     const subItems = item[buttonLabel];
     return (
       <Dropdown
+        solutionsNav={solutionsNav}
+        integrationNav={integrationNav}
         index={index}
         buttonLabel={buttonLabel}
         subItems={subItems}
@@ -48,4 +55,6 @@ export const ExpandedNavLink = ({ item, index }) => {
 ExpandedNavLink.propTypes = {
   item: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   index: PropTypes.number,
+  solutionsNav: PropTypes.object,
+  integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };

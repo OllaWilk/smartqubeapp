@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useToggle } from "../../../utils/useToggle";
 import { SideOpenSubMenu } from "../index";
 import styles from "./Dropdown.module.scss";
-import { solutionsNav } from "../../../db/en/navigation";
 
 export const Dropdown = ({
   index,
@@ -11,24 +10,25 @@ export const Dropdown = ({
   subItems,
   expanded,
   toggleExpand,
+  integrationNav,
 }) => {
   const [value, toggle] = useToggle(true);
   const [selectedSubItem, setSelectedSubItem] = useState(subItems[0]);
-  const [selectedData, setSelectedData] = useState(solutionsNav[0]);
+  const [selectedData, setSelectedData] = useState(integrationNav[0]);
 
-  const displaySubItem = (subItem) => {
-    setSelectedSubItem(subItem);
-  };
-
-  const handleToggle = (subItem) => {
-    toggle(!value);
-    displaySubItem(subItem);
-
-    const data = solutionsNav.find((item) => item.name === subItem);
-
-    if (data) {
-      setSelectedData(data);
+  useEffect(() => {
+    if (selectedSubItem) {
+      console.log(`${selectedSubItem} has changed.`);
+      const data = integrationNav.find((item) => item.name === selectedSubItem);
+      if (data) {
+        setSelectedData(data);
+      }
     }
+  }, [selectedSubItem, integrationNav]);
+
+  const handleToggle = (linkName) => {
+    toggle(!value);
+    setSelectedSubItem(linkName);
   };
 
   return (
@@ -40,20 +40,21 @@ export const Dropdown = ({
         <>
           <div></div>
           <ul className={`${styles.dropList} `}>
-            {subItems.map((subItem, subIndex) => (
+            {integrationNav.map((integrationLink) => (
               <li
-                key={`dropdownBtnNav-${subItem}`}
+                key={`dropdownBtnNav-${integrationLink.name}`}
                 className={`${styles.expandedLink} ${
-                  subItem === selectedSubItem ? styles.selectedItem : ""
+                  integrationLink.name === selectedSubItem
+                    ? styles.selectedItem
+                    : ""
                 }`}
-                onClick={() => handleToggle(subItem)}
+                onClick={() => handleToggle(integrationLink.name)}
               >
-                {subItem}
+                {integrationLink.name}
+
+                <SideOpenSubMenu data={selectedData} onHide={toggleExpand} />
               </li>
             ))}
-            {selectedSubItem && (
-              <SideOpenSubMenu data={selectedData} onHide={toggleExpand} />
-            )}
           </ul>
         </>
       )}
@@ -67,4 +68,5 @@ Dropdown.propTypes = {
   subItems: PropTypes.array,
   expanded: PropTypes.bool,
   toggleExpand: PropTypes.func,
+  integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };

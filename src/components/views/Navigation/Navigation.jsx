@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
 import { useToggle } from "../../../utils/useToggle";
 import useScroll from "../../../utils/useScrool";
 import { icons, logos } from "../../../images/index";
@@ -13,10 +12,10 @@ import {
 } from "../../common/index.js";
 import styles from "./Navigation.module.scss";
 
-export const Navigation = ({ navigationNavbar }) => {
+export const Navigation = ({ navigationNavbar, integrationNav }) => {
   const [value, toggle] = useToggle(false);
   const scrollPosition = useScroll();
-
+  // console.log(integrationNav);
   const animateSidebar = () => {
     toggle(!value);
   };
@@ -50,7 +49,12 @@ export const Navigation = ({ navigationNavbar }) => {
           <div className={styles.navLangOptionsWrap}>
             <nav className={styles.navigationList}>
               {navigationNavbar.map((item, index) => (
-                <ExpandedNavLink key={item} item={item} index={index} />
+                <ExpandedNavLink
+                  key={item}
+                  item={item}
+                  index={index}
+                  integrationNav={integrationNav}
+                />
               ))}
             </nav>
             {/* LANGUAGE & LOCATION */}
@@ -93,4 +97,5 @@ export const Navigation = ({ navigationNavbar }) => {
 
 Navigation.propTypes = {
   navigationNavbar: PropTypes.array,
+  integrationNav: PropTypes.array,
 };

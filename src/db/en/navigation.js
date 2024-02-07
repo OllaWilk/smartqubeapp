@@ -9,48 +9,7 @@ export const navigationNavbar = [
   "contact",
 ];
 
-export const coolingSolutions = {};
-
-export const footerNavigation = [
-  "home",
-  "about",
-  { solutions: ["integration", "cooling solutions", "services"] },
-  "contact",
-];
-
-export const footer = {
-  logo: {
-    imgUrl: logos.logo,
-    companyName: "SMARTqube",
-    street: "ul. Rakietowa 29E",
-    zip: "51-311 Wrocław, Poland",
-  },
-
-  logoUSA: {
-    imgUrl: logos.logo,
-    street: "141 Wilson Avenue ",
-    zip: "Greensburg, PA 15601",
-  },
-
-  iso: [
-    "ISO 9001:2015 Certificate Number: 017884",
-    "© 2024 SMARTqube",
-    "All Rights Reserved",
-  ],
-
-  certificates: [
-    iso.sri,
-    iso.ce,
-    iso.crus,
-    iso.culus,
-    iso.ex,
-    iso.iec,
-    iso.iecx,
-    iso.ukca,
-  ],
-};
-
-export const solutionsNav = [
+export const integrationNav = [
   {
     name: "integration",
     abstract:
@@ -92,3 +51,42 @@ export const solutionsNav = [
     linkTo: ["explore services", "services"],
   },
 ];
+
+export const footerNavigation = [
+  "home",
+  "about",
+  { solutions: ["integration", "cooling solutions", "services"] },
+  "contact",
+];
+
+export const footer = {
+  logo: {
+    imgUrl: logos.logo,
+    companyName: "SMARTqube",
+    street: "ul. Rakietowa 29E",
+    zip: "51-311 Wrocław, Poland",
+  },
+
+  logoUSA: {
+    imgUrl: logos.logo,
+    street: "141 Wilson Avenue ",
+    zip: "Greensburg, PA 15601",
+  },
+
+  iso: [
+    "ISO 9001:2015 Certificate Number: 017884",
+    "© 2024 SMARTqube",
+    "All Rights Reserved",
+  ],
+
+  certificates: [
+    iso.sri,
+    iso.ce,
+    iso.crus,
+    iso.culus,
+    iso.ex,
+    iso.iec,
+    iso.iecx,
+    iso.ukca,
+  ],
+};
