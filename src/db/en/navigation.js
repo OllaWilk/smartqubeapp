@@ -41,7 +41,7 @@ export const integrationNav = [
   {
     name: "climate control",
     abstract:
-      "Climate Control involves creating optimal conditions for sensitive equipment by regulating temperature and humidity. Our solutions encompass the design and installation of HVAC systems, clean rooms, and environmental monitoring systems.",
+      "CLIMATE CONTROL INVOLVES CREATING OPTIMAL CONDITIONS FOR SENSITIVE EQUIPMENT BY REGULATING TEMPERATURE AND HUMIDITY. OUR SOLUTIONS ENCOMPASS THE INDUSTRIES SMALLEST AC UNIT, THINNEST AC UNIT, HIGHEST OPERATING TEMPERATURE, THE LARGEST SELECTION OF HAZARDOUS DUTY CLIMATE CONTROL, AND MUCH MORE.",
     linkTo: ["explore climate control", "climatecontrol"],
   },
   {
