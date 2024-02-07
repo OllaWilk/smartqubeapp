@@ -22,7 +22,10 @@ export const App = () => {
 
   return (
     <>
-      <Navigation navigationNavbar={data.navigationNavbar} />
+      <Navigation
+        navigationNavbar={data.navigationNavbar}
+        integrationNav={data.integrationNav}
+      />
 
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
