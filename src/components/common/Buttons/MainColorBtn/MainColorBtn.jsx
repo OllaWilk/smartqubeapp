@@ -7,7 +7,10 @@ import styles from "./MainColorBtn.module.scss";
 
 export const MainColorBtn = ({ text, linkTo }) => {
   return (
-    <Link className={styles.btnMainColor} to={removeSpaces(`/${linkTo}`)}>
+    <Link
+      className={styles.btnMainColor}
+      to={`${linkTo.includes("http") ? linkTo : "/" + removeSpaces(linkTo)}`}
+    >
       <p>{text} </p>
     </Link>
   );

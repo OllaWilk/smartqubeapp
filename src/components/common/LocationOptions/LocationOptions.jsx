@@ -38,7 +38,7 @@ export const LocationOptions = () => {
   const options = [
     { value: "eu", label: "EU" },
     { value: "usa", label: "USA" },
-    { value: "gb", label: "UK" },
+    { value: "uk", label: "UK" },
   ];
 
   const [selectedOption, setSelectedOption] = useState(options[0]);

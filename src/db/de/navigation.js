@@ -1,4 +1,4 @@
-import { logos, iso } from "../../images";
+import { logos, iso, photos } from "../../images";
 
 export const navigationNavbar = [
   "Startseite",
@@ -44,6 +44,14 @@ export const integrationNav = [
     abstract:
       "Klimakontrolle beinhaltet die Schaffung optimaler Bedingungen für empfindliche Ausrüstung durch Regulierung von Temperatur und Luftfeuchtigkeit. Unsere Lösungen umfassen die Planung und Installation von HVAC-Systemen, Reinräumen und Umweltüberwachungssystemen.",
     linkTo: ["Klimakontrolle erkunden", "Klimakontrolle"],
+  },
+  {
+    id: "usa",
+    name: "Gehäuse",
+    img: photos.iceCube,
+    abstract:
+      "Ice Qube bietet eine breite Palette von hochwertigen Produkten zur Klimakontrolle. Smart Qube nutzt ihre Lösungen und fungiert auch als Distributor für Europa.",
+    linkTo: ["besuche ICEqube", "https://www.iceqube.com"],
   },
   {
     name: "Dienstleistungen",

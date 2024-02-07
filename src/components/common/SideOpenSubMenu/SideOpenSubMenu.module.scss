@@ -20,14 +20,13 @@
   z-index: -999;
 }
 .sideOpenMenu {
-  background-color: var(--color-dark);
-  height: 100%;
+  min-height: 350px;
   padding: 20px 30px;
   color: var(--color-light);
   width: 70%;
   transition: var(--transition);
   background-color: var(--color-grey-dark);
-  @include flex(column, stretch, flex-start);
+  @include flex(column, stretch, space-between);
   overflow-wrap: scroll;
 
   .abstractWrap {
@@ -37,6 +36,17 @@
       width: 18px;
       height: 18px;
       margin-left: 10px;
+    }
+
+    .imgAbstract {
+      margin-right: 10px;
+      @include flex(row, flex-start, space-between);
+
+      img {
+        width: 170px;
+        height: 170px;
+        margin-right: 20px;
+      }
     }
   }
 
