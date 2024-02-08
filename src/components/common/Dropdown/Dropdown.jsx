@@ -14,7 +14,11 @@ export const Dropdown = ({
   integrationNav,
 }) => {
   const { region } = useContext(LocaleContext);
-  const allButtons = Object.keys(integrationNav);
+  const allButtons = Object.keys(integrationNav).filter((button) => {
+    if (region === "usa") return true;
+    if (region !== "usa" && integrationNav[button].id === "usa") return false;
+    return true;
+  });
 
   const [selectedButton, setselectedButton] = useState(allButtons[0]);
 
