@@ -7,22 +7,21 @@ export const navigationNavbar = [
   "kontakt",
 ];
 
-export const integrationNav = [
-  {
-    name: "Integracja",
+export const integrationNav = {
+  integration: {
     abstract:
-      "Integracja obejmuje szeroki zakres działań projektowych, w tym inżynierię, zaopatrzenie, testowanie, pakowanie, wysyłkę i uruchomienie na miejscu, podczas gdy montaż jest tylko częścią tego obszernego procesu. Specjalizujemy się w projektowaniu inżynierskim, systemach mechanicznych i elektrycznych, dystrybucji energii niskiego napięcia, systemach sterowania oraz uruchamianiu urządzeń OEM, zgodnie z normami międzynarodowymi.",
-    linkTo: ["eksploruj integrację", "integracja"],
+      "Integracja obejmuje szeroki zakres działań projektowych, w tym projektowanie inżynierskie, pozyskiwanie, testowanie, pakowanie, wysyłkę i uruchomienie na miejscu, podczas gdy montaż jest tylko częścią tego obszernego procesu. Specjalizujemy się w projektowaniu inżynierskim, systemach mechanicznych i elektrycznych, dystrybucji energii niskonapięciowej, systemach kontrolnych oraz uruchamianiu urządzeń OEM, przestrzegając międzynarodowych norm.",
+    linkTo: ["poznaj integrację", "integracja"],
     subjects: [
       {
-        name: "Sterowanie Silnikami",
+        name: "Sterowanie silnikiem",
         btnsList: [
-          "Rozwiązania z regulowaną prędkością",
+          "Rozwiązania z regulacją prędkości",
           "Rozwiązania Soft Start",
         ],
       },
       {
-        name: "Pomiary i Analizy",
+        name: "Pomiary i analityka",
         btnsList: [
           "Rozwiązania CEMS",
           "Rozwiązania Chroma",
@@ -38,35 +37,33 @@ export const integrationNav = [
         btnsList: ["Rozwiązania RF", "Rozwiązania światłowodowe"],
       },
       {
-        name: "Na zamówienie",
+        name: "Niestandardowe",
         btnsList: [
-          "Rozwiązania inżynierskie",
-          "Rozwiązania zbudowane na specyfikację",
+          "Rozwiązania inżynieryjne",
+          "Rozwiązania zbudowane na zamówienie",
         ],
       },
     ],
   },
-  {
-    name: "Kontrola klimatu",
+  "climate control": {
     abstract:
-      "KONTROLA KLIMATU POLEGA NA TWORZENIU OPTYMALNYCH WARUNKÓW DLA WRAŻLIWEGO SPRZĘTU PRZEZ REGULACJĘ TEMPERATURY I WILGOTNOŚCI. NASZE ROZWIĄZANIA OBEJMUJĄ NAJMNIEJSZĄ NA RYNKU JEDNOSTKĘ KLIMATYZACYJNĄ, NAJCIEŃSZĄ JEDNOSTKĘ KLIMATYZACYJNĄ, JEDNOSTKĘ Z NAJWYŻSZĄ DOPUSZCZALNĄ TEMPERATURĄ EKSPLOATACJI, NAJWIĘKSZY WYBÓR KLIMATYZACJI DO STREF ZAGROŻONYCH I WIELE INNYCH.",
-    linkTo: ["eksploruj kontrolę klimatu", "kontrolaklimatu"],
+      "KONTROLA KLIMATU OBEJMUJE TWORZENIE OPTYMALNYCH WARUNKÓW DLA WRAŻLIWEGO SPRZĘTU POPRZEZ REGULACJĘ TEMPERATURY I WILGOTNOŚCI. NASZE ROZWIĄZANIA OBEJMUJĄ NAJMNIEJSZĄ NA RYNKU JEDNOSTKĘ KLIMATYZACYJNĄ, NAJCIEŃSZĄ JEDNOSTKĘ KLIMATYZACYJNĄ, NAJWYŻSZĄ TEMPERATURĘ PRACY, NAJWIĘKSZY WYBÓR KLIMATYZACJI DO STREF ZAGROŻONYCH I WIELE INNYCH.",
+    linkTo: ["przejdź do strony kontrolę klimatu", "climatecontrol"],
   },
-  {
+  ENCLOSURES: {
     id: "usa",
-    name: "Obudowy",
     img: photos.iceCube,
     abstract:
-      "Ice Qube oferuje szeroką gamę wysokiej jakości produktów do kontroli klimatu. Smart Qube wykorzystuje ich rozwiązania oraz pełni funkcję dystrybutora na Europę.",
+      "Ice Qube dostarcza szeroką gamę wysokiej jakości produktów do kontroli klimatu. Smart Qube wykorzystuje ich rozwiązania i działa również jako dystrybutor w Europie.",
     linkTo: ["odwiedź ICEqube", "https://www.iceqube.com"],
   },
-  {
-    name: "Usługi",
+
+  services: {
     abstract:
       "Oferujemy szeroki zakres usług, w tym konserwację sprzętu, kalibrację i rozwiązywanie problemów. Nasz zespół ekspertów zapewnia, że twoje systemy działają z maksymalną wydajnością i zgodnie z normami branżowymi.",
-    linkTo: ["eksploruj usługi", "usługi"],
+    linkTo: ["poznaj nasze usługi", "usługi"],
   },
-];
+};
 
 export const footer = {
   logo: {

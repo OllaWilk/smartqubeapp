@@ -1,7 +1,6 @@
 /* eslint-disable indent */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
-import { useToggle } from "../../../utils/useToggle";
 import { SideOpenSubMenu } from "../index";
 import styles from "./Dropdown.module.scss";
 import { LocaleContext } from "../../../contexts/LocaleContext";
@@ -15,23 +14,12 @@ export const Dropdown = ({
   integrationNav,
 }) => {
   const { region } = useContext(LocaleContext);
+  const allButtons = Object.keys(integrationNav);
 
-  const [value, toggle] = useToggle(true);
-  const [selectedSubItem, setSelectedSubItem] = useState(subItems[0]);
-  const [selectedData, setSelectedData] = useState(integrationNav[0]);
+  const [selectedButton, setselectedButton] = useState(allButtons[0]);
 
-  useEffect(() => {
-    if (selectedSubItem) {
-      const data = integrationNav.find((item) => item.name === selectedSubItem);
-      if (data) {
-        setSelectedData(data);
-      }
-    }
-  }, [selectedSubItem, integrationNav]);
-
-  const handleToggle = (linkName) => {
-    toggle(!value);
-    setSelectedSubItem(linkName);
+  const handleButtonClick = (buttonName) => {
+    setselectedButton(buttonName);
   };
 
   return (
@@ -41,45 +29,25 @@ export const Dropdown = ({
       </p>
       {expanded && (
         <>
-          <div></div>
           <ul className={`${styles.dropList} `}>
-            {region === "usa"
-              ? integrationNav.map((integrationLink) => (
-                  <li
-                    key={`dropdownBtnNav-${integrationLink.name}`}
-                    className={`${styles.expandedLink} ${
-                      integrationLink.name === selectedSubItem
-                        ? styles.selectedItem
-                        : ""
-                    }`}
-                    onClick={() => handleToggle(integrationLink.name)}
-                  >
-                    {integrationLink.name}
-                    <SideOpenSubMenu
-                      data={selectedData}
-                      onHide={toggleExpand}
-                    />
-                  </li>
-                ))
-              : integrationNav
-                  .filter((integrationLink) => integrationLink.id !== "usa")
-                  .map((integrationLink) => (
-                    <li
-                      key={`dropdownBtnNav-${integrationLink.name}`}
-                      className={`${styles.expandedLink} ${
-                        integrationLink.name === selectedSubItem
-                          ? styles.selectedItem
-                          : ""
-                      }`}
-                      onClick={() => handleToggle(integrationLink.name)}
-                    >
-                      {integrationLink.name}
-                      <SideOpenSubMenu
-                        data={selectedData}
-                        onHide={toggleExpand}
-                      />
-                    </li>
-                  ))}
+            {allButtons.map((button, idx) => (
+              <li
+                key={`dropdownBtnNav-${idx}`}
+                className={`${styles.expandedLink} ${
+                  button === selectedButton ? styles.selectedItem : ""
+                }`}
+                onClick={() => handleButtonClick(button)}
+              >
+                {button}
+              </li>
+            ))}
+
+            <SideOpenSubMenu
+              data={integrationNav}
+              onHide={toggleExpand}
+              buttons={allButtons}
+              activeButton={selectedButton}
+            />
           </ul>
         </>
       )}
@@ -93,6 +61,5 @@ Dropdown.propTypes = {
   subItems: PropTypes.array,
   expanded: PropTypes.bool,
   toggleExpand: PropTypes.func,
-  integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  region: PropTypes.string,
+  integrationNav: PropTypes.object,
 };
