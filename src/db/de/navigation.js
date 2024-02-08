@@ -7,17 +7,16 @@ export const navigationNavbar = [
   "Kontakt",
 ];
 
-export const integrationNav = [
-  {
-    name: "Integration",
+export const integrationNav = {
+  integration: {
     abstract:
-      "Integration umfasst eine breite Palette von Projektaktivitäten, einschließlich Ingenieurwesen, Beschaffung, Tests, Verpackung, Versand und Inbetriebnahme vor Ort, während die Montage nur ein Teil dieses umfangreichen Prozesses ist. Wir sind spezialisiert auf Ingenieurdesign, mechanische und elektrische Systeme, Niederspannungs-Stromverteilung, Steuerungssysteme und Inbetriebnahme von OEM-Geräten, unter Einhaltung internationaler Standards.",
-    linkTo: ["Integration erkunden", "Integration"],
+      "Integration umfasst eine breite Palette von Projektaktivitäten, einschließlich Engineering, Beschaffung, Testen, Verpacken, Versenden und Inbetriebnahme vor Ort, während die Montage nur ein Teil dieses umfangreichen Prozesses ist. Wir spezialisieren uns auf Ingenieurdesign, mechanische und elektrische Systeme, Niederspannungs-Stromverteilung, Steuerungssysteme und die Inbetriebnahme von OEM-Geräten unter Einhaltung internationaler Standards.",
+    linkTo: ["Integration erkunden", "integration"],
     subjects: [
       {
         name: "Motorsteuerung",
         btnsList: [
-          "Lösungen für variable Geschwindigkeiten",
+          "Lösungen für variable Geschwindigkeit",
           "Soft-Start-Lösungen",
         ],
       },
@@ -27,39 +26,37 @@ export const integrationNav = [
       },
       {
         name: "Energie",
-        btnsList: ["USV-Lösungen"],
+        btnsList: ["UPS-Lösungen"],
       },
       {
         name: "Netzwerk",
         btnsList: ["RF-Lösungen", "Faser-Lösungen"],
       },
       {
-        name: "Angepasst",
-        btnsList: ["Engineered Solutions", "Build To Spec-Lösungen"],
+        name: "Individuell",
+        btnsList: ["Ingenieurlösungen", "Lösungen nach Spezifikation"],
       },
     ],
   },
-  {
-    name: "Klimakontrolle",
+  "climate control": {
     abstract:
-      "KLIMAKONTROLLE BESTEHT DARIN, OPTIMALE BEDINGUNGEN FÜR EMPFINDLICHE GERÄTE DURCH REGELUNG VON TEMPERATUR UND FEUCHTIGKEIT ZU SCHAFFEN. UNSERE LÖSUNGEN UMFASSEN DIE KLEINSTE KLIMAANLAGE AUF DEM MARKT, DIE DÜNNSTE KLIMAANLAGE, DIE EINHEIT MIT DER HÖCHSTEN BETRIEBSTEMPERATUR, DIE GRÖSSTE AUSWAHL AN KLIMAKONTROLLEN FÜR GEFAHRENGEBIETE UND VIELES MEHR.",
-    linkTo: ["Klimakontrolle erkunden", "Klimakontrolle"],
+      "KLIMAKONTROLLE BEINHALTET DIE SCHAFFUNG OPTIMALER BEDINGUNGEN FÜR EMPFINDLICHE AUSRÜSTUNG DURCH REGULIERUNG VON TEMPERATUR UND FEUCHTIGKEIT. UNSERE LÖSUNGEN UMFASSEN DIE KLEINSTE KLIMAANLAGE DER BRANCHE, DIE DÜNNSTE KLIMAANLAGE, DIE HÖCHSTE BETRIEBSTEMPERATUR, DIE GRÖSSTE AUSWAHL AN KLIMAKONTROLLEN FÜR GEFÄHRLICHE BEREICHE UND VIELES MEHR.",
+    linkTo: ["Klimakontrolle erkunden", "climatecontrol"],
   },
-  {
+  ENCLOSURES: {
     id: "usa",
-    name: "Gehäuse",
     img: photos.iceCube,
     abstract:
-      "Ice Qube bietet eine breite Palette von hochwertigen Produkten zur Klimakontrolle. Smart Qube nutzt ihre Lösungen und fungiert auch als Distributor für Europa.",
-    linkTo: ["besuche ICEqube", "https://www.iceqube.com"],
+      "Ice Qube liefert eine breite Palette von hochwertigen Produkten zur Klimakontrolle. Smart Qube nutzt ihre Lösungen und fungiert auch als Distributor für Europa.",
+    linkTo: ["ICEqube besuchen", "https://www.iceqube.com"],
   },
-  {
-    name: "Dienstleistungen",
+
+  services: {
     abstract:
-      "Wir bieten eine breite Palette von Dienstleistungen an, einschließlich Ausrüstungswartung, Kalibrierung und Fehlerbehebung. Unser Team von Experten stellt sicher, dass Ihre Systeme mit Spitzenleistung und in Übereinstimmung mit Industriestandards arbeiten.",
-    linkTo: ["Dienstleistungen erkunden", "Dienstleistungen"],
+      "Wir bieten eine breite Palette von Dienstleistungen an, einschließlich Gerätewartung, Kalibrierung und Fehlerbehebung. Unser Team von Experten stellt sicher, dass Ihre Systeme mit maximaler Leistung und in Übereinstimmung mit Industriestandards arbeiten.",
+    linkTo: ["Dienstleistungen erkunden", "services"],
   },
-];
+};
 
 export const footer = {
   logo: {
