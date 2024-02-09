@@ -4,7 +4,7 @@ export const navigationNavbar = [
   "home",
   "about",
   {
-    solutions: ["integration", "climate control", "ENCLOSURES", "services"],
+    solutions: ["integration", "climate control", "services"],
   },
   "contact",
 ];
@@ -12,7 +12,7 @@ export const navigationNavbar = [
 export const integrationNav = {
   integration: {
     abstract:
-      "Integration covers a broad range of project activities including engineering, procurement, testing, packaging, shipping, and commissioning at the site, while assembly is just a part of this extensive process. We specialize in engineering design, mechanical and electrical systems, low-voltage power distribution, control systems, and commissioning of OEM devices, adhering to international standards.",
+      "INTEGRATION COVERS A BROAD RANGE OF PROJECT ACTIVITIES INCLUDING ENGINEERING, PROCUREMENT, TESTING, PACKAGING, SHIPPING, AND COMMISSIONING AT THE FINAL INSTALLATION SITE. WE SPECIALIZE IN ENGINEERING DESIGN, MECHANICAL AND ELECTRICAL SYSTEMS, LOW-VOLTAGE POWER DISTRIBUTION, CONTROL SYSTEMS, AND COMMISSIONING OF OEM DEVICES, FOR VARIOUS INDUSTRIES WITH ACCORDANCE TO RANGE OF LOCAL AND INTERNATIONAL REGULATIONS.",
     linkTo: ["explore integration", "integration"],
     subjects: [
       {
@@ -46,7 +46,7 @@ export const integrationNav = {
     id: "usa",
     img: photos.iceCube,
     abstract:
-      "Ice Qube supplies a wide variety of high quality climate control products. Smart Qube utilizes their solutions and also acts as a distributor for Europe.",
+      "Ice Qube supplies a wide variety of high quality climate control products. ",
     linkTo: ["visit ICEqube ", "https://www.iceqube.com"],
   },
 

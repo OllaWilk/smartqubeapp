@@ -8,7 +8,6 @@ import { LocaleContext } from "../../../contexts/LocaleContext";
 export const Dropdown = ({
   index,
   buttonLabel,
-  subItems,
   expanded,
   toggleExpand,
   integrationNav,
