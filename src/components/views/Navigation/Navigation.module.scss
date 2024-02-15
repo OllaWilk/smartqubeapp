@@ -33,13 +33,13 @@
   }
 
   .navLangOptionsWrap {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-end);
     width: 80%;
 
     .navigationList {
       @include flex(row, stretch, flex-end);
       text-transform: uppercase;
-      width: 80%;
+      align-content: stretch;
 
       @include lg-max {
         display: none;

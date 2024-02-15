@@ -15,7 +15,6 @@ import styles from "./Navigation.module.scss";
 export const Navigation = ({ navigationNavbar, integrationNav }) => {
   const [value, toggle] = useToggle(false);
   const scrollPosition = useScroll();
-  // console.log(integrationNav);
   const animateSidebar = () => {
     toggle(!value);
   };

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { navigationNavbar } from "../../../db/en/navigation";
-import { NormalLink, Dropdown } from "../index";
 import { useToggle } from "../../../utils/useToggle";
+import { NormalLink, Dropdown } from "../index";
 
 export const ExpandedNavLink = ({
   item,
@@ -12,7 +12,7 @@ export const ExpandedNavLink = ({
 }) => {
   const [value, toggle] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
-  // console.log(integrationNav);
+
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
