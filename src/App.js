@@ -20,10 +20,9 @@ import { CookieInfo } from "./components/common";
 export const App = () => {
   const { language, region } = useContext(LocaleContext);
   const data = loadLanguage(language);
-
   return (
     <>
-      <CookieInfo />
+      <CookieInfo cookie={data.cookie} />
       <Navigation
         navigationNavbar={data.navigationNavbar}
         integrationNav={data.integrationNav}

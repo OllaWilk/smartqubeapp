@@ -19,20 +19,14 @@
     right: 0;
     background-color: var(--color-dark);
     opacity: 0.4;
-
-    @include sm-max {
-      display: none;
-    }
   }
 
   .info {
     z-index: 998;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    min-height: 65%;
+    bottom: 0%;
+    width: 100%;
+    min-height: 35%;
     @include flex(column, flex-start, space-between);
     background-color: var(--color-light);
     opacity: 1;
@@ -40,14 +34,8 @@
     text-align: left;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
 
-    @include md-max {
-      width: 95%;
-      min-height: 90%;
-      padding: 20px 20px;
-      margin: 30px 0;
-    }
-
     @include sm-max {
+      padding: 20px 10px;
     }
 
     .text {

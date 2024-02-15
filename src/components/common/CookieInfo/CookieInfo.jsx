@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import styles from "./CookieInfo.module.scss";
-import { DescriptionSubtitle } from "../Titles/DescriptionSubtitle/DescriptionSubtitle";
 import { Link } from "react-router-dom";
+import styles from "./CookieInfo.module.scss";
+import PropTypes from "prop-types";
 
-export const CookieInfo = () => {
+import { DescriptionSubtitle } from "../Titles/DescriptionSubtitle/DescriptionSubtitle";
+
+export const CookieInfo = ({ cookie }) => {
   const [isVisible, setIsVisible] = useState(false);
+  console.log(cookie);
 
   useEffect(() => {
     const cookiesAccepted = localStorage.getItem("cookiesAccepted");
@@ -27,16 +30,8 @@ export const CookieInfo = () => {
         <div className={styles.modal}></div>
         <div className={styles.info}>
           <div>
-            <DescriptionSubtitle text={"Polityka Cookies"} />
-            <p className={styles.text}>
-              Szanowni Państwo, w ramach naszego serwisu stosujemy pliki
-              cookies. Korzystanie z witryny bez zmiany ustawień dotyczących
-              cookies oznacza, że będą one zamieszczane w Państwa urządzeniu
-              końcowym. Jeśli nie wyrażają Państwo zgody, uprzejmie prosimy o
-              dokonanie stosownych zmian w ustawieniach przeglądarki
-              internetowej z tym, że może to wpłynąć na dostępność niektórych
-              funkcjonalności.
-            </p>
+            <DescriptionSubtitle text={cookie.title} />
+            <p className={styles.text}>{cookie.cookie}</p>
           </div>
 
           <div className={styles.buttonsWrap}>
@@ -44,14 +39,18 @@ export const CookieInfo = () => {
               className={styles.greenTransparentBckg}
               onClick={handleAccept}
             >
-              Akceptuję
+              {cookie.accept}
             </button>
             <Link to={"/cookies"} className={styles.goToCookiePolicy}>
-              * więcej o naszej polityce cookies przeczytasz <span>tutaj</span>
+              * {cookie.info} <span>{cookie.urlLink}</span>
             </Link>
           </div>
         </div>
       </div>
     )
   );
+};
+
+CookieInfo.propTypes = {
+  cookie: PropTypes.object,
 };
