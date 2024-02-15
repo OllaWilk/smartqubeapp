@@ -1,9 +1,9 @@
 /* eslint-disable indent */
 import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
+import { LocaleContext } from "../../../contexts/LocaleContext";
 import { SideOpenSubMenu } from "../index";
 import styles from "./Dropdown.module.scss";
-import { LocaleContext } from "../../../contexts/LocaleContext";
 
 export const Dropdown = ({
   index,
