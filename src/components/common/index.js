@@ -11,6 +11,7 @@ export { ImageHeaderColumns } from "./ImageHeaderColumns/ImageHeaderColumns";
 export { Carousel } from "./Carousel/Carousel";
 export { Video } from "./Video/Video";
 export { ExpandedNavLink } from "./ExpandedNavLink/ExpandedNavLink";
+export { CookieInfo } from "./CookieInfo/CookieInfo";
 
 /*forms*/
 export { ContactForm } from "./Forms/ContactForm/ContactForm";
