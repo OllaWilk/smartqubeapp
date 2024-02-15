@@ -99,7 +99,7 @@ export const Footer = ({ footer, navigationNavbar, region }) => {
           ))}
           <div className={styles.logoWrap}>
             <Link to={"/privacy"} className={styles.logoWrap}>
-              Privacy and leggacy
+              Privacy & Legal
             </Link>
           </div>
         </div>

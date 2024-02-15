@@ -15,6 +15,7 @@ import {
   Integration,
   Services,
 } from "./components/views/index";
+import { CookieInfo } from "./components/common";
 
 export const App = () => {
   const { language, region } = useContext(LocaleContext);
@@ -22,11 +23,11 @@ export const App = () => {
 
   return (
     <>
+      <CookieInfo />
       <Navigation
         navigationNavbar={data.navigationNavbar}
         integrationNav={data.integrationNav}
       />
-
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
         <Route path="/smartqube" element={<Redirect redirectUrl={"home"} />} />
@@ -59,7 +60,6 @@ export const App = () => {
         />
         <Route path="*" element={<NotFound notFound={data.notFound} />} />
       </Routes>
-
       <Footer
         footer={data.footer}
         navigationNavbar={data.navigationNavbar}
