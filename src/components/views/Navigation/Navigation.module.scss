@@ -15,10 +15,7 @@
     transition: var(--transition);
     transition-delay: --var(--deley);
     overflow: visible;
-
-    @include sm-max {
-      flex-wrap: wrap;
-    }
+    padding-bottom: 10px;
   }
 
   .navigationLogo,
@@ -40,7 +37,7 @@
     width: 80%;
 
     @include sm-max {
-      margin: 10px 0;
+      width: 50%;
     }
 
     .navigationList {
