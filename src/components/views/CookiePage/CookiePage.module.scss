@@ -1,0 +1,40 @@
+@import "../../../styles/mixins";
+
+.header {
+  background-color: var(--color-green-dark);
+  z-index: -999;
+  word-wrap: break-word;
+
+  @include sm-max {
+    padding-top: 30px;
+  }
+}
+
+.articles {
+  @include flex(column, flex-start, flex-start);
+
+  text-align: justify;
+  padding: 2rem 0;
+}
+
+.butonsWrap {
+  @include flex(row, center, flex-start);
+  margin: 40px 0;
+  gap: 20px;
+  width: 75%;
+}
+
+.greenTransparentBckg {
+  @include btn;
+  background-color: var(--color-dark);
+  border: none;
+  color: var(--color-light);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: var(--fw-900);
+  width: 250px;
+
+  &:hover {
+    background-color: var(--color-green-dark);
+  }
+}

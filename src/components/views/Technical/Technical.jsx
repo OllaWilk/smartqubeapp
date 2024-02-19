@@ -25,17 +25,12 @@ export const Technical = ({ technical }) => {
                 <p className={styles.text}>{document.text}</p>
               </div>
               <div className={styles.btnDownloadWrap}>
-                <a
-                  href={document.downloadUrl}
-                  className={styles.downloadLink}
-                  download
-                >
+                <a href={document.downloadUrl} className={styles.downloadLink}>
                   {document.download}
                 </a>
                 <a
                   href={document.downloadLangugageUrl}
                   className={styles.downloadLink}
-                  download
                 >
                   {document.downloadLanguage}
                 </a>

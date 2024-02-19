@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import { LocaleContext } from "./contexts/LocaleContext";
 import { loadLanguage } from "./utils/loadLanguage";
+import { CookieInfo } from "./components/common";
 import {
   About,
   Home,
@@ -14,12 +15,13 @@ import {
   Coolingsolutions,
   Integration,
   Services,
+  CookiePage,
 } from "./components/views/index";
-import { CookieInfo } from "./components/common";
 
 export const App = () => {
   const { language, region } = useContext(LocaleContext);
   const data = loadLanguage(language);
+
   return (
     <>
       <CookieInfo cookie={data.cookie} />
@@ -56,6 +58,10 @@ export const App = () => {
         <Route
           path="/contact"
           element={<Contact contact={data.contact} region={region} />}
+        />
+        <Route
+          path="/cookies"
+          element={<CookiePage cookiePage={data.cookiePage} region={region} />}
         />
         <Route path="*" element={<NotFound notFound={data.notFound} />} />
       </Routes>

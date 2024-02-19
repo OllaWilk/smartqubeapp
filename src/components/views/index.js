@@ -9,3 +9,4 @@ export { Footer } from "./Footer/Footer";
 export { Navigation } from "./Navigation/Navigation";
 export { Integration } from "./Integration/Integration";
 export { Services } from "./Services/Services";
+export { CookiePage } from "./CookiePage/CookiePage";
