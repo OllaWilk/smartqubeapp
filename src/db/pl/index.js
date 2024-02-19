@@ -10,3 +10,4 @@ export { integration } from "./integration";
 export { services } from "./services";
 export { technical } from "./technical";
 export { cookie } from "./cookie";
+export { cookiePage } from "./cookie";

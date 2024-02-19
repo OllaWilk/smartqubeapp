@@ -28,17 +28,24 @@ export const technical = {
     },
     {
       img: icons.shield,
-      text: "Details about the warranty coverage for our products in both English and Polish.",
+      text: "Details about the warranty coverage for our products in English",
       language: "TERMS OF WARRANTY",
       download: "Download PDF (English)",
       downloadUrl: "link_do_pobrania_pdf_angielski.pdf",
     },
     {
       img: icons.document,
-      text: "Details about the warranty coverage for our products in both English and Polish.",
+      text: "Details about the warranty coverage for our products in English.",
       language: "TERMS OF WARRANTY",
       download: "Download PDF (English)",
       downloadUrl: "link_do_pobrania_pdf_angielski.pdf",
+    },
+    {
+      img: icons.document,
+      text: "Cookie Policy - Gain insights into our approach to cookies and manage your preferences by engaging with our comprehensive guide.",
+      language: "TERMS OF WARRANTY",
+      download: "Explore Cookie Policy",
+      downloadUrl: "/cookies",
     },
   ],
 };

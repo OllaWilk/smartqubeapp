@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import styles from "./CookieInfo.module.scss";
 import PropTypes from "prop-types";
-
+import { Link } from "react-router-dom";
 import { DescriptionSubtitle } from "../Titles/DescriptionSubtitle/DescriptionSubtitle";
+import styles from "./CookieInfo.module.scss";
 
 export const CookieInfo = ({ cookie }) => {
   const [isVisible, setIsVisible] = useState(false);
-  console.log(cookie);
 
   useEffect(() => {
     const cookiesAccepted = localStorage.getItem("cookiesAccepted");
-    console.log(cookiesAccepted);
 
     if (!cookiesAccepted) {
-      console.log(cookiesAccepted);
       setIsVisible(true);
     }
   }, []);
