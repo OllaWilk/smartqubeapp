@@ -36,6 +36,7 @@ export { LocationOptions } from "./LocationOptions/LocationOptions";
 export { NormalLink } from "./NormalLink/NormalLink";
 export { Dropdown } from "./Dropdown/Dropdown";
 export { SideOpenSubMenu } from "./SideOpenSubMenu/SideOpenSubMenu";
+export { PDFDownloadButton } from "./Buttons/PDFDownloadButton/PDFDownloadButton";
 
 /* Carts */
 export { CartWithImg } from "./Carts/CartWithImg/CartWithImg";

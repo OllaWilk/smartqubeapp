@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { GreenHeader, ScrollBtn } from "../../common";
+import { GreenHeader, PDFDownloadButton, ScrollBtn } from "../../common";
 
 import styles from "./Technical.module.scss";
 
 export const Technical = ({ technical }) => {
   const { header, documents } = technical;
+
   return (
     <div className={styles.technical}>
       <ScrollBtn />
@@ -15,7 +16,7 @@ export const Technical = ({ technical }) => {
       </section>
       <section className={`${styles.sectionWrap} container`}>
         <div className={styles.documentsWrap}>
-          {documents.map((document, index) => (
+          {[...documents].map((document, index) => (
             <div key={`document-${index}`} className={styles.card}>
               <div className={styles.cartWrap}>
                 <div className={styles.logos}>
@@ -25,15 +26,29 @@ export const Technical = ({ technical }) => {
                 <p className={styles.text}>{document.text}</p>
               </div>
               <div className={styles.btnDownloadWrap}>
-                <a href={document.downloadUrl} className={styles.downloadLink}>
-                  {document.download}
-                </a>
-                <a
-                  href={document.downloadLangugageUrl}
-                  className={styles.downloadLink}
-                >
-                  {document.downloadLanguage}
-                </a>
+                {document.goToPage && (
+                  <PDFDownloadButton
+                    folderPath={document.goToPage}
+                    btnText={document.buttonNameEn}
+                    btnType={"goToPage"}
+                  />
+                )}
+                {document.downloadUrlEn && (
+                  <>
+                    <PDFDownloadButton
+                      folderPath={document.downloadUrlEn}
+                      btnText={document.buttonNameEn}
+                      btnType={"download"}
+                    />
+                    {document.downloadLanguage && (
+                      <PDFDownloadButton
+                        folderPath={document.downloadLangugageUrl}
+                        btnText={document.downloadLanguage}
+                        btnType={"download"}
+                      />
+                    )}
+                  </>
+                )}
               </div>
             </div>
           ))}
