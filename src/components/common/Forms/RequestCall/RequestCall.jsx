@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import PhoneInput from "react-phone-number-input";
+import { LocaleContext } from "../../../../contexts/LocaleContext";
+
 import useFormValidation from "../../../../utils/useFormValidation";
 import "react-phone-number-input/style.css";
 import styles from "./RequestCall.module.scss";
@@ -33,7 +35,12 @@ export const RequestCall = ({
     },
     {}
   );
+  const { region } = useContext(LocaleContext);
+  const [myRegion, setMyRegion] = useState("US");
 
+  useEffect(() => {
+    setMyRegion(region === "usa" ? "US" : "PL");
+  }, [region]);
   const onChange = (e) => setFieldValue(e.target.name, e.target.value);
 
   const handleSubmit = (e) => {
@@ -68,7 +75,7 @@ export const RequestCall = ({
           <li>
             <PhoneInput
               className={styles.phoneSelect}
-              defaultCountry="PL"
+              defaultCountry={myRegion}
               placeholder={phonePlaceholder}
               value={formData.phone}
               onChange={(phone) => setFieldValue("phone", phone)}
