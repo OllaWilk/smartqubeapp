@@ -36,8 +36,8 @@ export const LocationOptions = () => {
   const { switchRegion } = useContext(LocaleContext);
 
   const options = [
-    { value: "eu", label: "EU" },
     { value: "usa", label: "USA" },
+    { value: "eu", label: "EU" },
     { value: "uk", label: "UK" },
   ];
 

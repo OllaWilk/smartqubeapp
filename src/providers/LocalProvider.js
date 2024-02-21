@@ -4,7 +4,7 @@ import { LocaleContext } from "./../contexts/LocaleContext";
 
 export const LocaleProvider = ({ children }) => {
   const [language, setLanguage] = useState("en");
-  const [region, setRegion] = useState("eu");
+  const [region, setRegion] = useState("usa");
 
   const switchLanguage = (lang) => setLanguage(lang);
   const switchRegion = (reg) => setRegion(reg);

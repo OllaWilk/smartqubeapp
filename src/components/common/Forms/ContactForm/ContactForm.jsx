@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import PhoneInput from "react-phone-number-input";
+import { LocaleContext } from "../../../../contexts/LocaleContext";
+
 import useFormValidation from "../../../../utils/useFormValidation";
 import "react-phone-number-input/style.css";
 import styles from "./ContactForm.module.scss";
 
 export const ContactForm = ({ contactForm, errorsMessages }) => {
+  const { region } = useContext(LocaleContext);
+  const [myRegion, setMyRegion] = useState("US");
   const {
     name,
     companyName,
@@ -15,6 +19,10 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
     message,
     requiredFields,
   } = contactForm;
+
+  useEffect(() => {
+    setMyRegion(region === "usa" ? "US" : "PL");
+  }, [region]);
 
   const { formData, errors, setFieldValue, validateForm } = useFormValidation(
     {
@@ -97,7 +105,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
               <li>
                 <PhoneInput
                   className={styles.phoneSelect}
-                  defaultCountry="PL"
+                  defaultCountry={myRegion}
                   placeholder={phoneNumber}
                   value={formData.phone}
                   onChange={(phone) => setFieldValue("phone", phone)}

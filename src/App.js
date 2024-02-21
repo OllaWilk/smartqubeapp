@@ -21,6 +21,7 @@ import {
 export const App = () => {
   const { language, region } = useContext(LocaleContext);
   const data = loadLanguage(language);
+  console.log(region);
 
   return (
     <>
