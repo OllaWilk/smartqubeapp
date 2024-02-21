@@ -1,0 +1,18 @@
+.downloadLink {
+  button {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-green-dark);
+    font-weight: bold;
+    transition: var(--transition);
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+
+    &:hover {
+      color: var(--color-main);
+    }
+  }
+}
