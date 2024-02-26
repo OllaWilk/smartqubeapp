@@ -46,9 +46,9 @@ export const About = ({ about, region }) => {
       </section>
       {/* OUR PEOPLE */}
       <section className={`${styles.ourPeople} container`}>
-        {companyDescription.map((el) => (
+        {companyDescription.map((el, index) => (
           <ImageHeaderColumns
-            key={el.title}
+            key={`${el.title}-about-${index}`}
             header={el.header}
             text1={el.section1}
             text2={el.section2}

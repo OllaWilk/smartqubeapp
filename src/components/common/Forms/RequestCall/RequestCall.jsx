@@ -95,7 +95,7 @@ export const RequestCall = ({
 };
 
 RequestCall.propTypes = {
-  errorsMessages: PropTypes.string,
+  errorsMessages: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   namePlaceholder: PropTypes.string,
   phonePlaceholder: PropTypes.string,
 };
