@@ -8,7 +8,7 @@ export const about = {
     description: "Our team is our greatest asset.",
     greenBtn: "contact",
     transparentBtn: "solutions",
-    transparentBtnLinkTo: "coolingsolutions",
+    transparentBtnLinkTo: "climatecontrol",
     greenBtnLinkTo: "contact",
   },
   companyDescription: [

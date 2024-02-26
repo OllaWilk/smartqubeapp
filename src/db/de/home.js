@@ -59,7 +59,7 @@ export const home = {
   callToaction: {
     titile: "Zögern Sie nicht, uns jederzeit zu kontaktieren.",
     subtitle: "Haben Sie Fragen?",
-    button: ["Kontaktieren Sie uns", "kontakt"],
+    button: ["Kontaktieren Sie uns", "contact"],
   },
 
   mission: {
