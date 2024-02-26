@@ -96,5 +96,5 @@ export const Navigation = ({ navigationNavbar, integrationNav }) => {
 
 Navigation.propTypes = {
   navigationNavbar: PropTypes.array,
-  integrationNav: PropTypes.array,
+  integrationNav: PropTypes.object,
 };
