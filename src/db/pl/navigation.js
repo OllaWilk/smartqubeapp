@@ -11,7 +11,7 @@ export const integrationNav = {
   integration: {
     abstract:
       "Integracja obejmuje szeroki zakres działań projektowych, w tym projektowanie inżynierskie, pozyskiwanie, testowanie, pakowanie, wysyłkę i uruchomienie na miejscu, podczas gdy montaż jest tylko częścią tego obszernego procesu. Specjalizujemy się w projektowaniu inżynierskim, systemach mechanicznych i elektrycznych, dystrybucji energii niskonapięciowej, systemach kontrolnych oraz uruchamianiu urządzeń OEM, przestrzegając międzynarodowych norm.",
-    linkTo: ["poznaj integrację", "integracja"],
+    linkTo: ["poznaj naszą integrację", "integration"],
     subjects: [
       {
         name: "Sterowanie silnikiem",
@@ -61,7 +61,7 @@ export const integrationNav = {
   services: {
     abstract:
       "Oferujemy szeroki zakres usług, w tym konserwację sprzętu, kalibrację i rozwiązywanie problemów. Nasz zespół ekspertów zapewnia, że twoje systemy działają z maksymalną wydajnością i zgodnie z normami branżowymi.",
-    linkTo: ["poznaj nasze usługi", "usługi"],
+    linkTo: ["poznaj nasze usługi", "services"],
   },
 };
 

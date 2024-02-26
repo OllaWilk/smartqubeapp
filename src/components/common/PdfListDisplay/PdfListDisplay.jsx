@@ -21,8 +21,6 @@ export const PdfListDisplay = ({ certificate, data, allSeriesKeys }) => {
               key={`${certificate}-active-list`}
               className={styles.componentWrap}
             >
-              <li>{item}</li>
-              <li>{certificate}</li>
               {data[item].map((item, index) => (
                 <li key={index}>
                   <img
