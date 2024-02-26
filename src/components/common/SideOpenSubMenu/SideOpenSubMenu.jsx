@@ -13,7 +13,7 @@ export const SideOpenSubMenu = ({ data, buttons, activeButton, onHide }) => {
   const renderActiveButtonsContent = (button) => {
     const { subjects, img, abstract, linkTo } = data[button];
     return (
-      <>
+      <div key={`${subjects}-${button}`}>
         <div className={styles.abstractWrap}>
           <img src={icons.close} alt={"close"} onClick={handleToggle} />
           <div className={styles.imgAbstract}>
@@ -43,7 +43,7 @@ export const SideOpenSubMenu = ({ data, buttons, activeButton, onHide }) => {
         <div className={styles.btnWrap} onClick={handleToggle}>
           <MainColorBtn text={linkTo[0]} linkTo={linkTo[1]} />
         </div>
-      </>
+      </div>
     );
   };
 

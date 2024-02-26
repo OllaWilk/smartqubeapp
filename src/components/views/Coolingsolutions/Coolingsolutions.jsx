@@ -23,7 +23,7 @@ export const Coolingsolutions = ({ coolingSolutions }) => {
       <div key={series} className={styles.card}>
         {downloads[series].map((item, index) => (
           // Title
-          <>
+          <div key={`${item}-${index}-title`}>
             <div>
               {item.series && (
                 <div className={styles.titleWrap}>
@@ -50,7 +50,7 @@ export const Coolingsolutions = ({ coolingSolutions }) => {
                 </a>
               </li>
             </ul>
-          </>
+          </div>
         ))}
       </div>
     ));

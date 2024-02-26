@@ -179,7 +179,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
 };
 
 ContactForm.propTypes = {
-  errorsMessages: PropTypes.string,
+  errorsMessages: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   contactForm: PropTypes.shape({
     name: PropTypes.string,
     companyName: PropTypes.string,
