@@ -2,16 +2,42 @@
 
 .banerWrap {
   position: fixed;
-  width: 100%;
-  min-height: 20%;
+  text-align: left;
   padding: 40px 30px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-  bottom: 0px;
-  z-index: 111;
-  //   background-color: var(--color-light);
+  bottom: 40px;
+  right: 100px;
+  z-index: -999;
+  background-color: var(--color-light);
   @include flex(column, flex-start, space-between);
+  border: 1px solid var(--color-main);
+
+  @include md-max {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
 
   @include sm-max {
     padding: 20px 10px;
+  }
+
+  .closeBaner {
+    @include btn;
+    background-color: transparent;
+    letter-spacing: 2px;
+    border: none;
+    color: var(--color-main);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: var(--fw-900);
+    padding: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+      color: var(--color-dark);
+    }
   }
 }

@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import Select from "react-select";
-import { LocaleContext } from "../../../contexts/LocaleContext";
 import styles from "./LocationOptions.module.scss";
 
 const customStyles = {
@@ -32,25 +32,27 @@ const customStyles = {
 
 const DropdownIndicator = () => null;
 
-export const LocationOptions = () => {
-  const { switchRegion } = useContext(LocaleContext);
-
-  const options = [
-    { value: "usa", label: "USA" },
-    { value: "eu", label: "EU" },
-    { value: "uk", label: "UK" },
-  ];
-
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+export const LocationOptions = ({ selectedRegion, onRegionChange }) => {
+  const options = useMemo(
+    () => [
+      { value: "usa", label: "USA" },
+      { value: "eu", label: "EU" },
+      { value: "uk", label: "UK" },
+    ],
+    []
+  );
 
   const handleChange = (option) => {
-    setSelectedOption(option);
-    switchRegion(option.value);
+    onRegionChange(option.value);
   };
+
+  const selectedRegionOption = options.find(
+    (option) => option.value === selectedRegion
+  );
 
   return (
     <Select
-      value={selectedOption}
+      value={selectedRegionOption}
       onChange={handleChange}
       options={options}
       styles={customStyles}
@@ -58,4 +60,9 @@ export const LocationOptions = () => {
       components={{ DropdownIndicator }}
     />
   );
+};
+
+LocationOptions.propTypes = {
+  selectedRegion: PropTypes.node,
+  onRegionChange: PropTypes.node,
 };

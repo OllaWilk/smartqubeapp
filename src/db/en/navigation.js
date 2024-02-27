@@ -95,3 +95,11 @@ export const footer = {
     iso.ukca,
   ],
 };
+
+export const geolocation = {
+  textLanguage:
+    "You are viewing the default version of the site in English for the region America (USA).",
+  textRegion:
+    " Choose your region and language to customize the site content to your preferences.",
+  close: "close",
+};

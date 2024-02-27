@@ -88,3 +88,11 @@ export const footer = {
     iso.ukca,
   ],
 };
+
+export const geolocation = {
+  textLanguage:
+    "Sie betrachten die Standardversion der Website auf Englisch für die Region Amerika (USA).",
+  textRegion:
+    " Wählen Sie Ihre Region und Sprache, um den Inhalt der Website Ihren Vorlieben anzupassen.",
+  close: "schließen",
+};

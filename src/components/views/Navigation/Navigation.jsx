@@ -5,14 +5,14 @@ import { useToggle } from "../../../utils/useToggle";
 import useScroll from "../../../utils/useScrool";
 import { icons, logos } from "../../../images/index";
 import { GeolocationBaner, SideNavigation } from "../../views/index.js";
-import {
-  ExpandedNavLink,
-  LanguageOptions,
-  LocationOptions,
-} from "../../common/index.js";
+import { ExpandedNavLink } from "../../common/index.js";
 import styles from "./Navigation.module.scss";
 
-export const Navigation = ({ navigationNavbar, integrationNav }) => {
+export const Navigation = ({
+  navigationNavbar,
+  integrationNav,
+  geolocation,
+}) => {
   const [isSidebarOpen, toggleSidebar] = useToggle(false);
   const scrollPosition = useScroll();
 
@@ -52,11 +52,11 @@ export const Navigation = ({ navigationNavbar, integrationNav }) => {
               ))}
             </nav>
             {/* LANGUAGE & LOCATION */}
-
-            <div className={styles.lanRegWrap}>
-              <LanguageOptions />
-              <LocationOptions />
-            </div>
+            <GeolocationBaner
+              banerTeksLanguage={geolocation.textLanguage}
+              bamerTextRegion={geolocation.textRegion}
+              btnText={geolocation.close}
+            />
           </div>
 
           {/* HAMBUTGER */}
@@ -93,4 +93,5 @@ export const Navigation = ({ navigationNavbar, integrationNav }) => {
 Navigation.propTypes = {
   navigationNavbar: PropTypes.array,
   integrationNav: PropTypes.object,
+  geolocation: PropTypes.object,
 };
