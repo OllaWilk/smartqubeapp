@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Cookies from "js-cookie";
 import { GreenHeader } from "../../common";
 import styles from "./CookiePage.module.scss";
 
 export const CookiePage = ({ cookiePage }) => {
   const [isAccepted, setIsAccepted] = useState(false);
 
+  const removeAllCookies = () => {
+    const allCookies = Cookies.get();
+    Object.keys(allCookies).forEach((cookie) => Cookies.remove(cookie));
+  };
+
   const handleRemove = () => {
-    localStorage.removeItem("cookiesAccepted", "false");
+    removeAllCookies();
     setIsAccepted(true);
+    window.location.reload();
   };
 
   const handleAccept = () => {
-    localStorage.setItem("cookiesAccepted", "true");
+    Cookies.set("cookiesAccepted", "true", { expires: 365 });
     setIsAccepted(true);
+    window.location.reload();
   };
 
   return (

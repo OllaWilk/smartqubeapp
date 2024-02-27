@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
+
 import Select from "react-select";
 
-import { LocaleContext } from "../../../contexts/LocaleContext";
 import styles from "./LanguageOptions.module.scss";
 
 const customStyles = {
@@ -30,30 +31,39 @@ const customStyles = {
 
 const DropdownIndicator = () => null;
 
-export const LanguageOptions = () => {
-  const { switchLanguage } = useContext(LocaleContext);
-
-  const options = [
-    { value: "en", label: "EN" },
-    { value: "pl", label: "PL" },
-    { value: "de", label: "DE" },
-  ];
-
-  const [selectedOption, setSelectedOption] = useState(options[0]);
+export const LanguageOptions = ({ selectedLanguage, onLanguageChange }) => {
+  const options = useMemo(
+    () => [
+      { value: "en", label: "EN" },
+      { value: "pl", label: "PL" },
+      { value: "de", label: "DE" },
+    ],
+    []
+  );
 
   const handleChange = (option) => {
-    setSelectedOption(option);
-    switchLanguage(option.value);
+    onLanguageChange(option.value);
   };
 
-  return (
-    <Select
-      value={selectedOption}
-      onChange={handleChange}
-      options={options}
-      className={styles.languageLocationWrap}
-      styles={customStyles}
-      components={{ DropdownIndicator }}
-    />
+  const selectedOption = options.find(
+    (option) => option.value === selectedLanguage
   );
+
+  return (
+    <>
+      <Select
+        value={selectedOption}
+        onChange={handleChange}
+        options={options}
+        className={styles.languageLocationWrap}
+        styles={customStyles}
+        components={{ DropdownIndicator }}
+      />
+    </>
+  );
+};
+
+LanguageOptions.propTypes = {
+  selectedLanguage: PropTypes.node,
+  onLanguageChange: PropTypes.node,
 };

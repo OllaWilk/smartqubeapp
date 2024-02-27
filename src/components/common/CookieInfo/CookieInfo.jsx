@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 import { DescriptionSubtitle } from "../Titles/DescriptionSubtitle/DescriptionSubtitle";
 import styles from "./CookieInfo.module.scss";
 
@@ -8,7 +9,7 @@ export const CookieInfo = ({ cookie }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+    const cookiesAccepted = Cookies.get("cookiesAccepted");
 
     if (!cookiesAccepted) {
       setIsVisible(true);
@@ -16,8 +17,9 @@ export const CookieInfo = ({ cookie }) => {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("cookiesAccepted", "true");
+    Cookies.set("cookiesAccepted", "true", { expires: 365 });
     setIsVisible(false);
+    window.location.reload();
   };
 
   return (

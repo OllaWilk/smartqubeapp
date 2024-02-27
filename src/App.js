@@ -16,7 +16,6 @@ import {
   Integration,
   Services,
   CookiePage,
-  GeolocationBaner,
 } from "./components/views/index";
 
 export const App = () => {
@@ -26,11 +25,11 @@ export const App = () => {
   return (
     <>
       <CookieInfo cookie={data.cookie} />
-      <GeolocationBaner />
 
       <Navigation
         navigationNavbar={data.navigationNavbar}
         integrationNav={data.integrationNav}
+        geolocation={data.geolocation}
       />
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />
