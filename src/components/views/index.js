@@ -10,3 +10,5 @@ export { Navigation } from "./Navigation/Navigation";
 export { Integration } from "./Integration/Integration";
 export { Services } from "./Services/Services";
 export { CookiePage } from "./CookiePage/CookiePage";
+export { GeolocationBaner } from "./GeolocationBaner/GeolocationBaner";
+export { SideNavigation } from "./SideNavigation/SideNavigation";

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useToggle } from "../../../utils/useToggle";
 import useScroll from "../../../utils/useScrool";
 import { icons, logos } from "../../../images/index";
-import { SideNavigation } from "../SideNavigation/SideNavigation";
+import { GeolocationBaner, SideNavigation } from "../../views/index.js";
 import {
   ExpandedNavLink,
   LanguageOptions,
@@ -13,34 +13,29 @@ import {
 import styles from "./Navigation.module.scss";
 
 export const Navigation = ({ navigationNavbar, integrationNav }) => {
-  const [value, toggle] = useToggle(false);
+  const [isSidebarOpen, toggleSidebar] = useToggle(false);
   const scrollPosition = useScroll();
-  const animateSidebar = () => {
-    toggle(!value);
-  };
 
-  /*SCROOL TO BEGINING OF THE VIEW */
-  const handleNavLinkClick = () => {
+  const animateSidebar = useCallback(() => {
+    toggleSidebar(!isSidebarOpen);
+  }, [isSidebarOpen, toggleSidebar]);
+
+  const handleNavLinkClick = useCallback(() => {
     window.scrollTo(0, 0);
-  };
+  }, []);
+
+  const navigationClass =
+    scrollPosition > 50 ? styles.navigationActive : styles.navigation;
+  const logoClass =
+    scrollPosition > 50 ? styles.navigationLogoActive : styles.navigationLogo;
 
   return (
     <>
-      <div
-        className={
-          scrollPosition > 50 ? styles.navigationActive : styles.navigation
-        }
-      >
+      <div className={navigationClass}>
         <div className={`${styles.navWrap} container`}>
           {/* LOGO */}
           <Link to="/home" onClick={handleNavLinkClick}>
-            <h1
-              className={
-                scrollPosition > 50
-                  ? styles.navigationLogoActive
-                  : styles.navigationLogo
-              }
-            >
+            <h1 className={logoClass}>
               <img src={logos.logo} alt="Smartqube" />
             </h1>
           </Link>
@@ -57,6 +52,7 @@ export const Navigation = ({ navigationNavbar, integrationNav }) => {
               ))}
             </nav>
             {/* LANGUAGE & LOCATION */}
+
             <div className={styles.lanRegWrap}>
               <LanguageOptions />
               <LocationOptions />
@@ -70,14 +66,14 @@ export const Navigation = ({ navigationNavbar, integrationNav }) => {
             id="hamburger"
           >
             <img
-              src={value ? icons.close : icons.hamburger}
-              alt={value ? "hamburger" : "close"}
+              src={isSidebarOpen ? icons.close : icons.hamburger}
+              alt={isSidebarOpen ? "hamburger" : "close"}
             />
           </div>
           {/* SIDE NAVIGATION */}
 
           <nav
-            className={`${styles.sidebar} ${value ? "open" : "closed"}`}
+            className={`${styles.sidebar} ${isSidebarOpen ? "open" : "closed"}`}
             id="sidebarNav"
           >
             {navigationNavbar.map((item, index) => (
