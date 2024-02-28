@@ -15,7 +15,6 @@ export const Navigation = ({
 }) => {
   const [isSidebarOpen, toggleSidebar] = useToggle(false);
   const scrollPosition = useScroll();
-
   const animateSidebar = useCallback(() => {
     toggleSidebar(!isSidebarOpen);
   }, [isSidebarOpen, toggleSidebar]);
@@ -81,6 +80,7 @@ export const Navigation = ({
                 index={index}
                 item={item}
                 key={`${index}-sidebar`}
+                integrationNav={integrationNav}
               />
             ))}
           </nav>

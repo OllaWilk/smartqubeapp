@@ -35,6 +35,7 @@ export { LanguageOptions } from "./LanguageOptions/LanguageOptions";
 export { LocationOptions } from "./LocationOptions/LocationOptions";
 export { NormalLink } from "./NormalLink/NormalLink";
 export { Dropdown } from "./Dropdown/Dropdown";
+export { DropdownHamburger } from "./DropdownHamburger/DropdownHamburger";
 export { SideOpenSubMenu } from "./SideOpenSubMenu/SideOpenSubMenu";
 export { PDFDownloadButton } from "./Buttons/PDFDownloadButton/PDFDownloadButton";
 
