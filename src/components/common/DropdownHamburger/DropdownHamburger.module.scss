@@ -1,0 +1,59 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.navigationList {
+  height: auto;
+}
+.dropList {
+  width: 90vw;
+  margin: 0 auto;
+  transition: var(--transition);
+  z-index: -999;
+  position: relative;
+}
+
+.topNavlink,
+.expandedLink,
+.activBtn {
+  cursor: pointer;
+  color: var(--color-light);
+  word-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.expandedLink {
+  min-width: 100%;
+  width: 100%;
+  background-color: var(--color-grey-dark);
+  transition: var(--transition);
+  padding: 20px;
+  color: var(--color-light);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-light);
+  }
+}
+
+.topNavlink:hover {
+  background-color: var(--color-main);
+}
+
+.topNavlink {
+  padding: 20px;
+  width: 95vw;
+}
+
+.selectedItem {
+  background-color: lighten($color: #1d1d1d, $amount: 5);
+}
+
+.dontSelectedItem {
+  width: 100%;
+  height: 100%;
+}
+
+.moveLeft {
+  transition: var(--transition);
+}

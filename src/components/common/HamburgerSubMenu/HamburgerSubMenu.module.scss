@@ -1,0 +1,78 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variable";
+
+.sideOpenMenu {
+  position: absolute;
+  padding: 20px;
+  width: 90vw;
+
+  color: var(--color-light);
+  transition: var(--transition);
+  background-color: lighten($color: #1d1d1d, $amount: 5);
+  @include flex(column, stretch, space-between);
+  overflow-wrap: scroll;
+
+  .abstractWrap {
+    @include flex(column, center, space-between);
+    text-transform: uppercase;
+
+    .imgAbstract {
+      gap: 10px;
+      @include flex(row, flex-start, space-between);
+
+      @include sm-max {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .headerName {
+    font-size: var(--font-d-btn);
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid var(--color-main);
+    text-align: justify;
+    margin-bottom: 16px;
+  }
+
+  .btnWrap {
+    @include flex(column, stretch, flex-start);
+    margin-top: 20px;
+  }
+
+  .megaWrap {
+    @include flex(row, stretch, space-between);
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: left;
+
+    @include md-max {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .megaCartWrap {
+      flex-grow: 1;
+
+      .mainTitle {
+        font-weight: bold;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        .listItems {
+          font-weight: lighter;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}

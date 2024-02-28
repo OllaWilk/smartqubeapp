@@ -1,8 +1,20 @@
+@import "../../../styles/mixins.scss";
+
 .link {
   transition: var(--transition);
   padding: 20px;
   color: var(--color-light);
   cursor: pointer;
+  text-transform: uppercase;
+
+  @include lg-max {
+    width: 95vw;
+  }
+
+  @include md-max {
+    width: 95%;
+    padding: 20px 10px;
+  }
 
   &:hover {
     background-color: var(--color-main);
