@@ -59,12 +59,15 @@ const GeolocationBaner = ({ banerTeksLanguage, bamerTextRegion, btnText }) => {
   };
 
   const handleClose = () => {
-    setClose(!close);
-    console.log(close);
+    Cookies.set("defaultWebsite", true, { expires: 365 });
+    setClose(true);
   };
 
   const shouldDisplayBanner =
-    cookiesAccepted && !(savedLanguage && savedRegion) && !close;
+    cookiesAccepted &&
+    !(savedLanguage && savedRegion) &&
+    !close &&
+    !Cookies.get("defaultWebsite");
 
   return (
     <>
