@@ -55,7 +55,6 @@
       @include flex(row, stretch, flex-end);
       text-transform: uppercase;
       align-content: stretch;
-      background-color: red;
 
       @include lg-max {
         display: none;
@@ -102,15 +101,16 @@
 
 .sidebar {
   @include flex(column, center, flex-start);
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 1);
-  min-height: 100vh;
   width: 100%;
-  top: 100%;
+  min-height: 80vh;
+  height: 90vh;
   right: 0;
+  top: 90px;
+
   transition: var(--transition);
-  transition-delay: 0.1s;
-  z-index: -90;
+
   overflow-y: auto;
 
   @include lg-min {
@@ -120,10 +120,4 @@
 
 .link {
   width: auto;
-}
-
-.space {
-  width: 300px;
-  height: 300px;
-  background-color: red;
 }
