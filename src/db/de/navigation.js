@@ -30,7 +30,7 @@ export const integrationNav = {
       },
       {
         name: "Netzwerk",
-        btnsList: ["RF-Lösungen", "Faser-Lösungen"],
+        btnsList: ["Passive Lösungen", "Aktive Lösungen"],
       },
       {
         name: "Individuell",

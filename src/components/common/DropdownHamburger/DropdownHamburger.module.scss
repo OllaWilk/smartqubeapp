@@ -8,8 +8,6 @@
   width: 90vw;
   margin: 0 auto;
   transition: var(--transition);
-  z-index: -999;
-  position: relative;
 }
 
 .topNavlink,
@@ -22,17 +20,14 @@
 }
 
 .expandedLink {
-  min-width: 100%;
   width: 100%;
   background-color: var(--color-grey-dark);
   transition: var(--transition);
   padding: 20px;
   color: var(--color-light);
-  cursor: pointer;
 
   &:hover {
-    background-color: var(--color-main);
-    color: var(--color-light);
+    color: var(--color-main);
   }
 }
 
@@ -41,8 +36,16 @@
 }
 
 .topNavlink {
-  padding: 20px;
+  padding: 20px 10px;
   width: 95vw;
+
+  span {
+    display: inline-block;
+
+    font-size: 22px;
+    margin-left: 20px;
+    transition: transform 0.75s cubic-bezier(0.71, 0.01, 0.24, 0.99);
+  }
 }
 
 .selectedItem {

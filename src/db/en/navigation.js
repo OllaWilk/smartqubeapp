@@ -29,7 +29,7 @@ export const integrationNav = {
       },
       {
         name: "Network",
-        btnsList: ["RF Solutions", "Fiber Solutions"],
+        btnsList: ["Passive Solutions", "Active Solutions"],
       },
       {
         name: "Custom",

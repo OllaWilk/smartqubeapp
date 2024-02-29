@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useToggle } from "../../../utils/useToggle";
@@ -14,6 +14,7 @@ export const Navigation = ({
   geolocation,
 }) => {
   const [isSidebarOpen, toggleSidebar] = useToggle(false);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const scrollPosition = useScroll();
   const animateSidebar = useCallback(() => {
     toggleSidebar(!isSidebarOpen);
@@ -21,6 +22,17 @@ export const Navigation = ({
 
   const handleNavLinkClick = useCallback(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const navigationClass =
@@ -70,10 +82,10 @@ export const Navigation = ({
             />
           </div>
           {/* SIDE NAVIGATION */}
-
           <nav
             className={`${styles.sidebar} ${isSidebarOpen ? "open" : "closed"}`}
             id="sidebarNav"
+            style={{ height: `${windowHeight}px` }}
           >
             {navigationNavbar.map((item, index) => (
               <SideNavigation

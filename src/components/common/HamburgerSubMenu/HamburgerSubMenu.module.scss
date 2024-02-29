@@ -2,13 +2,10 @@
 @import "../../../styles/variable";
 
 .sideOpenMenu {
-  position: absolute;
   padding: 20px;
-  width: 90vw;
 
   color: var(--color-light);
-  transition: var(--transition);
-  background-color: lighten($color: #1d1d1d, $amount: 5);
+  // background-color: lighten($color: #1d1d1d, $amount: 5);
   @include flex(column, stretch, space-between);
   overflow-wrap: scroll;
 
