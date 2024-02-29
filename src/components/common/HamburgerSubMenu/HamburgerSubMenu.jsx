@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { MainColorBtn } from "../Buttons/MainColorBtn/MainColorBtn";
-import { icons } from "../../../images/index";
 
 import styles from "./HamburgerSubMenu.module.scss";
 

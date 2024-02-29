@@ -20,7 +20,6 @@ export const DropdownHamburger = ({
   });
 
   const [selectedButton, setselectedButton] = useState(allButtons[0]);
-
   const handleButtonClick = (buttonName) => {
     setselectedButton(buttonName);
   };
@@ -29,6 +28,11 @@ export const DropdownHamburger = ({
     <div key={`stringBtn-${index}`} className={styles.navigationList}>
       <p onClick={toggleExpand} className={styles.topNavlink}>
         {buttonLabel}
+        <span
+          style={{ transform: expanded ? "rotate(270deg)" : "rotate(90deg)" }}
+        >
+          &gt;
+        </span>
       </p>
       {expanded && (
         <>
@@ -42,15 +46,16 @@ export const DropdownHamburger = ({
                 onClick={() => handleButtonClick(button)}
               >
                 {button}
+                {button === selectedButton && (
+                  <HamburgerSubMenu
+                    data={integrationNav}
+                    onHide={toggleExpand}
+                    buttons={allButtons}
+                    activeButton={selectedButton}
+                  />
+                )}
               </li>
             ))}
-
-            <HamburgerSubMenu
-              data={integrationNav}
-              onHide={toggleExpand}
-              buttons={allButtons}
-              activeButton={selectedButton}
-            />
           </ul>
         </>
       )}

@@ -34,7 +34,7 @@ export const integrationNav = {
       },
       {
         name: "Sieć",
-        btnsList: ["Rozwiązania RF", "Rozwiązania światłowodowe"],
+        btnsList: ["Rozwiązania Pasywne", "Rozwiązania Aktywne"],
       },
       {
         name: "Niestandardowe",

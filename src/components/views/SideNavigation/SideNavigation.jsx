@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { navigationNavbar } from "../../../db/en/navigation";
 import { useToggle } from "../../../utils/useToggle";
@@ -10,47 +10,54 @@ export const SideNavigation = ({
   solutionsNav,
   integrationNav,
 }) => {
-  const [value, toggle] = useToggle(true);
+  const [value, toggleValue] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
 
-  const handleToggle = (index) => {
-    window.scrollTo(0, 0);
-    setExpandedItem((prev) => (prev === index ? null : index));
-    toggle(!value);
-  };
+  const handleToggle = useCallback(
+    (index) => {
+      window.scrollTo(0, 0);
+      setExpandedItem((prev) => (prev === index ? null : index));
+      toggleValue();
+    },
+    [toggleValue]
+  );
 
-  const renderNavItem = (item, index) => {
-    if (typeof item === "string") {
-      return (
-        <NormalLink
-          name={item}
-          to={`/${navigationNavbar[index].toLowerCase()}`}
-          onClick={handleToggle}
-        />
-      );
-    } else if (typeof item === "object") {
-      const buttonLabel = Object.keys(item)[0];
-      const subItems = item[buttonLabel];
+  const renderNavItem = useCallback(
+    (item, index) => {
+      if (typeof item === "string") {
+        return (
+          <NormalLink
+            key={index}
+            name={item}
+            to={`/${navigationNavbar[index].toLowerCase()}`}
+            onClick={handleToggle}
+          />
+        );
+      } else if (typeof item === "object") {
+        const buttonLabel = Object.keys(item)[0];
+        const subItems = item[buttonLabel];
 
-      return (
-        <DropdownHamburger
-          solutionsNav={solutionsNav}
-          integrationNav={integrationNav}
-          index={index}
-          buttonLabel={buttonLabel}
-          subItems={subItems}
-          expanded={expandedItem === index}
-          toggleExpand={() => {
-            window.scrollTo(0, 0);
-            handleToggle(index);
-          }}
-        />
-      );
-    }
-    return null;
-  };
+        return (
+          <DropdownHamburger
+            key={index}
+            solutionsNav={solutionsNav}
+            integrationNav={integrationNav}
+            index={index}
+            buttonLabel={buttonLabel}
+            subItems={subItems}
+            expanded={expandedItem === index}
+            toggleExpand={() => {
+              handleToggle(index);
+            }}
+          />
+        );
+      }
+      return null;
+    },
+    [expandedItem, solutionsNav, integrationNav, handleToggle]
+  );
 
-  return <> {renderNavItem(item, index)} </>;
+  return <> {renderNavItem(item, index)}</>;
 };
 
 SideNavigation.propTypes = {
