@@ -82,20 +82,17 @@ export const Navigation = ({
             />
           </div>
           {/* SIDE NAVIGATION */}
-          <nav
-            className={`${styles.sidebar} ${isSidebarOpen ? "open" : "closed"}`}
-            id="sidebarNav"
-            style={{ height: `${windowHeight}px` }}
-          >
+          <div className={`${styles.sidebar} ${isSidebarOpen ? "" : "closed"}`}>
             {navigationNavbar.map((item, index) => (
               <SideNavigation
                 index={index}
                 item={item}
                 key={`${index}-sidebar`}
                 integrationNav={integrationNav}
+                windowHeight={windowHeight}
               />
             ))}
-          </nav>
+          </div>
         </div>
       </div>
     </>

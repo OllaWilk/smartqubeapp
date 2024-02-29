@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { LocaleContext } from "../../../contexts/LocaleContext";
 import { HamburgerSubMenu } from "../HamburgerSubMenu/HamburgerSubMenu";
@@ -13,6 +13,8 @@ export const DropdownHamburger = ({
   integrationNav,
 }) => {
   const { region } = useContext(LocaleContext);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
   const allButtons = Object.keys(integrationNav).filter((button) => {
     if (region === "usa") return true;
     if (region !== "usa" && integrationNav[button].id === "usa") return false;
@@ -24,6 +26,16 @@ export const DropdownHamburger = ({
     setselectedButton(buttonName);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div key={`stringBtn-${index}`} className={styles.navigationList}>
       <p onClick={toggleExpand} className={styles.topNavlink}>
@@ -36,7 +48,10 @@ export const DropdownHamburger = ({
       </p>
       {expanded && (
         <>
-          <ul className={`${styles.dropList} `}>
+          <ul
+            className={`${styles.dropList} `}
+            // style={{ height: `${windowHeight}px` }}
+          >
             {allButtons.map((button, idx) => (
               <li
                 key={`dropdownBtnNav-${idx}`}
@@ -45,7 +60,7 @@ export const DropdownHamburger = ({
                 }`}
                 onClick={() => handleButtonClick(button)}
               >
-                {button}
+                <p>{button}</p>
                 {button === selectedButton && (
                   <HamburgerSubMenu
                     data={integrationNav}

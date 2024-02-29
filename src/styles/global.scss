@@ -52,12 +52,13 @@ button {
 }
 
 .closed {
-  transform: translateX(100vw);
+  // transform: translateX(100vw);
+  transform: translateX(100%);
 }
 
-.open {
-  transform: translateX(0);
-}
+// .open {
+//   transform: translateX(0);
+// }
 
 .active {
   color: var(--color-main);
