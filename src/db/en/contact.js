@@ -57,10 +57,18 @@ export const contact = {
     requiredFields:
       "Please note: All fields marked with an asterisk (*) are required",
     submit: "submit",
-    isOver18: "I declare that I am over 18 years old; *",
-    dataProcessingConsent:
-      "I consent to the processing of my personal data in accordance with the laws applicable in my place of residence and the place of operation by SmartQube, based in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620, regulations concerning the provision of services electronically and regulations concerning the protection of personal data for the purpose of transmitting and sending commercial information in the future. The provision of personal data is voluntary but necessary for the proper provision of ordered services. I have been informed that I have the right to access my data, the possibility of correcting it, and the request to cease processing it – noting that ceasing the processing of personal data will result in the cessation of services. The data administrator is SmartQube with its registered office in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620 *",
-    GDPR: "I consent to the processing of my personal data in accordance with the regulations on the protection of personal data (including in particular Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC, and the Act of 10 May 2018 on the protection of personal data) in connection with sending an inquiry via the contact form. Providing personal data is voluntary but necessary for processing the query. I have been informed that I have the right to access my data, the possibility of correcting it, and the request to cease its processing. The data administrator is SmartQube with its registered office in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620",
+    isOver18: "I declare that I am over 18 years old *",
+    dataProcessingConsent: [
+      " I agree to the processing of my personal data by SmartQube based in Wrocław for the purpose of providing services and receiving commercial information",
+      "More information",
+      "I consent to the processing of my personal data in accordance with the laws applicable in my place of residence and the place of operation by SmartQube, based in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620, regulations concerning the provision of services electronically and regulations concerning the protection of personal data for the purpose of transmitting and sending commercial information in the future. The provision of personal data is voluntary but necessary for the proper provision of ordered services. I have been informed that I have the right to access my data, the possibility of correcting it, and the request to cease processing it – noting that ceasing the processing of personal data will result in the cessation of services. The data administrator is SmartQube with its registered office in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620 ",
+    ],
+
+    GDPR: [
+      "I agree to the processing of my personal data by SmartQube in accordance with the GDPR for purposes related to the contact form",
+      "More information",
+      "I consent to the processing of my personal data in accordance with the regulations on the protection of personal data (including in particular Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC, and the Act of 10 May 2018 on the protection of personal data) in connection with sending an inquiry via the contact form. Providing personal data is voluntary but necessary for processing the query. I have been informed that I have the right to access my data, the possibility of correcting it, and the request to cease its processing. The data administrator is SmartQube with its registered office in Wrocław, ul. Rakietowa 29E, 54-615 Wrocław KRS: 0000984616, NIP: 8971909651; REGON: 522685620",
+    ],
     gdrLink: [
       " Full information on personal data processing is here.",
       "http://localhost:3000/privacy",
@@ -72,5 +80,8 @@ export const contact = {
     companyName: "Please enter your company name",
     email: "Please enter a valid email address ",
     message: "Please enter your message",
+    isOver18: "You must be over 18 years old",
+    dataProcessingConsent: "You must accept the data processing consent",
+    euLawConsent: "Consent to GDPR data processing is required",
   },
 };

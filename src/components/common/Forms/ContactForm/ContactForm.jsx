@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 export const ContactForm = ({ contactForm, errorsMessages }) => {
   const { region } = useContext(LocaleContext);
   const [myRegion, setMyRegion] = useState(region === "usa" ? "US" : "PL");
+  const [information, setInformation] = useState(false);
+  const [GDPR, setGDPR] = useState(false);
   const { formData, errors, setFieldValue, validateForm } = useFormValidation(
     {
       name: "",
@@ -17,6 +19,9 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
       job: "",
       email: "",
       message: "",
+      isOver18: "",
+      dataProcessingConsent: "",
+      euLawConsent: "",
     },
     {
       name: [
@@ -51,8 +56,19 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
           pattern: /^\S+@\S+$/i,
         },
       ],
-
-      message: [{ required: true, minlength: 1, maxlength: 250 }],
+      message: [
+        {
+          required: true,
+          minlength: 1,
+          maxlength: 250,
+          message: errorsMessages.message,
+        },
+      ],
+      isOver18: [{ required: true, message: errorsMessages.isOver18 }],
+      dataProcessingConsent: [
+        { required: true, message: errorsMessages.dataProcessingConsent },
+      ],
+      euLawConsent: [{ required: true, message: errorsMessages.euLawConsent }],
     },
     {}
   );
@@ -78,6 +94,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
       <div className={styles.formBox}>
         <div className={styles.contactForm}>
           <form onSubmit={handleSubmit}>
+            {/* NAME */}
             <input
               className={styles.customImput}
               type="text"
@@ -89,6 +106,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.name && (
               <span className={styles.errorText}>{errors.name}</span>
             )}
+            {/* PHONE */}
             <PhoneInput
               className={styles.phoneSelect}
               defaultCountry={myRegion}
@@ -99,6 +117,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.phone && (
               <span className={styles.errorText}>{errors.phone}</span>
             )}
+            {/* COMPANY NAME */}
             <input
               className={styles.customImput}
               type="text"
@@ -110,6 +129,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.companyName && (
               <span className={styles.errorText}>{errors.companyName}</span>
             )}
+            {/* JOB POSSITION */}
             <input
               className={styles.customImput}
               type="text"
@@ -121,6 +141,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.job && (
               <span className={styles.errorText}>{errors.job}</span>
             )}
+            {/* EMAIL */}
             <input
               className={styles.customImput}
               type="email"
@@ -132,6 +153,7 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.email && (
               <span className={styles.errorText}>{errors.email}</span>
             )}
+            {/* MESSAGE */}
             <textarea
               className={styles.customImput}
               name="message"
@@ -142,20 +164,21 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
             {errors.message && (
               <span className={styles.errorText}>{errors.message}</span>
             )}
+            {/* IS 18 */}
             <div className={styles.checkboxProcessing}>
-              <label>
-                <input
-                  type="checkbox"
-                  name="ageConfirmation"
-                  checked={formData.ageConfirmation || false}
-                  onChange={() =>
-                    setFieldValue("ageConfirmation", !formData.ageConfirmation)
-                  }
-                />
-                {contactForm.isOver18}
-              </label>
+              <input
+                type="checkbox"
+                name="isOver18"
+                checked={formData.isOver18 || false}
+                onChange={() => setFieldValue("isOver18", !formData.isOver18)}
+              />
+              <div>{contactForm.isOver18}</div>
             </div>
+            {errors.isOver18 && (
+              <span className={styles.errorText}>{errors.isOver18}</span>
+            )}
 
+            {/* PROCESSING CONSENT */}
             <div className={styles.checkboxProcessing}>
               <input
                 type="checkbox"
@@ -168,8 +191,23 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
                   )
                 }
               />
-              <p>{contactForm.dataProcessingConsent}</p>
+              <div className={styles.checkboxWrap}>
+                <p>{contactForm.dataProcessingConsent[0]} *</p>
+                <p
+                  onClick={() => setInformation(!information)}
+                  className={styles.info}
+                >
+                  {contactForm.dataProcessingConsent[1]}
+                </p>
+                {information && <p>{contactForm.dataProcessingConsent[2]}</p>}
+              </div>
             </div>
+            {errors.dataProcessingConsent && (
+              <span className={styles.errorText}>
+                {errors.dataProcessingConsent}
+              </span>
+            )}
+            {/* GDPR */}
             <div className={styles.checkboxProcessing}>
               <input
                 type="checkbox"
@@ -179,15 +217,21 @@ export const ContactForm = ({ contactForm, errorsMessages }) => {
                   setFieldValue("euLawConsent", !formData.euLawConsent)
                 }
               />
-              <p>
-                {contactForm.GDPR} *
-                <br />
-                <span>
-                  <Link to={`/privacy`}>{contactForm.gdrLink[0]}</Link>
-                </span>
-              </p>
+              <div className={styles.checkboxWrap}>
+                <p>{contactForm.GDPR[0]} *</p>
+                <p onClick={() => setGDPR(!GDPR)} className={styles.info}>
+                  {contactForm.GDPR[1]}
+                </p>
+                {GDPR && <p>{contactForm.GDPR[2]}</p>}
+              </div>
             </div>
 
+            {errors.euLawConsent && (
+              <span className={styles.errorText}>{errors.euLawConsent}</span>
+            )}
+            <span>
+              <Link to={`/privacy`}>{contactForm.gdrLink[0]}</Link>
+            </span>
             <button className={styles.formBtn} type="submit">
               {contactForm.submit}
             </button>
