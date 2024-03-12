@@ -73,7 +73,6 @@ export const About = ({ about, region }) => {
       <section className={` ${styles.offers} container`}>
         <div className={styles.headerTextWrap}>
           <SectionTitle h2={offers.title} h3={team.slogan} />
-          <p>{team.text}</p>
         </div>
         <div className={styles.offersCart}>
           {region === "usa" ? (
