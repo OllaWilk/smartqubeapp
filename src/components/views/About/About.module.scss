@@ -95,6 +95,10 @@
       }
     }
 
+    .headerTextWrap {
+      margin-bottom: 60px;
+    }
+
     .offersCart {
       @include flex(column, center, space-between);
       gap: 30px;
