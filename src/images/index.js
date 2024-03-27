@@ -18,6 +18,7 @@ import electrical from "./icons/electrical.png";
 
 /* logo */
 import logo from "./logo/logo.png";
+import logoTm from "./logo/logoTM.png";
 import logo100px from "./logo/logo100px.png";
 import logo70px from "./logo/logo70px.png";
 import logo80px from "./logo/logo80px.png";
@@ -92,6 +93,7 @@ export const logos = {
   evLogo,
   evz2Logo,
   exz1Logo,
+  logoTm,
 };
 
 export const photos = {

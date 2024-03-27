@@ -47,7 +47,7 @@ export const Navigation = ({
           {/* LOGO */}
           <Link to="/home" onClick={handleNavLinkClick}>
             <h1 className={logoClass}>
-              <img src={logos.logo} alt="Smartqube" />
+              <img src={logos.logoTm} alt="Smartqube" />
             </h1>
           </Link>
           {/* NAVIGATION */}

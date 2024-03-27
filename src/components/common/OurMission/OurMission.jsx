@@ -1,9 +1,9 @@
 import React from "react";
+import { footer } from "../../../db/en";
 import { ImgOnTheLeftAndTextOnRight } from "../index";
 import PropTypes from "prop-types";
 
 import styles from "./OurMission.module.scss";
-import { footer } from "../../../db/en";
 
 export const OurMission = ({ title, subtitle, description, src }) => {
   return (

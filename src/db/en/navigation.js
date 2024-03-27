@@ -66,14 +66,14 @@ export const footerNavigation = [
 
 export const footer = {
   logo: {
-    imgUrl: logos.logo,
+    imgUrl: logos.logoTm,
     companyName: "SMARTqube",
     street: "ul. Rakietowa 29E",
     zip: "51-311 Wrocław, Poland",
   },
 
   logoUSA: {
-    imgUrl: logos.logo,
+    imgUrl: logos.logoTm,
     street: "141 Wilson Avenue ",
     zip: "Greensburg, PA 15601",
   },

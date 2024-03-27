@@ -25,7 +25,7 @@ export const about = {
         "W SMARTqube każdy z nas wnosi lata doświadczeń z różnych międzynarodowych organizacji, co skutkuje wspólną wizją i nieograniczoną pasją do kreatywności. Nasza wspólna podróż wykracza poza samą ekspertyzę, obejmując bogactwo pomysłów i niezłomne zaangażowanie.",
       section2:
         "Nasze wysiłki i kompetencje zostawiły ślad na różnych frontach, w tym w elektrowniach na Bliskim Wschodzie, hutach stali w Europie Wschodniej i platformach na Morzu Północnym. Rdzeniem naszego wspólnego doświadczenia jest analiza procesów i pomiary (instrumentacja).",
-      img: logos.logo,
+      img: logos.logoTm,
     },
   ],
   team: {
