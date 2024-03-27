@@ -26,7 +26,7 @@ export const about = {
         "Bei SMARTqube trägt jeder von uns jahrelange Erfahrung aus verschiedenen internationalen Organisationen bei, die in einer gemeinsamen Vision und grenzenloser Leidenschaft für Kreativität gipfelt. Unsere kollektive Reise übersteigt die bloße Expertise und umfasst einen Reichtum an Ideen und unerschütterlichem Engagement.",
       section2:
         "Unsere Bemühungen und Fachkenntnisse haben Auswirkungen auf verschiedene Bereiche gehabt, einschließlich Kraftwerke im Nahen Osten, Stahlwerke in Osteuropa und Plattformen in der Nordsee. Der Kern unserer gemeinsamen Erfahrung dreht sich um Prozessanalyse und Messungen (Instrumentierung).",
-      img: logos.logo,
+      img: logos.logoTm,
     },
   ],
   team: {

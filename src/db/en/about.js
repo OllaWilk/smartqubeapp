@@ -26,7 +26,7 @@ export const about = {
         "At SMARTqube, we each contribute years of experience from diverse international organizations, culminating in a united vision and boundless passion for creativity. Our collective journey transcends mere expertise, encompassing a wealth of ideas and unwavering commitment.",
       section2:
         "Our efforts and proficiency have left an impact on various fronts, including power plants in the Middle East, steel mills in Eastern Europe, and platforms in the North Sea. The core of our shared experience revolves around process analysis and measurements (instrumentation).",
-      img: logos.logo,
+      img: logos.logoTm,
     },
   ],
   team: {
