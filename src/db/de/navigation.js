@@ -72,7 +72,7 @@ export const footer = {
   },
 
   iso: [
-    "ISO 9001:2015 Zertifikatsnummer: 017884",
+    "ISO 9001:2015 Zertifikatsnummer:  3780/03/2024/ZSZ/C",
     "© 2024 SMARTqube",
     "Alle Rechte vorbehalten",
   ],
@@ -86,7 +86,9 @@ export const footer = {
     iso.iec,
     iso.iecx,
     iso.ukca,
+    iso.cert_PAJ,
   ],
+  documentsLink: "Privacy & Legal",
 };
 
 export const geolocation = {
@@ -95,4 +97,11 @@ export const geolocation = {
   textRegion:
     " Wählen Sie Ihre Region und Sprache, um den Inhalt der Website Ihren Vorlieben anzupassen.",
   close: "schließen",
+};
+
+export const translations = {
+  integration: "Integration",
+  "climate control": "Kühlungslösungen",
+  ENCLOSURES: "Klimakontrolle",
+  services: "Dienstleistungen",
 };

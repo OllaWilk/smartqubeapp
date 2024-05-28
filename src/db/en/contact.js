@@ -10,7 +10,7 @@ export const contact = {
       imgUrl: icons.location,
       companyName: "Smartqube",
       street: "ul. Rakietowa 29E",
-      zip: "51-311 Wrocław, Poland",
+      zip: "54-615 Wrocław, Poland",
     },
     {
       imgUrl: icons.envelop,
@@ -73,6 +73,8 @@ export const contact = {
       " Full information on personal data processing is here.",
       "http://localhost:3000/privacy",
     ],
+    requestCall: "Request a call!",
+    submitCall: "Submit",
   },
   errorsMessages: {
     name: "Please enter your name",

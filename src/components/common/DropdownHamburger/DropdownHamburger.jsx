@@ -11,6 +11,7 @@ export const DropdownHamburger = ({
   expanded,
   toggleExpand,
   integrationNav,
+  translations,
 }) => {
   const { region } = useContext(LocaleContext);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -60,7 +61,7 @@ export const DropdownHamburger = ({
                 }`}
                 onClick={() => handleButtonClick(button)}
               >
-                <p>{button}</p>
+                <p>{translations[button]}</p>
                 {button === selectedButton && (
                   <HamburgerSubMenu
                     data={integrationNav}
@@ -85,4 +86,5 @@ DropdownHamburger.propTypes = {
   expanded: PropTypes.bool,
   toggleExpand: PropTypes.func,
   integrationNav: PropTypes.object,
+  translations: PropTypes.object,
 };

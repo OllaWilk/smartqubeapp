@@ -3,23 +3,23 @@ export const integration = {
   header: "Kompleksowe Rozwiązania Integracji Przemysłowej",
   whatIsIntegration: {
     title: "ISTOTA INTEGRACJI",
-    subtitle: "USPRAWNIANIE SKOMPLIKOWANYCH SYSTEMÓW",
+    subtitle: "USPRAWNIANIE ZŁOŻONYCH SYSTEMÓW",
     paragraphOne:
-      "Integracja to termin opisujący szereg działań podejmowanych podczas realizacji każdego projektu, który skutkuje powstaniem skomplikowanego systemu przemysłowego, na przykład analizatora schronienia lub obudowy VFD.",
-    paragraphTwo: "Czym Integracja różni się od Montażu?",
+      "Integracja to termin opisujący szereg działań podejmowanych podczas realizacji każdego projektu, który skutkuje powstaniem złożonego systemu przemysłowego, na przykład kontenera analityki procesowej lub obudowy napędu silnikowego.",
+    paragraphTwo: "Czym integracja różni się od montażu?",
     paragraphTree:
-      "Montaż to tylko jeden etap całego procesu realizacji projektu. Integracja zawiera Montaż wraz z Inżynierią, Zaopatrzeniem, Testowaniem, Pakowaniem, Ładowaniem, Transportem i Uruchomieniem na Miejscu.",
+      "Montaż to tylko jeden etap całego procesu realizacji projektu. Integracja zawiera montaż wraz z inżynieringiem, zaopatrzeniem, testowaniem, pakowaniem, załadunkiem, transportem i uruchomieniem obiektowym.",
     img: photos.integrator,
   },
   design: {
-    title: "PROJEKTOWANIE INŻYNIERSKIE",
+    title: "Projektowanie i inżyniering",
     subtitle: "NASZE KOMPETENCJE",
     designCart: [
       {
-        title: "Mechaniczny",
+        title: "Mechanika",
         elements: [
           "obudowy",
-          "tace kablowe",
+          "koryta i drabinki kablowe",
           "konstrukcje wsporcze",
           "technologia mocowania",
           "analiza obciążenia cieplnego",
@@ -27,37 +27,37 @@ export const integration = {
         designIcon: icons.mechanical,
       },
       {
-        title: "Elektryczny",
+        title: "Elektryka i automatyka",
         elements: [
-          "Rozdział Mocy Niskiego Napięcia",
+          "Rozdział niskiego napięcia",
           "System Sterowania PLC",
           "Komunikacja Szeregowa",
-          "Światłowód i Ethernet",
+          "komunikacja światłowodowa i etherner",
         ],
         designIcon: icons.electrical,
       },
       {
-        title: "Projekt Ex",
+        title: "Projektowanie dla stref EX",
         elements: [
-          "obudowy dźwiękoszczelne",
-          "systemy przeczyszczane",
-          "pętle wewnętrznie bezpieczne",
-          "klasyfikacja obszaru",
+          "Obudowy ognioszczelne Ex-d",
+          "Systemy  przedmuchowe",
+          "Obwody iskrobezpieczne",
+          "Klasyfikacja stref zagrożonych wybuchem",
         ],
         designIcon: icons.explose,
       },
     ],
   },
   callToaction: {
-    titile: "Nie wahaj się skontaktować z nami w dowolnym momencie.",
+    titile: "Skontaktuj się z nami już teraz.",
     subtitle: "Masz jakieś pytania?",
     button: ["Skontaktuj się z nami", "contact"],
   },
   projectExecution: {
-    title: "REALIZACJA PROJEKTU",
+    title: "REALIZACJA PROJEKTÓW",
     subtitle: "NASZE KOMPETENCJE",
     description:
-      "W naszej dziedzinie specjalizacji, realizacja projektu leży w samym sercu tego, co robimy. Specjalizujemy się w starannym planowaniu, profesjonalnym zaopatrzeniu, efektywnym zarządzaniu magazynem i halą montażową oraz płynnym zarządzaniu logistyką i operacjami eksportowymi. Skupiając się na precyzji i dbałości o szczegóły, zapewniamy, że każdy projekt jest realizowany z doskonałością, dostarczając wyniki, które spełniają i przekraczają oczekiwania. Nasze zaangażowanie w realizację projektu stanowi fundament naszego sukcesu i klucz do dostarczania wysokiej jakości rozwiązań naszym klientom.",
+      "Realizacja projektów jest trzonem naszej działalności. Specjalizujemy się w starannym planowaniu, profesjonalnym zaopatrzeniu, efektywnym zarządzaniu magazynem i halą montażową oraz płynnym zarządzaniu logistyką i operacjami eksportowymi. Skupiając się na precyzji i dbałości o szczegóły, zapewniamy, że każdy projekt jest realizowany z doskonałością, dostarczając wyniki, które spełniają i przekraczają oczekiwania. Nasze zaangażowanie w realizację projektu stanowi fundament naszego sukcesu i klucz do dostarczania wysokiej jakości rozwiązań naszym klientom.",
     img: photos.logistic,
     list: [
       "Planowanie",
@@ -70,7 +70,7 @@ export const integration = {
     title: "SPECJALISTYCZNA WIEDZA",
     subtitle: "NASZE KOMPETENCJE",
     description:
-      "Specjalizujemy się w uruchamianiu i serwisowaniu urządzeń OEM, zapewniając ich działanie na najwyższych obrotach. Z naszą wiedzą ekspercką i doświadczeniem przestrzegamy międzynarodowych standardów, aby zagwarantować jakość i niezawodność. Nasza wiedza rozciąga się na specjalistyczne projektowanie, takie jak Projektowanie Systemów Analitycznych, gdzie wyróżniamy się w tworzeniu spersonalizowanych rozwiązań na konkretne potrzeby.",
+      "Specjalizujemy się w uruchamianiu i serwisowaniu urządzeń OEM, zapewniając ich działanie na najwyższych obrotach. Z naszą wiedzą ekspercką i doświadczeniem przestrzegamy międzynarodowych standardów, aby zagwarantować jakość i niezawodność. Nasza wiedza obejmuje projektowanie specjalistycznych rozwiązań takich jak systemy analityki procesowej, gdzie wyróżniamy się w tworzeniu spersonalizowanych rozwiązań na konkretne potrzeby.",
     img: photos.designer,
     list: [
       "Uruchamianie i Serwis Urządzeń OEM",

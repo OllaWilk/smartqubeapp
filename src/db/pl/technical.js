@@ -1,13 +1,13 @@
 import { icons } from "../../images/index";
 
 export const technical = {
-  header: "Wytyczne prawne i Twoja prywatność",
+  header: "Dokumenty Handlowe i prawne",
   description:
     "Zapoznaj się z naszymi kluczowymi dokumentami, aby lepiej zrozumieć nasze polityki, co zapewni jasność w zakresie Twoich praw i obowiązków podczas korzystania z naszych produktów lub usług.",
   documents: [
     {
       img: icons.document,
-      text: "Nasze zaangażowanie w ochronę danych i zgodność z Ogólnym Rozporządzeniem o Ochronie Danych (RODO)",
+      text: "Pełna treść klauzul dotyczących Rozporządzenia o Ochronie Danych Osobowych (RODO)",
       buttonNameEn: "Download PDF (English)",
       downloadUrlEn: "./pdf/en/General_Data_Protection_Regulation_en.pdf",
       downloadLanguage: "Pobierz PDF (Polski)",
@@ -16,7 +16,7 @@ export const technical = {
     },
     {
       img: icons.sale,
-      text: "Wytyczne regulujące sprzedaż naszych produktów lub usług w języku angielskim i polskim",
+      text: "Ogólne Warunki Sprzedaży Towarów i Usług",
       buttonNameEn: "Download PDF (English)",
       downloadUrlEn:
         "./pdf/en/Guidelines_for_the_Sale_of_Our_Products_or_Services_en.pdf",
@@ -25,7 +25,7 @@ export const technical = {
     },
     {
       img: icons.purchese,
-      text: "Warunki dotyczące zakupu naszych produktów lub usług, dostępne zarówno w języku angielskim, jak i polskim",
+      text: "Ogólne Warunki Zakupu Towarów i Usług",
       buttonNameEn: "Download PDF (English)",
       downloadUrlEn:
         "./pdf/en/Terms_and_Conditions_of_Purchase_for_Our_Products_or_Services_en.pdf",
@@ -34,7 +34,7 @@ export const technical = {
     },
     {
       img: icons.shield,
-      text: "Szczegóły dotyczące pokrycia gwarancyjnego naszych produktów w języku angielskim i polskim.",
+      text: "Ogólne Warunki Gwarancji",
       buttonNameEn: "Download PDF (English)",
       downloadUrlEn: "./pdf/en/Warranty_coverage_for_our_products_en.pdf",
 
@@ -43,7 +43,7 @@ export const technical = {
     },
     {
       img: icons.document,
-      text: "Polityka Prywatności - Poznaj nasze zaangażowanie w ochronę prywatności i dowiedz się, jak chronimy Twoje dane osobowe",
+      text: "Polityka Prywatności",
       buttonNameEn: "Download PDF (English)",
       downloadUrlEn: "./pdf/en/Privacy_policy_en.pdf",
       downloadLanguage: "Pobierz PDF (Polski)",
@@ -51,7 +51,7 @@ export const technical = {
     },
     {
       img: icons.document,
-      text: "Polityka Cookie - Poznaj nasze podejście do plików cookie i zarządzaj swoimi preferencjami.",
+      text: "Polityka Cookies, zarządzanie preferencjami",
       buttonNameEn: "Zapoznaj się z naszą polityką cookie",
       goToPage: "/cookies",
     },

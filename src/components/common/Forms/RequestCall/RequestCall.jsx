@@ -11,6 +11,8 @@ export const RequestCall = ({
   namePlaceholder,
   phonePlaceholder,
   errorsMessages,
+  requestCall,
+  submitCall,
 }) => {
   const { formData, errors, setFieldValue, validateForm } = useFormValidation(
     {
@@ -55,7 +57,7 @@ export const RequestCall = ({
   return (
     <div className={`${styles.callToAction} container`}>
       <div className={styles.headlingsWrap}>
-        <h2 className={styles.subtitleCall}>Request a call!</h2>
+        <h2 className={styles.subtitleCall}>{requestCall}</h2>
       </div>
       <form className={styles.formRequest} onSubmit={handleSubmit}>
         <ul>
@@ -87,7 +89,7 @@ export const RequestCall = ({
         </ul>
 
         <button className={styles.submitBtn} type="submit">
-          submit
+          {submitCall}
         </button>
       </form>
     </div>
@@ -98,4 +100,6 @@ RequestCall.propTypes = {
   errorsMessages: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   namePlaceholder: PropTypes.string,
   phonePlaceholder: PropTypes.string,
+  requestCall: PropTypes.string,
+  submitCall: PropTypes.string,
 };

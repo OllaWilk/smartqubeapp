@@ -30,6 +30,7 @@ export const App = () => {
         navigationNavbar={data.navigationNavbar}
         integrationNav={data.integrationNav}
         geolocation={data.geolocation}
+        translations={data.translations}
       />
       <Routes>
         <Route path="/" element={<Redirect redirectUrl={"home"} />} />

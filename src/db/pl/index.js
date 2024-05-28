@@ -12,3 +12,4 @@ export { technical } from "./technical";
 export { cookie } from "./cookie";
 export { cookiePage } from "./cookie";
 export { geolocation } from "./navigation";
+export { translations } from "./navigation";

@@ -15,16 +15,16 @@ export const about = {
     {
       header: "NASZE KORZENIE",
       section1:
-        "SMARTqube to polska firma ściśle związana z ICEqube w Pensylwanii, USA. Łączymy najlepsze atuty obu pochodzeń, łącząc niezawodność naszych rozwiązań z elastycznym i innowacyjnym podejściem. Nasza synergia tworzy unikalną podstawę, zapewniając najwyższą jakość i innowacyjność we wszystkim, co robimy.",
+        "SMARTqube to polska firma ściśle związana z ICEqube w Pensylwanii, USA. Wykorzystujemy najlepsze atuty obu źródeł pochodzenia, łącząc niezawodność naszych rozwiązań z elastycznym i innowacyjnym podejściem. Nasza synergia tworzy unikalne fundamenty, zapewniając najwyższą jakość i innowacyjność we wszystkim, co robimy. Witamy w świecie precyzji i przedsiębiorczości.",
       section2: "Witamy w świecie precyzji i przedsiębiorczości.",
       img: photos.iceCube,
     },
     {
       header: "NASI LUDZIE",
       section1:
-        "W SMARTqube każdy z nas wnosi lata doświadczeń z różnych międzynarodowych organizacji, co skutkuje wspólną wizją i nieograniczoną pasją do kreatywności. Nasza wspólna podróż wykracza poza samą ekspertyzę, obejmując bogactwo pomysłów i niezłomne zaangażowanie.",
+        "W SMARTqube każdy z nas wnosi lata doświadczeń z różnych międzynarodowych organizacji, co skutkuje wspólną wizją i niemal nieograniczonymi zasobami kreatywności. Nasz profesjonalizm wykracza poza samą wiedzę, obejmując bogactwo pomysłów i niezłomne zaangażowanie.",
       section2:
-        "Nasze wysiłki i kompetencje zostawiły ślad na różnych frontach, w tym w elektrowniach na Bliskim Wschodzie, hutach stali w Europie Wschodniej i platformach na Morzu Północnym. Rdzeniem naszego wspólnego doświadczenia jest analiza procesów i pomiary (instrumentacja).",
+        "Nasze wysiłki i kompetencje zostawiły ślad na różnych frontach, w tym w elektrowniach na Bliskim Wschodzie, hutach stali w Europie Wschodniej i platformach wiertniczych na Morzu Północnym. Rdzeniem naszego wspólnego doświadczenia jest analityka procesowa i pomiary (instrumentacja).",
       img: logos.logoTm,
     },
   ],
@@ -40,23 +40,23 @@ export const about = {
     carts: [
       {
         id: 1,
-        title: "WYŁĄCZNY DYSTRYBUTOR PRODUKTÓW ICEQUBE",
+        title: "WYŁĄCZNY IMPORTER PRODUKTÓW ICEQUBE",
         content:
-          "Jesteśmy jedynymi dystrybutorami produktów ICEqube w Europie. Nasze lokalne magazynowanie w połączeniu z dedykowanym biurem logistycznym współpracuje, aby zwiększyć dostępność produktów ICEqube. Doświadcz szybszych czasów dostawy i zredukowanych kosztów wysyłki dla Twojej wygody!",
+          "Jesteśmy jedynymi dystrybutorami produktów ICEqube w Europie. Nasz lokalny magazyn w połączeniu z dedykowanym biurem logistycznym poprawiają dostępność produktów ICEqube. Dzieki temu możemy zapewnić szybsze czasy dostawy i zredukowane koszty wysyłki dla Twojej wygody!",
         img: icequbeProducts.evSeries,
       },
       {
         id: 2,
-        title: "OBSŁUGA PRZETARGÓW, OCENA MIEJSC I STUDIA WYKONALNOŚCI",
+        title: "Wsparcie sprzedaży, wizje lokalne i studia wykonalności",
         content:
-          "Nasz zespół wsparcia klienta wraz z siecią partnerów kanałowych na terenie Europy jest gotowy, aby pomóc Ci najlepiej, jak potrafią, w wyborze odpowiednich rozwiązań nawet dla najbardziej wymagających aplikacji. W SMARTqube priorytetem jest Twoje zadowolenie i sukces!",
+          "Nasz zespół wsparcia klienta wraz z siecią partnerów  na terenie Europy jest gotowy, aby pomóc Ci najlepiej, jak potrafią, w wyborze odpowiednich rozwiązań nawet dla najbardziej wymagających aplikacji. W SMARTqube priorytetem jest Twoje zadowolenie i sukces!",
         img: photos.support,
       },
       {
         id: 3,
         title: "PROJEKTOWANIE I INTEGRACJA",
         content:
-          "W sercu naszej reputacji leży nasz sektor Zintegrowanych Rozwiązań. Nasz dobrze wyposażony warsztat i dedykowany zespół inżynierów projektowych wcielają Twoje wizje w życie, obsługując kompleksowe projekty pod klucz. To coś więcej niż tylko plac budowy - od pierwszej iskry pomysłu po ostateczne uruchomienie i uruchomienie Twojego systemu, Twój projekt jest w bezpiecznych rękach.",
+          "Podstawą naszej reputacji jest sektor Zintegrowanych Rozwiązań. Nasz dobrze wyposażony warsztat i dedykowany zespół inżynierów projektowych wcielają Twoje wizje w życie, obsługując kompleksowe projekty pod klucz. To dużo więcej niż tylko zakład montażowy - od pierwszej iskry pomysłu po ostateczne uruchomienie i uruchomienie Twojego systemu, Twój projekt jest w bezpiecznych rękach.",
         img: photos.tenderSupport,
       },
 
@@ -64,7 +64,7 @@ export const about = {
         id: 4,
         title: "DOŚWIADCZONY ZESPÓŁ SERWISOWY I INŻYNIERSKI",
         content:
-          "Kiedykolwiek potrzebne jest uruchomienie miejsca, konserwacja, naprawy lub modyfikacje, możesz liczyć na naszą przyjazną grupę serwisową, aby poradzić sobie nawet z najtrudniejszymi problemami technicznymi z uśmiechem! Dla nas nie ma nic niemożliwego!",
+          "Kiedykolwiek potrzebne jest uruchomienie obiektowe, prace serwisowe, naprawy lub modyfikacje, możesz liczyć na naszą przyjazną grupę serwisową, aby poradzić sobie nawet z najtrudniejszymi problemami technicznymi z uśmiechem! Dla nas nie ma nic niemożliwego!",
         img: photos.fieldServices,
       },
 
@@ -72,7 +72,7 @@ export const about = {
         id: 5,
         title: "PAKOWANIE I LOGISTYKA",
         content:
-          "Z centralną lokalizacją we Wrocławiu, Polska, nasze skuteczne operacje obejmują całe terytorium europejskie, ale nie ograniczają się do niego!",
+          "Dzięki naszej lokalizacji we Wrocławiu - w centurm Europy, nasz efektywny obszar działania obejmuje wszetstkie kraje europejskie, ale nie ogranicza się do niego!",
         img: photos.logistic,
       },
     ],
@@ -117,17 +117,17 @@ export const about = {
     ],
   },
   callToaction: {
-    titile: "Nie wahaj się skontaktować z nami w dowolnym czasie.",
+    titile: "Skontaktuj się z nami już teraz.",
     subtitle: "Masz jakieś pytania ?",
     button: ["Skontaktuj się z nami", "contact"],
   },
 
   location: {
     src: photos.headquarters,
-    title: "Siedziba Wrocław",
+    title: "Siedziba we Wrocławiu",
     subtitle: "ODWIEDŹ NASZ ZESPÓŁ SMARTqube",
     description:
-      "Nasza placówka Smartqube strategicznie zlokalizowana jest we Wrocławiu, tuż przy autostradzie A8, co zapewnia łatwy dostęp dla wszelkiego rodzaju transportu, w tym transportu ponadgabarytowego. Goście mogą łatwo dotrzeć na Międzynarodowe Lotnisko Wrocław, które znajduje się zaledwie 5 minut drogi. Nasza siedziba obejmuje magazyn, strefę wolnocłową dla przychodzącego sprzętu z USA, warsztat oraz biura.",
+      "Nasza placówka Smartqube jest strategicznie zlokalizowana we Wrocławiu, tuż przy autostradzie A8, co zapewnia łatwy dostęp dla wszelkiego rodzaju transportu, w tym transportu ponadgabarytowego. Goście mogą łatwo dotrzeć na Międzynarodowy Port Lotniczy Wrocław, który znajduje się zaledwie 5 minut drogi od nas. Nasza siedziba obejmuje magazyn, strefę wolnocłową dla przychodzącego sprzętu z USA, warsztat oraz biura.",
   },
   locationUSA: {
     src: photos.sartQubeHeadquarters,

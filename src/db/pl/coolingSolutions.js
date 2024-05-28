@@ -2,19 +2,18 @@ import { logos, icequbeProducts } from "../../images/index";
 
 export const coolingSolutions = {
   carousel: {
-    header: "Oblicz swoją klimatyzację z ",
+    header: "Dobierz swój klimatyzator z ",
     span: "IceQube",
-    text: "Systemy wentylatorów obudów, klimatyzatory termoelektryczne, wymienniki ciepła, klimatyzatory do miejsc niebezpiecznych, wymienniki ciepła do miejsc niebezpiecznych, chłodzenie kontenerów/serwerowni.",
-    button: "ODWIEDŹ STRONĘ I OBLICZ SWÓJ PROJEKT JUŻ DZIŚ",
+    text: "Wentylatory do obudów, klimatyzatory termoelektryczne, wymienniki ciepła, klimatyzatory i wymienniki ciepła do stref zagrożonych wybuchem, chłodzenie dla kontenerów i szaf serwerowych.",
+    button: "Odwiedź stronę IceQube aby dobrać klimatyzator",
     linkTo: "https://www.iceqube.com/technical/calculator/",
     images: [icequbeProducts.GroupPicture, icequbeProducts.evSeries],
   },
   manualsSection: {
     title:
-      "Znajdź potrzebny Ci podręcznik i upewnij się, że Twoje systemy działają płynnie i bezpiecznie",
-    subtitle: "Podręczniki",
-    description:
-      "Znajdź potrzebny Ci podręcznik i upewnij się, że Twoje systemy działają płynnie i bezpiecznie",
+      "Znajdź potrzebny Ci dokument i upewnij się, że Twoje urządzenie działa prawidłowo.",
+    subtitle: "Dokumentacja urządzeń",
+    description: "",
     btnNames: ["Seria EV", "Seria EVZ2", "Seria EX"],
 
     downloads: {
@@ -22,7 +21,7 @@ export const coolingSolutions = {
         {
           series: "Seria Evolution",
           imgLogo: logos.evLogo,
-          text: "Seria EV od Ice Qube na nowo definiuje standardy branżowe zaawansowaną technologią, oferując klimatyzatory z certyfikatem CE, charakteryzujące się zwiększoną efektywnością, trwałością i wysoką temperaturą pracy 60*C (140*F). Przeznaczone do zwykłych lokalizacji.",
+          text: "Seria EV od Ice Qube na nowo definiuje standardy branżowe dzięki zaawansowanym technologiom, oferując klimatyzatory z oznakowaniem CE, charakteryzujące się zwiększoną efektywnością, trwałością i wysoką temperaturą pracy 60*C (140*F). Przeznaczone do zwykłych lokalizacji.",
           name: "Klimatyzatory do obszarów bezpiecznych",
           url: "https://www.iceqube.com/manuals/QD-ENG-69%20Operation%20and%20Installation%20Manual%20-%20Evolution%20Series%20Rev%203.pdf",
         },
@@ -39,7 +38,7 @@ export const coolingSolutions = {
         {
           series: "Seria Evolution Strefa 2",
           imgLogo: logos.evz2Logo,
-          text: "Seria Evolution od Ice Qube wprowadza zaawansowane rozwiązania chłodzenia dla miejsc niebezpiecznych Strefy 2 z funkcjami takimi jak technologia przepływu powietrza w panelu pomocniczym, technologia stanu stałego i wysokie temperatury pracy, rewolucjonizując efektywność i trwałość w branży.",
+          text: "Seria Evolution Zone 2 od Ice Qube wprowadza zaawansowane rozwiązania chłodzenia dla 2 strefy zagrożenia wybuchem, wykorzystując technologię SAFT (Subpanel Airflow Technology), technologie półprzewodnikowe, gwarantując wysokie temperatury pracy, rewolucjonizując efektywność i trwałość w branży.",
           name: "Klimatyzatory Strefy 2",
           url: "https://www.iceqube.com/manuals/QD-ENG-71%20Operation%20and%20Installation%20Manual%20-%20Zone%202%20Evolution%20series%20ATEX%20IECEx%20REV7.pdf",
         },
@@ -57,7 +56,7 @@ export const coolingSolutions = {
         {
           series: "Seria Ex Strefa 1",
           imgLogo: logos.exz1Logo,
-          text: "Nowe klimatyzatory serii EX są zaprojektowane specjalnie dla środowisk niebezpiecznych, systemów obudów z przeczyszczaniem lub bez, i są dostarczane w obudowie ze stali nierdzewnej 316. Klimatyzatory Ice Qube Surface Vertical Mount Zone 1 - ATEX/IECEx/UK CA do miejsc niebezpiecznych oferują zakres mocy chłodzenia 1172-3517 Watt (4000-12000 Btu/h).",
+          text: "Nowe klimatyzatory serii EX są zaprojektowane specjalnie dla stref zagrożonych wybuchem, mogą pracować z systemem przedmuchowym lub bez, i są dostarczane w obudowie ze stali nierdzewnej 316. Klimatyzatory Ice Qube serii Ex oferują zakres mocy chłodzeniczej od 1172 do 3517 Watt (4000-12000 Btu/h).",
           name: "Klimatyzatory Strefy 1",
           url: "https://www.iceqube.com/manuals/QD-ENG-74%20Operation%20and%20Installation%20Manual%20-%20Zone%201%20EX%20series%20ATEX%20IECEx%20Rev%201.pdf",
         },
@@ -72,7 +71,7 @@ export const coolingSolutions = {
     title: "Zawsze aktualne i dostępne",
     subtitle: "Certyfikaty",
     description:
-      "Każdy certyfikat jest starannie przedstawiony, aby zapewnić łatwy dostęp do szczegółowych informacji. Możesz przeglądać, pobierać i używać tych dokumentów, aby zweryfikować specyfikacje i zgodność naszych produktów, co jest niezbędne w regulowanych branżach wymagających dokładnej dokumentacji.",
+      "Każdy certyfikat jest starannie przedstawiony, aby zapewnić łatwy dostęp do szczegółowych informacji. Możesz przeglądać, pobierać i używać tych dokumentów, aby zweryfikować specyfikacje i zgodność naszych produktów, co jest niezbędne w szczególnie wymagających branżach, gdzie oczekuje się rzetelnej dokumentacji.",
     btnNames: ["Seria EV", "Seria EVZ2", "Seria EX"],
     atex: "Związane z certyfikatami związanymi z dyrektywą ATEX, która jest standardem Unii Europejskiej dla sprzętu przeznaczonego do użytku w potencjalnie wybuchowych atmosferach.",
     iecx: "Skupia się na globalnym standardzie IECEX dla sprzętu używanego w wybuchowych atmosferach.",

@@ -6,7 +6,7 @@ import { removeSpaces } from "../../../utils/removeSpaces";
 import styles from "./Footer.module.scss";
 
 export const Footer = ({ footer, navigationNavbar, region }) => {
-  const { logo, logoUSA, iso, certificates } = footer;
+  const { logo, logoUSA, iso, certificates, documentsLink } = footer;
   const [expandedItem, setExpandedItem] = useState(null);
 
   const handleToggle = (index) => {
@@ -99,7 +99,7 @@ export const Footer = ({ footer, navigationNavbar, region }) => {
           ))}
           <div className={styles.logoWrap}>
             <Link to={"/privacy"} className={styles.logoWrap}>
-              Privacy & Legal
+              {documentsLink}
             </Link>
           </div>
         </div>

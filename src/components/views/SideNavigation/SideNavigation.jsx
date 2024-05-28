@@ -9,6 +9,7 @@ export const SideNavigation = ({
   index,
   solutionsNav,
   integrationNav,
+  translations,
 }) => {
   const [value, toggleValue] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
@@ -39,6 +40,7 @@ export const SideNavigation = ({
 
         return (
           <DropdownHamburger
+            translations={translations}
             key={index}
             solutionsNav={solutionsNav}
             integrationNav={integrationNav}
@@ -64,5 +66,6 @@ SideNavigation.propTypes = {
   item: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   index: PropTypes.number,
   solutionsNav: PropTypes.object,
+  translations: PropTypes.object,
   integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
