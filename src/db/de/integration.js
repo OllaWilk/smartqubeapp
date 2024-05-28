@@ -12,7 +12,7 @@ export const integration = {
     img: photos.integrator,
   },
   design: {
-    title: "ENGINEERING DESIGN",
+    title: "DESIGN & ENGINEERING ",
     subtitle: "UNSERE KOMPETENZEN",
     designCart: [
       {

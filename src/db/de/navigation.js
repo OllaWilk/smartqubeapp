@@ -63,7 +63,7 @@ export const footer = {
     imgUrl: logos.logoTm,
     companyName: "SMARTqube",
     street: "ul. Rakietowa 29E",
-    zip: "51-311 Breslau, Polen",
+    zip: "54-615 Breslau, Polen",
   },
   logoUSA: {
     imgUrl: logos.logoTm,

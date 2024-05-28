@@ -25,7 +25,7 @@ export const about = {
       section1:
         "At SMARTqube, we each contribute years of experience from diverse international organizations, culminating in a united vision and boundless passion for creativity. Our collective journey transcends mere expertise, encompassing a wealth of ideas and unwavering commitment.",
       section2:
-        "Our efforts and proficiency have left an impact on various fronts, including power plants in the Middle East, steel mills in Eastern Europe, and platforms in the North Sea. The core of our shared experience revolves around process analysis and measurements (instrumentation).",
+        "Our efforts and proficiency have left an impact on various fronts, including power plants in the Middle East, steel mills in Eastern Europe, and platforms in the North Sea. The core of our shared experience revolves around process analytics and measurements (instrumentation).",
       img: logos.logoTm,
     },
   ],
@@ -57,7 +57,7 @@ export const about = {
         id: 3,
         title: "DESIGN AND INTEGRATION",
         content:
-          "At the heart of our reputation lies our Integrated Solutions sector. Our well-equipped workshop and dedicated project engineering team bring your visions to life, handling complete turn-key projects. It's more than just a construction site - from the initial spark of an idea to the final commissioning and startup of your system, your project is in safe hands.",
+          "At the heart of our reputation lies our Integrated Solutions sector. Our well-equipped workshop and dedicated project engineering team bring your visions to life, handling complete turn-key projects. It's more than just an assembly workshop - from the initial spark of an idea to the final commissioning and startup of your system, your project is in safe hands.",
         img: photos.tenderSupport,
       },
 
@@ -96,7 +96,7 @@ export const about = {
         id: 3,
         title: "DESIGN AND INTEGRATION",
         content:
-          "At the heart of our reputation lies our Integrated Solutions sector. Our well-equipped workshop and dedicated project engineering team bring your visions to life, handling complete turn-key projects. It's more than just a construction site - from the initial spark of an idea to the final commissioning and startup of your system, your project is in safe hands.",
+          "At the heart of our reputation lies our Integrated Solutions sector. Our well-equipped workshop and dedicated project engineering team bring your visions to life, handling complete turn-key projects. It's more than just an assembly workshop - from the initial spark of an idea to the final commissioning and startup of your system, your project is in safe hands.",
         img: photos.tenderSupport,
       },
 
