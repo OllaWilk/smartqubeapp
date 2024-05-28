@@ -9,7 +9,7 @@ export const contact = {
       imgUrl: icons.location,
       companyName: "Smartqube",
       street: "ul. Rakietowa 29E",
-      zip: "51-311 Breslau, Polen",
+      zip: "54-615 Breslau, Polen",
     },
     {
       imgUrl: icons.envelop,

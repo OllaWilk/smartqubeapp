@@ -76,7 +76,7 @@ export const home = {
         and tools needed to do their job, but also with job satisfaction
         and a sense of belonging to our company. As a result, our
         customers receive the most advanced solutions in the field of
-        refrigeration and air conditioning, which meet their requirements
+        air conditioning, which meet their requirements
         and are tailored to their needs. Our high quality services also
         have a positive impact on the environment, thanks to the use of
         eco-friendly technologies and our focus on energy efficiency.`,
