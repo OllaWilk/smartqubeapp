@@ -9,6 +9,7 @@ export const ExpandedNavLink = ({
   index,
   solutionsNav,
   integrationNav,
+  translations,
 }) => {
   const [value, toggle] = useToggle(true);
   const [expandedItem, setExpandedItem] = useState(null);
@@ -35,6 +36,7 @@ export const ExpandedNavLink = ({
     const subItems = item[buttonLabel];
     return (
       <Dropdown
+        translations={translations}
         solutionsNav={solutionsNav}
         integrationNav={integrationNav}
         index={index}
@@ -54,6 +56,7 @@ export const ExpandedNavLink = ({
 
 ExpandedNavLink.propTypes = {
   item: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  translations: PropTypes.object,
   index: PropTypes.number,
   solutionsNav: PropTypes.object,
   integrationNav: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),

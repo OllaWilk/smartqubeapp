@@ -2,7 +2,7 @@ import { icons } from "../../images/index";
 
 export const contact = {
   contactTitle: "Masz jakiś projekt?",
-  cartSubtitle: "Proszę, zostaw wiadomość",
+  cartSubtitle: "Zostaw nam wiadomość",
   cartDescription:
     "Skontaktuj się z nami i daj nam znać, jak możemy pomóc. Wypełnij formularz, a my odezwiemy się tak szybko, jak to możliwe.",
   contactCart: [
@@ -10,7 +10,7 @@ export const contact = {
       imgUrl: icons.location,
       companyName: "Smartqube Sp z o.o.",
       street: "ul. Rakietowa 29E",
-      zip: "51-311 Wrocław, Poland",
+      zip: "54-615 Wrocław, Poland",
     },
     {
       imgUrl: icons.envelop,
@@ -23,7 +23,7 @@ export const contact = {
       weekend: "Sob, Niedz: Zamknięte",
     },
     {
-      VAT: "VAT ID: PL 897 190 96 51",
+      VAT: "NIP: PL 897 190 96 51",
       USDIBAN: "USD IBAN: 17 1050 1575 1000 0090 3282 4709",
       EURIBAN: "EUR IBAN: 40 1050 1575 1000 0090 3282 4683",
       PLNIBAN: "PLN IBAN: 62 1050 1575 1000 0090 3282 4675",
@@ -50,8 +50,8 @@ export const contact = {
   contactForm: {
     name: "Wpisz swoje imię *",
     companyName: "Wpisz nazwę swojej firmy *",
-    email: "Wpisz swój ważny adres e-mail *",
-    position: "Wpisz swoją pozycję zawodową",
+    email: "Wpisz swój aktualny adres e-mail *",
+    position: "Wpisz swoje stanowisko",
     phoneNumber: "Wpisz swój numer telefonu *",
     message: "Wpisz swoją wiadomość *",
     requiredFields:
@@ -74,7 +74,10 @@ export const contact = {
       "Pełna treść informacji dotyczących przetwarzania danych osobowych jest tutaj. ",
       "http://localhost:3000/privacy",
     ],
+    requestCall: "Zostaw nam swój numer, oddzwonimy!",
+    submitCall: "Prześlij",
   },
+
   errorsMessages: {
     name: "Proszę wpisać swoje imię",
     phone: "Proszę wpisać swój numer telefonu",

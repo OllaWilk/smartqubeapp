@@ -11,14 +11,14 @@ export const Dropdown = ({
   expanded,
   toggleExpand,
   integrationNav,
+  translations,
 }) => {
   const { region } = useContext(LocaleContext);
-  const allButtons = Object.keys(integrationNav).filter((button) => {
+  const allButtons = Object.keys(integrationNav).filter((button, index) => {
     if (region === "usa") return true;
     if (region !== "usa" && integrationNav[button].id === "usa") return false;
     return true;
   });
-
   const [selectedButton, setselectedButton] = useState(allButtons[0]);
 
   const handleButtonClick = (buttonName) => {
@@ -41,10 +41,9 @@ export const Dropdown = ({
                 }`}
                 onClick={() => handleButtonClick(button)}
               >
-                {button}
+                {translations[button]}
               </li>
             ))}
-
             <SideOpenSubMenu
               data={integrationNav}
               onHide={toggleExpand}
@@ -65,4 +64,5 @@ Dropdown.propTypes = {
   expanded: PropTypes.bool,
   toggleExpand: PropTypes.func,
   integrationNav: PropTypes.object,
+  translations: PropTypes.object,
 };

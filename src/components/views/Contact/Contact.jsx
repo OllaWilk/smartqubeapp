@@ -19,6 +19,7 @@ export const Contact = ({ contact, region }) => {
     contactCartUSA,
     contactForm,
     errorsMessages,
+    callForm,
   } = contact;
   return (
     <div className={styles.contact}>
@@ -56,7 +57,10 @@ export const Contact = ({ contact, region }) => {
         <RequestCall
           namePlaceholder={contactForm.name}
           phonePlaceholder={contactForm.phoneNumber}
+          requestCall={contactForm.requestCall}
+          submitCall={contactForm.submitCall}
           errorsMessages={errorsMessages}
+          callForm={callForm}
         />
       </div>
     </div>

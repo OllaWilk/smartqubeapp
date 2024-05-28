@@ -12,6 +12,7 @@ export const Navigation = ({
   navigationNavbar,
   integrationNav,
   geolocation,
+  translations,
 }) => {
   const [isSidebarOpen, toggleSidebar] = useToggle(false);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -39,7 +40,6 @@ export const Navigation = ({
     scrollPosition > 50 ? styles.navigationActive : styles.navigation;
   const logoClass =
     scrollPosition > 50 ? styles.navigationLogoActive : styles.navigationLogo;
-
   return (
     <>
       <div className={navigationClass}>
@@ -59,6 +59,7 @@ export const Navigation = ({
                   item={item}
                   index={index}
                   integrationNav={integrationNav}
+                  translations={translations}
                 />
               ))}
             </nav>
@@ -90,6 +91,7 @@ export const Navigation = ({
                 key={`${index}-sidebar`}
                 integrationNav={integrationNav}
                 windowHeight={windowHeight}
+                translations={translations}
               />
             ))}
           </div>
@@ -103,4 +105,5 @@ Navigation.propTypes = {
   navigationNavbar: PropTypes.array,
   integrationNav: PropTypes.object,
   geolocation: PropTypes.object,
+  translations: PropTypes.object,
 };

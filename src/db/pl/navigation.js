@@ -3,18 +3,18 @@ import { logos, iso, photos } from "../../images";
 export const navigationNavbar = [
   "home",
   "o nas",
-  { rozwiazania: ["integracja", "rozwiazania chłodnicze", "usługi"] },
+  { rozwiazania: ["integracja", "rozwiazania chłodnicze", "Usługi obiektowe"] },
   "kontakt",
 ];
 
 export const integrationNav = {
   integration: {
     abstract:
-      "Integracja obejmuje szeroki zakres działań projektowych, w tym projektowanie inżynierskie, pozyskiwanie, testowanie, pakowanie, wysyłkę i uruchomienie na miejscu, podczas gdy montaż jest tylko częścią tego obszernego procesu. Specjalizujemy się w projektowaniu inżynierskim, systemach mechanicznych i elektrycznych, dystrybucji energii niskonapięciowej, systemach kontrolnych oraz uruchamianiu urządzeń OEM, przestrzegając międzynarodowych norm.",
-    linkTo: ["poznaj naszą integrację", "integration"],
+      "Integracja obejmuje szeroki zakres działań projektowych, w tym inżyniering, dobór komponentów i zaopatrzenie, testowanie, pakowanie, wysyłkę i uruchomienie obiektowe, podczas gdy montaż jest tylko częścią tego obszernego procesu. Specjalizujemy się w inżynieringu - systemach mechanicznych i elektrycznych, systemach niskich napięć, systemach kontrolnych oraz uruchamianiu urządzeń OEM - przestrzegając międzynarodowych norm.",
+    linkTo: ["DOWIEDZ SIĘ WIĘCEJ O INTEGRACJI", "integration"],
     subjects: [
       {
-        name: "Sterowanie silnikiem",
+        name: "NAPĘDY",
         btnsList: [
           "Rozwiązania z regulacją prędkości",
           "Rozwiązania Soft Start",
@@ -47,8 +47,8 @@ export const integrationNav = {
   },
   "climate control": {
     abstract:
-      "KONTROLA KLIMATU OBEJMUJE TWORZENIE OPTYMALNYCH WARUNKÓW DLA WRAŻLIWEGO SPRZĘTU POPRZEZ REGULACJĘ TEMPERATURY I WILGOTNOŚCI. NASZE ROZWIĄZANIA OBEJMUJĄ NAJMNIEJSZĄ NA RYNKU JEDNOSTKĘ KLIMATYZACYJNĄ, NAJCIEŃSZĄ JEDNOSTKĘ KLIMATYZACYJNĄ, NAJWYŻSZĄ TEMPERATURĘ PRACY, NAJWIĘKSZY WYBÓR KLIMATYZACJI DO STREF ZAGROŻONYCH I WIELE INNYCH.",
-    linkTo: ["przejdź do strony kontrolę klimatu", "climatecontrol"],
+      "KONTROLA KLIMATU OBEJMUJE TWORZENIE OPTYMALNYCH WARUNKÓW DLA WRAŻLIWEGO SPRZĘTU POPRZEZ REGULACJĘ TEMPERATURY I WILGOTNOŚCI. NASZE ROZWIĄZANIA OBEJMUJĄ NAJMNIEJSZĄ NA RYNKU JEDNOSTKĘ KLIMATYZACYJNĄ, NAJCIEŃSZĄ JEDNOSTKĘ KLIMATYZACYJNĄ, NAJWYŻSZĄ TEMPERATURĘ PRACY, NAJWIĘKSZY WYBÓR KLIMATYZATORÓW DO STREF ZAGROŻONYCH WYBUCHEM I WIELE INNYCH.",
+    linkTo: ["PRZEJDŹ DO STRONY ROZWIĄZAŃ CHŁODNICZYCH", "climatecontrol"],
   },
   ENCLOSURES: {
     id: "usa",
@@ -60,7 +60,7 @@ export const integrationNav = {
 
   services: {
     abstract:
-      "Oferujemy szeroki zakres usług, w tym konserwację sprzętu, kalibrację i rozwiązywanie problemów. Nasz zespół ekspertów zapewnia, że twoje systemy działają z maksymalną wydajnością i zgodnie z normami branżowymi.",
+      "Oferujemy szeroki zakres usług, w tym serwisowanie sprzętu, kalibrację i rozwiązywanie problemów. Nasz zespół ekspertów zadba, aby  Twoje systemy działały z maksymalną wydajnością i zgodnie z normami branżowymi.",
     linkTo: ["poznaj nasze usługi", "services"],
   },
 };
@@ -70,7 +70,7 @@ export const footer = {
     imgUrl: logos.logoTm,
     companyName: "SMARTqube Sp z o.o.",
     street: "ul. Rakietowa 29E",
-    zip: "51-311 Wrocław, Poland",
+    zip: "54-615 Wrocław, Poland",
   },
   logoUSA: {
     imgUrl: logos.logoTm,
@@ -79,9 +79,9 @@ export const footer = {
   },
 
   iso: [
-    "ISO 9001:2015 Certificate Number: 017884",
+    "ISO 9001:2015 i ISO45001:2018 Certyfikat nr 3780/03/2024/ZSZ/C",
     "© 2024 SMARTqube",
-    "All Rights Reserved",
+    "Wszelkie prawa zastrzeżone",
   ],
 
   certificates: [
@@ -93,7 +93,10 @@ export const footer = {
     iso.iec,
     iso.iecx,
     iso.ukca,
+    iso.cert_PAJ,
   ],
+
+  documentsLink: "Dokumenty handlowe i prawne",
 };
 
 export const geolocation = {
@@ -102,4 +105,11 @@ export const geolocation = {
   textRegion:
     " Wybierz swóju region i język aby dostosować treść strony do swoich preferencji.",
   close: "zamknij",
+};
+
+export const translations = {
+  integration: "Integracja",
+  "climate control": "Rozwiązania chłodnicze",
+  ENCLOSURES: "Klimatyzatory",
+  services: "Usługi obiektowe",
 };

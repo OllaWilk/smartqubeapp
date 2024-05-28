@@ -72,6 +72,8 @@ export const contact = {
       "Informationen zur Verarbeitung personenbezogener Daten hier.",
       "http://localhost:3000/privacy",
     ],
+    requestCall: "Request a call!",
+    submitCall: "absenden",
   },
   errorsMessages: {
     name: "Bitte geben Sie Ihren Namen ein",

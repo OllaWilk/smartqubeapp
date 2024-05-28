@@ -69,7 +69,7 @@ export const footer = {
     imgUrl: logos.logoTm,
     companyName: "SMARTqube",
     street: "ul. Rakietowa 29E",
-    zip: "51-311 Wrocław, Poland",
+    zip: "54-615 Wrocław, Poland",
   },
 
   logoUSA: {
@@ -79,7 +79,7 @@ export const footer = {
   },
 
   iso: [
-    "ISO 9001:2015 Certificate Number: 017884",
+    "ISO 9001:2015 Certificate Number: 3780/03/2024/ZSZ/C",
     "© 2024 SMARTqube",
     "All Rights Reserved",
   ],
@@ -93,7 +93,10 @@ export const footer = {
     iso.iec,
     iso.iecx,
     iso.ukca,
+    iso.cert_PAJ,
   ],
+
+  documentsLink: "Privacy & Legal",
 };
 
 export const geolocation = {
@@ -102,4 +105,11 @@ export const geolocation = {
   textRegion:
     " Choose your region and language to customize the site content to your preferences.",
   close: "close",
+};
+
+export const translations = {
+  integration: "integration",
+  "climate control": " climate control",
+  ENCLOSURES: "ENCLOSURES",
+  services: "services",
 };
