@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+#  🌍 SMARTqube - Comprehensive Industrial Solutions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SMARTqube is a cutting-edge engineering company with a mission to design and deliver the future of industrial solutions. Originating as a strategic extension of ICEqube in the USA, SMARTqube is based in Wrocław, Poland, serving as a crucial hub for the European and Middle Eastern markets. The company focuses on providing high-quality climate control products, industrial automation, and integrated solutions that enhance productivity and efficiency in various industrial sectors.
 
-## Available Scripts
+## 🙋🏼‍♀️ Live demo:
+[![](screenshots/smartqube.png)](https://www.smartqube.com/home)
 
-In the project directory, you can run:
+**[Click here to  the live site](https://www.smartqube.com/home)**
 
-### `npm start`
+## ⭐ Key Features:
+The SMARTqube website is organized into several subpages that are described below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 🏠 Home Page:
+The home page introduces SMARTqube with a sleek and professional interface, reflecting the company's commitment to excellence in engineering and industrial solutions. Users can easily navigate to key sections such as 'About', 'Solutions', and 'Contact' to learn more about the company's offerings.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 🏢 About Page:
+The About page of SMARTqube introduces the company's origins and its strategic partnership with ICEqube, blending American reliability with European innovation. It highlights the expertise and passion of the SMARTqube team, whose diverse international experiences drive the company's success in delivering high-quality industrial solutions. The page emphasizes that the company's greatest asset is its people, dedicated to providing exceptional service and innovation.
 
-### `npm test`
+#### 💼 Solutions Overview:
+The "Solutions" section of the SMARTqube website expands into several detailed subpages, each focusing on specific areas of expertise:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Integration:** This subpage details SMARTqube's expertise in engineering, procurement, testing, packaging, shipping, and commissioning at final installation sites. They specialize in engineering design, mechanical and electrical systems, and control systems, ensuring compliance with local and international regulations across various industries.
 
-### `npm run build`
+* **Climate Control:** This section provides advanced cooling solutions from IceQube, including systems for hazardous locations. These products are supported by detailed manuals and certifications, ensuring efficient operation and compliance with industry standards. Access to these resources helps users maintain and verify their systems effectively.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Enclosures:** This subpage refers to SMARTqube's partnership with IceQube, offering robust enclosures designed to protect critical equipment in harsh industrial settings.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Services:** A comprehensive overview of the various support services offered by SMARTqube, including maintenance, repair, and on-site support.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 📞 Contact Section: 
+The Contact section of the SMARTqube website is designed to facilitate easy communication between potential clients and the company. It features a user-friendly form where visitors can submit their name, phone number, company details, job position, and a message to inquire about services or discuss potential projects. The form also ensures compliance with GDPR regulations, requiring users to confirm their age and consent to data processing before submission.
 
-### `npm run eject`
+#### 📜 Legal and Privacy Section: 
+The Legal and Privacy section of the SMARTqube website provides users with essential documents and guidelines related to data protection and the company's operational policies. This section includes downloadable PDFs covering topics such as GDPR compliance, sales guidelines, terms and conditions, warranty details, and the company's privacy policy. Additionally, there is a link to explore the Cookie Policy, offering insights into how cookies are managed and providing users with the option to adjust their preferences. This section ensures transparency and helps users understand their rights and the company's commitment to protecting personal information.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 🌍 Multilingual and Regional Support: 
+The SMARTqube website is multilingual, available in English, German, and Polish. It is also tailored for different regions, including Europe, the USA, and the United Kingdom. The user's language and region preferences are stored in context and cookies, ensuring that these settings are remembered across sessions. Users must accept cookies to browse the site freely, and they have the option to change their preferences or withdraw consent at any time.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🐞 Tech Stack
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Learn More
+## 🤓 Summary 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The SMARTqube project presented a unique challenge in managing collaboration with various stakeholders, including sales teams, clients, an SEO company, and legal professionals. This experience taught me the importance of effective communication and teamwork in delivering a successful project. Additionally, I gained valuable skills in deploying websites to external servers and connecting the site to a purchased domain, further enhancing my technical expertise.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Github frontend:** [https://github.com/OllaWilk/smartqubeapp](https://github.com/OllaWilk/smartqubeapp)
 
-### Code Splitting
+## 🦋 Installation project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Clone the project:**
 
-### Analyzing the Bundle Size
+```
+git clone https://github.com/OllaWilk/smartqubeapp.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Go to the project directory:**
 
-### Making a Progressive Web App
+```
+cd smartqubeapp
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Install dependencies:**
 
-### Advanced Configuration
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Start the server:**
 
-### Deployment
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
