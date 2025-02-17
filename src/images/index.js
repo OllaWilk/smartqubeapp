@@ -67,6 +67,7 @@ import iecx from "./iso/iecx.png";
 import sri from "./iso/sri.png";
 import ukca from "./iso/ukca.png";
 import cert_PAJ from "./iso/CERT_PAJ.jpg";
+import pri_cert from "./iso/RRi_cert.png";
 
 export const icons = {
   close,
@@ -131,6 +132,7 @@ export const iso = {
   sri,
   ukca,
   cert_PAJ,
+  pri_cert,
 };
 
 export const icequbeProducts = {

@@ -78,23 +78,26 @@ export const footer = {
     zip: "Greensburg, PA 15601",
   },
 
-  iso: [
-    "ISO 9001:2015 i ISO45001:2018 Certyfikat nr 3780/03/2024/ZSZ/C",
-    "© 2024 SMARTqube",
-    "Wszelkie prawa zastrzeżone",
-  ],
+  iso: {
+    isoUSA: "ISO 9001:2015 Certyfikat nr: 023196",
+    isoPL: "ISO 9001:2015 Certyfikat nr: 3780/03/2024/ZSZ/C",
+    rights: ["© 2024 SMARTqube", "Wszelkie prawa zastrzeżone"],
+  },
 
-  certificates: [
-    iso.sri,
-    iso.ce,
-    iso.crus,
-    iso.culus,
-    iso.ex,
-    iso.iec,
-    iso.iecx,
-    iso.ukca,
-    iso.cert_PAJ,
-  ],
+  certificates: {
+    certUSA: iso.pri_cert,
+    certPL: iso.cert_PAJ,
+    other: [
+      // iso.sri,
+      iso.ce,
+      iso.crus,
+      iso.culus,
+      iso.ex,
+      iso.iec,
+      iso.iecx,
+      iso.ukca,
+    ],
+  },
 
   documentsLink: "Dokumenty handlowe i prawne",
 };

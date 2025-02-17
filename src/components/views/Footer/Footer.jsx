@@ -87,15 +87,26 @@ export const Footer = ({ footer, navigationNavbar, region }) => {
           </div>
         </div>
         <div className={styles.certificatesWrap}>
-          {certificates.map((el, index) => (
+          <div className={styles.qualityCertWrap}>
+            <img
+              alt={region === "usa" ? "PRI Certification" : "Quality Cert"}
+              src={
+                region === "usa" ? certificates.certUSA : certificates.certPL
+              }
+            />
+          </div>
+          {certificates.other.map((el, index) => (
             <div key={`footerCert-${index}-${el}`} className={styles.imgWrap}>
               <img alt={"iso"} src={el} />
             </div>
           ))}
         </div>
         <div className={styles.isoWrap}>
-          {iso.map((el, index) => (
-            <p key={`footer-${index}-last-${el}`}>{el}</p>
+          <p>{region === "usa" ? iso.isoUSA : iso.isoPL}</p>
+          {iso.rights.map((el, index) => (
+            <div key={`footer-${index}-last-${el}`}>
+              <p>{el}</p>
+            </div>
           ))}
           <div className={styles.logoWrap}>
             <Link to={"/privacy"} className={styles.logoWrap}>

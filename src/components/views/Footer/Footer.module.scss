@@ -58,6 +58,16 @@
     gap: 20px;
     padding: 40px 0 40px 0;
 
+    .qualityCertWrap {
+      height: 35px;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
     .imgWrap {
       max-width: 80px;
 
