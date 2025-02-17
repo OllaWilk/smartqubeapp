@@ -80,16 +80,7 @@ export const footer = {
   certificates: {
     certUSA: iso.pri_cert,
     certPL: iso.cert_PAJ,
-    other: [
-      // iso.sri,
-      iso.ce,
-      iso.crus,
-      iso.culus,
-      iso.ex,
-      iso.iec,
-      iso.iecx,
-      iso.ukca,
-    ],
+    other: [iso.ce, iso.crus, iso.culus, iso.ex, iso.iec, iso.iecx, iso.ukca],
   },
   documentsLink: "Privacy & Legal",
 };
